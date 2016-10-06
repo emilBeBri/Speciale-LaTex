@@ -1,0 +1,161 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage \chapter{variabelbeskrivelser: løn \label{app_loen}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Jeg har valgt at beskrive indkomstbeskrivelse i realindkomst, da denne gør det muligt at lave sammenligninger i indkomst over tid. Alternativet er en nominel indkomstbeskrivelse, altså blot kroner og ører, som det ser ud på et givent tidspunkt \parencite[6]{DST2009}. 
+En beskrivelse af realindkomsten tager udgangspunkt i købekraften, som den reelt ser ud, og korrigerer således for inflation mv. Tallene korrigeres ud fra forbrugerprisindekset \parencite{DSTPRISINDEKS}. 
+
+Monecakortet er, som beskrevet i ???, et tværsnit lavet på baggrund af 1996 til 2009, altså 14 år. Et lignende tværsnit af indkomst virker derfor mest fornuftigt, da det på samme måde som selve netværkskortet viser strukturen, som den ser ud gennem alle de 14 år. Et alternativ ville være at vise lønninger for et enkelt år, eksempelvis det seneste, 2009. Det mener jeg ville være misvisende, da det ikke tager højde for de strukturelle udsving i indkomsten, der uværgeligt forekommer over en periode på 14 år. Derfor forekommer et gennemsnit af indkomsten over de 14 år som den fornuftigste måde at beskrive indkomst på, indenfor denne afhandlings rammer. Metoden til det er som nævnt at korrigere hvert af de tidligere år, således at alle indkomster i årene 1996-2008 bliver opdateres til 2009-priser, hvorefter gennemsnittet tages. 
+
+Danmarks Statistik har en række indkomstvariable til rådighed. Disse variable registrerer indkomst ud fra en række forskellige parametre. Selv tilsyneladende ens variable har alligevel diskrete, omend ofte betydningsfulde, forskelle i opgørelsesmetoden. Dette er ikke uskyldige forskelle, og i sammenligning af variablenes centralmål er det tydeligt, at disse forskellige opgørelsesmetoder har stor betydning for variablenes fordelinger.
+
+Eksempelvis registrerer \texttt{DISPO\_NY} den disponible indkomst efter skat og renter, mens \texttt{perindkialt} registrerer personindkomst i alt, hvilket defineres som summen af erhvervsindkomst, overførselsindkomst, formueindkomster samt anden ikke-klassificerbar indkomst, altså hvad der forekommer som rub og stub. Disse to variable beskrivelser et individs samlede indkomst, men på forskellige måder, hvoraf den mest centrale og iøjnefaldene er, at den sidstnævnte måler før skat, og førstnævnte er efter skat. Derudover registreres den samlede indkomst ud fra forskellige kilder, som ikke altid er lige lette at gennemskue betydningen af. Dette ses også i deres fordelinger, samt i mængden af fejlværdier såsom negative indkomstværdier m.m.
+
+Andre variable registrerer løn direkte, såsom \texttt{loen\_mv}, der inkluderer hele den skattepligtige lønindkomst, inklusiv frynsegoder, skattefri løn, jubilæums- og fratrædelsesgodtgørelser samt værdi af aktieoptioner. Det gælder også \texttt{jobloen}, hvis opgørelsesmetode i beskrivelsen hos DST er mere centreret på ansættelses i registreringsmåneden november, omend også inkluderer andre ansættelser i ikke-novemberansættelser, som de kalder det. \label{indkomstvariable}
+
+Det har vist sig, at stort set alle indkomstvariablene, som jeg har til rådighed i registerdataet, ligger en del lavere end de tal, DST selv benytter til at beskrive løn indenfor forskellige \texttt{DISCO}kategorier i deres rapport \emph{Indkomst} fra 2009  \textcite{DST2009}.  
+
+Den eneste variabel, hvor det ikke er tilfældet, \texttt{TIMELON}, der beskriver timelønnen. Det er den variabel, der, udover sin kvalitet i form af let fortolkbarhed, kommer tættest DSTs egne tal i rapporten \emph{Befolkningens løn} fra 2012. Denne variabel vil derfor benyttes til at beskrive lønindkomst i denne afhandling, og selvom nedenstående vil inddrage de andre indkomstvariable som reference, er denne variabel, dens validitet og central omdrejningspunktet for dette appendiks. 
+
+\section{Timeløn \label{}}
+
+variablen \texttt{TIMELON} har til formål at beskrive timelønnen, også for danskere, hvori lønninger normalt ikke opgøres i timeløn. “Variablen angiver den gennemsnitlige timeløn i novemberansættelsen for hoved- og bibeskæftigede lønmodtagere.” \parencite{DSTTIMELON}. Lønnen, der indgår i den gennemsnitlige timeløn, er det beløb, der årligt indberettes af arbejdsgiveren på oplysningssedlen til Skat. Dvs. at der indgår løn, feriegodtgørelse, løn under sygdom mv. Bidrag til pensionsordninger medregnes ikke. 
+
+Den centrale vanskelighed ved at beskrive timeløn, er, iflg. DST, at bestemme antallet af arbejdstimer for den enkelte, således at timelønsskønnet er pålideligt. Til at bestemme kvaliteten af timelønsskønnet i \texttt{TIMELON}, findes variablen \texttt{TLONKVAL}, der går fra 0 \% til 100 \%, hvor 0 \% er maksimal sikkerhed af skønnet, og 100 \% er maksimal usikkerhed. I denne vurdering indgår en række elementer til bestemmelsen af antal arbejdstimer, trukket af arbejdsgiverens oplysningssedler, ATP-biddrag mm. DST skriver, at værdier fra 0 til 50 \% er af brugbar kvalitet, mens >50 \% er af tvivlsom kvalitet. DST skriver om kvaliteten, at “\emph{Set for alle ansættelsesforhold under ét er der en rimelig overensstemmelse mellem den beregnede timeløn i IDA og Danmarks Statistiks lønstatistik. For ansatte på fuld tid er der for 44 pct. af lønmodtagerne en forskel på 5 kr. eller mindre (Det økonomiske Råds sekretariat 2003). Der kendes ingen kvalitetsundersøgelser på et mere detaljeret niveau. }” \parencite{DSTTIMELON}. Det centrale her er, at der ingen kvalitetsundersøgelser findes på et mere detaljeret niveau. 
+
+Der er derfor to problemer på spil i ovenstående: \emph{Det første} er, at \texttt{TIMELON} beregnes for novemberansættelsen et givent år, hvorimod vores \texttt{DISCO}-variabel benytter den længste ansættelse indenfor et givent år. Der er, for mange mennesker, med ganske stor sandsynlighed fin overenstemmelse mellem længste ansættelse, og novemberansættelsen. Men vi har ingen mulighed for at tjekke det. \emph{Det andet problem} er det, DST skriver i ovenstående paragraf: Der findes ingen kvalitetsundersøgelse af \texttt{TIMELON} på et mere detaljeret niveau. Et sådant detaljeret niveau kunne eksempelvis være inddelingen af befolkningen i 150 arbejdskategorier. Som jeg gør det, i dette speciale. 
+
+For at komme det første problem til livs, vælger jeg derfor at fjerne alle observationer med en \texttt{TLONKVAL} på >50 \%. Det sker naturligvis ud fra DSTs anbefaling om at disse er “af tvivlsom kvalitet” generelt, men især fordi, at dette mål for tvivlsom kvalitet er baseret på deltidsansættelse. Det er mit skøn, at ved at fjerne personer, der arbejder under halv tid på et år, fjerner jeg mange af de fejl, der måtte forekomme, hvis en person, der 3 måneder af året arbejder som taxachauffør, men tilfældigvis i november har en ansættelse som jord- og betonarbejder. Det ville betyde, at jeg i min benyttelse af \texttt{TIMELON} ville få registreret lønnen som taxachauffør som en jord-og betonarbejder lønning. Ved at fjerne dem, hvor deres \texttt{TIMELON} ansættelse er under halvdelen af året, er faren for fejlkategoriserede lønninger reduceret væsentligt, da jeg nu kun har lønninger med for folk, der arbejder over halvdelen af året. Chancen for at denne halvdel af året inkluderer november, er derfor over halvdelen. Dette er naturligvis ikke en skudsikker gardering overhovedet, men er en nem måde at fjerne, så vidt jeg kan vurdere, den værste kilde til fejl i min lønbeskrivelse.
+
+min bedste mulighed for at vurdere omfanget af disse problemer for validiteten af \texttt{TIMELON}, er i sidste ende at undersøge dens overenstemmigelse med virkelighedens lønninger. Den overenstemmigelse har jeg mulighed for at vurdere via følgende 3 metoder:
+
+\begin{enumerate}
+  \item DSTs timelønsbeskrivelser i rapporten \emph{Befolkningens Løn 2012}
+  \item common sense vurdering af lønniveauer for forskellige genkendelige faggrupper
+  \item Den relationelle forskel mellem de forskellige lønninger, og hvorvidt denne relationelle forskel er konsistent med de relationelle forskel jeg ser i andre af DSTS indkomstvariable
+\end{enumerate}
+
+
+\section{Centrale mål \label{}}
+
+Nedenstående tabel \ref{app_timelon1996_2009} viser de centrale mål for hvert år af \texttt{TIMELON}. Disse er ikke korrigeret for inflation, da jeg har valgt ikke at omregne hele populations individuelle lønninger med forbrugerprisindekset, og i stedet kun valgt de relevante gennemsnitsværdier. Standardafvigelse og percentiler kan naturligvis ikke vises medmindre hele populations observationer er i samme enhed, derfor denne fremstillingsform. 
+
+Det bemærkes at ingen har en timeløn under 11 kr. Det skyldes at jeg har fjernet alle observationer der tjener mellem 0 og 10 kr, da dette forekom som en kunstigt lav timeløn, der kun kunne forekomme, grundet udregningsmetoden i \texttt{TIMELON}-variablen. Dette ville, ifølge mit skøn, give et misvisende billede af den reelle timeløn indenfor en given disco-kategori. I gennemsnit fjernes 369 personer pr. år på denne måde, altså et ubetydeligt bortfald. 
+
+Det ses desuden i tabel \ref{app_timelon1996_2009} der i 2003 sker et lille fald i gennemsnitslønnen, fra 185,5 kr/t til 184,8 kr/t. Det efterfølgende år sker der en relativt kraftig stigning til 195,2 kr/t. Dette skyldes databrud hos DST. I denne henseende er det en fordel at min datastruktur kræver et gennemsnit over den 14-årige periode, da et databrud i en kortere periode indenfor tidsrammen derfor er af mindre betydning. 
+
+\begin{table}[H] \centering
+\caption{centrale mål for TIMELON, 1996-2009}
+\label{app_timelon1996_2009}
+\resizebox{1.0\textwidth}{!}{
+\begin{tabular}{@{}lrrrrrrrrrrrrrr@{}} \toprule	
+År	&	1996	&	1997	&	1998	&	1999	&	2000	&	2001	&	2002	&	2003	&	2004	&	2005	&	2006	&	2007	&	2008	&	2009	\\	\midrule
+N	&	1677704	&	1738875	&	1755089	&	1789319	&	1624672	&	1638380	&	1582448	&	1508256	&	1512068	&	1530139	&	1526006	&	1587350	&	1521759	&	1647924	\\	
+Gennemsnit (2012 priser)	&	211,6	&	208,5	&	216,1	&	215,5	&	217,5	&	223,5	&	221,8	&	223,5	&	219,8	&	227,8	&	232,0	&	234,9	&	236,90	&	239,35	\\	
+Gennemsnit (2009-priser)	&	196,8	&	193,9	&	201,0	&	200,4	&	202,2	&	207,8	&	206,3	&	207,9	&	204,4	&	211,9	&	215,7	&	218,4	&	220,31	&	222,58	\\	
+Gennemsnit	&	150,6	&	151,6	&	159,8	&	163,9	&	169,8	&	177,7	&	181,3	&	185,6	&	184,8	&	195,2	&	202,3	&	209,8	&	217,4	&	222,6	\\	
+Sdafvigelse	&	67	&	66	&	72	&	74	&	78	&	83	&	84	&	84	&	84	&	90	&	99	&	102	&	113	&	108	\\	
+Mindste værdi	&	11	&	11	&	11	&	11	&	11	&	11	&	11	&	11	&	11	&	11	&	11	&	11	&	11	&	11	\\	
+Højeste værdi	&	9974	&	5970	&	5952	&	8772	&	8019	&	9826	&	6850	&	7158	&	15165	&	8323	&	29429	&	11940	&	16977	&	28752	\\	
+p25	&	115	&	116	&	121	&	125	&	129	&	135	&	137	&	141	&	141	&	149	&	154	&	159	&	164	&	169	\\	
+p50	&	139	&	140	&	147	&	151	&	156	&	163	&	167	&	171	&	170	&	180	&	187	&	194	&	200	&	204	\\	
+p75	&	170	&	171	&	181	&	185	&	192	&	201	&	205	&	210	&	208	&	220	&	228	&	237	&	245	&	250	\\	
+p90	&	218	&	218	&	232	&	237	&	245	&	257	&	262	&	267	&	265	&	279	&	289	&	300	&	312	&	318	\\	
+p99	&	379	&	380	&	408	&	418	&	433	&	456	&	467	&	476	&	477	&	499	&	521	&	548	&	580	&	580	\\	\bottomrule
+\end{tabular} }
+\end{table}
+
+Jeg har benyttet forbrugerindekset til to korrektioner af lønningerne. omregningen til 2012 priser sker for at kunne sammenligne direkte med DSTs rapport fra 2012, og omregningen til 2009 priser bliver benyttet i afhandlingen. Det kan måske forekomme omstændigt, men det virker mest hensigtsmæssigt at benytte et prisniveau fra et år i den tidsperiode, der rent faktisk er i analysen, fremfor et prisniveau 3 år længere fremme i tiden, og som udelukkende er med for at kunne teste validiteten af variablen op imod DSTs rapport.
+
+\begin{table}[H] \centering
+\caption{centrale mål for TIMELON, 1996-2009}
+\label{app_timeloninf}
+\begin{tabular}{@{}lccc@{}} \toprule								
+	&	2009 priser	&	2012 priser	&	DST 2012	\\	\midrule
+gennemsnitsløn	&	207,8	&	223,5	&	243,0	\\	
+N	&	\multicolumn{2}{c}{1.617.142}			&	1.353.000	\\	\bottomrule
+\end{tabular}
+\end{table}
+
+% \begin{table}[]
+% \centering
+% \caption{My caption}
+% \label{my-label}
+% \begin{tabular}{cccc}
+% 					& 2009      & 20012     & dst \\
+% A                    & -         & -         & -   \\
+% n                    & \multicolumn{2}{c}{4} & -  
+% \end{tabular}
+% \end{table}
+
+
+
+
+Det ses af tabel \ref{app_timeloninf}, at den gennemsnitlige timeløn i perioden 1996-2009, omregnet til 2012-priser, er 223,5 kr/t. i DST rapporten omhandlende samme år, er de kommet frem til en gennnemsnitsløn på 243 kr/t, altså en forskel på 19,5 kr i timen. Det er naturligvis en klar forskel. Det er dog ikke så bekymrende, når man medtager det forhold, at der faktisk ikke er tale om to direkte sammenlignende tal: DSTs gennemsnitslønning er et forsøg på at ramme den reelle gennemsnitsløn for et bestemt år, her 2012. Mit formål er imidlertidig at beskrive lønniveauet i en 14-årig periode. Det betyder at min gennemsnitslønning også indeholder strukturelle forskydninger og konjunktursvingninger i økonomien, som den har  udviklet sig over de 14 år. Det er derfor forventeligt, at den ikke rammer præcis gennemsnitslønnen, som den så ud i et enkelt år, her 2012. I denne optik er forskellen på 19,5 kr på ingen måde bekymrende. Det ses også, at mit N har 264.142 flere personer i gennemsnit over årene, end DST benyttede til deres rapport i 2012. Datarensningen i DSTs rapport fremgår ikke tydeligt, så det er ikke muligt at klargøre hvorfor denne forskel eksisterer. Det er dog ikke bekymrende, når gennemsnittet alligevel ligger acceptabelt tæt.  
+
+
+
+\section{sammenligning med DSTs rapport \label{app_indkdstrapport}}
+
+Grundet omkodninger og xx (det ord Søren bruger) fra et 4-cifret DISCO-niveau til mit, omtalt i Bilag (\#henvisning), er det ikke muligt at sammenligne direkte med DSTs rapport om timelønninger fra forskellige faggrupper. I 19 tilfælde svarer mit DISCO-variabel imidlertidig direkte til DSTs oprindelige 4-cifrede niveau. Det er således muligt at lave en sammenligning mellem mit data og DSTs timelønsrapport, for at få en indikator på validiteten af mine timelønninger. Disse 19 tilfælde er opgjort i Tabel \ref{app_timelon_dstsammenligning}. Det viser timelønnen i mit data, i DST rapporten, forskellen i timellen opgjort i absolutte værdier samt i procent. Rangeringen går fra højeste positive forskel til mellem DST rapportens timeløn for faggruppen og min timeløn for faggruppen, til højest negative forskel ditto. Det vil sige at at en positiv forskel i timeløn, rangeret øverst, betyder at mine tal ligger \emph{under} x antal kroner under DSTs timelønssats, og en negativ forskel i timeløn, rangeret lavest, betyder at min timelønssats ligger x antal kroner \emph{over} DSTs timelønssats. Endelig er den gennemsnitlige (numeriske) forskel opgjort nederst, i absolut værdi og i procent. Min timelønssats er som omtalt korrigeret til 2012-priser. 
+
+\begin{table}[H] \centering
+\caption{Sammenligning med DST rapport}
+\label{app_timelon_dstsammenligning}
+\resizebox{1.0\textwidth}{!}{
+\begin{tabular}{@{}lrrrrr@{}} \toprule
+Discokode	&	Eget data, sdafvigelse 2009	&	Eget data, gns.	&	DST rapport, gns.	&	Forskel	&	Forskel i procent	\\	\midrule
+110: Militaert arbejde	&	78	&	218	&	312	&	94	&	29 \%	\\	
+7139: Bygningsarbejde (finish) Elektriker	&	75	&	192	&	220	&	28	&	12 \%	\\	
+3111: Teknikerarbejde inden for fysik, kemi, astronomi, \\ meteorologi, geologi mv	&	55	&	193	&	219	&	26	&	11 \%	\\	
+7124: Bygningsarbejde (basis), toemrer- og snedkerarbejde	&	64	&	186	&	205	&	19	&	9 \%	\\	
+4110: Alment kontorarbejde	&	60	&	182	&	199	&	17	&	8 \%	\\	
+3118: Teknisk tegnearbejde	&	48	&	200	&	214	&	14	&	6 \%	\\	
+7122: Bygningsarbejde (basis), murer- og brolaegningsarbejde	&	65	&	197	&	210	&	13	&	6 \%	\\	
+3112: Teknikerarbejde vedr. bygninger og anlaeg	&	72	&	246	&	259	&	12	&	4 \%	\\	
+2141: Ingenioerer og arkitekter	&	108	&	306	&	317	&	11	&	3 \%	\\	
+2221: Laege	&	155	&	391	&	401	&	10	&	2 \%	\\	
+2411: Overordnet revisions- og regnskabsarbejde, herunder \\ registeret revisor og statsautoriseret revisor	&	172	&	300	&	308	&	8	&	2 \%	\\	
+2331: Folkeskolelaerer	&	49	&	219	&	224	&	5	&	2 \%	\\	
+9130: Rengoerings- og koekkenhjaelpsarbejde	&	48	&	158	&	162	&	4	&	2 \%	\\	
+3113: Teknikerarbejde vedr. elektriske anlaeg mv	&	72	&	266	&	267	&	1	&	0 \%	\\	
+3114: Teknikerarbejde vedr. elektroniske anlaeg mv	&	77	&	257	&	251	&	-6	&	-2 \%	\\	
+3115: Teknikerarbejde vedr. maskiner og roeranlaeg, eksklusiv \\ vedligeholdelse af maskiner om bord paa skibe	&	74	&	265	&	250	&	-14	&	-5 \%	\\	
+8322: Koersel af hyre- og varevogn m.v. 	&	90	&	196	&	170	&	-26	&	-15 \%	\\	
+2412: Udvikling og planlaegning af personalespoergsmaal	&	160	&	327	&	296	&	-31	&	-10 \%	\\	
+6130: Arbejde med saavel markafgroeder som husdyr, fx som landmand	&	79	&	195	&	159	&	-36	&	-22 \%	\\	
+1211: Ledelse 10+ ansatte: overordnet og/eller tvaergaaende ledelse i virksomheder,  herunder \\ administrerende direktoer, bankdirektoer, kreditforeningsdirektoer, varehusdirektoer	&	409	&	480	&	398	&	-82	&	-20 \%	\\	\midrule
+Gennemsnitlig forskel	&	-	&	-	&	-	&	24	&	9 \%	\\	\bottomrule
+\end{tabular} }
+\end{table}
+
+Det ses af tabellen, at den gennemsnitlige timelønsforskel ligger på 24 kr/t, hvilket stemmer nogenlunde overens med den overordnede gennemsnitlige forskel på 19,5 kr/t. Det ses at tre faggrupper afviger ganske betragteligt fra DSTs rapport. I faggruppen \texttt{1211: Ledelse 10+ ansatte} overvurderer jeg deres lønninger med 82 kr/t eller 20 \%. Der er tale om en gruppe, hvis lønninger varierer ganske betragteligt, hvilket ses på standardafvigelsen fra år 2009%
+%
+\footnote{Da jeg kun har korrigeret gennemsnittene for de enkelte faggrupper, og ikke hver enkelt observation i registerdataen, kan jeg ikke inflationskorrigere standardafvigelsen. Jeg har derfor benyttet variansen for 2009, der derfor ikke kan sammenlignes direkte, men alligel giver en ganske udemærket indikation af variansen omkring gennemsnittet}%
+%
+. Her ses det, at \texttt{1211: Ledelse 10+ ansatte} har en voldsomt høj standardvigelse, hvilket giver fin mening, indenfor en gruppe ledere af små virksomheder med eksempelvis 11 ansatte, samt chefer for en stribe af landets største virksomheder. Det giver derfor ikke anledning til bekymring, og må nok anses som et særtilfælde. 
+De to andre kategorier med store udsving, \texttt{110: Militært arbejde}, hvor jeg undervurderer deres lønninger med med 78 kr/t eller 29 \%, samt \texttt{6130: Arbejde med såvel markafgrøder som husdyr}, hvor forskellen er med 79 kr/t eller 22 \% kan ikke umiddelbart forklares. Det eneste, der måske kan forklare det, er at der er tale om meget brede kategorier, der indeholder en række meget forskellige typer jobs, selv på dette nære DISCO-niveau. Det er værd at holde sig for øje om de brede kategorier, at de muligvis er mere upålidelige end de mere mere specifikke erhvervskategorier, omend det måske er meget at konkludere ud fra disse sparsomme sammenligninger. Jeg vil derfor på anden vis prøve at vurdere, om jeg kan stole på disse kategorier. Derfor vil jeg benytte den i indledningen omtalte 3. metode, nemlig den relative forskel i indtjening mellem faggrupperne, set over flere af DSTS indkomstvariable. 
+
+\section{relative lønforskelle \label{app_relativloen}}
+
+
+Det er vigtigt, at de lønningerne afspejler virkeligheden, men det allervigtigste må være, at den \emph{relative forskel} mellem faggrupperne er pålidelig. Derfor har jeg sammenlignet med 4 andre af DSTs indkomstvariable, for at vurdere om den relative forskel i indtjening er nogenlunde ensartet over 5 variable. De fire andre indkomstvariable 
+er \texttt{DISPON\_NY}, \texttt{loen\_mv}, \texttt{perindkialt} samt \texttt{joblon}, og er omtalt i indledning på s. \pref{indkomstvariable}. En nærmere analyse ville være for omfattende at komme ind på her, men det skal kort nævnes, at den relative forskel er nogenlunde ensartet, taget i betragtning af de vidt forskellige opgørelsesmetoder. Det vigtige i denne sammenhæng er de tre føromtalte faggrupper ligger relativt pålideligt. \texttt{1211: Ledelse 10+ ansatte} ligger som nr. 1 i alle indkomstvariablene, så det er meget tilfredsstillende. \texttt{110: Militært arbejde} ligger ikke på præcis samme placering i alle de 5 variable, men ligger omtrent i midten i alle 5 variable, hvilket også må anses som tilfredsstillende. \texttt{6130: Arbejde med såvel markafgrøder som husdyr} derimod ligger som nr. 93 i \texttt{timelon}, men placerer sig lige fra en bundkategori på 132. plads over indtjeninger i \texttt{loen\_mv}, noget tilsvarende i \texttt{joblon}. Altså de andre to andre \emph{lønnings} variable. Mens faggruppen i \texttt{DISPON\_NY} og \texttt{perindkialt} placerer sig som henholdsvis nr. 36 og 17, altså ganske tæt på Danmarks bedst tjenende faggrupper i \emph{overordnet indkomst}, som disse to variable måler. Hvad dette skyldes, kan være svært at sige, men i forhold til, om \texttt{timelon} er et pålideligt lønmål, er det ganske fint, at der tilsyneladende "bare" er tale om en DISCO-kategori, hvori deres måde at tjene penge på er sådan skruet sammen, at opgørelsesmetoden bliver vigtig. At arbejde med markafgrøder og husdyr er et specielt erhverv, i forhold til de mere almindelige lønarbejdsformer, vi ellers arbejder med, og som tabel \ref{app_timelon_dstsammenligning} ser ud til at dække ganske fint. Det gælder heldigvis et fåtal af faggrupperne, som set på s. \#ref. 
+
+\section{sammenfatning \label{app_indksammenfatning}}
+
+Sammenfattende må man konkludere, at mit mål for timeløn er validt, selv indenfor så detaljeret et DISCO-niveau som dette. de tre faggrupper, der giver anledning til bekymring, kan i høj grad forklares ved deres særlige stilling i samfundet, og af disse to - ledere med over 10 ansatte samt militæret - viser det sig i sammenligning af relative indkomstforskelle at der ikke er anledning til bekymring. Den sidste faggruppes timelønsskøn må anses som netop dette, et skøn, omed forskellen mellem DSTs opgørelse og min er på 79 kr/t eller 22 \%. 22 \% er naturligvis en del, men ikke alarmenerende, og i betragtning af faggruppens særlige karakter giver det ikke anledning til tvivl om timelønsvariablens validitet i langt de fleste tilfælde. Det, der skal tages med forbehold i analysen, må være at for faggrupper, hvis arbejdsindhold har en ganske særlig karakter, kan timelønvariablen være unøjagtig, dog uden at være alarmende unøjagtig. 
+Udover det er "stikprøven", der er mulig at sammenligne med DSTs rapport, i god overenstemmigelse, og jeg vil derfor kun med det enkelte ovenstående forbehold i mente, benytte \texttt{timelon} i analysen. 
+
+
+
+
+
+
+
+
+
+
+
+

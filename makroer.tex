@@ -1,0 +1,333 @@
+%!TEX root = ../report.tex
+
+
+% segmenter
+\DefineRemark{s5.2}{5.2}
+\DefineRemark{s5.1}{5.1}
+\DefineRemark{s4.9}{4.9}
+\DefineRemark{s4.8}{4.8}
+\DefineRemark{s4.6}{4.6}
+\DefineRemark{s4.4}{4.4}
+\DefineRemark{s4.2}{4.2}
+\DefineRemark{s4.13}{4.13}
+\DefineRemark{s4.12}{4.12}
+\DefineRemark{s4.11}{4.11}
+\DefineRemark{s4.10}{4.10}
+\DefineRemark{s4.1}{4.1}
+\DefineRemark{s3.9}{3.9}
+\DefineRemark{s3.8}{3.8}
+\DefineRemark{s3.37}{3.37}
+\DefineRemark{s3.36}{3.36}
+\DefineRemark{s3.35}{3.35}
+\DefineRemark{s3.30}{3.30}
+\DefineRemark{s3.26}{3.26}
+\DefineRemark{s3.25}{3.25}
+\DefineRemark{s3.24}{3.24}
+\DefineRemark{s3.21}{3.21}
+\DefineRemark{s3.20}{3.20}
+\DefineRemark{s3.2}{3.2}
+\DefineRemark{s3.18}{3.18}
+\DefineRemark{s3.15}{3.15}
+\DefineRemark{s3.14}{3.14}
+\DefineRemark{s3.12}{3.12}
+\DefineRemark{s2.80}{2.80}
+\DefineRemark{s2.78}{2.78}
+\DefineRemark{s2.74}{2.74}
+\DefineRemark{s2.66}{2.66}
+\DefineRemark{s2.64}{2.64}
+\DefineRemark{s2.61}{2.61}
+\DefineRemark{s2.58}{2.58}
+\DefineRemark{s2.56}{2.56}
+\DefineRemark{s2.40}{2.40}
+\DefineRemark{s2.31}{2.31}
+\DefineRemark{s2.24}{2.24}
+\DefineRemark{s1.93}{1.93}
+\DefineRemark{s1.75}{1.75}
+\DefineRemark{s1.45}{1.45}
+\DefineRemark{s1.27}{1.27}
+\DefineRemark{s1.260}{1.260}
+\DefineRemark{s1.223}{1.223}
+\DefineRemark{s1.217}{1.217}
+\DefineRemark{s1.214}{1.214}
+\DefineRemark{s1.204}{1.204}
+\DefineRemark{s1.194}{1.194}
+\DefineRemark{s1.162}{1.162}
+\DefineRemark{s1.159}{1.159}
+
+% disco
+\DefineRemark{d110}{\texttt{110: Militaert arbejde}}
+\DefineRemark{d1110}{\texttt{1110: Lovgivningsarbejde og ledelse i offentlig administration}}
+\DefineRemark{d1140}{\texttt{114: Overordnet ledelse i interesseorganisationer og humanitaere organisationer}}
+\DefineRemark{d1210}{\texttt{1210: Overordnet og/eller tvaergaaende ledelse i virksomheder m. 10+ ansatte}}
+\DefineRemark{d1222}{\texttt{1222: Ledelse af produktionen i haandvaerks- og industrivirksomheder}}
+\DefineRemark{d1223}{\texttt{1223: Ledelse af produktionen i bygge- og anlaegssektoren}}
+\DefineRemark{d1224}{\texttt{1224: Ledelse af salget i engros- og detailhandelsvirksomheder}}
+\DefineRemark{d1225}{\texttt{1225: Ledelse af hovedaktiviteten i hotel- og restaurationsvirksomheder}}
+\DefineRemark{d1226}{\texttt{1226: Ledelse af hovedaktiviteten i virksomheder inden for transport og kommunikation}}
+\DefineRemark{d1227}{\texttt{1227: Ledelse af hovedaktiviteten i virksomheder inden for forretningsservice}}
+\DefineRemark{d1229}{\texttt{1229: Ledelse af hovedaktiviteten i oevrige virksomheder m. 10+ ansatte}}
+\DefineRemark{d1231}{\texttt{1231: Ledelse vedr. administration og finansiering i ikke-finansielle virksomheder}}
+\DefineRemark{d1232}{\texttt{1232: Personaleledelse}}
+\DefineRemark{d1233}{\texttt{1233: Salgs- og afsaetningsledelse, eksklusive salgsvirksomheder}}
+\DefineRemark{d1234}{\texttt{1234: Informations- og markedsfoeringsledelse}}
+\DefineRemark{d1235}{\texttt{1235: Indkoebs- og forsyningsledelse}}
+\DefineRemark{d1236}{\texttt{1236: Edb-ledelse, eksklusive edb-virksomheder}}
+\DefineRemark{d1237}{\texttt{1237: Forsknings- og udviklingsledelse}}
+\DefineRemark{d1239}{\texttt{1239: Ledelse af andre specialomraader i virksomheder m. 10+ ansatte}}
+\DefineRemark{d1311}{\texttt{1311: Ledelse af virksomhed: landbrug, skovbrug og fiskeri}}
+\DefineRemark{d1312}{\texttt{1312: Ledelse af virksomhed: haandvaerks- og industri}}
+\DefineRemark{d1313}{\texttt{1313: Ledelse af virksomhed: bygge- og anlaeg}}
+\DefineRemark{d1314}{\texttt{1314: Ledelse af virksomhed: engros- og detailhandel}}
+\DefineRemark{d1315}{\texttt{1315: Ledelse af virksomhed: hotel- og restaurations}}
+\DefineRemark{d1316}{\texttt{1316: Ledelse af virksomhed: transport og kommunikation}}
+\DefineRemark{d1317}{\texttt{1317: Ledelse af virksomhed: forretningsservice}}
+\DefineRemark{d1318}{\texttt{1318: Ledelse af virksomhed. "personlige tjenesteydelser"}}
+\DefineRemark{d1319}{\texttt{1319: Ledelse af oevrige virksomhed m. <10 ansatte}}
+\DefineRemark{d2110}{\texttt{2110: Arbejde m. fysik, kemi, astronomi, meteorologi, geologi og geofysik}}
+\DefineRemark{d2120}{\texttt{2120: Arbejde m. matematiske og statistiske begreber, teorier og metoder}}
+\DefineRemark{d2131}{\texttt{2131: Design, analyse og overordnet planlaegning af edb-systemer}}
+\DefineRemark{d2132}{\texttt{2132: Systemudvikling samt konstruktion/programmering af edb-systemer}}
+\DefineRemark{d2139}{\texttt{2139: Andet edb-arbejde paa hoejeste faglige niveau}}
+\DefineRemark{d2141}{\texttt{2141: Arkitektarbejde og planlaegning af anlaegsarbejder}}
+\DefineRemark{d2142}{\texttt{2142: Ingenioerarbejde vedr. bygninger og anlaeg}}
+\DefineRemark{d2143}{\texttt{2143: Ingenioerarbejde vedr. staerkstroem}}
+\DefineRemark{d2144}{\texttt{2144: Ingenioerarbejde vedr. svagstroem}}
+\DefineRemark{d2145}{\texttt{2145: Ingenioerarbejde vedr. ikke-elektriske motorer og maskinanlaeg}}
+\DefineRemark{d2146}{\texttt{2146: Ingenioerarbejde vedr. kemiske processer ved industriel produktion}}
+\DefineRemark{d2148}{\texttt{2148: Landinspektoerarbejde}}
+\DefineRemark{d2149}{\texttt{2149: Andet arkitekt- og ingenioerarbejde m.v.}}
+\DefineRemark{d2211}{\texttt{2211: Arbejde m. biologi, genetik, zoologi, botanik, oekologi og levnedsmidler}}
+\DefineRemark{d2212}{\texttt{2212:Arbejde m. anatomi, biokemi, fysiologi, patologi og farmakologi}}
+\DefineRemark{d2213}{\texttt{2213: Arbejde m. agronomi vedr. plante- og husdyravl}}
+\DefineRemark{d2221}{\texttt{2221: Laegearbejde}}
+\DefineRemark{d2222}{\texttt{2222: Tandlaegearbejde}}
+\DefineRemark{d2223}{\texttt{2223: Veterinaerarbejde}}
+\DefineRemark{d2224}{\texttt{2224: Farmaceutarbejde}}
+\DefineRemark{d2225}{\texttt{2225: Arbejde m. medicin, odontologi, veterinaervidenskab og anden farmaci}}
+\DefineRemark{d2230}{\texttt{2230: Jordemoderarbejde, overordnet sygeplejearbejde m.v.}}
+\DefineRemark{d2310}{\texttt{2310: Undervisning paa universiteter og andre hoejere laereanstalter}}
+\DefineRemark{d2320}{\texttt{2320: Undervisning paa gymnasier, erhvervsskoler m.v.}}
+\DefineRemark{d2330}{\texttt{2330: Undervisning i folkeskoler o.lign.}}
+\DefineRemark{d2341}{\texttt{2340: Undervisning af handicappede mennesker}}
+\DefineRemark{d2351}{\texttt{2351: Forskning, udvikling og raadgivning vedr. undervisningsmetoder}}
+\DefineRemark{d2352}{\texttt{2352: Kontrol og tilrettelaeggelse af undervisning}}
+\DefineRemark{d2359}{\texttt{2359: Andet arbejde vedr. undervisning, herunder kursusvirksomhed}}
+\DefineRemark{d2411}{\texttt{2411: Overordnet revisions- og regnskabsarbejde}}
+\DefineRemark{d2412}{\texttt{2412: Udvikling og planlaegning af personalespoergsmaal}}
+\DefineRemark{d2419}{\texttt{2419: Specialfunktioner vedr. organisation, herunder ledelsesraadgivning}}
+\DefineRemark{d2421}{\texttt{2421: Advokatarbejde}}
+\DefineRemark{d2422}{\texttt{2422: Dommerarbejde}}
+\DefineRemark{d2429}{\texttt{2429: Juridisk praeget arbejde i oevrigt}}
+\DefineRemark{d2432}{\texttt{2432: Bibliotekararbejde}}
+\DefineRemark{d2441}{\texttt{2441: Arbejde m. samfundsoekonomi}}
+\DefineRemark{d2442}{\texttt{2442: Arbejde m. sociologi og antropologi}}
+\DefineRemark{d2443}{\texttt{2443: Arbejde m. filosofi og historie}}
+\DefineRemark{d2444}{\texttt{2444: Arbejde m. sprogvidenskab}}
+\DefineRemark{d2445}{\texttt{2445: Arbejde m. psykologi}}
+\DefineRemark{d2446}{\texttt{2446: Overordnet socialraadgivningsarbejde}}
+\DefineRemark{d2451}{\texttt{2451:Alment journalistisk arbejde og skribentarbejde}}
+\DefineRemark{d2452}{\texttt{2452: Illustrationsgrafisk arbejde vedr. formidling og billedkunst/formgivning}}
+\DefineRemark{d2453}{\texttt{2453: Kunstnerisk arbejde vedr. udoevelse/instruktion af musik/sang}}
+\DefineRemark{d2455}{\texttt{2455: Film- og skuespilarbejde}}
+\DefineRemark{d2460}{\texttt{2460: Arbejde inden for religion}}
+\DefineRemark{d2470}{\texttt{2470: Arbejde m. administration af lovgivningen I den offentlige sektor}}
+\DefineRemark{d3111}{\texttt{3111: Teknikerarbejde inden for fysik, kemi, astronomi, meteorologi, geologi m.v.}}
+\DefineRemark{d3112}{\texttt{3112: Teknikerarbejde vedr. bygninger og anlaeg}}
+\DefineRemark{d3113}{\texttt{3113: Teknikerarbejde vedr. elektriske anlaeg m.v.}}
+\DefineRemark{d3114}{\texttt{3114: Teknikerarbejde vedr. elektroniske anlaeg m.v.}}
+\DefineRemark{d3115}{\texttt{3115: Teknikerarbejde vedr. maskiner og roeranlaeg (skibsvedligeholdelse undtaget)}}
+\DefineRemark{d3116}{\texttt{3116: Teknikerarbejde vedr. kemiske processer ved industriel produktion}}
+\DefineRemark{d3118}{\texttt{3118:Teknisk tegnearbejde}}
+\DefineRemark{d3119}{\texttt{3119: Teknikerarbejde i oevrigt inden for fysik, kemi, mekanik m.v.}}
+\DefineRemark{d3121}{\texttt{3121: Programmoerarbejde}}
+\DefineRemark{d3122}{\texttt{3122: Edb-operatoerarbejde samt planlaegning af edb-drift}}
+\DefineRemark{d3131}{\texttt{3131: Arbejde m. lyd, lys og billeder ved fotografering, film- og teaterforestillinger m.v.}}
+\DefineRemark{d3133}{\texttt{3133: Betjening af medicinsk udstyr}}
+\DefineRemark{d3139}{\texttt{3139: Arbejde m. lyd, lys og billeder i oevrigt}}
+\DefineRemark{d3141}{\texttt{3141: Teknisk arbejde om bord paa skibe m. mekaniske, elektriske/elektroniske installationer}}
+\DefineRemark{d3142}{\texttt{3142: Skibsfoererarbejde}}
+\DefineRemark{d3143}{\texttt{3143: Flypilot}}
+\DefineRemark{d3144}{\texttt{3144: Flyvelederarbejde samt planlaegning og afvikling af flytrafik i oevrigt}}
+\DefineRemark{d3152}{\texttt{3152: Arbejde vedr. kontrol af miljoe, sikkerhed og kvalitet}}
+\DefineRemark{d3211}{\texttt{3211: Teknikerarbejde inden for biologi, medicin m.v.}}
+\DefineRemark{d3212}{\texttt{3212: Teknikerarbejde inden for landbrug og skovbrug}}
+\DefineRemark{d3213}{\texttt{3213: Raadgivningsarbejde inden for landbrug og skovbrug}}
+\DefineRemark{d3223}{\texttt{3223: Assistentarbejde og raadgivning vedr. kostforplejning paa hospitaler o.lign.}}
+\DefineRemark{d3224}{\texttt{3224: Optikerarbejde}}
+\DefineRemark{d3225}{\texttt{3225: Assistentarbejde vedr. tandpleje}}
+\DefineRemark{d3226}{\texttt{3226: Arbejde m. fysioterapi, kiropraktik m.v.}}
+\DefineRemark{d3228}{\texttt{3228: Assistentarbejde inden for farmaci}}
+\DefineRemark{d3229}{\texttt{3229: Arbejde m. ergoterapi, zoneterapi, yoga m.v.}}
+\DefineRemark{d3230}{\texttt{3230: Sygeplejearbejde}}
+\DefineRemark{d3310}{\texttt{3310: Skoleundervisning af boern under den undervisningspligtige alder}}
+\DefineRemark{d3320}{\texttt{3320: Paedagogisk arbejde m. boern under den undervisningspligtige alder}}
+\DefineRemark{d3330}{\texttt{3330: Omsorgsarbejde m. handicappede mennesker}}
+\DefineRemark{d3340}{\texttt{3340: Undervisnings- og omsorgsarbejde i oevrigt}}
+\DefineRemark{d3411}{\texttt{3411: Finansielt arbejde vedr. Vaerdipapirer, laanebetingelser, kreditvaerdighed m.v.}}
+\DefineRemark{d3412}{\texttt{3412: Forsikringssalgsarbejde}}
+\DefineRemark{d3413}{\texttt{3413: Arbejde m. koeb, salg, leje og leasing af fast ejendom}}
+\DefineRemark{d3414}{\texttt{3414: Arbejde vedr. tilrettelaeggelse af rejser}}
+\DefineRemark{d3415}{\texttt{3415: Opsoegende salgsarbejde, eksklusive detailsalg}}
+\DefineRemark{d3416}{\texttt{3416: Indkoebsarbejde i virksomheder og organisationer}}
+\DefineRemark{d3417}{\texttt{3417: Vurderings- og takseringsarbejde}}
+\DefineRemark{d3419}{\texttt{3419: Salgs- og finansieringsarbejde i oevrigt}}
+\DefineRemark{d3421}{\texttt{3421: Maeglerarbejde}}
+\DefineRemark{d3422}{\texttt{3422: Speditionsarbejde}}
+\DefineRemark{d3423}{\texttt{3423: Jobformidlingsarbejde}}
+\DefineRemark{d3429}{\texttt{3429: Agentarbejde og forretningsservice i oevrigt}}
+\DefineRemark{d3431}{\texttt{3431: Administrativt arbejde i sekretariat o.lign.}}
+\DefineRemark{d3432}{\texttt{3432: Advokatsekretaerarbejde}}
+\DefineRemark{d3433}{\texttt{3433: Revisions- og regnskabsarbejde}}
+\DefineRemark{d3434}{\texttt{3434: Assistentarbejde ved matematiske beregninger og udarbejdelse af statistik}}
+\DefineRemark{d3439}{\texttt{3439: Administrationsarbejde i oevrigt}}
+\DefineRemark{d3443}{\texttt{3443: Arbejde vedr. tildeling af offentlige ydelser}}
+\DefineRemark{d3449}{\texttt{3449: Andet administrativt arbejde vedr. offentlige ydelser og afgifter}}
+\DefineRemark{d3450}{\texttt{3450: Politimaessigt undersoegelsesarbejde}}
+\DefineRemark{d3460}{\texttt{3460: Socialt vejlednings- og omsorgsarbejde}}
+\DefineRemark{d3471}{\texttt{3471: Arbejde m. dekoration, design, illustration og indretning}}
+\DefineRemark{d3475}{\texttt{3475: Sportsudoevelse og traenervirksomhed}}
+\DefineRemark{d3480}{\texttt{3480: Arbejde m. tilknytning til religion}}
+\DefineRemark{d4111}{\texttt{4111: Arbejde m. stenografering og maskinskrivning}}
+\DefineRemark{d4113}{\texttt{4113: Edb-indtastningsarbejde}}
+\DefineRemark{d4114}{\texttt{4114: Andet indtastningsarbejde paa regnemaskine m.v.}}
+\DefineRemark{d4115}{\texttt{4115: Alment kontorarbejde}}
+\DefineRemark{d4121}{\texttt{4121: Beregningsarbejde i forbindelse m. bogfoering, loenadministration og revision}}
+\DefineRemark{d4122}{\texttt{4122: Beregningsarbejde i forbindelse m. finansielle transaktioner, statistik m.v.}}
+\DefineRemark{d4131}{\texttt{4131: Registreringsarbejde vedr. lagerfoering af faerdige produkter og produktionsmidler}}
+\DefineRemark{d4132}{\texttt{4132: Registreringsarbejde vedr. ordrer, forbrug o.lign. samt kontrol af produktionsprogrammer}}
+\DefineRemark{d4133}{\texttt{4133: Registrerings- og kontrolarbejde vedr. transport og transporttilrettelaeggelse}}
+\DefineRemark{d4141}{\texttt{4141: Registreringsarbejde vedr. samlinger af boeger o.lign.}}
+\DefineRemark{d4142}{\texttt{4142: Post- og betjentarbejde}}
+\DefineRemark{d4190}{\texttt{4190: Internt kontorarbejde i oevrigt}}
+\DefineRemark{d4211}{\texttt{4211: Kassererarbejde og billetsalg}}
+\DefineRemark{d4212}{\texttt{4212: Arbejde m. registrering af pengetransaktioner, veksling af valuta m.v.}}
+\DefineRemark{d4221}{\texttt{4221: Rejsebureauarbejde}}
+\DefineRemark{d4222}{\texttt{4222: Receptionsarbejde}}
+\DefineRemark{d4223}{\texttt{4223: Telefonomstillingsarbejde}}
+\DefineRemark{d5111}{\texttt{5111: Betjening af passagerer og besaetning, eksklusive ekspedientarbejde}}
+\DefineRemark{d5112}{\texttt{5112: Kontrol- og informationsvirksomhed under rejser}}
+\DefineRemark{d5113}{\texttt{5113: Turist- og rejselederarbejde}}
+\DefineRemark{d5121}{\texttt{5121: Generelt husholdningsarbejde}}
+\DefineRemark{d5122}{\texttt{5122: Tilberedning af maaltider}}
+\DefineRemark{d5123}{\texttt{5123: Serveringsarbejde}}
+\DefineRemark{d5131}{\texttt{5131: Boernepasning i private hjem}}
+\DefineRemark{d5132}{\texttt{5132: Plejearbejde paa institutioner}}
+\DefineRemark{d5133}{\texttt{5133: Omsorgsarbejde i private hjem}}
+\DefineRemark{d5141}{\texttt{5141: Personpleje}}
+\DefineRemark{d5161}{\texttt{5161: Brandbekaempelse}}
+\DefineRemark{d5162}{\texttt{5162: Politiarbejde}}
+\DefineRemark{d5163}{\texttt{5163: Overvaagningsarbejde i faengsler}}
+\DefineRemark{d5169}{\texttt{5169: Overvaagnings- og redningsarbejde i oevrigt}}
+\DefineRemark{d5181}{\texttt{5181: Servicearbejde for privatpersoner i oevrigt}}
+\DefineRemark{d5220}{\texttt{5220: Ekspedient-, kasse- og demonstrationsarbejde}}
+\DefineRemark{d6111}{\texttt{6111: Arbejde m. markafgroeder inden for landbrug}}
+\DefineRemark{d6112}{\texttt{6112: Arbejde vedr. plantevaekst inden for gartneri}}
+\DefineRemark{d6121}{\texttt{6121: Arbejde m. husdyr undtagen fjerkrae}}
+\DefineRemark{d6129}{\texttt{6129: Arbejde m. dyr i oevrigt}}
+\DefineRemark{d6130}{\texttt{6130: Arbejde m. såvel markafgrøder som husdyr, fx som landmand}}
+\DefineRemark{d6150}{\texttt{6150: Arbejde inden for fiskeri og jagt}}
+\DefineRemark{d6181}{\texttt{6181: Skovbrugsarbejde}}
+\DefineRemark{d7121}{\texttt{7121: Bygningsarbejde m. naturmaterialer}}
+\DefineRemark{d7122}{\texttt{7122: Murer- og brolaegningsarbejde}}
+\DefineRemark{d7124}{\texttt{7124: Toemrer- og snedkerarbejde}}
+\DefineRemark{d7129}{\texttt{7129: Bygningsarbejde (basis) i oevrigt}}
+\DefineRemark{d7131}{\texttt{7131: Tagdaekningsarbejde}}
+\DefineRemark{d7132}{\texttt{7132: Arbejde m. gulvlaegning, vedligeholdelse af gulve o.lign.}}
+\DefineRemark{d7134}{\texttt{7134: Isoleringsarbejde}}
+\DefineRemark{d7135}{\texttt{7135: Glarmesterarbejde}}
+\DefineRemark{d7136}{\texttt{7136: VVS-arbejde}}
+\DefineRemark{d7137}{\texttt{7137: Elektrikerarbejde}}
+\DefineRemark{d7139}{\texttt{7139: Bygningsarbejde (finish) i oevrigt}}
+\DefineRemark{d7141}{\texttt{7141: Maler-og tapetsererarbejde, herunder skibsmaler- og skiltemalerarbejde}}
+\DefineRemark{d7142}{\texttt{7142: Sproejtelakeringsarbejde}}
+\DefineRemark{d7143}{\texttt{7143: Arbejde m. bygningsrengoering}}
+\DefineRemark{d7211}{\texttt{7211: Formningsarbejde}}
+\DefineRemark{d7212}{\texttt{7212: Svejsearbejde}}
+\DefineRemark{d7213}{\texttt{7213: Tyndpladearbejde}}
+\DefineRemark{d7214}{\texttt{7214: Staalkonstruktionsarbejde}}
+\DefineRemark{d7221}{\texttt{7221: Grovsmedearbejde}}
+\DefineRemark{d7222}{\texttt{7222: Vaerktoejsmagerarbejde}}
+\DefineRemark{d7223}{\texttt{7223: Maskinelt praecisionsarbejde i metal og indstilling af metalforarbejdningsmaskiner}}
+\DefineRemark{d7224}{\texttt{7224: Polerings- og slibearbejde i metal}}
+\DefineRemark{d7231}{\texttt{7231: Automekaniker- og automontoerarbejde}}
+\DefineRemark{d7232}{\texttt{7232: Flymekaniker- og flymontoerarbejde}}
+\DefineRemark{d7233}{\texttt{7233: Mekaniker- og montoerarbejde m. andre motorer og mekaniske maskiner}}
+\DefineRemark{d7241}{\texttt{7241: Elektromekaniker- og specialelektrikerarbejde}}
+\DefineRemark{d7242}{\texttt{7242: Montoerarbejde vedr. elektronik}}
+\DefineRemark{d7243}{\texttt{7243: Service- og reparationsarbejde vedr. elektronik}}
+\DefineRemark{d7244}{\texttt{7244: Telefon- og telegrafmekanikerarbejde}}
+\DefineRemark{d7245}{\texttt{7245: Kabelmontoerarbejde}}
+\DefineRemark{d7310}{\texttt{731: Praecisionsarbejde i metal}}
+\DefineRemark{d7320}{\texttt{732: Glas-, keramik- og teglarbejde}}
+\DefineRemark{d7341}{\texttt{7341: Grafisk formfremstilling (pre-press)}}
+\DefineRemark{d7343}{\texttt{7343: Gravoer- og aetsearbejde}}
+\DefineRemark{d7346}{\texttt{7346: Serigrafisk arbejde}}
+\DefineRemark{d7411}{\texttt{7411: Slagterarbejde og behandling af fisk og skaldyr}}
+\DefineRemark{d7412}{\texttt{7412: Bager-, konfekture- og chokoladearbejde}}
+\DefineRemark{d7413}{\texttt{7413: Mejeriarbejde}}
+\DefineRemark{d7422}{\texttt{7422: Boedker- og moebelsnedkerarbejde}}
+\DefineRemark{d7423}{\texttt{7423: Opstilling og betjening af maskiner inden for traeindustrien}}
+\DefineRemark{d7430}{\texttt{743: Tekstil- og beklaedningsarbejde}}
+\DefineRemark{d8110}{\texttt{8110: Mine- og mineraludvindingsanlaegsarbejde}}
+\DefineRemark{d8120}{\texttt{8120: Jern-, metalvaerks- og stoeberianlaegsarbejde}}
+\DefineRemark{d8130}{\texttt{8130: Glas-, keramik- og teglprocesanlaegsarbejde}}
+\DefineRemark{d8140}{\texttt{8140: Trae- og papirprocesanlaegsarbejde}}
+\DefineRemark{d8150}{\texttt{8150: Operatoerarbejde og andet (FIX SENERE)}}
+\DefineRemark{d8160}{\texttt{8160: Energi- og vandforsyningsanlaegsarbejde}}
+\DefineRemark{d8211}{\texttt{8211: Betjening af maskiner: metalindustrien}}
+\DefineRemark{d8212}{\texttt{8212: Betjening af maskiner: mineralindustrien}}
+\DefineRemark{d8221}{\texttt{8221: Betjening af maskiner: medicinalvare-, saebe- og kosmetikindustrien}}
+\DefineRemark{d8223}{\texttt{8223: Betjening af maskiner: galvanisering}}
+\DefineRemark{d8229}{\texttt{8229: Betjening af maskiner: den kemiske industri i oevrigt}}
+\DefineRemark{d8231}{\texttt{8231: Betjening af maskiner: gummivareindustrien}}
+\DefineRemark{d8232}{\texttt{8232: Betjening af maskiner: plastindustrien}}
+\DefineRemark{d8240}{\texttt{8240: Betjening af maskiner: traeindustrien, eksklusive opstilling}}
+\DefineRemark{d8251}{\texttt{8251: Betjening af trykkerimaskiner}}
+\DefineRemark{d8252}{\texttt{8252: Betjening af bogbinderimaskiner}}
+\DefineRemark{d8253}{\texttt{8253: Betjening af papirbearbejdningsmaskiner}}
+\DefineRemark{d8261}{\texttt{8261: Betjening af maskiner: garnforberedende arbejde, spinderiarbejde}}
+\DefineRemark{d8262}{\texttt{8262: Betjening af vaeve- og strikkemaskiner}}
+\DefineRemark{d8263}{\texttt{8263: Betjening af symaskiner}}
+\DefineRemark{d8264}{\texttt{8264: Betjening af maskiner til efterbehandling}}
+\DefineRemark{d8269}{\texttt{8269: Betjening af andre maskiner  tekstil-, skind- og laedervareindustrien}}
+\DefineRemark{d8271}{\texttt{8271: Betjening af maskiner: slagte- og fiskeindustrien}}
+\DefineRemark{d8272}{\texttt{8272: Betjening af maskiner: produktion af mejeriprodukter}}
+\DefineRemark{d8274}{\texttt{8274: Betjening af maskiner: produktion af bage- og sukkervarer}}
+\DefineRemark{d8275}{\texttt{8275: Betjening af maskiner: produktion af frugt- og groentkonserves}}
+\DefineRemark{d8278}{\texttt{8278: Betjening af maskiner: produktion af drikkevarer}}
+\DefineRemark{d8281}{\texttt{8281: Montering af mekaniske maskiner}}
+\DefineRemark{d8282}{\texttt{8282: Montering af elektrisk udstyr}}
+\DefineRemark{d8283}{\texttt{8283: Montering af elektronisk udstyr}}
+\DefineRemark{d8284}{\texttt{8284: Monterings- og samlebaandsarbejde: produktion af metal-, gummi- og plastvarer}}
+\DefineRemark{d8285}{\texttt{8285: Monterings- og samlebaandsarbejde: produktion af traevarer}}
+\DefineRemark{d8287}{\texttt{8287: Monterings- og samlebaandsarbejde i oevrigt}}
+\DefineRemark{d8290}{\texttt{8290: Betjening af industrimaskiner i oevrigt}}
+\DefineRemark{d8311}{\texttt{8311: Lokomotiv- og elektrofoererarbejde}}
+\DefineRemark{d8312}{\texttt{8312: Betjentarbejde, arbejde m. rangering samt styring af togtrafik}}
+\DefineRemark{d8322}{\texttt{8322: Koersel af hyre- og varevogn}}
+\DefineRemark{d8323}{\texttt{8323: Koersel af bus}}
+\DefineRemark{d8324}{\texttt{8324: Koersel af last- og tankbil m.v.}}
+\DefineRemark{d8332}{\texttt{8332: Entreprenoermaskinfoererarbejde}}
+\DefineRemark{d8333}{\texttt{8333: Kran- og liftfoererarbejde}}
+\DefineRemark{d8334}{\texttt{8334: Truckfoererarbejde}}
+\DefineRemark{d8340}{\texttt{8340: Skibstransportarbejde}}
+\DefineRemark{d9110}{\texttt{9110: Salgs- og servicearbejde primaert ved telefon}}
+\DefineRemark{d9131}{\texttt{9131: Rengoerings- og koekkenhjaelpsarbejde i private hjem}}
+\DefineRemark{d9132}{\texttt{9132: Rengoerings- og koekkenhjaelpsarbejde i oevrigt}}
+\DefineRemark{d9133}{\texttt{9133: Vaskeri- og renseriarbejde}}
+\DefineRemark{d9141}{\texttt{9141: Tilsyns-, vicevaert- og pedelarbejde}}
+\DefineRemark{d9142}{\texttt{9142: Bil- og vinduespolerarbejde}}
+\DefineRemark{d9151}{\texttt{9151: Budtjeneste o.lign.}}
+\DefineRemark{d9152}{\texttt{9152: Vagtarbejde}}
+\DefineRemark{d9161}{\texttt{9161: Renovationsarbejde, eksklusive koersel af renovationsvogne}}
+\DefineRemark{d9162}{\texttt{9162: Arbejde m. gadefejning, snerydning o.lign.}}
+\DefineRemark{d9211}{\texttt{9211: Landbrugs- og gartnerimedhjaelperarbejde}}
+\DefineRemark{d9212}{\texttt{9212: Medhjaelp ved skovbrug}}
+\DefineRemark{d9213}{\texttt{9213: Medhjaelp i fiskerierhverv (paa land) samt medhjaelp ved jagt o.lign.}}
+\DefineRemark{d9312}{\texttt{9312: Jord- og kloakarbejde samt andet anlaegsarbejde}}
+\DefineRemark{d9313}{\texttt{9313: Medhjaelp ved bygningsarbejde}}
+\DefineRemark{d9320}{\texttt{9320: Manuelt arbejde inden for fremstillingsvirksomhed}}
+\DefineRemark{d9330}{\texttt{9330: Manuelt transport- og lagerarbejde uden anvendelse af maskiner eller koeretoejer}}
+
+
+

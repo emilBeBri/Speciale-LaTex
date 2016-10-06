@@ -1,0 +1,180 @@
+%!TEX root = ./report.tex
+%-*- coding: utf-8 -*-
+%!TeX encoding = UTF-8
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ----------- Preamble ------------ %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+% ----------- dokumentclass ------------ %
+
+\documentclass[11pt,a4paper,report,danish,oneside]{memoir} % for a short document
+%brug article til kortere opgaver, hvor en af effekterne er at chapters og sections har samme status
+
+
+% ----------- Font og sprog ------------ %
+
+\usepackage[utf8]{inputenc} % set input encoding to utf8
+\usepackage[T1]{fontenc}
+\usepackage{kpfonts}
+\usepackage[danish]{babel} %dansk sprog
+\renewcommand{\danishhyphenmins}{22} % gør ordopdeling bedre men den er lort i forvejen så hvor slemt kan det være hvis det her er det bedste?! Prøv at eksperimentér med det der tal, 22, se hvad der sker.
+
+
+% \usepackage[avantgarde]{quotchap}   % Pænere kapitler
+
+\usepackage[scaled]{helvet}
+\renewcommand\familydefault{\sfdefault} 
+% \usepackage[T1]{fontenc}
+
+
+% ----------- Sidelayout------------ %
+% Set up the paper to be as close as possible to both A4 & letter:
+\setulmarginsandblock{3cm}{3cm}{*} % 50pt upper margins
+\setlrmarginsandblock{3cm}{3cm}{*} % golden ratio again for left/right margins
+\checkandfixthelayout 
+% Ovenstående er fra the memoir manual
+
+\pagestyle{ruled} % try also: empty , plain , headings , ruled , Ruled , companion
+
+%\SingleSpacing
+\OnehalfSpacing
+%\DoubleSpacing
+%\setstretch{1.1}
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+
+%indholdsfortegnelse
+\renewcommand\cftappendixname{\appendixname~} %gør at der står "bilag A" i stedet for bare "A"
+
+
+
+% Ændre skrifttypen:
+% \renewcommand{\familydefault}{\ttdefault} % typewriter font i hele documentet, men fucker med linjebrydningen/hypernation, ved ikke hvorfor.
+
+
+% ----------- Diverse pakker - rækkefølgen er IKKE ligegyldig ------------ %
+
+%\usepackage{longtable}  For at kunne lave tabeller fx i Stata der rækker over flere sider
+
+\usepackage[table,xcdraw]{xcolor} % farver i tabeller
+\usepackage{enumitem} %en ekstra slags liste 
+\usepackage{float} % for at kunne placere en floater PRÆCIS her med \begin{figure}[H]
+\usepackage{pdfpages} % understøtter inkluderingen af pdf-filer
+\usepackage[plainpages=false,pdfpagelabels,pageanchor=false,hidelinks]{hyperref}   % aktive links
+\usepackage{memhfixc}       % rettelser til hyperref - ved ikke hvad den gør
+\usepackage{booktabs} %fancy tabeller
+\usepackage{tabularx} % til statas tabout
+\usepackage{multirow} % flere rækker i tabeller
+\usepackage{graphicx} % indsæt billeder
+\usepackage{rotating} %tillader figurer der står sidelæns
+\usepackage{csquotes}
+\usepackage{enumitem} %mindre mellemrum mellem items
+\usepackage{dashrule} %stiblede linier i tabeller
+%\usepackage{comment} % kunne sætte sectioner er ikke helt overbevidst om den her er brugbar, måske bare ifelse-løsningen
+\usepackage{nameref} %giver mulighed for at refere til chapters etc med navn i stedet for bare en counter eller sidetal. 
+% \usepackage{bytefield} % til at skabe datafigurer, se http://tex.stackexchange.com/questions/108257/implementing-a-way-to-show-data-structures-in-latex
+\usepackage[normalem]{ulem} %striketrough
+\usepackage{array} %centering 
+\usepackage{wallpaper}
+
+% Test pakker
+\usepackage{appendix} %[toc,page]
+\usepackage{capt-of} % til at sættte figurer og tabeller side-by-side
+\usepackage[table,xcdraw]{xcolor} % farver til tabeller
+\usepackage{courier} %sætter \texttt{} command til courier i stedet for den anden. courier er angiveligt bedre fordi den visuelt er mere forskellig fra standardfonten.
+\usepackage{tcolorbox}
+% \usepackage{siunitx}
+% \sisetup{locale = DA}
+\usepackage{multirow} 
+\usepackage{geometry}
+\usepackage{nicefrac}
+% ----------- Bibliografi ------------ %
+
+%%bibliografi med biblatex
+\usepackage[citestyle=authoryear-ibid, sorting=nty,backend=biber,bibencoding=UTF8,maxcitenames=1]{biblatex}
+%% options til ovenstaaende:
+%% maxcitenames=x styrer antal af forfattere før der står et.al/m.fl.
+%% uniquelist=false/true styrer om den alligevel skal skrive flere navne end specifieret i maxcitenames i tvivlspørgsmål, dvs. hvis en forfatter optræder i flere referencer med andre forfattere.
+
+
+%\usepackage[style=authoryear,backend=biber]{biblatex}
+%bibtex-fil
+
+%lave filtre så bibliografien kan deles op
+\defbibfilter{notonline}{
+  not type=online
+  and not type=manual
+%  and not keyword={DST}
+}
+\defbibfilter{DST}{%
+keyword=DST %keyword er et felt i en bib-entry
+}
+
+\addbibresource{biblio/bibliografi.bib}
+
+
+
+% ----------- Floaters ------------ %
+
+
+%%% Ikke sikker på effekten af følgende. Måske slet, eksperimenter dig frem når du står i en situation hvor du kan se floaters opfører sig underligt.
+%Alter some LaTeX defaults for better treatment of figures:
+    % See p.105 of "TeX Unbound" for suggested values.
+    % See pp. 199-200 of Lamport's "LaTeX" book for details.
+    %   General parameters, for ALL pages:
+    \renewcommand{\topfraction}{0.9}	% max fraction of floats at top
+    \renewcommand{\bottomfraction}{0.8}	% max fraction of floats at bottom
+    %   Parameters for TEXT pages (not float pages):
+    \setcounter{topnumber}{2}
+    \setcounter{bottomnumber}{2}
+    \setcounter{totalnumber}{4}     % 2 may work better
+    \setcounter{dbltopnumber}{2}    % for 2-column pages
+    \renewcommand{\dbltopfraction}{0.9}	% fit big float above 2-col. text
+    \renewcommand{\textfraction}{0.07}	% allow minimal text w. figs
+    %   Parameters for FLOAT pages (not text pages):
+    \renewcommand{\floatpagefraction}{0.7}	% require fuller float pages
+	% N.B.: floatpagefraction MUST be less than topfraction !!
+    \renewcommand{\dblfloatpagefraction}{0.7}	% require fuller float pages
+	% remember to use [htp] or [htpb] for placement
+
+
+% ----------- Egne kommandoer ------------ %
+
+% \newcommand{\5.1}{5.1} (bruges ikke længere men for eksemplets skyld)
+
+% \newcommand{\antalkat}{150} (bruges ikke længere men for eksemplets skyld)
+
+% \fref og venner er defineret saaledes i memoir
+
+% \renewcommand{\fref}[1]{\figurerefname~ef{#1}} 
+% \renewcommand{\tref}[1]{\tablerefname~ef{#1}} 
+% \renewcommand{\pref}[1]{\pagerefname~\pageref{#1}} 
+% \renewcommand{\Pref}[1]{\partrefnameef{#1}} 
+% \renewcommand{\Cref}[1]{\chapterrefnameef{#1}} 
+% \renewcommand{\Sref}[1]{\sectionrefnameef{#1}} 
+
+% og de navne som er anvendt er defineret som det her, dvs her kan man ændre om det er på dansk eller engelsk:
+
+% \renewcommand*{\figurerefname}{Figur} 
+% \renewcommand*{\tablerefname}{Tabel} 
+\renewcommand*{\pagerefname}{side} 
+% \renewcommand*{\partrefname}{Part~} 
+% \renewcommand*{\chapterrefname}{Chapter~} 
+% \renewcommand*{\sectionrefname}{\S} 
+
+% \renewcommand*{\pref}{side} 
+
+
+%Local Variables: 
+%mode: latex
+%TeX-master: "report"
+%End: 
+
+
+
+
+
