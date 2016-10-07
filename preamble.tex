@@ -50,6 +50,26 @@
 %indholdsfortegnelse
 \renewcommand\cftappendixname{\appendixname~} %gør at der står "bilag A" i stedet for bare "A"
 
+% fjerner sidenr fra \part-sider
+\makeatletter
+\renewcommand\part{%
+  \if@openright
+    \cleardoublepage
+  \else
+    \clearpage
+  \fi
+  \thispagestyle{empty}%
+  \if@twocolumn
+    \onecolumn
+    \@tempswatrue
+  \else
+    \@tempswafalse
+  \fi
+  \null\vfil
+  \secdef\@part\@spart}
+\makeatother
+
+
 
 
 % Ændre skrifttypen:

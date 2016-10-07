@@ -22,5 +22,23 @@ nogle gange fucker ting op, og man aner ikke hvorfor. Så er det bare med at pr�
 brug minima moralia som tekst skabelon 
 
 
+Husk dem på at de kan hente mine snippets i mit github repository. Og følge den daglige udvikling i mit speciale! Live!! Følge den magiske proces, hvorigennem speciale bliver til! yeay!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
