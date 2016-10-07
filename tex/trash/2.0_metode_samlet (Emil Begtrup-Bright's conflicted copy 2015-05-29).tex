@@ -1,0 +1,433 @@
+% -*- coding: utf-8 -*-
+% !TeX encoding = UTF-8
+% !TeX root = ../report.tex
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\chapter{KORTLÆGNING AF DE LEDIGE PÅ ARBEJDSMARKED} \label{metode}
+
+
+% \subsection{Skitse over lediges bevægelser på arbejdsmarkedet \label{}}
+
+% \subsection{Case 1: Det faglærte/ufaglærte segment \label{}}
+
+% \subsection{Case 2: De akademiske segmenter \label{}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\section{AT KORTLÆGGE ARBEJDSMARKEDET MED NETVÆRKSANALYSE \label{netvaerksanalyse}}
+
+I dette speciale tilgår vi arbejdsmarkedet som et netværk af forskellige arbejdsstillinger. I netværket bevæger individer sig mellem forskellige typer af arbejdsstillinger. Det sker når en person går fra at være beskæftiget i en arbejdsstilling til at være beskæftiget i en anden arbejdsstilling efter en mellemliggende periode med ledighed eller uden beskæftigelse. Arbejdsstillingerne tager form som noder i netværket, og personernes bevægelser mellem forskellige arbejdsstillinger er det som frembringer  i netværket. Formålet med at anskue arbejdsmarkedet som et netværk er at kortlægge beskæftigelsesmønstre på arbejdsmarkedet for at se, hvilke arbejdsstillinger de ledige bevæger sig imellem, og hvilke arbejdsstillinger de ikke bevæger sig imellem.
+
+\emph{... her skal vi skrive et afsnit på 1-2 sider om MONECA-algoritmen...} %%% #todo
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\section{AT KATEGORISERE ARBEJDSMARKEDET I SEGMENTER \label{disco}}
+
+Social netværksanalyse er en relationel analysemetode. Vi benytter en udgave af denne til at kortlægge lediges beskæftigelsesmobilitet, som Toubøl og Larsen har udviklet til at inddele sociale grupper i større segmenter \parencite{TouboelLarsenJensen2013, TouboelLarsen2015}. Med deres tilgang ligger vi i forlængelse af arbejdsmarkedssegmenteringsteorien udviklet i 1960'erne og 1970'erne (Becker 1993; Hall 1970; Phelps Brown 1977), hvor flere studier viste, at der eksisterede barrierer mellem de gode og de dårlige jobs i forhold til løn og arbejdsvilkår med videre (Bluestone 1971; Doeringer og Piore 1971 og 1975; Gordon 1972; Reich et al. 1973). Det nye i Toubøl og Larsens tilgang er, at metoden generer segmenter a posteriori i stedet for a priori at lave segmenter ud fra et teoretisk perspektiv (fx Osterman 1975; Fichtenbaum et al 1994; Stier og Grusky 1990) eller på baggrund af løn, færdigheder og arbejdsvilkår (fx Boston 1990; Hudson 2007; Daw og Hardie 2012). Men givet at sociale grupper og deres relationer til andre grupper er komplekse, samt at mange grupper kan have relationer til mange andre grupper, hvordan kan man så overhovedet inddele disse grupper i meningsfulde segmenter? Formuleringens forførende enkelhed bør ikke narre nogen. Det er et af sociologiens grundlæggende spørgsmål: Hvad konstituerer en social gruppe, efter hvilke principper finder en sådan konstituering sted, og hvilken betydning har den?
+
+Det er i sin essens spørgsmålet om hvad klasse er, hvordan klasse virker og hvad klasse gør. En række nye bidrag til forskning i klasse, der betoner forskellige traditioner eller forsøger at sammenfatte forskellige indsigter fra disse traditioner, har i løbet af 00'erne og 10'erne vundet indpas, se for eksempel \textcite{Lareau2008}, \textcite{Resnick2006}, \textcite{Savage2013} og \textcite{Andrade2014}. Det er ikke dette speciales hovedformål at klargøre hvad social klasse \emph{er}, eller give et fyldestgørende overblik over diskussionerne omkring det. Det er dog en central og helt nødvendig del af vores opgave, at forholde os til forskellige definitioner af klasse, når specialets primære metode i sin essens handler om at skabe klynger baseret på mobilitet mellem arbejdsstillinger. Det rejser en række spørgsmål om hvorledes man bør inddele i klasser, og hvad styrker og begrænsninger er i vores måde at klassificere forskellige subgrupper af ledige på. Man kunne sige at et spøgelse vil gå gennem specialet - klasssespørgsmålets spøgelse. Vi vil med jævne mellemrum fremmane dette spøgelse for læseren, således at denne med egne øjne kan se, hvordan det animerer vores arbejde.
+
+\subsection{Mentale kategoriseringer og Bourdieu}
+
+Det første vi rent praktisk har stået overfor, er vores inddeling af beskæftigelseskategorier fra \texttt{DISCO}, som vil blive uddybet i afsnit \ref{disco_omkodninger}. Her stod vi overfor at skulle sammenlægge en række beskæftigelseskategorier, da det ikke er muligt at benytte alle de knap ottehundrede forskellige \texttt{DISCO}-kategorier, af åbenlyse årsager, relateret til overskuelighed. Bourdieu beskriver, hvordan der eksisterer en homologi mellem de sociale og mentale strukturer, mellem de objektive adskillelser i den sociale verden og de perspektiver, agenterne selv ser denne verden igennem \parencite[12]{Bourdieu1992}. Deraf følger, at ethvert blik på disse strukturer er svært adskilleligt fra éns egen position i det sociale rum. Vi vil have tendens til at kende de felter, vi selv er i berøring med, bedre end de felter, vi ikke kender til, da vores kategorier til at forstå verden igennem ikke er individuelle, men kollektive repræsentationer, og de er struktureret ud fra den eller de sociale grupper, vi befinder (eller har befundet) os i \parencite[12]{Bourdieu1992}. Der opstår en forvrængning, “\emph{alene af den grund, at for at kunne strukturere, beskrive og fremstille det, må man i samme bevægelse i videst muligt omfang lægge afstand til det. Her sker der typisk en forvrængning, fordi man i den teoretiske model, der konstrueres af det sociale, glemmer at den er et produkt af en teoretisk og distancerende holdning. En refleksiv sociologi i ordets egentlige betydning må konstant være på vagt over for den form for “akademisk etnocentrisme”, der overser alt det, forskeren indlæser i undersøgelsesgenstanden, i kraft af at han eller hun befinder sig udenfor den og studerer den på afstand og oppefra.}” \parencite[62]{Bourdieu1996}. Det findes næppe en måde mere “på afstand og oppefra” end at se på registerdata gennem en VPN-forbindelse til Danmarks Statistiks servere. Der er en voldsom afstand til den praksis vi forsøger at beskrive, og det er helt centralt, at vi og læseren hele tiden forholder sig til de vilkår for analysen%
+%
+\footnote{Under dataarbejdet sad vi og skulle tjekke om min kode for inddeling i ledighedsperioder tog højde for en række scenarier. Vi plejer at vælge 20-30 paneler ud, som vi så kigger på for at se om koden gør det den skal. Her sad vi og kiggede på om vores ledighedsvariabel opførte sig som ønsket. Det er derfor interessant at se på dem der ryger ind og ud af ledighed flere gange i perioden, for at se om koden er fleksibel nok til at kategorisere dem korrekt. vi sad derfor og kiggede på et panel, der havde 3 års beskæftigelse fra 1996 til 1999, efterfulgt af revalideringsydelse, derefter arbejde et enkelt år, og diverse overgangsydelser frem til 2009. De fleste af panelets udfald i \texttt{SOCSTILL} var koderne \texttt{325}, \texttt{326} og \texttt{322}. De koder stod for revalideringsydelse, kontanthjælp og dagpenge. Det går pludselig op for mig, at det her ikke bare er et panel, det er konkret menneske, der mellem 1996 og 2009 oplevede en voldsom deroute. At det overhovedet er muligt at opleve så abstrakt en relation til et “element” i sit genstandsfelt, at man får oplevelsen af at vågne ud af abstraktionen, og tænke “gud, det er et menneske”, det siger meget om farerne ved den metode vi har valgt at gå til arbejdsløshed på. Bourdieu skriver i indledningen til \emph{The Weight of the World}, “the discussion must provide all the elements necessary to analyze the interviewees' positions objectively and to understand their point of view, and it must accomplish this without reducing the individual to a specimen in a display case” \parencite[2]{Bourdieu1999}. Der er en klar væsensforskel i metode som gør den metodemæssigt kvalitativt orienterede \emph{The Weight of the World} har nemmere ved at forholde sig direkte til dem, der undersøges, men idealet er centralt og bør nok særlig forfølges af dem, der - som os - benytter redskaber, der fordrer eller hvis grundlag måske ligefrem c\emph{er} denne \emph{specimen}-tilgang.}. 
+%
+Et eksempel på denne proces opstod tidligt i kategoriseringsprocessen. Her skulle Emil vurdere hvilke grupper indenfor den overordnede kategori, \emph{Assistentarbejde indenfor sundhedssektoren} (\texttt{3220}), der kunne lægges sammen. Emil havde enormt svært ved at lægge gruppen \emph{Arbejde med emner inden for fysioterapi, kiropraktik mv.} (\texttt{3226}) sammen med gruppen \emph{Arbejde med emner inden for ergoterapi, zoneterapi, yoga med videre} (\texttt{3229}). Han kunne jo se, at det jo er to helt forskellige ting! Fysioterapeuter og kiropraktikere er accepterede og institutionaliserede dele af sundhedssektoren, mens den anden kategori indeholder sundhedsrelaterede behandlere, der befinder sig i randen af disse institutioner. Emil har gået til yoga, og han har en fornemmelse af, at de ikke er samme typer som fysioterapeuter og kiropraktorer. Dem kunne han da umuligt lægge sammen, da det ville være at gøre vold på den sociale virkelighed. Så gik det op for Emil, at han en halv time forinden havde slået alle undergrupper, der arbejder med teknikerarbejde, sammen til en enkelt gruppe, og dét uden at blinke. Vi taler om mennesker, der laver så forskelligartede ting som at arbejde med elektroniske anlæg\footnote{Såsom byggetekniker og landmaalingstekniker.}, bygningsrelateret anlægsarbejde\footnote{Såsom elektroniktekniker, køletekniker, teletekniker.} og arbejde vedrørende maskiner og røranlæg \footnote{Såsom gastekniker, konstruktør, maskintekniker, VVS-tekniker, værktøjstekniker. Dette er “\emph{eksklusiv vedligeholdelse af maskiner ombord på skibe}”.}. Der er tale om en gruppe arbejdsfunktioner, der i gennemsnit beskæftiger 40.507 mennesker om året. Til sammenligning beskæftigede gruppen af fysioterapeuter og kiropraktikere 12.499 personer, mens yogalærerne og zoneterapueterne beskæftigede 2.382, i alt 14.811 personer, under halvdelen af antallet med teknikeruddannelserne. Emil kender ingen køleteknikere, vejrobservatøre, gasteknikere eller laborante, men han kender en fysioterapeut og flere der har taget diverse yogalæreruddannelser. Det er en kæmpeudfordring i forbindelse med dette projekt. Det er helt nødvendigt og udemærket at benytte sin faglige og personlige viden om sociale relationer, vilkår og status tilknyttet forskellige beskæftigelser til at skabe nogle meningsfyldte grundkategorier. Om man “bør” gøre det giver efter vores opfattelse et spørgsmål med omtrent som meget mening som “bør man rette sig efter tyngekraften?”. Det er i bedste fald naivt. Der findes ikke en taksonomi, der står udenfor de sociale kampe, disse taksonomier er et produkt af. Særligt med sammensatte og til en vis grad abstrakte inddelinger som “beskæftigelseskategorier” må vi gå til opgaven med omtanke. Som Bourdieu skriver i \emph{Practical Reason}:
+%
+ \begin{quote} \small %\raggedright %(bloktekst on/off)
+	To endavour to think the state is to take the risk of taking over (or being taken over by) a thought of the state, that is, of applying to the state categories of thought produced and 	guaranteed by the state and hence to misrecognize its most profound truth. \sourceatright{\parencite[35]{Bourdieu1998}}
+ \end{quote}
+ % 
+Her er inddelingen af teknikere farlig, da den har en tilsyneladende og \emph{troskyldig} objektivitet bag sig. I en vis forstand er den rimelig nok, da disse opdelinger i eksempelvis tekniker-kategorierne ud fra arbejdsfunktion- og færdighedsskøn sandsynligvis godtgør nogle delte sociale vilkår, der også er omsat til kognitive strukturer for den enkelte. I moderne samfund er homologien mellem sociale strukturer og kognitive strukturer i høj grad formet af uddannelsessystemet som en, hvis ikke den, afgørende smeltedigel for de habituelle dispositioner hos agenterne \parencite[12]{Bourdieu1992}. Det er klart, at i et samfund der i så høj grad kræver institutionaliseret kulturel kapital gennem uddannelsesystemet, vil der være tilbøjelighed til at de lignende vilkår skabt igennem dette system også kommer til udtryk i delt socialtet. Der er derfor en vis fornuft i benytte sig af et klassifikationsystem, der bruger dette som udgangspunkt for inddelingen. Omvendt vil en for stor tiltro til denne inddeling vanskeliggøre netop den opgave, vi har stillet os selv, nemlig at fremvise et systematiske forskelle og ligheder mellem ledige baseret på de mønstre, som deres jobmuligheder giver dem, og se hvordan det hænger sammen med fordelingen af andre slags ressourcer. 
+
+\texttt{DISCO} har her nogle ganske fornuftige egenskaber, i og med den det er baseret på hvilken arbejdsfunktion, der udføres, det vil sige arbejdsopgaver, der har en høj grad ligner hinanden, samt kriterier for det færdighedsniveau, de udføres på \textcite{DST2014b}. Dette skulle gerne godtgøre en vis grundlæggende enshed i de førnævnte kognitive og sociale strukturer, så længe at befinder os på et tilstrækkeligt detaljeret niveau. Problemet er at en højere-ordensinddeling på et (stærkt) teoretisk eller administrativt funderet grundlag, ikke har evnen til at indfange feltspecifikke logikker, funderet i praksis. Der er en pendant til når Bourdieu kritiserer  sociologisk reduktionisme, som det kommer til udtryk ved at direkte relationer etableres mellem et kulturelt udtryk og de sociale klasser, de formodes at være beregnet til eller udspringer fra. Det 
+
+
+
+Her vil netop “\emph{enshed i arbejdsfunktion}” og “\emph{}”
+
+
+
+
+
+Det er en naturligvis en illusion at tro på den rene induktion, men det er for os et mål at danne så praksisfølsom en model som overhovedet muligt. Udfordringen er ikke benytte disse kategorier, som staten har stillet til rådighed for os, på en sådan måde, at præcisionen i den sociale inddeling er størst indenfor de felter, vi selv har en relation til, og stort set ikke-eksisterende på de felter, vi ikke kender til, hvor vi bliver nødt til at forlade os på statens højere kategori-niveauer. Det har vi forsøgt at undgå ved at benytte så lavt et niveau som er praktisk muligt i vores \texttt{DISCO}-inddeling, da det ikke altid er muligt at benytte sig af kategorierne på det laveste niveau. Og selvom der er tale om statens kategorier - og den sunde reminder om at man altid bruge “nogle andres” kategorier - så har 
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Operationalisering af Danmarks Statistiks \texttt{DISCO}-inddeling} \label{disco_dst}
+
+Til at kortlægge arbejdsstillinger benytter vi os af DSTs. \texttt{DISCOALLE\_INDK}-variabel\footnote{\texttt{DISCO} er den officielle danske version af den internationale fagklassifikation, International Standard Classification of Occupations (ISCO), som er blevet udviklet af International Labour Organisation (ILO).} til at kategorisere de forskellige arbejdsstillinger i en matrice som består af \textbf{150} gange \textbf{150} celler, hvor cellerne står for antallet af skift fra række-kategorierne til søjle-kategorierne. Da fagklassifikationen løbende udskiftes, fraråder DST at sammenligne arbejdsstillinger over en periode, hvor der er flere forskellige typer af fagklassifikationer. Derfor har vi besluttet os for kun at benytte os af \texttt{DISCOALLE\_INDK} som følger \texttt{DISCO-88}-fagklassifikationen i perioden 1991 til 2009. Denne fagklassifikation blev erstattet i 2010 af \texttt{DISCO-08}-kategoriseringen, hvilket betyder, at vi har fravalgt perioden efter 2009, fordi DST der er så store databrud mellem de forskellige fagklassifikationer at DST fraråder, at man bruger flere sammen.
+
+Strukturen i \texttt{DISCO-88} er udarbejdet a priori og inddelt hierarkisk i hovedgrupper ud fra færdigheder på arbejdsmarkedet. Den første hovedgruppe består af ledelse, den anden består  primært af akademikere, den tredje består primært af personer med korte og mellemlange videregående uddannelser, de fire næste består af personer med baggrund i grundskolen, erhvervsskole og gymnasieskolerne og den sidste består af arbejdsstillinger som ikke kræver uddannelsesfærdigheder. For at lave segmenter a posteriori, omdanner MONECA-logaritmen \texttt{DISCO}-kategorierne til en ny struktur ud fra de lediges reelle beskæftigelsesmønstre på arbejdsmarkedet. Dette betyder, at det ikke længere for eksempel er uddannelseslængde som er afgørende for hvilket segment man er i. Dette betyder for eksempel, at sundhedsvidenskabelige akademikere som farmaceuter, læger og tandlæger ikke er et segment, fordi der ikke er nogen sammenhæng mellem bevægelserne mellem disse arbejdsstillinger. Derfor adskiller vi os fra DST og arbejdsmarkedssegmenteringen som netop ville samle disse arbejdsstillinger, fordi man skal have en akademisk uddannelse og det er arbejde inden for sundhedsområdet.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Den lange rejse mod de mest anvendelige \texttt{DISCO}-omkodninger} \label{disco_omkodninger}
+
+For at lave vores datadrevede segmenter kræver det en kraftig reducering af de 794 forskellige arbejdsstillinger i \texttt{DISCOALLE\_INDK} til de 150 kategorier vi endte med at behandle med MONECA-logaritmen. Denne reducering har været nødvendigt for, at der er nok personer inden for de forskellige arbejdsstillinger før det er meningsfuldt at kigge på bevægelser, hvilket slet ikke er tilfældet for mange af værdierne i \texttt{DISCOALLE\_INDK} seks-cifrede værdisystem. Eksempelvis er der i 2005 kun to, to og fire personer som lavede mineanlægsarbejde (\texttt{811100}), var motorcykelbude (\texttt{832100}) og lavede pantelånerarbejde (\texttt{421400})e.
+
+Det første skridt er at reducere værdierne fra et seks-cifret niveau til et fir-cifret niveau. Dette valg er helt naturligt for os tage, fordi det alligevel først er fra 2003, at \texttt{DISCOALLE\_INDK} er på seks-cifret niveau, hvor det før 2003 er på et fir-cifret niveau. Som det fremgår af tabel \ref{tab_reducering} har vi reduceret \emph{Rengørings- og køkkenhjælpsarbejde} fra seks til fire cifre. I praksis betød det, at rengøring af kontorer, beboelsesområder, hospitaler, fabrikslokaler og passerområder i fly, tog og busser, medhjælp i køkken, afrydder i restauranter, klargøring af værelser på hoteller og serviceassistentarbejde kommer til at ligge under \emph{Rengøring, køkkenhjælp mv. (ikke private hjem}.
+% 
+\begin{table}[H] \centering
+\caption{Eksempel på reducering af \texttt{DISCOALLE\_INDK}. Kilde: DST}
+\label{tab_reducering}
+\begin{tabular}{@{}ll@{}} \toprule
+Værdi  & Arbejdsstilling \\ \midrule
+  \texttt{9130\sout{00}} & \textbf{Rengørings- og køkkenhjælpsarbejde} \\ \hline
+  \texttt{9131\sout{00}} & \textbf{Rengørings- og køkkenhjælpsarbejde i private hjem} \\ \hline
+  \texttt{9132\sout{00}} & \textbf{Rengøring, køkkenhjælp mv. (ikke private hjem)} \\ 
+  \texttt{9132\sout{10}} & \sout{Rengøring af kontorer og beboelsesområder} \\ 
+  \texttt{9132\sout{20}} & \sout{Rengøring på hospitaler o.l.} \\ 
+  \texttt{9132\sout{30}} & \sout{Rengøring af fabrikslokaler o.l.} \\ 
+  \texttt{9132\sout{40}} & \sout{Medhjælp i køkken} \\ 
+  \texttt{9132\sout{45}} & \sout{Afrydder i restauranter o.l.} \\ 
+  \texttt{9132\sout{50}} & \sout{Klargøring af værelser på hoteller o.l.} \\ 
+  \texttt{9132\sout{60}} & \sout{Rengøring af passagerområder i fly, tog og busser} \\ 
+  \texttt{9132\sout{70}} & \sout{Serviceassistentarbejde, tværgående serviceopgaver mv.} \\ \hline
+  \texttt{9133\sout{00}} & \textbf{Vaskeri- og renseriarbejde} \\ \bottomrule
+\end{tabular} \end{table}
+% 
+Ved at gå fra seks til fire cifre går vi fra at have 794 til 492 forskellige arbejdsstillinger. De 492 arbejdsstillinger er inddelt i 10 hovedgrupper (et-cifret niveau), 27 overgrupper (to-cifret niveau), 111 mellemgrupper (tre-cifret niveau) og 372 undergrupper (fir-cifret niveau), hvor detaljeringsgraden øges, jo flere cifre man betragter. Hvis vi eksempelvis kigger nærmere på os selv som sociologer (hvis vi vel og mærket ikke havde været specialestuderende, men ansat som sociologer) hører vi under alle fire af disse niveau alt afhængigt af hvilken detaljeringsgrad man benytter sig af:
+% 
+\begin{table}[H] \centering
+\caption{Eksempel på reducering af \texttt{DISCOALLE\_INDK}. Kilde: DST}
+\label{tab_reducering}
+\begin{tabular}{@{} l m{11cm} @{}} \toprule
+Værdi  & Arbejdsstilling \\ \midrule
+  \texttt{2000} & Arbejde, der forudsætter færdigheder på højeste niveau inden for pågældende område. \\ 
+  \texttt{2400} & Forskning og/eller anvendelse af færdigheder inden for samfundsvidenskab og humaniora. \\ 
+  \texttt{2440} & Arbejde med emner inden for samfundsøkonomi, samfundsfag og humaniora samt overordnet socialrådgivningsarbejde. \\ 
+  \texttt{2442} & Arbejde med emner inden for sociologi og antropologi. \\ \bottomrule
+\end{tabular} \end{table}
+%
+Det næste skridt er at udarbejde kategorierne til MONECA-algoritmen. I vores \textbf{første} kortlægning anvendte vi præcis de samme kategorier, som Toubøl og Larsen selv har anvendt \parencite{TouboelLarsen2015}. Vi besluttede os dog hurtigt for at producere nogle alternative kategorier, fordi vores fokus er et andet end Toubøl og Larsens. For det første anvender vi kun \texttt{DISCOALLE\_INDK} (\texttt{DISCO-88}-fagklassifikationen), mens Toubøl og Larsens anvender både den og \texttt{DISCO08\_ALLE\_INDK} (\texttt{DISCO-08}-fagklassifikationen). Dette betyder, at vi ikke behøver at forholde os til databrud mellem de to variable. For det andet anvender vi i modsætning til Toubøl og Larsen DSTs imputerede værdier\footnote{DST anvender imputerede værdier, når det ikke har været muligt at fastlægge værdien på et mere detaljeret niveau, hvor de så har indhentet information om \texttt{DISCO} fra et andet register end registret for lønstatistik.} med henblik på, at de imputerede værdier er arbejdsstillinger som DST har haft sværere ved at indhente informationer på, hvilket kan være et udtryk for de arbejdsstillinger som er på kanten af arbejdsmarkedet. Dette betyder, at vi inkluderer observationer på de et-cifrede, to-cifrede og tre-cifrede niveauer, så der er mulighed for at få kategorierne \texttt{2000}, \texttt{2400} og \texttt{2440} fra det føromtalte eksempel med sociologerne. \emph{...det skal nok uddybes lidt og eventuelt suppleres med en tabel...} %%% #todo
+
+I den \textbf{anden} kortlægning anvendte vi Toubøl og Larsens kategorier sammen med ni nye kategorier af alle de imputerede værdier uanset om de var på et et-, to- eller tre-cifret plan inden for hver af hovedgrupperne\footnote{På nær militært arbejde som er den eneste hovedgruppe uden flere detalje-niveauer.}. De imputerede værdier inden for hovedgruppen af akademikere fik eksempelvis navnet \emph{Ukendt arbejde, der forudsætter færdigheder på højeste niveau}. Denne løsning førte imidlertidigt til, at de forskellige kategorier inden for hver hovedgruppe fik kategorierne inden for hovedgrupperne til at klumpe sig sammen \emph{Ukendt arbejde, der forudsætter færdigheder på højeste niveau} består af alt muligt forskelligt akademisk arbejde, og derfor har økonomerne og lægerne mulighed for at blive bundet sammen til et segment via denne kategori uden, at de reelt har nogen som helst reel forbindelse til hinanden. For at illustrere det med et eksempel med en person som gik fra beskæftigelse som læge i 2000 til at være ledige i 2001 og så til beskæftigelse i kategorien ukendt arbejde i 2002. Hvis denne type af bevægelser ville ske for tilstrækkeligt med læger og økonomer, ville kategorierne af læger og økonomer hver for sig være så tæt bundet til ukendt arbejde, at de også ville komme til at blive bundet sammen i et segment, hvilket er uacceptabelt, da de reelt ikke har forbindelse til hinanden.
+
+I den \textbf{tredje} og sidste kortlægning dannede vi vores helt egne kategorier. For at få så mange som muligt af observationerne inden for de imputerede værdier med har vi samlet værdierne på et tre-cifret niveau, hvis det har været meningsfuldt. \emph{... Beskriv fordelen. Ekstra observationer samt problemer....}. %%% #todo 
+
+Gruppen \emph{Juridisk præget arbejde} (\texttt{2420}) har de tre undergrupper \emph{Advokatarbejde} (\texttt{2421}), \emph{Dommerarbejde} (\texttt{2422}) og \emph{Juridisk præget arbejde i øvrigt} (\texttt{2429}). I stedet for at advokaterne og dommerne befinder sig i hver deres kategori og der ses bort fra det imputerede niveau og det øvrige juridske arbejde, har vi valgt at samle dem til kategorien \emph{Advokat, dommer og andet juridisk arbejde}. Et eksempel på, hvor vi har vurderet, at det ikke har været meningsfyldt at samle værdierne på et tre-cifret niveau er for \emph{Arbejde med emner inden for medicin, odontologi, veterinærvidenskab og farmaci} (\texttt{2220}), hvor undergrupperne \emph{Lægearbejde} (\texttt{2221}), \emph{Tandlægearbejde} (\texttt{2222}), \emph{Veterinærarbejde} (\texttt{2223}), \emph{Farmaceutarbejde} (\texttt{2224}) og \emph{Jordemoderarbejde, overordnet sygeplejearbejde med videre} (\texttt{2230}) hver er blevet til kategorier for sig selv bortset fra på det tre-cifrede niveau (\texttt{2220}) og undergruppen \emph{Arbejde med emner inden for medicin, odontologi, veterinærvidenskab og farmaci i øvrigt} (\texttt{2229}) som er blevet samlet til kategorien \emph{Arbejde med emner inden for medicin, odontologi, veterinærvidenskab og farmaci i øvrigt}. \emph{... skriv lidt mere ud...} %%% #todo
+
+Hvis en kategori er et segment i sig selv, har vi enten splittet kategorien op eller samlet dem med andre kategorier. Det har vi eksempelvis gjort med \emph{Overvågnings- og redningsarbejde} (\texttt{5160}) som først var en kategori for sig selv på et tre-cifret nievau, men da den også var et segment for sig selv besluttede vi os for at splitte den op i undergrupperne \emph{Brandbekæmpelse} \texttt{5161}, \emph{Politiarbejde} (\texttt{5162}), \emph{Overvågningsarbejde i fængsler} (\texttt{5163}), mens det tre-cifrede nievau \texttt{5160} blev samlet med undergruppen \texttt{5169} \emph{Overvågnings- og redningsarbejde i øvrigt}, hvilket fører til, at politi og fængselsbetjente holder sig i et segment hver for sig, mens resten samler sig i hver deres segmenter. Vi har ikke samlet kategorierne som er segmenter i sig selv, hvis det ikke har været meningsfuldt for eksempel ved læger, tandlæger og efterfølgende politi- og fængselsbetjente.
+
+Hvis kategorierne har haft færre end 100 skift har vi som regel samlet dem med andre kategorier, fordi fordi de er mindre end 0,01 \% af alle beskæftigede, det vil sige det er meget små kategorier. Det er dog to tilfælde, hvor vi ikke har samlet dem. Vi har eksempelvis ikke samlet  samlet \texttt{2120} \emph{Arbejde med matematik, aktuariske og statistiske metode} med andre, fordi det allerede er en kategori på et tre-cifret nievau og den samle sig i et segment med andre kategorier.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Kvalitetssikring af vores \texttt{DISCO}-kategorier \label{disco_kvalitet}}
+
+For at kvalitetssikre kortlægningen har vi forholdt os kritisk til den inddeling af \texttt{DISCO}-kategorierne vi har lavet. Korterne er derfor blevet ændret løbende eftersom nye kategorier er kommet til og gamle er blevet sløjfet.
+
+Figur \ref{fig_hist_beskaeftigede_allekategorier} viser antallet af personer i de \antalkat kategorier, vi arbejder med, for henholdsvis alle beskæftigede og ledige. Eftersom vi arbejder med en 14 års periode, har vi taget gennemsnittet af hvert kategori over denne periode. Antallet af personer i kategorien skal derfor tolkes som det gennemsnitlige antal beskæftigede inden for denne kategori i perioden 1996 til 2009. For de ledige er forskellen, at figuren er begrænset til de personer, der har været ledige i denne periode. Kategorierne er desuden farveskaleret efter størrelse, således at kategorierne går fra grå til orange, desto større de er. Det er ikke meningen at figuren skal give detaljeret indsigt i hver enkelt af de \antalkat kategorier. Vi bruger netop MONECA for at kunne reducere antallet kategorier til et overskueligt antal. - men blot et overblik over vores grundkategorier, så læseren kan følge processen, som argumenteret for i afsnit \ref{...}. %%% Her henvises til afsnittet Emil skriver med udgangspunkt i Carol-bogen! #todo
+% 
+\begin{figure}[h]
+\begin{centering}
+	\caption{Antallet af beskæftigede indenfor disco-kategorierne}
+	\includegraphics[width=\textwidth]{fig/metode/hist_beskaeftigede_allekategorier.pdf}
+	\label{fig_hist_beskaeftigede_allekategorier}
+\end{centering}
+\end{figure}
+% man kunne muligvis indsætte figuren som set her, og så lave en stor version der kunne henvises til og som ligger i bilaget. Man kunne muligvis også i Illustrator fx, inddele figuren i de grupper som tabellen nedenfor beskriver.  #ideer
+
+Det ses tydeligt af figur \ref{fig_hist_beskaeftigede_allekategorier}, at enkelte kategorier er voldsomt meget større end resten, mens der er en lang hale af små kategorier. En række forskellige hensyn har spillet ind i denne inddeling, som tidligere har været berørt mere teoretisk, men som også er drevet af nogle praktiske begrænsninger og hensyn, som ovenstående figur kan give anledning til at diskutere. I tabel \ref{tab_discokat_grup} er \texttt{DISCO}-kategorierne inddelt i percentil-intervaller, der er bestemt ud fra den fordeling vi kan se i figur \ref{fig_hist_beskaeftigede_allekategorier}. Den eneste forskel er at fordelingen er præsenteret i procent fremfor antal personer. %B ør der her stå noget med i "i procent af det (gennemsnitlige) samlede antal beskæftigede i perioden", just to spell it out?   % betratningner om god mening det giver at identificere folk der er ledige indenfor beskæftigelseskategorier. 
+
+Tabel \ref{tab_discokat_grup} viser også den største og mindste kategori indenfor hver af de to populationer. De to mindste kategorier med kun 171 ledige i gennemsnit er kategorien \emph{Arbejde med emner inden for medicin, odontologi, veterinaervidenskab og farmaci i øvrigt
+} (der blandt andet tæller arbejdsmiljøkonsulent) og kategorien \emph{Arbejde med matematik, aktuariske og statistiske metoder} (der blandt andet tæller aktuar og statistiker). Der kan være stor forskel på hvor en \texttt{DISCO}-kategori er i henholdsvis populationen af alle beskæftigede og ledige, hvilket vi vil gå mere detaljeret ind i senere. De fleste af de ti mindste kategorier er dog de samme i begge populationer, med maks 260 personer i kategorien blandt ledige og ca. 2000 blandt alle  beskæftigede. Der er tale om højt specialiseret arbejde, der ikke nødvendigvis kræver en lang \emph{uddannelse}. Udover de to føromtalte tæller det arbejde som flymekaniker, håndarbejde i træ og tekstil, glaspuster og keramiker, driller på boreplatforme og mineanlægsrelateret arbejde. Der er ingen klar systematik i relation til disco-hierarkisering, det definerende kendetegn lader til at være det nicheprægede element, hvilket vel nærmest er tautologisk.
+
+Den næste kolonne i tabellen skal læses således, at de disco-kategorier, der har under 1 \% af det samlede antal, udgør 39 \% af alle de ledige, når de summeres, og består af 124 af de 150 kategorier. Derefter udgør de disco-kategorier, der har mellem 1-2 \% og 2-3 \%, henholdsvis 17 \% og 19 \% af totalen, mens de fem største kategorier står for 25 \% af det totale antal ledige%
+%
+\footnote{Af hensyn til formidlingen har vi valgt at skrive “1-2 \%” og “2-3 \%”, men rent teknisk operer vi med “1-1,999 \%” og “2-2,999 \%”. Ingen af grupperne rammer dog disse grænsetilfælde, derfor vælger vi at prioritere formidling højest.}%
+%
+. Hvis man sammenligner med den hovedpopulation, som de ledige kommer fra, alle beskæftigede, så er forskellen, at blandt alle beskæftigede er den lange hale tykkere. kategorierne under 2 \% udgør tilsammen 68 \%, fremfor 56 \% hos de ledige. Denne forskel i tyngde er hos de ledige forskudt op så gruppen af semi-store kategorier på mellem 2-3 \% er noget større, og gruppen af de fem største kategorier har 25 \% af fordelingen fremfor 20 \% blandt alle beskæftigede. Som nævnt i det foregående afsnit har det høj prioritet for os at at give plads til at praksis driver segmenteringen, så vidt muligt.  Det betyder at vi har overvejet forskellige inddelinger, blandt andet at lade os styre mere af fordelingen blandt ledige fremfor alle beskæftigede. Det ville dog være en fejlslutning, da ovenstående forskel i tyngde med stor sandsynlighed skal tolkes som udtryk for, at risikoen for ledighed varierer indenfor forskellige jobtyper, og dermed indenfor forskellige sociale grupper, hvilket er præcis det, vi ikke vil pille ved. Vi vender tilbage med en analyse af det i afsnit \ref{ledighedsrisiko}, foreløbigt skal det bare konstateres, at derfor foregår \texttt{DISCO}-kategoriseringen primært hensyn til fordelingen blandt alle beskæftigede, og her er det meget tilfredsstillende, at 68 \% af fordelingen, eller 1.649.859 i gennemsnit over perioden, er beskæftigede i den lange hale.
+% 
+\begin{table}[H]
+\centering
+\caption{Disco-kategorier grupperet efter andele}
+\label{tab_discokat_grup}
+\begin{tabular}{@{}lrrrrrrr@{}}
+\toprule
+\multicolumn{1}{c}{}      & \multicolumn{1}{c}{Minimum} & \multicolumn{1}{c}{Maksimum} & \multicolumn{1}{c}{Total} & \multicolumn{1}{c}{\textless 1 \%} & \multicolumn{1}{c}{1-2 \%} & \multicolumn{1}{c}{2-3 \%} & \multicolumn{1}{c}{3-7 \%} \\ \midrule
+Ledige                    & 165                         & 41.900                       & 656.927                   & 39 \%                              & 17 \%                      & 19 \%                      & 25 \%                      \\
+\textit{Antal kategorier} & -                           & -                            & 150                       & 124                                & 13                         & 8                          & 5                          \\
+Beskæftigede              & 464                         & 115.100                      & 2.440.511                 & 42 \%                              & 26 \%                      & 12 \%                      & 20 \%                      \\
+\textit{Antal kategorier} & -                           & -                            & 150                       & 122                                & 18                         & 5                          & 5                          \\ \bottomrule
+\end{tabular}
+\end{table}
+% 
+Gruppen med de fem største kategorier er desuden kendetegnet ved at bestå af primært en enkelt subkategori på det fir-cifrede \texttt{DISCO}-niveau. Det betyder at vi simpelthen ikke kan gå længere ned i detaljegrad, og det er således en praktisk omstændighed, vi ikke kan undslippe i vores arbejde med registerdata. Disse kategorier består af arbejde indenfor hovedgruppe 4, 5 og 9 i \texttt{DISCO}-klassifikationen. Det vil sige \emph{Almindeligt kontor- og kundeservicearbejde (4)}, \texttt{Service- og salgsarbejde (5)} og \emph{Andet manuelt arbejde (9)}. Det er ikke overraskende at arbejde indenfor disse kategorier er meget udbredt, og (læs Lars Olsen og sammenlign omkring skredet til servicearbejde, den danske arbejderklasses sammensætning, den slags). %%%% \#todo
+ 
+% 5133
+% 4110
+% 5131
+% 5200
+% 9130
+
+% Social- og sundhedspersonale i private hjem (hjemmehjælp)
+% Rengørings- og køkkenarbejde
+% Alment kontorarbejde
+% Privat børnepasning 
+% Demonstrationsarbejde Butiksmedarbejder, demonstratoer, kasseassistent, kommis, togsteward
+
+I tilfældende  \emph{rengørings- og køkkenarbejde} (41.897 personer eller 6,4 \%), \emph{alment kontorarbejde} (27.527 personer eller 4,2 \%) og \emph{Ekspedient-, kasse-,  demonstrations- og modelarbejde} (36.078 personer eller 5,5 \%), er en enkelt kategori på det fir-cifrede niveau blevet lagt sammen med de andre fir-cifrede kategorier indenfor sit tre-cifrede niveau, fordi denne enkelte kategori udgør langt størstedelen af den samlede tre-cifrede kategori på niveauet over. Eksempelvis udgør arbejdet med \emph{alment kontorarbejde} omtrent 94 \% af gruppens indhold, mens de andre fir-cifrede kategorier, der omhandler \emph{EDB-indtastningsarbejde}, \emph{andet indtastningsarbejde på regnemaskine m.v.}%
+%
+\footnote{I denne jobtype hvor informationsteknologiens udvikling har skabt omfattende ændringer af arbejdsgange bliver er det tydeligt at jobbeskrivelserne er løbet fra sproget i \texttt{Disco'88}.}%
+%
+samt \texttt{arbejde med stenografering}, udgør de resterende 6 \%. Vi har derfor kaldt gruppen for \texttt{alment kontorarbejde}. Samme logik gælder for de andre to kategorier.
+
+Her adskiller kategorien\texttt{Privat børnepasning} og \texttt{Omsorgsarbejde i private hjem
+} sig. De er lavet udelukkende fra det 4-cifrede disko-niveau. Det kan umiddelbart forekomme spøjst. \texttt{Privat børnepasning} har også blandt alle beskæftigede en betragtelig andel af alle ansættelser, og har her en 4. plads med sine 3,3 \% af alle beskæftigede. Eftersom den er taget direkte fra det 4-cifrede niveau, har vi intet ændret fra den oprindelige disco-variabel.
+
+Det er mindre mystisk hvis man ser på, hvorledes \texttt{pædagog} udgør 2,4 \% af de ledige og 2,5 \% af de beskæftigede, med henholdsvis en 8. og en 7. plads over største kategorier. Folkeskolelærer kommer lige efter. Man må bare konstatere, at børnepasning, at opdrage den næste generation, udgør en væsentlig del af det samfundsmæssige arbejde. % skriv samme pointe med at passe på ældre, når først vi har opdateret moneca og splittet ældre- og omsorgsarbejde op i to.
+
+Derefter bevæger vi os op til de mest iøjnefaldende kategorier, jævnfør figur \ref{fig_hist_beskaeftigede_allekategorier}, der udgør 27 \%.
+
+\label{ledighedsrisiko} % skal sættes ind der hvor der skrives om det
+
+%blandet og ukendt kategorier og overvejelser omkring det.
+
+% noget omkring det pudsige i at definere ledige i relation til deres job. og det der sker med den statistiske transformation der ser på gennemsnit indenfor en årrække. Og forsvar det alligevel: det siger noget om forskelligartetheden i at være ledig.
+
+% lav skelnen mellem job, jobtype, socialklasse, habitusdrevet, det der.
+
+% hold det her op imod Lars Olsens bøger
+
+% læs Stefan Andrades phd og kom ind på alt det der med serviceklasser og prekariatet-tænkning.
+
+% Husk eksemplet med børnehavelærer - pædagog af uddannelse, men arbejder på en folkeskole! hmm. 
+
+% husk det med ingeniører og arkitekter
+
+% hvilket betyder at de største kategorier  test test 
+
+% Samt den særlig opgave, det er for sociologien, der bør ligge til grund for en inddeling, som ingen i sagens natur kan have det fulde overblik over. 
+
+% Baseret på disse gruppers relationer, er Moneca-algoritmen udviklet  test
+
+% #### ideer til afsnit
+% - Disco
+% - opbygning af relativ risiko gennem total antal beskæftigede, teoretisk diskussion (se Emils logbog)
+% skriv noget om hvorfor vi ikke behøver lave statistik - vi har populationen - men hvorfor man alligevel godt kunne lave det, men hvorfor det nok ikke giver nogen mening alligevel (Adorno)
+
+Konklusionen er, at vi har stræbt efter at vores kortlægning af beskæftigelsesmobilitet blandt ledige på det danske arbejdsmarked har skulle være så datadrevet og eksplorativt som muligt samtidig med at vi alligevel har lavet en vurdering af hvad der er nødvendigt for at inkludere uden at gøre vold på nuancerne.
+
+For mere information om \texttt{DISCO} se \ref{appendiks_disco}.
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\section{AT SKABE EN KRITISK MASSE AF LEDIGE \label{ledigskab}}
+
+Kernen i vores empiriske arbejde er en fundamental skelnen mellem beskæftigelse og den mellemliggende periode mellem beskæftigelse. Eller med andre ord at “være ledig eller ej”. Selvom det er en nødvendig skelnen i vores empiri, behøver det i midlertidig ikke også at betyde, at vi i vores begrebsdannelse accepterer denne dikotomi som et lige så fundamentalt socialt fakta eller at det bliver et mål i sig selv at reducere den sociale virkelighed til et spørgsmål om at “være ledig eller ej”. Snarere tværtimod. Men for at kunne skabe et overblik over ledighedsmobilitet i tidsperioden, er det nødvendigt for senere at kunne åbne begrebet op igen. Vores gennemgang af vores empiriske ledighedsbegreb vil netop vise, at dikotomien er langt mere mudret end den efterfølgende reduktion til en binær modstilling lader ane. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Operationalisering af ledige i binær form \label{ledig_operationalisering}} 
+
+DST har ikke overraskende en lang række variable, der forholder sig direkte eller indirekte til begrebet ledighed. Mange af disse forholder sig specifikt til forskellige aspekter af det at være ledig, såsom \texttt{DPTIMER}, der beskriver det antal timer, der er udbetalt dagpenge for, indenfor en uge. At aggregere disse variable til et samlet ledighedsbegreb ville være en enorm opgave, og eftersom dokumentationen for variablene varierer fra ganske informativ til obskur intern system-jargon. I stedet for har vi udvalgt variablen \texttt{SOCSTIL} og kombineret denne med variablen \texttt{SOCIO}\footnote{I 2002 ændres \texttt{SOCIO} til \texttt{SOCIO02}, som er en ny udgave med mindre ændringer. For overskuelighedens skyld benytter vi navnet \texttt{SOCIO} selvom om det ville være mere hensigtsmæssigt at benytte navnet \texttt{SOCIO/SOCIO02}.}, som begge er blevet aggregeret af DST på en sådan vis, at vi kan skabe et binært ledighedsbegreb ud fra dem.
+
+Vores ledighedsbegreb fokuserer på beskæftigede som kommer midlertidigt ud af beskæftigelse for så at vende tilbage til beskæftigelse igen. I den sammenhæng anvender vi \texttt{SOCSTIL}, som angiver befolkningens tilknytning til arbejdsmarkedet ultimo november. Befolkningen opgøres i beskæftigede og arbejdsløse som udgør arbejdsstyrken samt den øvrige del af befolkningen som betegnes uden for arbejdsstyrken. Beskæftigelse i vores ledighedsbegreb er ensbetydende med \texttt{SOCSTIL}s betegnelse, hvilket udgør selvstændige, medarbejdende ægtefæller og lønmodtagere\footnote{Selvstændige, medarbejdende ægtefæller og lønmodtagere har henholdsvis \texttt{SOCSTIL}-værdierne 115-118, 120 og 130-135.}. Med hensyn til de midlertidigt uden beskæftigelse er vi interesserede i alle som vender tilbage i beskæftigelse uanset om de er en del af arbejdsstyrken eller ej\footnote{Vi anerkender, at arbejdsstyrken er den del af befolkningen hvis arbejdskraft er til rådighed for arbejdsmarkedet og som enten er i beskæftigelse eller er ledige. Vi mener dog, når vi netop kigger på ledighed over tid, at vi ikke kun behøves at forholde os til arbejdsstyrken, fordi selvom en person ikke registreres, at denne står til rådighed for arbejdsmarkedet, kan vi netop se, at denne person kan vende tilbage i beskæftigelse på et senere tidspunkt. Dette kan vi netop gør, fordi vi ser på de ledige over en længere periode og ikke opgør ledige på sammen måde som DST gør.}. Derfor inkluderer vi mere end blot de arbejdsløse, fordi de i \texttt{SOCSTIL}s betegnelse kun udgør nettoledige\footnote{Nettoledige og bruttoledige har henholdsvis \texttt{SOCSTIL}-værdierne 200 og 201.}, og ikke eksempelvis flere forskellige former for aktivering og kontanthjælp. DST's definition af at være arbejdsløs følger nemlig ILOs betingelser om at man skal være uden arbejde, stå til rådighed for arbejdsmarkedet og være aktivt arbejdssøgende \parencite{ILO1982}. Disse betingelser er lavet for at have en international sammenlignelig standard og som ikke nødvendigvis passer til overens med det arbejdsmarked, vi ønsker at beskrive.
+
+Til at moderere vores ledighedsbegreb, trækker vi på Jørgen Elms Larsens perspektiver om  marginalisering i sammenhæng med inklusion og eksklusion. Larsen definerer eksklusion som en ufrivillig ikke-deltagelse gennem forskellige typer af udelukkelsesmekanismer og -processer, som det ligger uden for indvidets og gruppens muligheder at få kontrol over \parencite[237]{Larsen2009}. Larsen er kritisk over for Luhmanns binære form inklusion/eksklusion, som han mener ikke er særlig hensigtsmæssig i forhold til virkeligheden \parencite[?]{Larsen2009}. Derfor argumenter han for, at marginalisering kan anvendes som en midtergruppe mellem de to \parencite[130f]{Larsen2009}. Til at illustrere dette har vi, som det fremgår af tabel \ref{tab_marginaliseringsmodel}, udviklet en model\footnote{Modellen er også inspireret af lignende modeller benyttet af Lars Svedberg \parencite[44]{Svedberg1995} og Catharina Juul Kristensen \parencite[18]{Kristensen1999}.} til at beskrive hvad der er på spil, når man går fra at være beskæftiget til at være “midlertidigt” uden beskæftigelse og tilbage til beskæftigelse igen. Processen med at gå fra at være beskæftiget kaldes her for en proces mod marginalisering og processen med at gå tilbage til beskæftigelse igen kaldes for en proces mod inklusion. \emph{... Det har antagelser om arbejdsfællesskabet...}
+%
+\begin{table}[H] \centering
+\caption{Model over marginalisering}
+\label{tab_marginaliseringsmodel}
+\begin{tabular}{@{} m{2,5cm} c m{4cm} c m{4cm} @{}} \toprule
+\textbf{Inkluderet} & & \multicolumn{1}{c}{\textbf{Marginaliseret}} & & \textbf{Ekskluderet} \\ \midrule
+  beskæftiget  & & “midlertidigt” uden beskæftigelse & & vender ikke tilbage i beskæftigelse \\  
+\end{tabular} \end{table}
+%
+\begin{table}[H] \centering
+\label{tab_marginaliseringsmodel}
+\begin{tabular}{@{} m{5,9cm} m{5,9cm} @{}} 
+  \textbf{Marginaliseringsproces} & \textbf{Eksklusionsproces} \\  
+  --------------------------------------------> & --------------------------------------------> \\ 
+\end{tabular} \end{table}
+%
+%
+\begin{table}[H] \centering
+\label{tab_marginaliseringsmodel}
+\begin{tabular}{@{} m{12,3cm} @{}} 
+  \textbf{Integrationsproces} \\  
+  <--------------------------------------------------------------------------------------------- \\ \bottomrule
+\end{tabular} \end{table}
+%
+På baggrund af denne model har vi udover de arbejdsløse valgt, at inkludere de personer som DST betegner “midlertidigt uden for arbejdsstyrken”\footnote{Som “midlertidigt uden for arbejdsstyrken” har vi valgt at inddrage beskæftiget uden løn (\texttt{317}), orlov fra ledighed (\texttt{318}), uddannelsesforanstaltning/vejledning  og  opkvalificering (\texttt{319}), særlig/aktivering (\texttt{320}), uoplyst aktivering (\texttt{321}), sygedagpenge (\texttt{323}), revalideringsydelse (\texttt{327}), integrationsuddannelse (\texttt{333}), ledighedsydelse (\texttt{334}), aktivering  iflg. kontanthj.statistikregister (\texttt{335}), mens vi har fravalgt delvis ledighed (\texttt{316}) og Barselsdagpenge (\texttt{322}).}, “pensionister” eller “tilbagetrukket fra arbejdsstyrken”\footnote{Som “pensionister” eller “tilbagetrukket fra arbejdsstyrken” har vi valgt at inddrage efterløn (\texttt{324}), overgangsydelse (\texttt{325}), tjenestemandspension (\texttt{328}), folkepensionist (\texttt{329}) og førtidspensionist (\texttt{331}), mens vi har fravalgt flexydelse (\texttt{315}).} hvis de kommer i beskæftigelse igen og til sidst de personer som DST kalder “andre uden for arbejdsstyrken”\footnote{Som “andre uden for arbejdsstyrken” har vi valgt at inddrage kontanthjælp (\texttt{326}) og introduktionsydelse (\texttt{332}), mens vi har fravalgt uddannelsessøgende (\texttt{310}), øvrige  uden for arbejdsstyrken (\texttt{330}) og barn eller ung (d.v.s. under 16  år) (\texttt{400}).} hvis også de kommer i beskæftigelse igen.
+
+Det betyder, at vi har inddelt danskerne i kategorierne beskæftigede og ledige. For overskuelighedens skyld har vi i tabel \ref{tab_SOCSTIL} skelnet mellem arbejdsløse og de personer uden for arbejdsstyrken, som vi mener er relevante i vores model. Tabellen inkluderer alle danskere inden for de tre grupper, og det fremgår først fra afsnit \ref{spells_runs}, at det kun er de personer som går fra at være beskæftiget til at være beskæftiget efter en mellemliggende periode med ledighed eller uden beskæftigelse. Det som tabel \ref{tab_SOCSTIL} dog viser er udviklingen i beskæftigelse og arbejdsløshed i perioden 1996 til 2009\footnote{Arbejdsløshedstallene kan eksempelvis ses i sammenhæng med lignende opgørelser fra Arbejderbevægelsens Erhversråd\parencite{Bjoersted2012}, Dansk Arbejdsgiverforening \parencite{Bang-Petersen2012} og DST \parencite{DST2014a}.}.
+%
+\begin{table}[H] \centering
+\caption{\texttt{SOCSTIL} omkodet i perioden 1996 til 2009. Kilde: DST}
+\label{tab_SOCSTIL}
+\begin{tabular}{@{}lrrr@{}} \toprule
+Årstal & \multicolumn{1}{c}{Beskæftigede} & \multicolumn{1}{c}{Arbejdsløse} & Uden for arbejdsstyrken \\ \midrule
+1996  & 2.598.866 & 193.672 & 798.902 \\ 
+1997  & 2.632.485 & 168.991 & 795.763 \\ 
+1998  & 2.680.115 & 132.179 & 796.388 \\ 
+1999  & 2.691.568 & 117.689 & 802.352 \\ 
+2000  & 2.705.333 & 118.520 & 788.038 \\ 
+2001  & 2.716.827 & 110.501 & 791.043 \\ 
+2002  & 2.676.979 & 119.250 & 814.652 \\ 
+2003  & 2.643.590 & 147.666 & 818.258 \\ 
+2004  & 2.652.214 & 134.586 & 829.698 \\ 
+2005  & 2.696.097 & 107.734 & 828.069 \\ 
+2006  & 2.761.924 & 80.270  & 815.445 \\ 
+2007  & 2.796.580 & 59.860  & 816.498 \\ 
+2008  & 2.725.310 & 43.895  & 874.735 \\ 
+2009  & 2.617.170 & 95.756  & 918.659 \\  \bottomrule
+\end{tabular} \end{table}
+% 
+
+Vi har valgt at kombinere \texttt{SOCSTIL} og \texttt{SOCIO}, fordi de indeholder definitioner af ledighed, der ligger tæt op af hinanden, men fanger forskellige aspekter. \texttt{SOCSTIL} er, som tidligere nævnt, dannet som den primære tilknytning til arbejdsmarkedet bestemt ved først at identificere de forskellige bruttobestande (tilknytninger til arbejdsmarkedet), den enkelte person indgår i ultimo november. Hvis en person indgår i mere end en bruttobestand, bestemmes den primære tilknytning til arbejdsmarkedet ud fra et sæt prioriteringsregler. Prioriteringsreglerne er fastlagt, således at de i videst muligt omfang følger ILO-retningslinierne. ILO-retningslinierne foreskriver, at \textbf{beskæftigelse skal vægtes højere end ledighed} (henvisning). \texttt{SOCIO} er dannet ud fra oplysninger om væsentligste indkomstkilde for personen, og ud fra denne fastlægges det, hvilken socioøkonomisk status vedkommende har i det år. I modsætning til \texttt{SOCSTIL} vægter \texttt{SOCIO} \textbf{ledighed højere end beskæftigelse}\footnote{I dannelsen af \texttt{SOCIO} findes først de personer, hvis hovedindkomst er efterløn og overgangsydelse (værdi 323). Derefter findes personer, som har været ledige mindst halvdelen af året (værdi 2). For de resterende personer følger \texttt{SOCIO} variablens hovedopdeling i variablen \texttt{BESKST} (beskæftigelsesstatus)}. Vi har valgt at inddele \texttt{SOCIO} ud fra samme princip som \texttt{SOCSTIL}, det vil sige i beskæftigede og ledige\footnote{Beskæftigede omfatter således ligesom \texttt{SOCSTIL} selvstændige erhvervsdrivende, medarbejdende ægtefæller og lønmodtagere (\texttt{SOCIO}=11-13, 111-114, 131-135; \texttt{SOCIO02}=111-139). Arbejdsløse afgrænses i overensstemmelse med ILOs fastlagte betegnelser, hvor kriterierne er, at arbejdsløse skal  være uden arbejde, stå til rådighed for arbejdsmarkedet og være aktivt arbejdssøgende (\texttt{SOCIO}=2; \texttt{SOCIO02}=210-220). Personer uden for arbejdsstyrken alle de personer, som ikke opfylder betingelserne for at være i arbejdsstyrken, hvilket er personer under uddannelse, pensionister mv., førtids- og folkepensionister, efterlønsmodtagere mv., andre personer og børn (\texttt{SOCIO}=31-33, 321-323, 4; \texttt{SOCIO02}=310-420).}. Som det fremgår af tabel \ref{tab_SOCIO_SOCSTIL_sammenligning} kan vi se, at \texttt{SOCSTIL} og \texttt{SOCIO} fanger forskelige aspekter ved, at de i deres binære form rammer samme indeling i 68 \% af tilfældende, mens det i 32 \% af tilfældende rammer en forkert inddeling.
+% 
+\begin{table}[H] \centering
+\caption{Sammenligning af \texttt{SOCIO} og \texttt{SOCSTIL}. Kilde: DST}
+\label{tab_SOCIO_SOCSTIL_sammenligning}
+\begin{tabular}{@{}llll@{}} \toprule
+ & & SOCSTIL &  \\ \midrule
+ & & Beskæftiget & Ledig \\ 
+ SOCIO & Beskæftigelse & & \\ 
+ & Ledig & & \\  \bottomrule
+\end{tabular} \end{table}
+% 
+Her er vores to primære kilder til at se på tilknytning til arbejdsmarkedet altså ikke enige om inddelingen. Det giver os fire mulige løsninger, rangeret efter hvor restriktivt et ledighedsbegreb man ønsker at benytte.
+%
+\begin{description} [topsep=6pt,itemsep=-1ex]
+  \item[Restriktiv] Udvælg de ledige, der defineres som sådan af både \texttt{SOCSTIL} \emph{og} \texttt{socio/SOCIO02}.
+  \item[Semirestriktiv] Benyt enten \texttt{SOCSTIL} eller \texttt{SOCIO}s inddeling af ledige
+  \item[Semibred] Benyt enten den ene variables inddeling, og supplere missing-værdierne med den anden variabel. \emph{... fomuler bedre}
+ \item[Bred] Benyt begge variables inddeling således at hvis den ene variabel siger en person er ledig, overruler det den anden variabels bestemmelse af at vedkommende ikke er det.
+\end{description}
+%
+Det er meget svært hvis ikke umuligt at verificere gyldigheden af enten \texttt{SOCSTIL} eller \texttt{SOCIO} som værende \emph{den helt korrekte} betegnelse, i tilfælde af tvivlsspørgsmål. Da vi arbejder med en meget bred forståelse af ledighed, og er interesseret i alle som på en eller anden måde kan karakteriseres som uden for beskæftigelse som vender tilbage til beskæftigelse igen, vælger vi at benytte den fjerde mulighed, hvor informationer fra begge variable inddrages. Vi antager, at hvis én af de to variable inddeler en person i en kategori udenfor beskæftigelse, så er det sandsynligt, at det forholder sig sådan. Det kan være, at man dermed kommer til at kategorisere en person, der i løbet af et år primært er på arbejdsmarkedet, og kun sekundært har været i kontakt med overførselsindkomster, som en person udenfor arbejdsmarkedet. Vi vælger denne løsning for at kunne udtale os bredt om dem, der i en periode har haft en løs eller ingen tilknytning til arbejdsmarkedet. 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Spells \& runs \label{ledig_spellsrun}} 
+
+For at skabe en datastruktur der ville give at mulighed for at undersøge perioder med ledighed har vi stået over for en udfordring. I modsætning til Larsen og Toubøls anvendelse af MONECA i forbindelse med social mobilitet blandt alle jobskift, står vi med det særlige benspænd, at der kan gå kort eller lang tid mellem at personer i vores data får nyt arbejde. Vi kan derfor ikke tælle skift per år, men bliver nødt til at lave en struktur, der tillader os at kollapse ledighedsperioden dynamisk således, at vi kan se hvilket job man gik fra og til uanset længden på ledighedsperioden. For at gøre dette, har vi som tidligere beskrevet reduceret informationsmængden i DSTs aggregerede ledighedsvariable til en binær variabel. Ved at skabe en sådan klar stop/start-indikator på ledighedsperioder, i kombination med en paneldatastruktur, kan vi ved kodning ved hjælp af indekseringsprogrammering\footnote{Det vil sige: skabe nye variable og lave beregninger baseret på værdier relativt til en given observations \emph{placering} i data, fremfor givne \emph{karakteristika} ved observationer.} opnå en struktur der viser skift, uagtet længden af ledighedsperioderne\footnote{Længden af ledighedsperioderne er naturligvis af stor analytisk interesse, men benyttes først på et senere trin i analysen.}. Det betyder, at vi - før nogen form for sortering - har 5.860.440 mennesker observeret over 14 år svarende til 82.046.160 observationer. Tabel \ref{tab_spellrun} er et illustrativt eksempel på denne struktur. 
+%
+\begin{table}[H]
+\centering
+\caption{Eksempel på datastruktur. Kilde: DST}
+\label{tab_spellrun}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}clrrc@{}}
+\toprule
+ID nummer & \multicolumn{1}{c}{År} & \multicolumn{1}{c}{SOCSTIL / SOCIO} & \multicolumn{1}{c}{DISCO-beskæftigelseskategori}      & Ledig \\ \midrule
+7384973       & 1996                   & Lønmodtagere på grundniveau         & Bager og konditorarbejde (eksklusiv industri)         & Nej   \\
+7384973       & 1997                   & Revalideringsydelse                 & -                                                     & Ja    \\
+7384973       & 1998                   & Revalideringsydelse                 & -                                                     & Ja    \\
+7384973       & 1999                   & Revalideringsydelse                 & -                                                     & Ja    \\
+7384973       & 2000                   & Revalideringsydelse                 & -                                                     & Ja    \\
+7384973       & 2001                   & Lønmodtager på mellemniveau         & Pædagogisk arbejde                                    & Nej   \\
+7384973       & 2002                   & Kontanthjælp                        & \textit{(Pædagogisk arbejde)}                         & Ja    \\
+7384973       & 2003                   & Lønmodtager uden nærmere angivelse  & Pædagogisk arbejde                                    & Nej   \\
+7384973       & 2004                   & Lønmodtagere på grundniveau         & Operatør- og fremstillingsarbejde i næring og nydelse & Nej   \\
+7384973       & 2005                   & Lønmodtagere på grundniveau         & Operatør- og fremstillingsarbejde i næring og nydelse & Nej   \\
+7384973       & 2006                   & Lønmodtagere på grundniveau         & Operatør- og fremstillingsarbejde i næring og nydelse & Nej   \\
+7384973       & 2007                   & Lønmodtagere på grundniveau         & Operatør- og fremstillingsarbejde i næring og nydelse & Nej   \\
+7384973       & 2008                   & Lønmodtagere på grundniveau         & Operatør- og fremstillingsarbejde i næring og nydelse & Nej   \\
+7384973       & 2009                   & Lønmodtagere på grundniveau         & Operatør- og fremstillingsarbejde i næring og nydelse & Nej   \\ \bottomrule
+\end{tabular} }
+\end{table}
+%
+Vi har at gøre med et enkelt panel, det vil her sige den samme anonymiserede person gennem 14 år. Det ses, at vedkommende i 1996 arbejder med bageri- eller konditorrelateret arbejde. Vedkommende er kategoriseret som lønmodtager på grundniveau i vores aggregerede beskæftigelsesvariabel \texttt{SOCSTIL/SOCIO}, hvilket betyder at han i vores binære ledighedsvariabel har et negativt udfald. Det kan konstateres, at han i 1997 tildeles en revalideringsydelse, som han er på de næste fire år. I vores optik er han derfor i denne periode “ledig”. Revalideringsydelsens formål er, ifølge Bekendtgørelsen om aktiv socialpolitik, “(...) \emph{at en person med begrænsninger i arbejdsevnen, herunder personer, der er berettiget til ledighedsydelse og særlig ydelse, fastholdes eller kommer ind på arbejdsmarkedet, således at den pågældendes mulighed for at forsørge sig selv og sin familie forbedres.}” (\textcite{lov_revalidering}).
+
+Efter fire år på denne ydelse bliver vedkommende ansat inden for pædagogisk arbejde.  Året efter ender han på kontanthjælp, men kommer tilbage til det pædagogiske arbejde i 2003. I 2004 skifter han til beskæftigelseskategorien \emph{Operatør- og fremstillingsarbejde i næring og nydelse}. Denne forbliver han i frem til panelets sidste observation i 2009\footnote{Mens denne person modtog revalideringsydelse og kontanthjælp, ville han blive af blandet andet DST og Beskæftigelsesministeriet blive kategoriseret som uden for arbejdsstyrken, men netop, fordi han vender tilbage til beskæftigelse igen, kommer han med i vores analyseudvalg og karakteriseres som “ledig” i denne periode.}. Derfor vil denne person blive registreret med to skift i vores mobilitetstabel: ét skift fra \emph{Bager- og konditorarbejde} til \emph{Pædagogisk arbejde}, og et andet fra \emph{Pædagogisk arbejde} til \emph{pædagogisk arbejde}. Det efterfølgende skift til fremstillingsarbejde i næringsindustrien medtages ikke. Man kunne mene, at det ville være en del af historien, og man kunne mene, at der sandsynligvis sker en tilbagevending til hårdere fysisk arbejde indenfor madfremstilling, ligesom bager- og konditorarbejdet som manden havde i 1996. Det hører med til historien, og er grunden til vi... %blah blah blah argument for at lave sekvensanalyse / en eller anden form for livsbane analyse #vendtilbage.
+
+Eksemplet tjener også til at illustrerer noget andet centralt. Det ses, at personen i 2002 var på kontanthjælp, og dog havde han en \texttt{DISCO}-værdi tilknyttet. Det skal forstås sådan, at en inddeling af et menneskes arbejdsliv, baseret på en årsinddeling, grundlæggende er en kunstig inddeling, der ikke kan indfange den kontinuitet, livet leves i. En sådan årsinddeling har ofte en vis berettigelse, eftersom det er grundlag for en lang række adminstrative inddelinger, med meget reelle sociale konsekvenser. Ikke desto mindre kan man sagtens være kontanthjælpsmodtager og have en en, to eller flere jobs i løbet af samme år, og det er en kompleksitet, vi er tvunget til at reducere til en samlet vurdering af hvad vedkommende lavede i løbet af året. Som beskrevet tidligere er dannelsen af \texttt{DISCO}-variablen en kompliceret proces, hvor den endelige beskæftigelsesværdi er sammensat ud fra mange forskellige kilder og kriterier. \texttt{DISCOALLE\_INDK} er grundlæggende dannet ud fra det arbejdssted, hvor de har fået størst lønindkomst gennem året. Der er ingen vurdering af hvor lang en ansættelse, der er tale om, før den tæller med. En ledighedsvariabel baseret på hvorvidt man har eller ikke har et udfald i \texttt{DISCOALLE\_INDK}, ville derfor være ekstremt upålidelig. Det forklarer også hvorfor personen i \texttt{SOCSTIL} er han sat med beskæftigelsesværdien \emph{Lønmodtagere på grundniveau}, mens han i \texttt{SOCIO} er kategoriseret som på kontanthjælp. Det er sandsynligt, at personen har været begge dele i dette år. Derfor mener vi netop, at hvis den ene af de to variable kategoriserer ham som kontanthjælpsmodtager som primær socioøkonimisk status, bør vi vurdere ham som ledig i år 2002 - eller i hvert fald \emph{primært} som ledig \footnote{som nævnt er det også muligt at have en \texttt{DISCO}-værdi selvom både \texttt{SOCIO} og \texttt{SOCSTIL} mener man ikke er i en beskæftigelseskategori. Det betyder sandsynligvis at der er tale om et job, der ikke fylder meget i forhold til de forskellige overførselsindkomster, som de to aggregerede variable baserer sig på. Det forekommer derfor rimeligt at ignorere denne beskæftigelse.}
+% 
+\begin{table}[H] \centering
+\caption{Antallet af ledige i perioden 1996 til 2009. Kilde: DST}
+\label{tab_SOCSTIL}
+\begin{tabular}{@{}lll@{}} \toprule
+Årstal & Vores ledige i ledighedsperiode & Vores ledige i beskæftigelse \\ \midrule
+1996  & 0 & ? \\ 
+1997  & ? & ? \\ 
+1998  & ? & ? \\ 
+1999  & ? & ? \\ 
+2000  & ? & ? \\ 
+2001  & ? & ? \\ 
+2002  & ? & ? \\ 
+2003  & ? & ? \\ 
+2004  & ? & ? \\ 
+2005  & ? & ? \\ 
+2006  & ? & ? \\ 
+2007  & ? & ? \\ 
+2008  & ? & ? \\ 
+2009  & 0 & ? \\  \bottomrule
+\end{tabular} \end{table}
+% 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Hvad er så vores analyseudvalg? \label{ledig_analyseudvalg}} 
+
+Vores analyseudvalg består af personer som går fra at være beskæftiget i en arbejdsstilling til at være beskæftiget i en anden arbejdsstilling efter en mellemliggende periode med ledighed eller uden beskæftigelse. For at være med skal personerne være beskæftiget så det passer overens med en af vores 150 \texttt{DISCO}-kategorier og være ledig så det passer overens med vores binære ledighedsbegreb lavet på baggrund af \texttt{SOCSTIL} og \texttt{SOCIO}. Vi har udvalgt perioden 1996 til 2009, fordi denne periode giver os mulighed for at have et datamateriale som har en forholdsvis god kvalitet uden så mange databrud, som vi ville skulle forholde os til, hvis vi tog perioderne før 1996 og efter 2009. Vi har indskrænket arbejdsmarkedet i forhold til aldersgruppen 16 til 70 år. I flere andre ledighedsstatistikker indskrænkes ledige til det år, hvor man har mulighed for at gå på pension fx \parencite{Bjoersted2012, Bang-Petersen2012, DST2014a}. I perioden 1996 til 2009 ville det derfor være hensigtsmæssigt at anvende aldersgruppen 16-64 år. Vi har dog valgt at udvide aldersgruppen med fem år, fordi vi gerne vil have en så bred gruppe af ledige som kommer ind og ud af arbejdsmarkedet\footnote{Når vi indskrænker det til aldersgruppen 16-70 år mister vi 8508 personer som enten er yngre eller ældre. Det er især inden for kategorien \emph{Arbejde med dyr og skovbrug, primaert landbrugsmedarbejder og landmand} (\texttt{6120}), hvor der er mange +70-årige som falder fra. Dette skyldes ifølge DST, at der findes mange landmænd som fortætter langt over pensionsalderen \parencite{DST2012}.}.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+% \section{LEDIGE VS. HELE ARBEJDSMARKDET \label{}}
+
+% Spørgsmålet er om man skal have noget her om alle beskæfigede
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{ET VIDENSKABSTEORETISK PERSPEKTIV PÅ VORES KORTLÆGNING \label{}}
+
+\emph{... her skal vi skrive et afsnit på 2-5 sider om et videnskabsteoretisk perspektiv på vores kortlægning på baggrunda af Bourdieu og netværksanalytisk videnskabsteori (blandt andet John Scott)...} %%% #todo
+
+
+%Local Variables: 
+%mode: latex
+%TeX-master: "report"
+%End:

@@ -1,0 +1,87 @@
+%!TEX TS-program = pdflatex
+%!TEX TS-program = pdflatex
+
+%%% -------------- Preamble ----------------- %%%
+
+\input{preamble}
+
+%%% -------------- Dokument ----------------- %%%
+
+\begin{document} \selectlanguage{danish}
+
+%%% -------------- forside ----------------- %%%
+%
+%\begin{titlingpage}
+%\centering
+%\Huge catcy titel \\
+%\large 
+%\emph{- test fancy undertitel der understreger vores akademiske respektabilitet} 
+%\begin{vplace}
+%\vspace{\baselineskip}
+%%  \includegraphics[width=17cm]{forside.png}
+%\vspace{1\baselineskip}
+%\emph{xx. januar 2015} 
+%% \vspace{5}
+%\vfill{\textit{antal tegn: xxx antal tegn i fodnoter: xxx}}
+%\emph{eksamensnumre: 1809 \& 1812}
+%\end{vplace}
+%\newpage
+%
+%\end{titlingpage} %skal måske først stå efter ToC, check om der er problemer med sidetal etc
+
+%%% -------------- Indholdsfortegnelse ----------------- %%%
+
+\pagenumbering{roman} %til preface etc.
+
+\tableofcontents*		% Indholdsfortegnelse the asterisk means that the contents itself isn't put into the ToC
+
+\newpage
+
+ 
+%\thispagestyle{empty}
+ 
+%\listoffigures
+%\newpage 
+%\listoftables
+ 
+
+
+\pagenumbering{arabic}
+%måske ikke nødvendigt
+
+%%% -------------- Afsnit ----------------- %%%
+
+\chapterstyle{southall} %hvordan kapitler skal se ud.
+%Nogle valgmuligheder, se flere i the memoir manual:
+% - madsen thatcher verville southall ger companion
+
+% \input{tex/1_indledning}
+% \input{tex/metode_ledighed}
+\input{tex/testtables}
+
+\newpage
+
+%%% -------------- Appendiks ----------------- %%%
+% \begin{appendices}
+% \newpage
+% \setcounter{secnumdepth}{3}
+% \input{tex/7.1_appendiks_disco_til_moneca}
+% \input{tex/7.2_appendiks_baggrundsvariable_til_moneca}
+% \end{appendices}
+
+%%% -------------- Bibliografi ----------------- %%%
+% biblatex definerer alt i preamblet
+%\nocite{*} % brug denne for at tage referencer med der ikke citeres i teksten
+\printbibliography[heading=subbibliography,title={Hovedbibliografi},filter=notonline]
+\printbibliography[heading=subbibliography,title={Online kilder},type=online]
+% \printbibliography[heading=subbibliography,title={DST manualer},filter=DST]
+\printbibliography[heading=subbibliography,title={Danmarks Statistiks Manualer},type=manual]
+
+
+
+%%% -------------- slut det hele er slut ----------------- %%%
+\end{document}
+
+
+
+

@@ -1,0 +1,212 @@
+% -*- coding: utf-8 -*-
+% !TeX encoding = UTF-8
+% !TeX root = ../report.tex
+
+
+%% Noter %%%
+
+% i afsnit om ledighed: start evt med figur om brutto/nettoledighed og akuledighed, og udvid med egne betragtninger om hvad På kanten af arbejdsmarkedet vil sige - det er  vores bidrag, en mere nuanceret forståelse om at være en del af arbejdsmarkedet er et kontinuum. Slut afsnittet med samme figur, nu med endnu en cirkel rundt om der viser vores overkategori.
+
+
+
+
+
+\chapter{METODE OM ARBEJDSLØSHED} \label{metode}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\section{At skabe en kritisk masse af ledige \label{ledigskab}}
+
+Kernen i vores empiriske arbejde er en fundamental skelnen mellem beskæftigelse og den mellemliggende periode mellem beskæftigelse. Eller med andre ord at “være ledig eller ej”. Selvom det er en nødvendig skelnen i vores empiri, behøver det i midlertidig ikke også at betyde, at vi i vores begrebsdannelse accepterer denne dikotomi som et lige så fundamentalt socialt fakta eller at det bliver et mål i sig selv at reducere den sociale virkelighed til et spørgsmål om at “være ledig eller ej”. Snarere tværtimod. Men for at kunne skabe et overblik over ledighedsmobilitet i tidsperioden, er det nødvendigt for senere at kunne åbne begrebet op igen. Vores gennemgang af vores empiriske ledighedsbegreb vil netop vise, at dikotomien er langt mere mudret end den efterfølgende reduktion til en binær modstilling lader ane. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\section{Operationalisering af ledige i binær form \label{ledig_operationalisering}} 
+% 
+Relevante beskæftigelsesvariable
+ \begin{itemize} [topsep=6pt,itemsep=-1ex]
+   \item ARSTIL, NYARB og SOCSTIL
+   \item HELTID\_DELTID
+   \item BESKST og BESKST02 -> Kan bruges til beskæftigelse
+   \item SOCIO og SOCIO02
+ \end{itemize}
+% 
+Relevante ledighedsvariable
+ \begin{itemize} [topsep=6pt,itemsep=-1ex]
+   \item FORANST kombineret med TIMERPU (går kun til 2006)
+   \item \textbf{LEDDEL og LEDFULD} -> kan bruges til mikro-ledige (går kun til 2007)
+   \item SUMGRAD
+ \end{itemize}
+% 
+
+
+DST har ikke overraskende en lang række variable, der forholder sig direkte eller indirekte til begrebet ledighed. Mange af disse forholder sig specifikt til forskellige aspekter af det at være ledig, såsom \texttt{DPTIMER}, der beskriver det antal timer, der er udbetalt dagpenge for, indenfor en uge. At aggregere disse variable til et samlet ledighedsbegreb ville være en enorm opgave, og eftersom dokumentationen for variablene varierer fra ganske informativ til obskur intern system-jargon. I stedet for har vi udvalgt variablen \texttt{SOCSTIL} og kombineret denne med variablen \texttt{SOCIO}\footnote{I 2002 ændres \texttt{SOCIO} til \texttt{SOCIO02}, som er en ny udgave med mindre ændringer. For overskuelighedens skyld benytter vi navnet \texttt{SOCIO} selvom om det ville være mere hensigtsmæssigt at benytte navnet \texttt{SOCIO/SOCIO02}.}, som begge er blevet aggregeret af DST på en sådan vis, at vi kan skabe et binært ledighedsbegreb ud fra dem.
+
+Vores ledighedsbegreb fokuserer på beskæftigede som kommer midlertidigt ud af beskæftigelse for så at vende tilbage til beskæftigelse igen. I den sammenhæng anvender vi \texttt{SOCSTIL}, som angiver befolkningens tilknytning til arbejdsmarkedet ultimo november. Befolkningen opgøres i beskæftigede og arbejdsløse som udgør arbejdsstyrken samt den øvrige del af befolkningen som betegnes uden for arbejdsstyrken. Beskæftigelse i vores ledighedsbegreb er ensbetydende med \texttt{SOCSTIL}s betegnelse, hvilket udgør selvstændige, medarbejdende ægtefæller og lønmodtagere\footnote{Selvstændige, medarbejdende ægtefæller og lønmodtagere har henholdsvis \texttt{SOCSTIL}-værdierne 115-118, 120 og 130-135.}. Med hensyn til de midlertidigt uden beskæftigelse er vi interesserede i alle som vender tilbage i beskæftigelse uanset om de er en del af arbejdsstyrken eller ej\footnote{Vi anerkender, at arbejdsstyrken er den del af befolkningen hvis arbejdskraft er til rådighed for arbejdsmarkedet og som enten er i beskæftigelse eller er ledige. Vi mener dog, når vi netop kigger på ledighed over tid, at vi ikke kun behøves at forholde os til arbejdsstyrken, fordi selvom en person ikke registreres, at denne står til rådighed for arbejdsmarkedet, kan vi netop se, at denne person kan vende tilbage i beskæftigelse på et senere tidspunkt. Dette kan vi netop gør, fordi vi ser på de ledige over en længere periode og ikke opgør ledige på sammen måde som DST gør.}. Derfor inkluderer vi mere end blot de arbejdsløse, fordi de i \texttt{SOCSTIL}s betegnelse kun udgør nettoledige\footnote{Nettoledige og bruttoledige har henholdsvis \texttt{SOCSTIL}-værdierne 200 og 201.}, og ikke eksempelvis flere forskellige former for aktivering og kontanthjælp. DST's definition af at være arbejdsløs følger nemlig ILOs betingelser om at man skal være uden arbejde, stå til rådighed for arbejdsmarkedet og være aktivt arbejdssøgende \parencite{ILO1982}. Disse betingelser er lavet for at have en international sammenlignelig standard og som ikke nødvendigvis passer til overens med det arbejdsmarked, vi ønsker at beskrive.
+
+Til at moderere vores ledighedsbegreb, trækker vi på Jørgen Elms Larsens perspektiver om  marginalisering i sammenhæng med inklusion og eksklusion. Larsen definerer eksklusion som en ufrivillig ikke-deltagelse gennem forskellige typer af udelukkelsesmekanismer og -processer, som det ligger uden for indvidets og gruppens muligheder at få kontrol over \parencite[237]{Larsen2009}. Larsen er kritisk over for Luhmanns binære form inklusion/eksklusion, som han mener ikke er særlig hensigtsmæssig i forhold til virkeligheden \parencite[?]{Larsen2009}. Derfor argumenter han for, at marginalisering kan anvendes som en midtergruppe mellem de to \parencite[130f]{Larsen2009}. Til at illustrere dette har vi, som det fremgår af tabel \ref{tab_marginaliseringsmodel}, udviklet en model\footnote{Modellen er også inspireret af lignende modeller benyttet af Lars Svedberg \parencite[44]{Svedberg1995} og Catharina Juul Kristensen \parencite[18]{Kristensen1999}.} til at beskrive hvad der er på spil, når man går fra at være beskæftiget til at være “midlertidigt” uden beskæftigelse og tilbage til beskæftigelse igen. Processen med at gå fra at være beskæftiget kaldes her for en proces mod marginalisering og processen med at gå tilbage til beskæftigelse igen kaldes for en proces mod inklusion. \emph{... Det har antagelser om arbejdsfællesskabet...}
+%
+\begin{table}[H] \centering
+\caption{Model over marginalisering}
+\label{tab_marginaliseringsmodel}
+\begin{tabular}{@{} m{2,5cm} c m{4cm} c m{4cm} @{}} \toprule
+\textbf{Inkluderet} & & \multicolumn{1}{c}{\textbf{Marginaliseret}} & & \textbf{Ekskluderet} \\ \midrule
+  beskæftiget  & & “midlertidigt” uden beskæftigelse & & vender ikke tilbage i beskæftigelse \\  
+\end{tabular} \end{table}
+%
+\begin{table}[H] \centering
+\label{tab_marginaliseringsmodel}
+\begin{tabular}{@{} m{5,9cm} m{5,9cm} @{}} 
+  \textbf{Marginaliseringsproces} & \textbf{Eksklusionsproces} \\  
+  --------------------------------------------> & --------------------------------------------> \\ 
+\end{tabular} \end{table}
+%
+%
+\begin{table}[H] \centering
+\label{tab_marginaliseringsmodel}
+\begin{tabular}{@{} m{12,3cm} @{}} 
+  \textbf{Integrationsproces} \\  
+  <--------------------------------------------------------------------------------------------- \\ \bottomrule
+\end{tabular} \end{table}
+%
+På baggrund af denne model har vi udover de arbejdsløse valgt, at inkludere de personer som DST betegner “midlertidigt uden for arbejdsstyrken”\footnote{Som “midlertidigt uden for arbejdsstyrken” har vi valgt at inddrage beskæftiget uden løn (\texttt{317}), orlov fra ledighed (\texttt{318}), uddannelsesforanstaltning/vejledning  og  opkvalificering (\texttt{319}), særlig/aktivering (\texttt{320}), uoplyst aktivering (\texttt{321}), sygedagpenge (\texttt{323}), revalideringsydelse (\texttt{327}), integrationsuddannelse (\texttt{333}), ledighedsydelse (\texttt{334}), aktivering  iflg. kontanthj.statistikregister (\texttt{335}), mens vi har fravalgt delvis ledighed (\texttt{316}) og Barselsdagpenge (\texttt{322}).}, “pensionister” eller “tilbagetrukket fra arbejdsstyrken”\footnote{Som “pensionister” eller “tilbagetrukket fra arbejdsstyrken” har vi valgt at inddrage efterløn (\texttt{324}), overgangsydelse (\texttt{325}), tjenestemandspension (\texttt{328}), folkepensionist (\texttt{329}) og førtidspensionist (\texttt{331}), mens vi har fravalgt flexydelse (\texttt{315}).} hvis de kommer i beskæftigelse igen og til sidst de personer som DST kalder “andre uden for arbejdsstyrken”\footnote{Som “andre uden for arbejdsstyrken” har vi valgt at inddrage kontanthjælp (\texttt{326}) og introduktionsydelse (\texttt{332}), mens vi har fravalgt uddannelsessøgende (\texttt{310}), øvrige  uden for arbejdsstyrken (\texttt{330}) og barn eller ung (d.v.s. under 16  år) (\texttt{400}).} hvis også de kommer i beskæftigelse igen.
+
+Det betyder, at vi har inddelt danskerne i kategorierne beskæftigede og ledige. For overskuelighedens skyld har vi i tabel \ref{tab_SOCSTIL} skelnet mellem arbejdsløse og de personer uden for arbejdsstyrken, som vi mener er relevante i vores model. Tabellen inkluderer alle danskere inden for de tre grupper, og det fremgår først fra afsnit \ref{spells_runs}, at det kun er de personer som går fra at være beskæftiget til at være beskæftiget efter en mellemliggende periode med ledighed eller uden beskæftigelse. Det som tabel \ref{tab_SOCSTIL} dog viser er udviklingen i beskæftigelse og arbejdsløshed i perioden 1996 til 2009\footnote{Arbejdsløshedstallene kan eksempelvis ses i sammenhæng med lignende opgørelser fra Arbejderbevægelsens Erhversråd\parencite{Bjoersted2012}, Dansk Arbejdsgiverforening \parencite{Bang-Petersen2012} og DST \parencite{DST2014a}.}.
+% hvor er de tabeller der viser overlappet mellem SOCIO og SOCTIL som vi talte om? Jeg mener at huske de arbejdede videre på dem Søren? #spmtilsoeren
+%
+\begin{table}[H] \centering
+\caption{\texttt{SOCSTIL} omkodet i perioden 1996 til 2009. Kilde: DST}
+\label{tab_SOCSTIL}
+\begin{tabular}{@{}lrrr@{}} \toprule
+Årstal & \multicolumn{1}{c}{Beskæftigede} & \multicolumn{1}{c}{Arbejdsløse} & Uden for arbejdsstyrken \\ \midrule
+1996  & 2.598.866 & 193.672 & 798.902 \\ 
+1997  & 2.632.485 & 168.991 & 795.763 \\ 
+1998  & 2.680.115 & 132.179 & 796.388 \\ 
+1999  & 2.691.568 & 117.689 & 802.352 \\ 
+2000  & 2.705.333 & 118.520 & 788.038 \\ 
+2001  & 2.716.827 & 110.501 & 791.043 \\ 
+2002  & 2.676.979 & 119.250 & 814.652 \\ 
+2003  & 2.643.590 & 147.666 & 818.258 \\ 
+2004  & 2.652.214 & 134.586 & 829.698 \\ 
+2005  & 2.696.097 & 107.734 & 828.069 \\ 
+2006  & 2.761.924 & 80.270  & 815.445 \\ 
+2007  & 2.796.580 & 59.860  & 816.498 \\ 
+2008  & 2.725.310 & 43.895  & 874.735 \\ 
+2009  & 2.617.170 & 95.756  & 918.659 \\  \bottomrule
+\end{tabular} \end{table}
+% 
+
+Vi har valgt at kombinere \texttt{SOCSTIL} og \texttt{SOCIO}, fordi de indeholder definitioner af ledighed, der ligger tæt op af hinanden, men fanger forskellige aspekter. \texttt{SOCSTIL} er, som tidligere nævnt, dannet som den primære tilknytning til arbejdsmarkedet bestemt ved først at identificere de forskellige bruttobestande (tilknytninger til arbejdsmarkedet), den enkelte person indgår i ultimo november. Hvis en person indgår i mere end en bruttobestand, bestemmes den primære tilknytning til arbejdsmarkedet ud fra et sæt prioriteringsregler. Prioriteringsreglerne er fastlagt, således at de i videst muligt omfang følger ILO-retningslinierne. ILO-retningslinierne foreskriver, at \textbf{beskæftigelse skal vægtes højere end ledighed} (henvisning). \texttt{SOCIO} er dannet ud fra oplysninger om væsentligste indkomstkilde for personen, og ud fra denne fastlægges det, hvilken socioøkonomisk status vedkommende har i det år. I modsætning til \texttt{SOCSTIL} vægter \texttt{SOCIO} \textbf{ledighed højere end beskæftigelse}\footnote{I dannelsen af \texttt{SOCIO} findes først de personer, hvis hovedindkomst er efterløn og overgangsydelse (værdi 323). Derefter findes personer, som har været ledige mindst halvdelen af året (værdi 2). For de resterende personer følger \texttt{SOCIO} variablens hovedopdeling i variablen \texttt{BESKST} (beskæftigelsesstatus)}. Vi har valgt at inddele \texttt{SOCIO} ud fra samme princip som \texttt{SOCSTIL}, det vil sige i beskæftigede og ledige\footnote{Beskæftigede omfatter således ligesom \texttt{SOCSTIL} selvstændige erhvervsdrivende, medarbejdende ægtefæller og lønmodtagere (\texttt{SOCIO}=11-13, 111-114, 131-135; \texttt{SOCIO02}=111-139). Arbejdsløse afgrænses i overensstemmelse med ILOs fastlagte betegnelser, hvor kriterierne er, at arbejdsløse skal  være uden arbejde, stå til rådighed for arbejdsmarkedet og være aktivt arbejdssøgende (\texttt{SOCIO}=2; \texttt{SOCIO02}=210-220). Personer uden for arbejdsstyrken alle de personer, som ikke opfylder betingelserne for at være i arbejdsstyrken, hvilket er personer under uddannelse, pensionister mv., førtids- og folkepensionister, efterlønsmodtagere mv., andre personer og børn (\texttt{SOCIO}=31-33, 321-323, 4; \texttt{SOCIO02}=310-420).}. Som det fremgår af tabel \ref{tab_SOCIO_SOCSTIL_sammenligning} kan vi se, at \texttt{SOCSTIL} og \texttt{SOCIO} fanger forskelige aspekter ved, at de i deres binære form rammer samme indeling i 68 \% af tilfældende, mens det i 32 \% af tilfældende rammer en forkert inddeling.
+% % 
+% \begin{table}[H] \centering
+% \caption{Sammenligning af \texttt{SOCIO} og \texttt{SOCSTIL}. Kilde: DST}
+% \label{tab_SOCIO_SOCSTIL_sammenligning}
+% \begin{tabular}{@{}llll@{}} \toprule
+%  & & SOCSTIL &  \\ \midrule
+%  & & Beskæftiget & Ledig \\ 
+%  SOCIO & Beskæftigelse & & \\ 
+%  & Ledig & & \\  \bottomrule
+% \end{tabular} \end{table}
+% % 
+Her er vores to primære kilder til at se på tilknytning til arbejdsmarkedet altså ikke enige om inddelingen. Det giver os fire mulige løsninger, rangeret efter hvor restriktivt et ledighedsbegreb man ønsker at benytte.
+%
+\begin{description} [topsep=6pt,itemsep=-1ex]
+  \item[Restriktiv] Udvælg de ledige, der defineres som sådan af både \texttt{SOCSTIL} \emph{og} \texttt{socio/SOCIO02}.
+  \item[Semirestriktiv] Benyt enten \texttt{SOCSTIL} eller \texttt{SOCIO}s inddeling af ledige
+  \item[Semibred] Benyt enten den ene variables inddeling, og supplere missing-værdierne med den anden variabel. \emph{... fomuler bedre}
+ \item[Bred] Benyt begge variables inddeling således at hvis den ene variabel siger en person er ledig, overruler det den anden variabels bestemmelse af at vedkommende ikke er det.
+\end{description}
+%
+Det er meget svært hvis ikke umuligt at verificere gyldigheden af enten \texttt{SOCSTIL} eller \texttt{SOCIO} som værende \emph{den helt korrekte} betegnelse, i tilfælde af tvivlsspørgsmål. Da vi arbejder med en meget bred forståelse af ledighed, og er interesseret i alle som på en eller anden måde kan karakteriseres som uden for beskæftigelse som vender tilbage til beskæftigelse igen, vælger vi at benytte den fjerde mulighed, hvor informationer fra begge variable inddrages. Vi antager, at hvis én af de to variable inddeler en person i en kategori udenfor beskæftigelse, så er det sandsynligt, at det forholder sig sådan. Det kan være, at man dermed kommer til at kategorisere en person, der i løbet af et år primært er på arbejdsmarkedet, og kun sekundært har været i kontakt med overførselsindkomster, som en person udenfor arbejdsmarkedet. Vi vælger denne løsning for at kunne udtale os bredt om dem, der i en periode har haft en løs eller ingen tilknytning til arbejdsmarkedet. 
+
+% DST versus den virkelige verden. Et godt eksempel på relationen mellem den virkelige verden og den måde, hvor på et virkeligt menneske ender med at blive tastet som en speciel person. Et eksempel her på er et problematik i forhold til dagpengesystemet med en person som kom i karambolage med sin a-kasse. Årsagen til at det er et relevant eksempel er jo netop, fordi at mange DST henter mange informationer fra A-kasse. Vi har at gøre med en person - et virkeligt eksempel fra 2015, som arbejder 20 timer om ugen som kommunikationsmedarbejder i Frode Laursen (lastbilselskab) samtidig med at personen er selvstændig og er ejer af et interessantskab. For at genoptjene retten til dagpenge skal personen arbejde 30 timer om ugen som lønmodtager og det at arbejde i og være ejer af et interessentskab opgør ikke for det. Dette medfører en lang række problemer for denne person registreres i en a-kasse og har konsekvenser for denne person arbejde og ret til dagpenge. Det har også konsekvenser for hvordan denne person indtastes i DST. Eksempelvis kan denne person både registreres som i beskæftigelse (lønmodtager SOCISTIL i deltid som arbejder med kommunikation DISCO inden for lastbilbranchen NACE), selvstændig (selvstændig SOCSTIL i deltid som arbejder med kommunikation DISCO inden for kommunikationsbranchen NACE) eller til sidst som uden for beskæftigelse (enten som dagpengemodtager, delvis ledig eller noget tredje SOCSTIL enten med eller uden DISCO og NACE). DST og A-kasserne kan nemlig ikke to eller flere  informationer og udvælger en som den primære funktion. Det kan være, fordi indkomst mv.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Spells \& runs \label{ledig_spellsrun}} 
+
+For at skabe en datastruktur der ville give at mulighed for at undersøge perioder med ledighed har vi stået over for en udfordring. I modsætning til Larsen og Toubøls anvendelse af MONECA i forbindelse med social mobilitet blandt alle jobskift, står vi med det særlige benspænd, at der kan gå kort eller lang tid mellem at personer i vores data får nyt arbejde. Vi kan derfor ikke tælle skift per år, men bliver nødt til at lave en struktur, der tillader os at kollapse ledighedsperioden dynamisk således, at vi kan se hvilket job man gik fra og til uanset længden på ledighedsperioden. For at gøre dette, har vi som tidligere beskrevet reduceret informationsmængden i DSTs aggregerede ledighedsvariable til en binær variabel. Ved at skabe en sådan klar stop/start-indikator på ledighedsperioder, i kombination med en paneldatastruktur, kan vi ved kodning ved hjælp af indekseringsprogrammering\footnote{Det vil sige: skabe nye variable og lave beregninger baseret på værdier relativt til en given observations \emph{placering} i data, fremfor givne \emph{karakteristika} ved observationer.} opnå en struktur der viser skift, uagtet længden af ledighedsperioderne\footnote{Længden af ledighedsperioderne er naturligvis af stor analytisk interesse, men benyttes først på et senere trin i analysen.}. Det betyder, at vi - før nogen form for sortering - har 5.860.440 mennesker observeret over 14 år svarende til 82.046.160 observationer. Tabel \ref{tab_spellrun} er et illustrativt eksempel på denne struktur. 
+%
+\begin{table}[H]
+\centering
+\caption{Eksempel på datastruktur. Kilde: DST}
+\label{tab_spellrun}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}clrrc@{}}
+\toprule
+ID nummer & \multicolumn{1}{c}{År} & \multicolumn{1}{c}{SOCSTIL / SOCIO} & \multicolumn{1}{c}{DISCO-beskæftigelseskategori}      & Ledig \\ \midrule
+7384973       & 1996                   & Lønmodtagere på grundniveau         & Bager og konditorarbejde (eksklusiv industri)         & Nej   \\
+7384973       & 1997                   & Revalideringsydelse                 & -                                                     & Ja    \\
+7384973       & 1998                   & Revalideringsydelse                 & -                                                     & Ja    \\
+7384973       & 1999                   & Revalideringsydelse                 & -                                                     & Ja    \\
+7384973       & 2000                   & Revalideringsydelse                 & -                                                     & Ja    \\
+7384973       & 2001                   & Lønmodtager på mellemniveau         & Pædagogisk arbejde                                    & Nej   \\
+7384973       & 2002                   & Kontanthjælp                        & \textit{(Pædagogisk arbejde)}                         & Ja    \\
+7384973       & 2003                   & Lønmodtager uden nærmere angivelse  & Pædagogisk arbejde                                    & Nej   \\
+7384973       & 2004                   & Lønmodtagere på grundniveau         & Operatør- og fremstillingsarbejde i næring og nydelse & Nej   \\
+7384973       & 2005                   & Lønmodtagere på grundniveau         & Operatør- og fremstillingsarbejde i næring og nydelse & Nej   \\
+7384973       & 2006                   & Lønmodtagere på grundniveau         & Operatør- og fremstillingsarbejde i næring og nydelse & Nej   \\
+7384973       & 2007                   & Lønmodtagere på grundniveau         & Operatør- og fremstillingsarbejde i næring og nydelse & Nej   \\
+7384973       & 2008                   & Lønmodtagere på grundniveau         & Operatør- og fremstillingsarbejde i næring og nydelse & Nej   \\
+7384973       & 2009                   & Lønmodtagere på grundniveau         & Operatør- og fremstillingsarbejde i næring og nydelse & Nej   \\ \bottomrule
+\end{tabular} }
+\end{table}
+%
+Vi har at gøre med et enkelt panel, det vil her sige den samme anonymiserede person gennem 14 år. Det ses, at vedkommende i 1996 arbejder med bageri- eller konditorrelateret arbejde. Vedkommende er kategoriseret som lønmodtager på grundniveau i vores aggregerede beskæftigelsesvariabel \texttt{SOCSTIL/SOCIO}, hvilket betyder at han i vores binære ledighedsvariabel har et negativt udfald. Det kan konstateres, at han i 1997 tildeles en revalideringsydelse, som han er på de næste fire år. I vores optik er han derfor i denne periode “ledig”. Revalideringsydelsens formål er, ifølge Bekendtgørelsen om aktiv socialpolitik, “(...) \emph{at en person med begrænsninger i arbejdsevnen, herunder personer, der er berettiget til ledighedsydelse og særlig ydelse, fastholdes eller kommer ind på arbejdsmarkedet, således at den pågældendes mulighed for at forsørge sig selv og sin familie forbedres.}” (\textcite{lov_revalidering}).
+
+Efter fire år på denne ydelse bliver vedkommende ansat inden for pædagogisk arbejde.  Året efter ender han på kontanthjælp, men kommer tilbage til det pædagogiske arbejde i 2003. I 2004 skifter han til beskæftigelseskategorien \emph{Operatør- og fremstillingsarbejde i næring og nydelse}. Dette job forbliver han i frem til panelets sidste observation i 2009\footnote{Mens denne person modtog revalideringsydelse og kontanthjælp, ville han blive af blandet andet DST og Beskæftigelsesministeriet blive kategoriseret som uden for arbejdsstyrken, men netop, fordi han vender tilbage til beskæftigelse igen, kommer han med i vores analyseudvalg og karakteriseres som “ledig” i denne periode.}. Derfor vil denne person blive registreret med to skift i vores mobilitetstabel: ét skift fra \emph{Bager- og konditorarbejde} til \emph{Pædagogisk arbejde}, og et andet fra \emph{Pædagogisk arbejde} til \emph{pædagogisk arbejde}. Det efterfølgende skift til fremstillingsarbejde i næringsindustrien medtages ikke, da han ikke har en periode med (registreret) ledighed ind i mellem. Vi mister en central information om denne person, da denne tilbagevending til hårdere fysisk arbejde indenfor madfremstilling er et vigtigt skifte tilbage til den type job, som manden havde i 1996, i det bager- og konditorrelaterede arbejde. Det hører med til historien, og er grunden til vi... %blah blah blah argument for at lave sekvensanalyse / en eller anden form for livsbane analyse #todo.
+
+Eksemplet tjener også til at illustrerer noget andet centralt. Det ses, at personen i 2002 var på kontanthjælp, og dog havde han en \texttt{DISCO}-værdi tilknyttet. Det skal forstås sådan, at en inddeling af et menneskes arbejdsliv, baseret på en årsinddeling, grundlæggende er en kunstig inddeling, der ikke kan indfange den kontinuitet, livet leves i. En sådan årsinddeling har ofte en vis berettigelse, eftersom det er grundlag for en lang række adminstrative inddelinger, med meget reelle sociale konsekvenser. Ikke desto mindre kan man sagtens være kontanthjælpsmodtager og have en en, to eller flere jobs i løbet af samme år, og det er en kompleksitet, vi indenfor det enkelte år er tvunget til at reducere til en samlet vurdering af, hvad vedkommende hovedsageligt lavede i løbet af året. Som beskrevet tidligere er dannelsen af \texttt{DISCO}-variablen en kompliceret proces, hvor den endelige beskæftigelsesværdi er sammensat ud fra mange forskellige kilder og kriterier. Informationen til dannelsen af \texttt{DISCOALLE\_INDK} er primært sket ud fra det arbejdssted, hvor de har fået størst lønindkomst gennem året. Der er ingen vurdering af hvor lang en ansættelse, der er tale om. En ledighedsvariabel baseret på hvorvidt man har eller ikke har et udfald i \texttt{DISCOALLE\_INDK}, ville derfor være ekstremt upålidelig, og ved at teste data igennem for konsistensen mellem \texttt{DISCOALLE\_INDK} og \texttt{SOCIO/SOCSTIL} var den præget af uacceptabelt mange forskelle i forhold til sidstnævnte. Det forklarer hvorfor personens ledighedsstatus i føromtalte panel ikke harmonerer mellem de to. I \texttt{SOCSTIL} er han sat med beskæftigelsesværdien \emph{Lønmodtagere på grundniveau}, mens han i \texttt{SOCIO} er kategoriseret som på kontanthjælp. \texttt{SOCSTIL} understøtte dermed \texttt{DISCOALLE\_INDK}, mens \texttt{SOCIO} ikke gør det. What to do? Vores vurdering i dette for det videre arbejde helt centrale spørgsmål, har været følgende: Det er sandsynligt, at personen både har haft et arbejde og har været på kontanthjælp i 2002. Derfor mener vi netop, at hvis den ene af de to variable kategoriserer ham som kontanthjælpsmodtager som primær socioøkonimisk status i 2002, bør vi vurdere ham som ledig i år 2002 - eller i hvert fald \emph{primært} som ledig.
+
+Nedenstående tabel viser hvor mange tvivlstilfælde, der er tale om. 
+
+
+
+% kom med tal på hvor mange tvivlstilfælde der er tale om.
+
+
+% som nævnt er det også muligt at have en \texttt{DISCO}-værdi selvom både \texttt{SOCIO} og \texttt{SOCSTIL} mener man ikke er i en beskæftigelseskategori. Det betyder sandsynligvis at der er tale om et job, der ikke fylder meget i forhold til de forskellige overførselsindkomster, som de to aggregerede variable baserer sig på. Det forekommer derfor rimeligt at ignorere denne beskæftigelse.}
+% % 
+% \begin{table}[H] \centering
+% \caption{Antallet af ledige i perioden 1996 til 2009. Kilde: DST}
+% \label{tab_SOCSTIL}
+% \begin{tabular}{@{}lll@{}} \toprule
+% Årstal & Vores ledige i ledighedsperiode & Vores ledige i beskæftigelse \\ \midrule
+% 1996  & 0 & ? \\ 
+% 1997  & ? & ? \\ 
+% 1998  & ? & ? \\ 
+% 1999  & ? & ? \\ 
+% 2000  & ? & ? \\ 
+% 2001  & ? & ? \\ 
+% 2002  & ? & ? \\ 
+% 2003  & ? & ? \\ 
+% 2004  & ? & ? \\ 
+% 2005  & ? & ? \\ 
+% 2006  & ? & ? \\ 
+% 2007  & ? & ? \\ 
+% 2008  & ? & ? \\ 
+% 2009  & 0 & ? \\  \bottomrule
+% \end{tabular} \end{table}
+% % 
+
+
+
+%Local Variables: 
+%mode: latex
+%TeX-master: "report"
+%End:

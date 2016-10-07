@@ -1,0 +1,238 @@
+% -*- coding: utf-8 -*-
+% !TeX encoding = UTF-8
+% !TeX root = ../report.tex
+
+\section{Baggrundsvariable til MONECA \label{}}
+
+% ------------------------------------------------------------------------------------------------
+\subsection{KVINDER \label{}}
+
+Andelen af kvinder er lavet ud fra variablen \texttt{koen}, som kommer fra DST's \texttt{BEF}-datasættet (Befolkningen).
+% 
+Kilde: http://www.dst.dk/da/TilSalg/Forskningsservice/Dokumentation/hoejkvalitetsvariable/folketal/koen.aspx
+
+
+% ------------------------------------------------------------------------------------------------
+\subsection{ALDER \label{}}
+
+Gennemsnitsalder er udregnet på baggrund af vriablen \texttt{aldernov}, som kommer fra DST's \texttt{IDAP}-registeret (IDA Persondata).
+
+Alderen er opgjort i referenceperioden, som i den registerbaserede arbejdsstyrkestatistik er den sidste uge i november. Opgørelsestidspunktet er helt præcist den sidste arbejdsdag i november (den dato, der bliver nævnt på oplysningssedlen). Det betyder, at det ikke er helt samme opgørelsesdato hvert år. Eksempelvis var det i 1998 den 30. november og i 1997 den 28. november.
+
+Når vi krydser alder med \texttt{DISCOMONECA} er der få personer, hvis alder er 0 eller missing:
+% 
+\begin{itemize} [topsep=6pt,itemsep=-1ex]
+  \item I perioden 1996-2009 har tre personer en alder som er missing [.] i den samlede population.
+  \item Inden for hvert år er der under 1 procent som er 15 år eller yngre i den samlede population.
+\end{itemize}
+%
+Kilde: http://www.dst.dk/da/TilSalg/Forskningsservice/Dokumentation/hoejkvalitetsvariable/beskaeftigelsesoplysninger-der-vedroerer-ida-personer/aldernov.aspx
+
+
+% ------------------------------------------------------------------------------------------------
+\subsection{LØN \label{}}
+
+Den årlige gennemsnitsløn er udregnet på baggrund af variablen \texttt{loenmv}, som kommer fra DST's \texttt{IND}-datasættet (Indkomster hdk.). Variablen dækker over skattepligtig løn inkl. frynsegoder, skattefri løn, jubilæums- og fratrædelsesgodtgørelser samt værdi af aktieoptioner. 
+
+Honorar for bestyrelsesarbejde indgår også i denne variabel. Honorar i forbindelse med konsulentarbejde, foredrag og lign. indgår ikke i denne variabel. Lønnen er efter fradrag af bidrag til arbejdsgiveradministrerede pensionsordninger og bidrag til ATP (både arbejdsgivers og arbejdstagers bidrag til pensionsordningerne er fratrukket). Lønnen er før fradrag af arbejdsmarkedsbidrag og særlig pensionsbidrag. \texttt{loenmv} inkluderer løn under sygdom og barsel, også i de tilfælde, hvor arbejdsgiverne får refunderet en del af lønnen fra det offentlige. I de tilfælde, hvor arbejdsgiveren ikke udbetaler løn under sygdom, udbetaler arbejdsgiveren sygedagpenge i de første to uger af sygeperioden - disse sygedagpenge indgår ikke i \texttt{loenmv}.
+% 
+I perioden 1996 til 2009 er der en række databrud:
+% 
+\begin{itemize} [topsep=6pt,itemsep=-1ex]
+  \item Fra 1999 inkl. værdi af køb eller tegningsret til aktier, for medarbejder mv.) udnyttet i året, jf. ligningslovens §16 og 28 (indgår ikke før 1999 i indkomsten)
+  \item 2001-2003 inkl. aktieoptionsaflønning, hvor arbejdsgiver har betalt afgift (indgår i årene 2001 til 2003 i \texttt{loenmv}).
+  \item 2002-2003 og fra 2008 inkl. løn til udenlandske forskere og specialister som beskattes efter kildeskattelovens §48E (forskerordningen); ikke alle oplysninger er modtaget af Danmarks Statistik, før ordningen indberettes i SKATs almindelige indberetninsgsystem (oplysningsseddlerne, COR fra 2004), og specielt mangler mange for 2003. 2004-2007 indgår denne lønindkomst ikke i \texttt{loenmv}
+\end{itemize}
+%
+Kilde: http://www.dst.dk/da/Statistik/dokumentation/Times/personindkomst/loenmv.aspx
+
+
+% ------------------------------------------------------------------------------------------------
+\subsection{UDDANNELSESLÆNGDE \label{}}
+
+Den gennemsnitlige uddannelseslængde er udregnet på baggrund af vriablen \texttt{hfpria}, som kommer fra DST's \texttt{UDDA}-registeret (Udannelser BUE).
+
+\texttt{hfpria} dækker over Normeret tid for højeste fuldførte uddannelse. \texttt{hfpria} er den normerede tid fra 1.klasse (den kortest mulige vej målt i måneder) - dvs. PRIA på en studentereksamen er (9 år + 3 år) * 12 = 144. På en bachelor: (9 år + 3 år + 3 år) * 12 = 180
+%
+Når vi krydser uddannelseslængde med DISCOMONECA er der en del personer som har 0 eller missing:
+% 
+\begin{itemize} [topsep=6pt,itemsep=-1ex]
+  \item Inden for hvert år er der under 0,06 procent som har 0 års uddannelse i den samlede population.
+  \item Inden for hvert år er der mellem 1,25 og 3,76 procent som som er missing [.] i den samlede population.
+\end{itemize}
+%
+Kilde: http://www.dst.dk/extranet/staticsites/TIMES3/html/70f144a5-7cbb-4e82-83d7-1fa3fceca7d7.htm
+
+
+% ------------------------------------------------------------------------------------------------
+\subsection{UDDANNELSE \label{}}
+
+Uddannelse er udregnet på baggrund af variablen \texttt{hfaudd}, som kommer fra DST's \texttt{UDDA}-registeret (Udannelser BUE).
+
+\texttt{hfaudd} dækker over kode for højst fuldført uddannelse pr. 1. oktober. Den højeste fuldførte uddannelse er, som det vigtigste kriterium, fastlagt i forhold til hovedgrupperne i den danske uddannelsesnomenklatur \texttt{Forspalte1} og følger den rangorden, som fastlægges herigennem.
+%
+Vi har omkodet \texttt{hfaudd}, så der er følgende syv kategorier:
+% 
+\begin{enumerate} [topsep=6pt,itemsep=-1ex]
+  \item [1] Grundskole
+  \item [2] Gymnasial uddannelse
+  \item [3] Erhvervsfaglig uddannelse
+  \item [4] Kort videregående uddannelse
+  \item [5] Mellemlang videregående uddannelse
+  \item [6] Lang videregående uddannelse
+  \item [9] Uoplyst
+\end{enumerate}
+%
+Kilde: http://www.dst.dk/da/Statistik/dokumentation/Times/uddannelsesdata/befolkningens-uddannelse/hfaudd.aspx
+
+
+% ------------------------------------------------------------------------------------------------
+\subsection{LEDIGHED \label{}}
+
+Danmarks Statistik udgiver løbende to ledighedsstatistikker \parencite{DST2014}. Den månedlige registerbaserede ledighedsstatistik, der opgør nettoledigheden og bruttoledigheden samt den interviewbaserede arbejdskraftundersøgelse, der opgør AKU-ledigheden. Dette tal udgives både som kvartalstal og som månedstal.
+\begin{itemize} [topsep=6pt,itemsep=-1ex]
+  \item De nettoledige omfatter de 16-64-årige jobparate modtagere af dagpenge, kontanthjælp og uddannelseshjælp, omregnet til ’fuldtidsledige’. Opgøres fra 1979.
+  \item De bruttoledige omfatter de nettoledige samt de 16-64-årige jobparate aktiverede dagpenge-, kontanthjælps- og uddannelseshjælpsmodtagere, herunder personer i løntilskud, omregnet til fuldtid. Opgøres fra 2007.
+  \item AKU-Ledigheden følger det europæiske statistikbureau Eurostats og ILO’s operationaliseringer af arbejdsmarkedstilknytningen. De AKU-ledige er således personer, der til arbejdskraftundersøgelsen oplyser, at de ikke var beskæftigede i en given referenceuge, og at de aktivt har søgt arbejde indenfor de seneste fire uger, og at de kan påbegynde nyt arbejde indenfor de kommende to uger. Opgøres fra 1990.
+\end{itemize}
+
+AKU følger de internationale standarder for arbejdsmarkedsstatistik, mens den registerbaserede  ledighedsstatistik  afviger  herfra.  Den  internationale arbejdsmarkedsorganisation ILO fastlagde i 1983, at en person er ledig, når denne, for en given referenceperiode, opfylder de følgende tre kriterier:
+\begin{itemize} [topsep=6pt,itemsep=-1ex]
+  \item Er helt uden arbejde
+  \item Er aktivt jobsøgende
+  \item Kan påtage sig et arbejde
+
+Den registerbaserede ledighedsstatistiks væsentligste afvigelser fra denne definition, og dermed fra AKU-ledigheden, er at den registrerede ledighed kun omfatter personer, der modtager en given
+ydelse. Det betyder bl.a., at studerende og pensionister sjældent bliver registreret som ledige, da de som regel hverken modtager dagpenge eller kontanthjælp eller starthjælp eller kommer i løntilskud. Samt at at ledigheden opgøres som et volumenmål (omregning til fuldtidsledige), hvorved de deltidsledige i referenceperioden inkluderes i ledighedstallet med den andel af referenceperioden, hvor de er ledige.
+
+Det er værd at bemærke, at bruttolangtidsledigheden kun kan laves konsistent tilbage til 2007, fordi der er mangler oplysninger om antallet af langtidsledige kontanthjælpsmodtagere tilbage i tid. Vi anvender derfor nettoledigheden, fordi DST anbefaler denne, når man ønsker en lang tidsserie selvom vi desværre ikke får ledigheden opgjort med jobklare personer i aktivering og løntilskud som ved bruttoledigheden.
+
+
+% ------------------------------------------------------------------------------------------------
+\subsection{LEDIGHEDSGRAD GENNEM HELE ARBEJDSLIVET \label{}}
+
+Den ennemsnitlige ledighedsgrad gennem hele arbejdslivet er udregnet på baggrund af variablen \texttt{sumgrad}, som kommer fra DST's *IDAP*-registeret (IDA Persondata).
+
+Variablen angiver summen af en persons ledighedsgrader i tusinder fra 1980. Værdien 1000 angiver, at personen er fuldt ledig i 1 år uanset forsikringskategori. Har en person således en ledighedsgrad på 1708 betyder det, at personen har været ledig i 1 år og 8 mdr.
+
+Evt. ledighedsgrader for personer, der er registrerede som efterlønsmodtagere i november, indgår ikke i summationen for det pågældende år. Værdien 0 angiver, at variablen ikke er relevant for den pågældende person [HVAD BETYDER DET?]. Fra 2008 baseres ledighedsoplysninger på statistikken Personer uden Ordinær Beskæftigelse, som erstatter Det centrale register for arbejdsmarkedsdata (CRAM).
+% 
+Når vi krydser ledighedsgrad med DISCOMONECA er der en del personer som har 0 eller missing:
+% 
+\begin{itemize} [topsep=6pt,itemsep=-1ex]
+  \item Inden for hvert år er mellem 840.430 og 1.337.262 som har 0.
+  \item Der er ingen missing [.] i den samlede population inden for alle årene.
+\end{itemize}
+%
+Kilde: http://www.dst.dk/da/Statistik/dokumentation/Times/ida-databasen/ida-personer/sumgrad.aspx
+
+
+% ------------------------------------------------------------------------------------------------
+\subsection{LANGTIDSLEDIGHED \label{}}
+%
+På nuværende tidspunkt figurerer forskellige langtidsledighedsdefitioner. DST \parencite{Grunnet-Lauridsen2014} opstiller følgende: 
+\begin{itemize} [topsep=6pt,itemsep=-1ex]
+  \item DST: 80 pct. bruttoledig det seneste kalenderår
+  \item DST: Personer der er berørt af bruttoledighed eller ”midlertidigt fraværende fra bruttoledighed” i de seneste 365 dage.%
+%
+\footnote{Midlertidigt fraværende fra bruttoledighed” afgrænses som: 1. Perioden, hvor personen ikke er berørt af bruttoledighed, er kortere end 29 dage, og i denne periode er personen ikke i lønmodtagerbeskæftigelse i mere end 10 timer. 2. Perioden mellem to ledighedsspænd er kortere end 29 dage og personen har markering for løntilskud dagen før eller dagen efter denne periode. Hvis det er tilfældet, indgår denne periode i opgørelsen af langtidsledighed uanset hvor mange timers lønmodtagerbeskæftigelse, der er i perioden. Tidsserien er først tilgængelig fra januar 2009, da oplysningerne i \texttt{BFL} først er fra januar 2008}%
+%
+\ .
+  \item AMS: 80 pct. bruttoledig de seneste 52 uger samt bruttoledig i sidste uge af perioden
+  \item AE: 80 pct. bruttoledig de seneste 52 uger samt bruttoledig i seneste dagpengemåned. Inkluderer desuden feriedagpengemodtagere fra ledighed.
+  \item AKU Langtidsledighed defineres som ledig de seneste 12 måneder med følgende opgørelsesmetode: AKU-ledig i referenceugen, søgt arbejde minimum de seneste 12 måneder og uden job de seneste 12 måneder.
+\end{itemize}
+%
+
+Andelen af langtidsledige er på baggrund af variablen \texttt{arledgr}, som kommer fra DST's \texttt{IDAP}-registeret (IDA Persondata).
+
+Ledighedsgraden svarer på årsbasis til den andel af året, hvori den ledighedsberørte person har været ledig i enten én sammenhængende periode eller flere perioder sammenlagt.
+
+Ledighedsgraden er beregnet som antallet af ledige timer i forhold til antallet af (mulige) arbejdstimer. Ledighedsgraden svarer på årsbasis til den andel af året, hvori den ledighedsberørte person har været ledig i enten én sammenhængende periode eller flere perioder sammenlagt. Ledigheden er angivet i promille. En årsledighedsgrad lig 1000 angiver fuld ledighed i hele året, en årsledighedsgrad på 500 angiver således ledighed i halvdelen af året etc.
+
+Ledighedsgraden beregnes for hele befolkningen, men det er valgt kun at vise graf og tabel for personer, der har en positiv årsledighedsgrad i løbet af året. Det betyder, at ARLEDGR er forskellig fra 0 eller med andre ord, at de pågældende personer er ledighedsberørte i arbejdsåret.
+
+Variablen dannes ikke i IDA, men modtages fra ledighedsstatistikken (Data modtages fra CRAM (Det centrale register for arbejdsmarked). For yderligere dokumentation henvises derfor til dokumentationen for dette område. Fra 2008 baseres ledighedsoplysninger på statistikken Personer uden Ordinær Beskæftigelse, som erstatter Det centrale register for arbejdsmarkedsdata (CRAM). Årsledighedsgraden beregnes som summen af tilstandskoderne for ledige dagpengemodtagere (kode 5020), G-dage (kode 5030) og ledige kontanthjælpsmodtagere (kode 5080).
+
+Vi har omkodet ledighedsgraden om til andelen af langtidsledige, det vil sige personer med en ledighed på over 800 (80 procent).
+
+Det er ikke muligt at danne Bruttoledighed før 2007 pga. usikkerhed omkring aktiveringen. Der er to muligheder for at gøre langtidsledighed bedre.
+Man kunne prøve at inddrage variable med varighed af aktiveringsydelser inden for det seneste år. 
+\begin{itemize} [topsep=6pt,itemsep=-1ex]
+  \item Man kan sænke procentsatsen til 75 eller 70 procent.
+  \item Disse variable har vi dog ikke, men kan bestilles fra SFI: texttt{NETTO_AK NETTO_M NETTO_VAR VAR_AF_B VAR_AF_FA VAR_AF_U VAR_AK1 VAR_AK2 VAR_AK3 VAR_AK4 VAR_AK5 VAR_AKT}
+  \item Fra 2007 til 2009 kunne man bruge \texttt{FORSIKRINGSKATEGORI_KODE GRADAAR KILDE_KODE PTI_TILSTAND_KODE PTI_TIMER_PER_UGE PTI_VFRA PTI_VTIL} til at få de bruttoledige med.
+\end{itemize}
+
+Kilde: http://www.dst.dk/da/Statistik/dokumentation/Times/ida-databasen/ida-personer/arledgr.aspx
+
+
+% ------------------------------------------------------------------------------------------------
+\subsection{REGIONSKOMMUNER/REGION HOVEDSTADEN \label{}}
+
+Regionskommuner er udregnet på baggrund af variablen \texttt{kom}, som kommer fra DST's \texttt{BEF}-register (Befolkningen).
+
+Med kommunalreformen pr. 1. jan. 2007 blev de 271 kommuner slået sammen til 98 nye storkommuner. For nogle af kommunerne (14 kommuner) gjaldt at de blev opsplittet og indgik i hver sin nye storkommune. Som konsekvens af dette har det været nødvendig at lægge de veje, der tidligere skilte ved kommunegrænsen men efter kommunesammenlægningen indgik i samme kommune, sammen.
+
+CPR har tilbagekonverteret adresserne for de 98 nye kommuner, der således også kan følges tilbage i tid. For de 241 kommunerne før kommunalreformen 1. jan 2007 betyder det, at de sammenlagte veje i disse 14 ud af de 271 kommuner udgør et mindre databrud efter 1. jan 2007.
+
+Kommunerne er blevet omregnet til de fem regioner, som ser er blevet delt op i andelen af personer fra regionhovedstaden.
+
+Kilde: http://www.dst.dk/da/Statistik/dokumentation/Times/moduldata-for-befolkning-og-valg/kom.aspx
+
+
+% ------------------------------------------------------------------------------------------------
+\subsection{ANCIENITET PÅ JOB FØR LEDIGHEDSPERIODE \label{}}
+
+Ancienitet på jobbet før ledighedsperiode er dannet ved at aggregere variablene \texttt{ANSAAR} og \texttt{ANSDAGE}, som kommer fra DST's \texttt{IDAN}-register (IDA Ansættelser).
+
+\texttt{ANSAAR} dækker over år for ansættelse på arbejdssted (efter 1980). Variablen \texttt{ANSAAR} defineres ved hjælp af variablen \texttt{ANSXTILB} (ansættelsesændring i forhold til året før). Hvis der har fundet en ansættelsesændring sted i forhold til året før (\texttt{ANSXTILB} antager en af værdierne T1-T9), sættes ansættelsesåret til det aktuelle år. Hvis der ikke forekommer ændringer i personernes ansættelsesforhold, er der ingen ændring i året for ansættelsen, og det pågældende år bevares.
+
+\texttt{ANSDAGE} dækker over antal ansættelsesdage hos arbejdsgiver ud fra oplysninger om datoer på oplysningsseddel. Antal ansættelsesdage er beregnet for det aktuelle år og for alle typer af ansættelser såsom hovedbeskæftigede lønmodtagere, bibeskæftigede lønmodtagere, øvrige novemberansættelser, vigtigste ej-novemberansættelser og arbejdsgivere. Antal ansættelsesdage kan maksimalt være 365 dage.
+
+Kilde:
+\begin{itemize} [topsep=6pt,itemsep=-1ex]
+http://www.dst.dk/da/Statistik/dokumentation/Times/ida-databasen/ida-ansaettelser/ansdage.aspx
+http://www.dst.dk/da/Statistik/dokumentation/Times/ida-databasen/ida-ansaettelser/ansaar.aspx
+\end{itemize}
+
+
+% ------------------------------------------------------------------------------------------------
+\subsection{ERHVERVSERFARING \label{}}
+
+Erhvervserfaring er er dannet ved at aggregere variablene \texttt{ERHVER} og \texttt{ERHVER79}, som kommer fra DST's \texttt{IDAP}-register (IDA Persondata).
+
+\texttt{ERHVER} giver et skøn over den samlede erhvervserfaring fra 1980. Skønnet over den samlede erhvervserfaring fra 1980 er angivet i 1.000. Det betyder, at har en person en værdi på 5500 i variablen erhverv, vil personen have en erhvervserfaring på 5½ fuldtidsår. Den maksimale erhvervserfaring for deltidsforsikrede kan antage 750 pr. år og for øvrige 1.000 pr. år.
+
+\texttt{ERHVER79} er erhvervserfaring fra 1964 til ultimo 1979 opgjort ud fra ATP-indbetalinger. Erhvervserfaringen er opgjort i år. Defineret for personer født i 1921 - 1971. Erhvervserfaringen = antal år som lønmodtager før 1980. Erhvervserfaringen beregnes ud fra den indbetalte ATP pr. ultimo 1979, som er omregnet ud fra de årlige maksimale ATP-indbetalinger fra 1979 og bagud til 1964.
+
+Kilde:
+\begin{itemize} [topsep=6pt,itemsep=-1ex]
+  \item http://www.dst.dk/da/TilSalg/Forskningsservice/Dokumentation/hoejkvalitetsvariable/beskaeftigelsesoplysninger-der-vedroerer-ida-personer/erhver79.aspx
+  \item http://www.dst.dk/da/Statistik/dokumentation/Times/ida-databasen/ida-personer/erhver.aspx
+\end{itemize}
+
+
+% ------------------------------------------------------------------------------------------------
+\subsection{AKASSE \label{}}
+
+Organisationsgrad -> AKASSE_ID
+
+
+
+% ------------------------------------------------------------------------------------------------
+\subsection{LØNDIFFERENCE MELLEM JOB FØR OG EFTER LEDIGHED \label{}}
+
+Den årlige gennemsnitsløn mellem jobbet før en ledighedsperiode og jobbet efter en ledighedsperiode.
+
+
+% ------------------------------------------------------------------------------------------------
+\subsection{Oversigt over alle variable \label{}}
+
+
+
+
+%Local Variables: 
+%mode: latex
+%TeX-master: "report"
+%End: 

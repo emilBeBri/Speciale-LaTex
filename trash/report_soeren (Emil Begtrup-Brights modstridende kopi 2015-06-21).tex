@@ -1,0 +1,139 @@
+%!TEX TS-program = pdflatex
+%!TEX TS-program = pdflatex
+
+%%% -------------- Preamble ----------------- %%%
+
+\input{preamble}
+
+%%% -------------- Dokument ----------------- %%%
+
+\begin{document} \selectlanguage{danish}
+
+
+% %%% -------------- forside ----------------- %%%
+% \begin{titlingpage}
+% % KU wallpaper
+% \ThisLRCornerWallPaper{1}{fig/forside/samf-farve.pdf}
+% % start
+% % newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+% \center % Center everything on the page
+% %Heading sections
+% \begin{minipage} {1\textwidth}
+% \begin{flushleft} \large
+% \textsc{Københavns Universitet} 
+% \end{flushleft}
+% \end{minipage}
+% \vspace{4,5cm}
+% %Title section
+% \HRule \\[0.4cm]
+% { \huge \bfseries \textsc{Veje til Beskæftigelse}}\\[0.4cm] % Title of your document
+% { \large \bfseries \textsc{En kortlægning af arbejdsmarkedsparates beskæftigelsesmobilitet på det danske arbejdsmarked fra 1996 til 2009}\\[0.4cm] % Title of your document
+% \HRule \\[1.5cm]
+% \vspace{12cm}
+% %Authour section
+% \begin{minipage}{1\textwidth}
+% \begin{flushleft} \large
+% Emil Erik Pula Bellamy \textsc{Begtrup-Bright} 
+% \newline Søren \textsc{Nielsen-Gravholt} 
+% \end{flushleft}
+% \end{minipage}
+% \end{titlingpage}
+
+% %%% -------------- kolofon ----------------- %%%
+% \begin{titlingpage}
+% \begin{minipage}{1\textwidth}
+% \vspace{11cm}
+% \begin{flushleft} \large
+% Sociologisk Institut, Københavns Universitet
+% \newline September 2015
+% \end{flushleft}
+% \vspace{0,5cm}
+% \begin{flushleft} \large
+% \emph{Forfattere:}\\
+% Emil Erik Pula Bellamy Begtrup-Bright
+% \newline Søren Nielsen-Gravholt
+% \end{flushleft}
+% \begin{flushleft} \large
+% \emph{Vejleder:}\\
+% Jens Arnholtz
+% \end{flushleft}
+% \vspace{0,5cm}
+% \begin{flushleft} \large
+% \emph{Antal tegn:} xxx
+% \newline \emph{Antal tegn i fodnoter:} xxx
+% \end{flushleft}
+% \end{minipage}
+% \end{titlingpage}
+
+
+%%% -------------- Indholdsfortegnelse ----------------- %%%
+
+\pagenumbering{roman} %til preface etc.
+
+\tableofcontents*		% Indholdsfortegnelse the asterisk means that the contents itself isn't put into the ToC
+
+\newpage
+
+
+%\thispagestyle{empty}
+ 
+%\listoffigures
+%\newpage 
+%\listoftables"C:\\texlive\\2011\\bin\\win32;$PATH"
+ 
+
+
+\pagenumbering{arabic}
+%måske ikke nødvendigt
+
+
+%%% -------------- Afsnit ----------------- %%%
+
+\chapterstyle{southall} %hvordan kapitler skal se ud.
+%Nogle valgmuligheder, se flere i the memoir manual:
+% - madsen thatcher verville southall ger companion
+
+\input{tex/1.0_indledning}
+% \input{tex/2.0_teori_bourdieu_og_arbejdsloeshed}
+\input{tex/3.0_metode_om_arbejdsloeshed}
+% \input{tex/4.0_teori_om_segmenter}
+% \input{tex/5.0_metode_om_netvaerksanalyse_og_moneca}
+% \input{tex/6.0_metode_om_disco}
+\input{tex/7.0_analyse_hovedkort}
+% \input{tex/7.1_analyse_faglaerte_og_ufaglaerte}
+% \input{tex/7.2_analyse_akademikerne}
+% \input{tex/8.0_baggrund}
+% \input{tex/9.0_diskussion}
+% \input{tex/10.0_konklusion}
+
+
+%%% -------------- Appendiks ----------------- %%%
+\begin{appendices}
+\setcounter{secnumdepth}{3}
+% \input{tex/appendiks_figurer}
+% \input{tex/appendiks_metode_arbejdsloeshed_og_skift}
+% \input{tex/appendiks_metode_disco}
+% \input{tex/appendiks_metode_baggrundsvariable}
+
+
+\end{appendices}
+
+%%% -------------- Bibliografi ----------------- %%%
+% biblatex definerer alt i preamblet
+%\nocite{*} % brug denne for at tage referencer med der ikke citeres i teksten
+% \printbibliography
+
+\chapter{BIBLIOGRAFI} \label{biblio}
+
+\printbibliography[heading=subbibliography,title={Hovedbibliografi},filter=notonline]
+\printbibliography[heading=subbibliography,title={Online kilder},type=online]
+% \printbibliography[heading=subbibliography,title={DST manualer},filter=DST]
+\printbibliography[heading=subbibliography,title={Danmarks Statistiks Manualer},type=manual]
+
+
+%%% -------------- slut det hele er slut ----------------- %%%
+\end{document}
+
+
+
+

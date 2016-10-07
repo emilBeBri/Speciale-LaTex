@@ -1,0 +1,395 @@
+% -*- coding: utf-8 -*-
+% !TeX encoding = UTF-8
+% !TeX root = ../report.tex
+
+
+\chapter{METODE OM ARBEJDSLØSHED} \label{metode_arbejdsloeshed}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Kernen i vores empiriske arbejde er en skelnen mellem beskæftigelse og den mellemliggende periode uden beskæftigelse. Eller med andre ord at “være arbejdsløs eller ej”. Med arbejdsløs har vi som udgangspunkt definitionen “at stå uden arbejde”. Selvom det er en nødvendig skelnen i vores empiri, behøver det i midlertidig ikke også at betyde, at vi i vores teoretiske begrebsdannelse har accepteret denne dikotomi som et lige så fundamentalt socialt fakta eller at det bliver et mål i sig selv at reducere den sociale virkelighed til et spørgsmål om at “være arbejdsløs eller ej”, hvilket fremgik af kapitel \ref{teori_arbejdsloeshed}. I vores teoretiske begrebsdannelse har vi netop argumenteret for, at arbejdsløshed i et marginaliseringsperspektiv, betyder at arbejdsløshed finder sted i forskellige grader i et spektrum mellem inkluderet og ekskluderet. Men dette får os ikke uden om, at for at få et overblik over beskæftigelsesmobilitet, er det nødvendigt i vores statistiske arbejde at skelne mellem at “være arbejdsløs eller ej”. Gennemgangen af vores arbejdsløshed i dette metodiske kapitel, viser, at der er flere måde at gribe dikotomien mellem arbejdsløse beskæftigede. 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Statistiske definitioner af arbejdsløshed \label{arbejdsloes_statistiske_definitioner}} 
+
+Danmarks Statistik udgiver løbende to ledighedsstatistikker. Den månedlige registerbaserede ledighedsstatistik, der opgør nettoledigheden og bruttoledigheden samt AKU-ledigheden som laves på baggrund af den interviewbaserede arbejdskraftundersøgelse \parencite{DST2014a}. De nettoledige omfatter de 16-64-årige arbejdsmarkedsparate modtagere af dagpenge, kontanthjælp og uddannelseshjælp. De bruttoledige omfatter de nettoledige samt de 16-64-årige arbejdsmarkedsparate aktiverede dagpenge-, kontanthjælps- og uddannelseshjælpsmodtagere, herunder personer i løntilskud. AKU-Ledigheden følger det europæiske statistikbureau Eurostats og ILOs definition af arbejdsløshed\footnote{Definitionen er arbejdsløse er det antal personer som står uden beskæftigelse samtidig med at være til rådighed for arbejdsmarkedet og aktivt arbejdssøgende \parencite{ILO1982}.} og omfatter personer, der til arbejdskraftundersøgelsen oplyser, at de ikke var beskæftigede i referenceugen, at de aktivt har søgt arbejde inden for de seneste fire uger, og at de kan påbegynde nyt arbejde indenfor de kommende to uger\footnote{DST har opgjort nettoledighed fra 1979, bruttoledighed fra 2007 og AKU-ledighed fra 1990.}. Den registerbaserede ledighedsstatistiks afviger sig fra ILO's definition, fordi den kun omfatter personer, der modtager ydelser som dagpenge og kontanthjælp\footnote{Det betyder blandt andet, at studerende og pensionister sjældent bliver registreret som ledige, fordi dem som regel hverken modtager dagpenge, kontanthjælp eller andre ydelser. Derudover opgøres ledigheden i fuldtidsledige, hvilket betyder, at de de deltidsledige inkluderes med den andel, de er ledige.}.
+% 
+\begin{figure}[H]
+\begin{centering}
+	\caption{Danmarks Statistiks tre ledighedsbegreber. Kilde: DST}
+	\includegraphics[width=\textwidth]{fig/metode/Figur_de_tre_ledighedsbegreber.pdf}
+	\label{fig_de_tre_ledighedsbegreber}
+\end{centering}
+\end{figure}
+% 
+Som det fremgik i kapitel \ref{teori_arbejdsloeshed} ligger fokus også på dem som står uden for arbejdsstyrken, fordi vi ønsker at bidrage med en mere nuanceret forståelse af deltagelse på arbejdsmarkedet som et spektrum mellem at være inkluderet og ekskluderet. Dem som står uden for arbejdsstyrken kan inddeles på mange forskellige måder alt efter tilgang og hvilken periode man har at gøre med. I forhold til periode er vi afhængige af, at forskellige ydelser kommer og går alt efter lovforslagene laves om for eksempel kommer fleksjob til i 1997 \parencite{lov_fleksjob}. Vi har valgt for overblikkets skyld at inddele dem som står uden for arbejdsstyrken i midlertidigt uden for arbejdsstyrken\footnote{Som ikke ikke er indbefattet af nettoledige, bruttoledige eller AKU-ledige.}, kontanthjælp\footnote{Som ikke har karakter af midlertidighed eller ikke-arbejdsmarkedsparat.}, tilbagetrukket fra arbejdsstyrken, under uddannelse og børn/unge. For de midlertidigt uden for arbejdsstyrken, kontanthjælpsmodtagerne, de tilbagetrukkede og under uddannelse har til fælles, at mange allerede har været en del af arbejdsstyrken tidligere og i flere tilfælde vender tilbage til i beskæftigelse igen. Børn og unge og delvist også folk under uddannelse har til fælles, at man aldrig har været en del af arbejdsstyrken og endnu har til gode at komme i beskæftigelse. Folk under uddannelse har en særlig karakter ved, at de for personer som oplevet arbejdsløshed kan være en måde at komme i beskæftigelse.
+
+% Slut eventuelt afsnittet med samme figur, nu med endnu en cirkel rundt om der viser vores overkategori.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Panelstruktur: Perioder med arbejdsløshed og beskæftigelse \label{arbejdsloes_spellsrun}} 
+
+For at skabe en datastruktur der giver mulighed for at undersøge perioder med arbejdsløshed har vi stået over for en udfordring. I modsætning til Larsen og Toubøls anvendelse af Moneca i forbindelse med social mobilitet blandt alle jobskift, står vi med det særlige benspænd, at der kan gå kort eller lang tid mellem, at personer i vores data får nyt arbejde. Vi bliver derfor nødt til at skabe en datastruktur, der tillader os at kollapse arbejdsløshedsperioden dynamisk således, at vi kan se hvilken type beskæftigelse man gik fra og til uanset længden på arbejdsløshedsperioden. For at gøre dette, reducerer vi arbejdsløshed til en binær variabel, hvilket giver en klar stop/start-indikator på arbejdsløshedsperioder. I kombination med en paneldatastruktur, kan vi kode ved hjælp af indekseringsprogrammering opnå en struktur der viser arbejdsløshedsperioder uagtet om en person er arbejdsløs i et halvt år eller tre år. Det vil sige, at vi i datamaterialet beregner sammenhængen mellem en given persons arbejdsløshed i et givent år i relation til vedkommendes arbejdsløshed og beskæftigelse i alle de andre år.
+
+I figur \ref{tab_spellrun} fremgår et eksempel med en fiktiv person som er arbejdsløs over tre perioder, som adskiller sig væsentligt fra hinanden. Den første varer et år, hvor vedkommende kommer fra beskæftigelse som farmaceut og vender tilbage til beskæftigelse som farmaceut. Den anden periode varer tre år, hvor vedkommende komme fra beskæftigelse som farmaceut og vender tilbage til beskæftigelse med rengørings- og køkkenhjælpearbejde. Den tredje varer to år, hvor vedkommende kommer fra beskæftigelse med rengørings- og køkkenhjælparbejde og vender tilbage til beskæftigelse med brandslukningsarbejde efter at have været indskrevet på og færdiggjort redderuddannelsen.
+% 
+\begin{table}[H]
+\centering
+\caption{Eksempel på datastruktur. Kilde: DST}
+\label{tab_spellrun}
+\resizebox{0.6\textwidth}{!}{%
+\begin{tabular}{@{}ll@{}} \toprule
+År & Status \\ \midrule
+	1996 & Beskæftiget som farmaceut \\
+	1997 & Beskæftiget som farmaceut \\ \midrule
+	1998 & Arbejdsløs \\ \midrule
+	1999 & Beskæftiget som farmaceut \\
+	1999 & Beskæftiget som farmaceut \\ \midrule
+	2000 & Arbejdsløs \\
+	2001 & Arbejdsløs \\
+	2002 & Arbejdsløs \\ \midrule
+	2003 & Beskæftiget med rengørings- og køkkenhjælpearbejde \\ \midrule
+	2004 & Arbejdsløs \\
+	2005 & Arbejdsløs \\
+	2006 & Under uddannelse \\ 
+	2007 & Under uddannelse \\
+	2008 & Under uddannelse \\ \midrule
+	2009 & Beskæftiget med brandslukningsarbejde \\ \bottomrule
+\end{tabular} }
+\end{table}
+% 
+Som det fremgår af figur \ref{tab_spellrun}, så skelner det binære arbejdsløshedsbegreb en personers arbejdsforløb i arbejdsløshed eller beskæftigelsestype. På den måde kan vi undersøge de arbejdsløses beskæftigelsesmobilitet på det danske arbejdsmarked, hvor vedkommende i eksemplet har gennemgået tre skifte - fra farmaceut til farmaceut - fra farmaceut til rengørings- og køkkenhjælpearbejde - og fra rengørings- og køkkenhjælpearbejde til brandslukningsarbejde.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Operationalisering af arbejdsløse \label{arbejdsloes_operationalisering}} 
+
+Som beskrevet i afsnit \ref{arbejdsloes_spellsrun} skelner vores binære arbejdsløshedsbegreb mellem perioder med arbejdsløshed og perioder med beskæftigelse. I kapitel \ref{teori_arbejdsloeshed} argumenterede vi for at inddrage personer uden for arbejdsstyrken som enten kommer i beskæftigelse eller vender tilbage i beskæftigelse beskæftigelse, selvom de ikke er en del af den såkaldte arbejdsstyrke. Om man er arbejdsløs eller ej bliver i en empirisk forstand en dynamisk størrelse, hvor det kun kan bestemmes om en person i en given periode er arbejdsløs eller ej i relation til, hvad vedkommende kommer fra og er på vej hen. Hermed operationaliseres arbejdsløse i forhold til om de ultimativt kommer fra og ender i beskæftigelse, hvilket fremgår af tabel \label{tab_marginaliseringsmodel_3}, hvor de arbejdsløse er dem som karakteriseres som “midlertidigt” uden beskæftigelse, hvilket betyder, at de ligger i en mellemgruppe af marginaliserede i et spektrum mellem inkluderet på arbejdsmarkedet og ekskluderet fra arbejdsmarkedet.
+
+% Et mere dynamisk begreb i forhold til arbejdsløse (som en del af arbejdsstyrken), men ikke forhold til arbejdsløse som ikke kommer i beskæftigelse igen.
+% Der er reelt færre af vores arbejdsløse end antallet af nettoledige. Se wideafterlong - ledsoec_tael
+% Ví kigger per definition på arbejdsmarkedsparate arbejdsløse. De opgør pr kvartal. Vi har tidsperspektiv. De kan have en idé om de arbejdsmarkedsparate arbejdsløse, men vi kigger på de reelle tal. Det er naturligvis i bakspejlet, men netop her kan vi se hvem der rent faktisk fik et arbejde.
+% 
+\begin{table}[H] \centering
+\caption{Model over marginalisering}
+\label{tab_marginaliseringsmodel_3}
+\begin{tabular}{@{} m{3,4cm} c m{3,6cm} c m{3,6cm} @{}} \toprule
+\textbf{Inkluderet} & & \textbf{Marginaliseret} & & \textbf{Ekskluderet} \\ \midrule
+  beskæftiget  & & “midlertidigt” & & vender ikke tilbage/ \\  
+  & & uden beskæftigelse & & kommer ikke \\  
+  & & & & i beskæftigelse \\  
+\end{tabular} \end{table} %%%%%
+\begin{table}[H] \centering
+\label{tab_marginaliseringsmodel}
+\begin{tabular}{@{} m{5,9cm} m{5,9cm} @{}} 
+  \textbf{Marginaliseringsproces} & \textbf{Eksklusionsproces} \\  
+  --------------------------------------------> & --------------------------------------------> \\ 
+\end{tabular} \end{table} %%%%%
+\begin{table}[H] \centering
+\label{tab_marginaliseringsmodel}
+\begin{tabular}{@{} m{12,3cm} @{}} 
+  \textbf{Inklusionsproces} \\  
+  <--------------------------------------------------------------------------------------------- \\ \bottomrule
+\end{tabular} \end{table}
+%
+DST har ikke overraskende en lang række variable, der forholder sig direkte eller indirekte til begrebet arbejdsløshed. Mange af disse forholder sig specifikt til forskellige aspekter af det at være arbejdsløs, såsom \texttt{DPTIMER}, der beskriver det antal timer, der inden for en uge er udbetalt dagpenge, \texttt{LEDFULD}, der beskriver det antal uger en person er arbejdsløs inden for det indeværende år, \texttt{FORANST}, der beskriver, hvilken arbejdsmarkedspolitisk foranstaltning personen deltager og \texttt{SOCSTIL}, der beskriver befolkningens primære tilknytning til arbejdsmarkedet. Vi ønsker at anvende flere forskellige af disse variable på forskellige måder for så at se, hvordan beskæftigelsesmobiliteten ændrer sig alt efter analyseudvalgets karakter. Vi har valgt at beskrive seks forskellige analyseudvalg, hvilket skaber en kritiske masse af arbejdsløse:
+% 
+\begin{enumerate} [topsep=6pt,itemsep=-1ex]
+  \item \textbf{Alle beskæftigede}
+  \item \sout{Minimum to ugers / en måneds / to måneders arbejdsløshed}
+  \item \textbf{Minimum et halvt års arbejdsløshed}
+  \item \sout{Minimum halvandet års arbejdsløshed}
+  \item \sout{Nettoledige}
+  \item \sout{Kontanthjælpsmodtagere}
+\end{enumerate}
+% 
+\newpage For at operationalisere de beskæftigede og de arbejdsløse anvender vi en række variable: \texttt{SOCSTIL}, \texttt{SOCIO}, \texttt{LEDFULD} og \texttt{LEDDEL}. \texttt{SOCSTIL} angiver befolkningens tilknytning til arbejdsmarkedet ultimo november\footnote{Den registerbasrede arbejdsstyrkestatistik (RAS) opgør befolkningens tilknytning til arbejdsmarkedet ud fra ILO's retningslinjer. I henhold ILO's retningslinjer skal beskæftigelse vægtes højere end andre aktiviteter, hvilket i DSTs praksis betyder, at når en person har mindst en times betalt beskæftigelse vægtes dette højere end alle andre aktiviteter. I tilfælde af, at en person deltager i flere aktiviteter på referencetidspunktet, prioriteres de aktiviteterne efter ILO's retningslinjer.}, hvor befolkningen inddeles i en række undergrupper under beskæftigede, arbejdsløse og uden for arbejdsstyrken som det fremgår af tabel \ref{tab_socstil}. Vi operationaliserer arbejdsløse som nettoledige\footnote{Disse nettoledighedstal kan eksempelvis ses i sammenhæng med lignende opgørelser fra Arbejderbevægelsens Erhversråd\parencite{Bjoersted2012}, Dansk Arbejdsgiverforening \parencite{Bang-Petersen2012} og DST \parencite{DST2014a}.} og en række personer uden for arbejdsmarkedet som opfylder vores krav om “midlertidigt” uden beskæftigelse. Disse består af beskæftiget uden løn, orlov fra ledighed, uddannelsesforanstaltning/vejledning og opkvalificering, særlig/aktivering, uoplyst aktivering, sygedagpenge, efterløn, overgangsydelse, kontanthjælp, revalideringsydelse, tjenestemandspension, folkepensionist, øvrige uden for arbejdsstyrken, førtidspensionist, introduktionsydelse, integrationsuddannelse, ledighedsydelse og aktivering ifølge kontanthjælpsstatistikregister\footnote{Uddannelsessøgende, flexydelse, delvis ledighed, barselsdagpenge og barn eller ung har vi valgt ikke at medregne.}.
+% 
+\begin{table}[H] \centering
+\caption{Operationalisering af SOCSTIL, 1996-2009. Kilde: DST} 
+\label{tab_socstil}
+\resizebox{0.8\textwidth}{!}{
+\begin{tabular}{@{}lllrrrrr@{}} \toprule
+	Værdi	&	Beskrivelse	&	Status	&	Gennemsnit	&	Gennemsnit (pct.)	&	Standardafv.	&	Min.	&	Maks.	\\	\midrule
+	115	&	Arbejdsgiver	&	.	&	70416	&	1,49	&	7185	&	54564	&	80421	\\	
+	116	&	Momsbetaler	&	.	&	114902	&	2,44	&	10346	&	99482	&	135862	\\	
+	117	&	CRAM-selvstændige	&	.	&	7981	&	0,17	&	4336	&	2897	&	13391	\\	
+	118	&	AKM-selvstændige	&	.	&	8710	&	0,18	&	2494	&	6883	&	14610	\\	
+	120	&	Medarbejdende ægtefælle	&	.	&	10932	&	0,23	&	4461	&	5646	&	19456	\\	
+	130	&	Lønmodtager uden nærmere angivelse	&	.	&	348873	&	7,40	&	96146	&	243799	&	487774	\\	
+	131	&	Topleder	&	.	&	71812	&	1,52	&	9632	&	60678	&	93002	\\	
+	132	&	Lønmodtager på højeste niveau	&	.	&	332485	&	7,06	&	23122	&	290213	&	384509	\\	
+	133	&	Lønmodtager på mellemniveau	&	.	&	437264	&	9,28	&	42266	&	384116	&	520369	\\	
+	134	&	Lønmodtagere på grundniveau	&	.	&	1091258	&	23,16	&	68535	&	1003460	&	1192673	\\	
+	135	&	Andre lønmodatagere	&	.	&	256052	&	5,43	&	27456	&	207532	&	288262	\\	\midrule
+	200	&	Nettoledige	&	Arbejdsløs	&	116469	&	2,47	&	39811	&	43895	&	193672	\\	\midrule
+	310	&	Uddannelsessøgende (under uddannelse)	&	.	&	126117	&	2,68	&	11779	&	113393	&	152519	\\	
+	315	&	Flexydelse	&	Arbejdsløs	&	544	&	0,01	&	977	&	3119	&	4500	\\	
+	316	&	Delvis ledighed	&	Arbejdsløs	&	852	&	0,02	&	805	&	5396	&	6534	\\	
+	317	&	Beskæftiget uden løn	&	Arbejdsløs	&	12822	&	0,27	&	2651	&	8524	&	17438	\\	
+	318	&	Orlov fra ledighed	&	Arbejdsløs	&	5312	&	0,11	&	6022	&	638	&	19500	\\	
+	319	&	Uddannelsesforanstaltning/vejledning og opkvalificering	&	Arbejdsløs	&	25953	&	0,55	&	11796	&	11656	&	52324	\\	
+	320	&	Særlig/aktivering	&	Arbejdsløs	&	7574	&	0,16	&	4848	&	3131	&	15413	\\	
+	321	&	Uoplyst aktivering	&	Arbejdsløs	&	54	&	0,00	&	64	&	139	&	275	\\	
+	322	&	Barselsdagpenge	&	Arbejdsløs	&	6325	&	0,13	&	5470	&	1611	&	18756	\\	
+	323	&	Sygedagpenge	&	Arbejdsløs	&	14024	&	0,30	&	8768	&	5080	&	32473	\\	
+	324	&	Efterløn	&	Arbejdsløs	&	146650	&	3,11	&	17570	&	121450	&	175478	\\	
+	325	&	Overgangsydelse	&	Arbejdsløs	&	15603	&	0,33	&	15308	&	119	&	44904	\\	
+	326	&	Kontanthjælp	&	Arbejdsløs	&	50574	&	1,07	&	5732	&	36899	&	57848	\\	
+	327	&	Revalideringsydelse	&	Arbejdsløs	&	16447	&	0,35	&	7184	&	3844	&	24554	\\	
+	328	&	Tjenestemandspension	&	Arbejdsløs	&	10863	&	0,23	&	4257	&	2174	&	18300	\\	
+	329	&	Folkepensionist	&	Arbejdsløs	&	604510	&	12,83	&	100182	&	477391	&	775401	\\	
+	330	&	Øvrige uden for arbejdsstyrken	&	Arbejdsløs	&	119718	&	2,54	&	11301	&	101509	&	136870	\\	
+	331	&	Førtidspensionist	&	Arbejdsløs	&	207218	&	4,40	&	9219	&	194958	&	221706	\\	
+	332	&	Introduktionsydelse	&	Arbejdsløs	&	1938	&	0,04	&	3339	&	279	&	11353	\\	
+	333	&	Integrationsuddannelse	&	Arbejdsløs	&	2021	&	0,04	&	1686	&	1172	&	5834	\\	
+	334	&	Ledighedsydelse	&	Arbejdsløs	&	3729	&	0,08	&	2376	&	2187	&	10087	\\	
+	335	&	Aktivering iflg. kontanthj.statistikregister	&	Arbejdsløs	&	2736	&	0,06	&	2812	&	2183	&	10129	\\	
+	400	&	Barn eller ung (d.v.s. under 16 år)	&	.	&	462597	&	9,82	&	231856	&	91017	&	795925	\\	
+		&	Total	&		&	4711333	&	100,00	&	149094	&	4475636	&	4919122	\\	\bottomrule
+\end{tabular} }
+\end{table}
+% 
+% Uddannelsessøgende er under uddannelse.
+% Øvrige er ikke børn og unge, under uddannelse, fordi så ville de være placeret der. Det er en restgruppe, som det ikke er muligt at finde arbejdsmarkedsrelevante informationer om.
+
+\newpage \texttt{SOCIO} er dannet ud fra oplysninger om væsentligste indkomstkilde for personen vedkommende har i det år\footnote{Arbejdsklassifikationsmodulet (AKM) opgør befolkningen på basis af indberetninger fra offentlige lønsystemer og virksomheder ved en maskinel proces, hvor hver enkelt person tildeles koderne på grundlag af oplysninger fra COR (Det Centrale Oplysningsseddelregister), CSR (Det Centrale Skatteyderregister) og en lang række registre. I \texttt{SOCIO} vægtes arbejdsløshed højere end beskæftigelse, hvor de personer, hvis hovedindkomst er efterløn og overgangsydelse findes først, efterfulgt af arbejdsløse mindst halvdelen af året.}. Befolkningen ligesom i \texttt{SOCSTIL} i en række undergrupper under beskæftigede, arbejdsløse og uden for arbejdsstyrken som det fremgår af tabel \ref{tab_socio}, hvor \texttt{SOCIO} ændres til den nye udgave \texttt{SOCIO02} i 2002. Vi operationaliserer arbejdsløse som arbejdsløse mindst halvdelen af året og en række personer uden for arbejdsmarkedet som opfylder vores krav om “midlertidigt” uden beskæftigelse. Disse består af dagpengemodtager i aktivering, sygdom og orlov, førtidspensionister, folkepensionister, efterlønsmodtagere og kontanthjælpsmodtager\footnote{Andre, børn og modtagere af barselsdagpenge har vi valgt ikke at medregne.}.
+%
+\begin{table}[H] \centering
+\caption{Operationalisering af \texttt{SOCIO}/\texttt{SOCIO02}, 1996-2009. Kilde: DST}
+\label{tab_socio}
+\resizebox{0.9\textwidth}{!}{
+\begin{tabular}{@{}l|llrrrrrr@{}} \toprule
+		&	Værdi	&	Beskrivelse	&	Status	&	Gennemsnit	&	Gennemsnit (pct.)	&	Standardafv.	&	Min.	&	Maks.	\\	\midrule
+	\texttt{SOCIO}	&	111	&	Selvstændig 50 eller flere ansatte	&	.	&	331	&	0,01	&	107	&	163	&	438	\\	
+		&	112	&	Selvstændig 10-49 ansatte	&	.	&	3.015	&	0,07	&	370	&	2.410	&	3.494	\\	
+		&	113	&	Selvstændig 1-9 ansatte	&	.	&	63.307	&	1,43	&	9.250	&	45.635	&	72.508	\\	
+		&	114	&	Selvstændig ingen ansatte	&	.	&	149.756	&	3,38	&	12.345	&	141.025	&	173.898	\\	
+		&	12	&	Medarbejdende ægtefælle	&	.	&	18.551	&	0,42	&	3.468	&	14.219	&	23.257	\\	
+		&	13	&	Lønmodtager, stillingsangivelse ikke oplyst	&	.	&	175.539	&	3,96	&	51.193	&	132.947	&	242.448	\\	
+		&	131	&	Topleder i virksomheder, organisationer og den offentlige sektor	&	.	&	68.962	&	1,56	&	4.451	&	62.938	&	72.938	\\	
+		&	132	&	Lønmodtager i arbejde der forudsætter færdigheder på højeste niveau	&	.	&	307.856	&	6,94	&	15.422	&	281.659	&	323.243	\\	
+		&	133	&	Lønmodtager i arbejde der forudsætter færdigheder på mellemniveau	&	.	&	397.412	&	8,96	&	14.170	&	380.032	&	415.486	\\	
+		&	134	&	Lønmodtager i arbejde der forudsætter færdigheder på grundniveau	&	.	&	1.121.613	&	25,29	&	33.151	&	1.073.508	&	1.156.396	\\	
+		&	135	&	Andre lønmodtagere	&	.	&	243.051	&	5,48	&	8.521	&	230.185	&	252.635	\\	\cline{2-8}
+		&	2	&	Arbejdsløs mindst halvdelen af året	&	Arbejdsløs	&	115.807	&	2,61	&	34.363	&	85.086	&	166.458	\\	\cline{2-8}
+		&	31	&	Elever min. 15 år, under uddannelse	&	.	&	313.936	&	7,08	&	5.784	&	306.305	&	320.187	\\	
+		&	321	&	Førtidspensionister	&	Arbejdsløs	&	236.244	&	5,33	&	4.794	&	229.435	&	240.641	\\	
+		&	322	&	Folkepensionister	&	Arbejdsløs	&	540.632	&	12,19	&	26.928	&	503.208	&	575.088	\\	
+		&	323	&	Efterlønsmodtager mv.	&	Arbejdsløs	&	170.576	&	3,85	&	6.019	&	160.618	&	175.414	\\	
+		&	33	&	Andre	&	.	&	255.574	&	5,76	&	5.494	&	248.269	&	264.071	\\	
+		&	4	&	Børn	&	.	&	90.555	&	2,04	&	2.567	&	86.750	&	93.743	\\	
+		&		&	Total	&		&	4.272.714	&	96,35	&	37.752	&	4.223.586	&	4.323.187	\\	\midrule
+	\texttt{SOCIO02}	&	111	&	Selvstændig, 10 eller flere ansatte	&	.	&	2.655	&	0,06	&	129	&	2.411	&	2.803	\\	
+		&	112	&	Selvstændig, 5 - 9 ansatte	&	.	&	5.825	&	0,13	&	614	&	4.994	&	6.584	\\	
+		&	113	&	Selvstændig, 1 - 4 ansatte	&	.	&	43.377	&	0,98	&	8.262	&	33.058	&	54.182	\\	
+		&	114	&	Selvstændig, ingen ansatte	&	.	&	133.361	&	3,01	&	6.686	&	125.885	&	140.860	\\	
+		&	120	&	Medarbejdende ægtefælle	&	.	&	9.324	&	0,21	&	1.990	&	6.479	&	12.331	\\	
+		&	131	&	Topleder i virksomheder, organisationer og den offentlige sektor	&	.	&	71.053	&	1,60	&	8.551	&	61.440	&	87.743	\\	
+		&	132	&	Lønmodtager i arbejde der forudsætter færdigheder på højeste niveau	&	.	&	330.915	&	7,46	&	17.611	&	315.284	&	365.038	\\	
+		&	133	&	Lønmodtager i arbejde der forudsætter færdigheder på mellemniveau	&	.	&	463.397	&	10,45	&	33.439	&	419.986	&	518.408	\\	
+		&	134	&	Lønmodtager i arbejde der forudsætter færdigheder på grundniveau	&	.	&	980.625	&	22,11	&	33.421	&	950.167	&	1.057.515	\\	
+		&	135	&	Andre lønmodtagere	&	.	&	195.138	&	4,40	&	21.493	&	175.519	&	243.589	\\	
+		&	139	&	Lønmodtager, stillingsangivelse ikke oplyst	&	.	&	354.284	&	7,99	&	66.713	&	246.505	&	446.326	\\	\cline{2-8}
+		&	210	&	Arbejdsløs mindst halvdelen af året(nettoledighed)	&	Arbejdsløs	&	86.642	&	1,95	&	39.868	&	18.922	&	132.557	\\	\cline{2-8}
+		&	220	&	Modtager af dagpenge (aktivering og lign.,sygdom, barsel og orlov)	&	Arbejdsløs	&	52.389	&	1,18	&	6.691	&	45.570	&	64.883	\\	
+		&	310	&	Elever min. 15 år, under uddannelse	&	.	&	313.820	&	7,08	&	13.308	&	291.979	&	330.014	\\	
+		&	321	&	Førtidspensionister	&	Arbejdsløs	&	218.151	&	4,92	&	6.343	&	208.389	&	227.256	\\	
+		&	322	&	Folkepensionister	&	Arbejdsløs	&	681.127	&	15,36	&	76.092	&	584.771	&	784.083	\\	
+		&	323	&	Efterlønsmodtager mv.	&	Arbejdsløs	&	156.153	&	3,52	&	21.422	&	134.519	&	181.989	\\	
+		&	330	&	Kontanthjælpsmodtager	&	Arbejdsløs	&	103.054	&	2,32	&	12.395	&	85.628	&	116.922	\\	
+		&	410	&	Andre	&	.	&	127.330	&	2,87	&	13.062	&	117.537	&	158.368	\\	
+		&	420	&	Børn	&	.	&	106.122	&	2,39	&	36.063	&	49.733	&	156.729	\\	
+		&		&	Total	&		&	4.434.743	&	100,00	&	39.118	&	4.340.304	&	4.459.385	\\	\bottomrule
+\end{tabular} }
+\end{table}
+% 
+\newpage \texttt{LEDFULD} og \texttt{LEDDEL} angiver antal uger med fuld ledighed (100\%) og delvis ledig (1-99\%)\footnote{Det Centrale Register for Arbejdsmarkedsstatistik (CRAM) opgør \texttt{LEDFULD} og \texttt{LEDDEL} ud fra registreringer ved det offentlige arbejdsformidlingssystem og omfatter arbejdsløshedsforsikrede og de ikke-forsikrede som modtager kontanthjælp. \texttt{LEDFULD} og \texttt{LEDDEL} løber kun til 2007.}. Som det fremgår af \ref{tab_ledfuld_leddel} har vi valgt at operationalisere arbejdsløshed som mere end tre ugers fuld ledighed og mere end fem ugers delvis ledighed.
+%
+\begin{table}[H] \centering
+\caption{Oversigt over \texttt{LEDFULD} og \texttt{LEDDEL}, 1996 til 2007  Kilde: DST}
+\label{tab_ledfuld_leddel}
+\resizebox{0.7\textwidth}{!}{
+\begin{tabular}{@{}l|llrrrr@{}} \toprule
+	Mellemtotaler	&	Status	&	Gennemsnit	&	Gennemsnit (pct.)	&	Standardafv.	&	Min.	&	Maks.	\\	\midrule
+	1 -2 uger fuld ledig	&	.	&	97.261	&	19,62	&	13.524	&	80.742	&	123.197	\\	
+	3-4 uger fuld ledig	&	Arbejdsløs	&	53.193	&	10,73	&	5.748	&	44.521	&	62.617	\\	
+	5-10 uger fuld ledig	&	Arbejdsløs	&	97.279	&	19,62	&	11.556	&	73.137	&	116.719	\\	
+	11-20 uger fuld ledig	&	Arbejdsløs	&	104.872	&	21,15	&	17.132	&	67.225	&	136.017	\\	
+	21-30 uger fuld ledig	&	Arbejdsløs	&	62.102	&	12,53	&	13.642	&	36.701	&	88.447	\\	
+	31-40 uger fuld ledig	&	Arbejdsløs	&	38.430	&	7,75	&	10.677	&	20.143	&	58.587	\\	
+	41-53 uger fuld ledig	&	Arbejdsløs	&	42.622	&	8,60	&	19.754	&	15.824	&	83.483	\\	
+	Total	&		&	495.759	&	100,00	&	84.815	&	341.592	&	662.410	\\	\bottomrule
+	1 -2 uger delvist ledig	&	.	&	230.690	&	59,04	&	39.505	&	159.039	&	302.465	\\	
+	3-4 uger delvist ledig	&	.	&	65.690	&	16,81	&	8.899	&	51.610	&	81.173	\\	
+	5-10 uger delvist ledig	&	Arbejdsløs	&	42.618	&	10,91	&	4.159	&	34.413	&	49.058	\\	
+	11-20 uger delvis ledig	&	Arbejdsløs	&	25.456	&	6,52	&	2.536	&	19.690	&	29.142	\\	
+	21-30 uger delvis ledig	&	Arbejdsløs	&	13.779	&	3,53	&	1.484	&	10.287	&	15.828	\\	
+	31-40 uger delvis ledig	&	Arbejdsløs	&	8.156	&	2,09	&	1.170	&	5.027	&	9.431	\\	
+	41-53 uger delvis ledig	&	Arbejdsløs	&	4.331	&	1,11	&	885	&	2.010	&	5.492	\\	
+	Total	&		&	390.719	&	100,00	&	54.400	&	282.076	&	486.944	\\	\bottomrule
+\end{tabular} }
+\end{table}
+% 
+Vi har valgt at kombinere \texttt{SOCSTIL} og \texttt{SOCIO}, fordi de indeholder definitioner af arbejdsløshed, der ligger tæt op af hinanden, men fanger forskellige aspekter. I deres binære form rammer \texttt{SOCSTIL} og \texttt{SOCIO} samme inddeling i 68 \% af tilfældende, det vil sige, at de ikke er enige om inddelingen. Det giver os fire mulige løsninger, rangeret efter hvor restriktivt et arbejdsløshedsbegreb man ønsker at benytte. Den \textbf{restriktive} udvælger de arbejdsløse, der defineres som sådan af både \texttt{SOCSTIL} og \texttt{SOCIO}. Den \textbf{semirestriktive} benytter enten \texttt{SOCSTIL} eller \texttt{SOCIO}s inddeling af arbejdsløse. Den \textbf{semibrede} benytter enten den ene variables inddeling, og supplere missing-værdierne med den anden variabel. Den \textbf{brede} benytter begge variables inddeling således, at hvis den ene variabel siger en person er arbejdsløs, overruler det den anden variabels bestemmelse af at vedkommende ikke er det. Vi vælger at benytte den fjerede mulighed, hvor informationer fra begge variable indrages for at få så mange, som kan karakteriseres som arbejdsløse med som muligt.
+
+Det betyder, at vi - før nogen form for sortering - har 5.860.440 personer observeret over 14 år svarende til 82.046.160 observationer. Efter operationaliseringen afhænger antallet af personer, observationer med videre af hvilket analyseudvalg, vi benyttet, hvilket fremgår af tabel \ref{tab_analyseudvalg}:
+%
+\newpage
+\begin{table}[H]
+\centering
+\caption{Oversigt over operationaliseringer. Kilde: DST}
+\label{tab_ledfuld_leddel}
+\resizebox{1.18\textwidth}{!}{
+\begin{tabular}{@{}lllrrrr@{}} \toprule
+	& Beskrivelse & Variable & Personer i alt & Personer pr år & Antal skifte & Længde \\ \midrule
+	1 & Alle beskæftigede & Ansxfrem & - & & 3.310.133  & \\	
+	2 & Minimum xx ugers arbejdsløshed & \texttt{SOCSTIL}, \texttt{SOCIO}, \texttt{LEDDEL}, \texttt{LEDFULD} & - & & - & \\	
+	3 & Minimum et halvt års arbejdsløshed & \texttt{SOCSTIL}, \texttt{SOCIO} gammel & 502.486 & & 599.892 & \\
+	4 & Minimum et halvt års arbejdsløshed & \texttt{SOCSTIL}, \texttt{SOCIO} ny & 516.812 & & 596.430
+ 	& \\
+	5 & Minimum et halvt års arbejdsløshed & \texttt{SOCSTIL} & 491.697 & & 562.885 & \\
+	6 & Minimum et halvt års arbejdsløshed & \texttt{SOCIO} & 310.308 & & 342.492
+	 & \\
+	7 & Minimum halvandet års arbejdsløshed & \texttt{SOCSTIL}, \texttt{SOCIO} & - & & - &  \\	
+	8 & Nettoledige & \texttt{SOCSTIL} = nettoledig & 292.926 & & 316.409
+ 	&  \\	
+	9 & Nettoledige & \texttt{SOCIO} = nettoledig & 230.708 & & 246.931
+ 	&  \\	
+	10 & Kontanthjælpsmodtagere & \texttt{SOCSTIL} = kontanthjælpsmodtager & - & & - &  \\	\bottomrule
+\end{tabular} }
+\end{table}
+% 
+De forskellige analyseudvalg indeholder forskellige grader af marginalisering. Personer som i det indeværende år vil generelt ligge tættere på inkluderet på arbejdsmarkedet end en person som har været arbejdsløs i halvandet år såvel som en nettoledig ligger tættere på at være inkluderet end en kontanthjælpsmodtager\footnote{Dette fremgår også af de gennemsnitslængden på arbejdsløshedsperioden se }. 
+
+Antal arbejdsløse
+% 
+\begin{table}[H]
+\centering
+\caption{Oversigt over antal arbejdsløse. Kilde: DST}
+\label{tab_ledfuld_leddel}
+\resizebox{0.6\textwidth}{!}{
+\begin{tabular}{@{}lrrr@{}} \toprule
+	Årstal 	&	SOCSTIL 	&	SOCIO 			&	Analyseudvalg 1	\\ 
+			& nettoledige 	&	arbejdsløse 	&					\\ \midrule
+	1996 	& 193.672		&	166.458			&					\\	
+	1997 	& 168.991		&	149.000			&	68.398			\\	
+	1998 	& 132.179 		&	113.354			&	89.297			\\	
+	1999	& 117.689		&	89.235			&	94.446			\\	
+	2000 	& 118.520		&	91.707			&	99.165			\\	
+	2001 	& 110.501		&	85.086			&	90.698			\\	
+	2002 	& 119.250		&	98.854			&	106.905			\\	
+	2003 	& 147.666 		&	129.575			&	115.100			\\	
+	2004 	& 134.586		&	132.557			&	106.311			\\	
+	2005 	& 107.734		&	114.760			&	92.120			\\	
+	2006 	& 80.270 		&	82.278			&	68.937			\\	
+	2007 	& 59.860 		&	58.483			&	50.185			\\	
+	2008 	& 43.895		&	18.922			&	43.072			\\
+	2009 	& 95.756		&	57.706			&					\\	\bottomrule
+\end{tabular} }
+\end{table}
+% 
+
+% I vores operationalisering får vi nogle nye - dem uden for arbejdsstyrken - men vi mister også nogen. Vi mister dem som ikke har en disco-kode. Vi mister dem som har en disco-kode vi har sat til missing (de ubekendte). Diskussion har hvad vi får og hvad vi mister. Det er en vigtig pointe.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Tre forløb med arbejdsløshed \label{}} 
+
+Følgende afsnit beskriver tre fiktive personers beskæftigelse og arbejdsløshed gennem 14 år.
+
+\subsection{En arbejdsløs på dagpenge \label{}} 
+
+\subsection{En arbejdsløs på efterløn \label{}} 
+
+\subsection{En arbejdsløs på revalideringsydelse \label{}} 
+Personen arbejder i 1996 med bageri- eller konditorrelateret arbejde. Vedkommende er kategoriseret som lønmodtager på grundniveau i \texttt{SOCSTIL}. Det kan konstateres, at han i 1997 tildeles en revalideringsydelse, som han er på de næste fire år. I vores optik er han derfor i denne periode “arbejdsløs”. Revalideringsydelsens formål er, ifølge Bekendtgørelsen om aktiv socialpolitik, “(...) \emph{at en person med begrænsninger i arbejdsevnen, herunder personer, der er berettiget til ledighedsydelse og særlig ydelse, fastholdes eller kommer ind på arbejdsmarkedet, således at den pågældendes mulighed for at forsørge sig selv og sin familie forbedres.}” \parencite{lov_revalidering}. Ydelsen svarer til den højeste dagpenge ydelse, og indebærer opkvalificering eller omskoling til mere egnet arbejde af forskellig art.  Efter fire år på denne ydelse bliver vedkommende ansat inden for pædagogisk arbejde med børn. Året efter ender han på kontanthjælp, men kommer tilbage til det pædagogiske arbejde i 2003. I 2004 skifter han til arbejde relateret til operatør- og fremstillingsarbejde indenfor næringsindustrien. Dette job forbliver han i frem til panelets sidste observation i 2009. Derfor vil denne person blive registreret med to skift: ét skift fra bager- og konditorarbejde til pædagogisk arbejde, og et andet fra pædagogisk arbejde til pædagogisk arbejde. Det efterfølgende skift til fremstillingsarbejde i næringsindustrien medtages ikke, da han ikke har en periode med (registreret) arbejdsløshed ind i mellem.
+
+Der er to vigtige ting konsekvenser af denne tilgang. Den første behandles i afsnit \ref{arbejdsloes_operationalisering}, og handler om vores bredde definition af arbejdsløshed. Mens denne person modtog revalideringsydelse og kontanthjælp, ville han blive af blandet andet DST og Beskæftigelsesministeriet blive kategoriseret som uden for arbejdsstyrken, men netop, fordi han vender tilbage til beskæftigelse igen, kommer han med i vores analyseudvalg og karakteriseres som arbejdsløs i denne periode. At kalde ham for “arbejdsløs” i traditionel forstand er derfor misvisende, da vedkommende er vurderet til ikke at være arbejdsduelig, og med behov for hjælp til at opnå dette. Som argumenteret for tidligere, skal man derfor se vores arbejdsløshedbegreb som en faktuel konstatering af, at vedkommende vender tilbage til arbejdsmarkedet.
+Den anden ting er endnu mere central for forståelsen af vores analyse. Vi mister en central information om denne person, vedkommende ikke har en periode med ledighed fra 2008 til sit job indenfor madfremstilling i 2009. Denne tilbagevending til hårdere fysisk arbejde med næringsmidler, er et vigtigt skifte tilbage til den type job, som manden havde i 1996, i det bager- og konditorrelaterede arbejde. Det hører med til denne persons livsbane. %Måske skal vi prøve at lave kort hvor alle der har haft et arbejde tages med. 
+%
+\begin{table}[H]
+\centering
+\caption{Eksempel på datastruktur. Kilde: DST}
+\label{tab_spellrun}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lrrc@{}}
+\toprule
+År & \multicolumn{1}{c}{\texttt{SOCSTIL}} & \multicolumn{1}{c}{\texttt{DISCO}-beskæftigelseskategori} & Status \\ \midrule
+	1996 & Lønmodtagere på grundniveau & Bager og konditorarbejde (eksklusiv industri) & Beskæftiget   \\
+	1997 & Revalideringsydelse & - & Arbejdsløs    \\
+	1998 & Revalideringsydelse & - & Arbejdsløs    \\
+	1999 & Revalideringsydelse & - & Arbejdsløs    \\
+	2000 & Revalideringsydelse & - & Arbejdsløs    \\
+	2001 & Lønmodtager på mellemniveau & Pædagogisk arbejde & Beskæftiget   \\
+	2002 & Kontanthjælp & (Pædagogisk arbejde) & Arbejdsløs    \\
+	2003 & Lønmodtager uden nærmere angivelse & Pædagogisk arbejde & Beskæftiget   \\
+	2004 & Lønmodtagere på grundniveau & Operatør- og fremstillingsarbejde i næring og nydelse & Beskæftiget   \\
+	2005 & Lønmodtagere på grundniveau & Operatør- og fremstillingsarbejde i næring og nydelse & Beskæftiget   \\
+	2006 & Lønmodtagere på grundniveau & Operatør- og fremstillingsarbejde i næring og nydelse & Beskæftiget   \\
+	2007 & Lønmodtagere på grundniveau & Operatør- og fremstillingsarbejde i næring og nydelse & Beskæftiget   \\
+	2008 & Lønmodtagere på grundniveau & Operatør- og fremstillingsarbejde i næring og nydelse & Beskæftiget   \\
+	2009 & Lønmodtagere på grundniveau & Operatør- og fremstillingsarbejde i næring og nydelse & Beskæftiget   \\ \bottomrule
+\end{tabular} }
+\end{table}
+% 
+% Eksemplet tjener også til at illustrerer noget andet centralt. Det ses, at personen i 2002 var på kontanthjælp, og dog havde han en \texttt{DISCO}-værdi tilknyttet. Det skal forstås sådan, at en inddeling af et menneskes arbejdsliv, baseret på en årsinddeling, grundlæggende er en kunstig inddeling, der ikke kan indfange den kontinuitet, livet leves i. En sådan årsinddeling har ofte en vis berettigelse, eftersom det er grundlag for en lang række adminstrative inddelinger, med meget reelle sociale konsekvenser. Ikke desto mindre kan man sagtens være kontanthjælpsmodtager og have en en, to eller flere jobs i løbet af samme år, og det er en kompleksitet, vi indenfor det enkelte år er tvunget til at reducere til en samlet vurdering af, hvad vedkommende hovedsageligt lavede i løbet af året. Som beskrevet tidligere er dannelsen af \texttt{DISCO}-variablen en kompliceret proces, hvor den endelige beskæftigelsesværdi er sammensat ud fra mange forskellige kilder og kriterier. Informationen til dannelsen af \texttt{DISCOALLE\_INDK} %%% Jens: det er 10 sider siden I nævnte denne sidst, og imellemtiden har I diskuteret mange andre, så nu kan jeg ikke huske hvad det er for en og ved derfor ikke hvorfor i nævner den her. En ide kan være at holde jeres diskussion af de variable i bruger mere sammen
+% er primært sket ud fra det arbejdssted, hvor de har fået størst lønindkomst gennem året. Der er ingen vurdering af hvor lang en ansættelse, der er tale om. En arbejdsløshedsvariabel baseret på hvorvidt man har eller ikke har et udfald i \texttt{DISCOALLE\_INDK}, ville derfor være ekstremt upålidelig, og ved at teste data igennem for konsistensen mellem \texttt{DISCOALLE\_INDK} og \texttt{SOCIO/SOCSTIL} var den præget af uacceptabelt mange forskelle i forhold til sidstnævnte. Det forklarer %%% Jens: Det kan muligvis også forklare...
+% hvorfor personens arbejdsløshedsstatus i føromtalte panel ikke harmonerer mellem de to. I \texttt{SOCSTIL} er han sat med beskæftigelsesværdien \emph{Lønmodtagere på grundniveau}, mens han i \texttt{SOCIO} er kategoriseret som på kontanthjælp. \texttt{SOCSTIL} understøtte dermed \texttt{DISCOALLE\_INDK}, mens \texttt{SOCIO} ikke gør det. What to do? Vores vurdering i dette for det videre arbejde helt centrale spørgsmål, har været følgende: Det er sandsynligt, at personen både har haft et arbejde og har været på kontanthjælp i 2002. Derfor mener vi netop, at hvis den ene af de to variable kategoriserer ham som kontanthjælpsmodtager som primær socioøkonimisk status i 2002, bør vi vurdere ham som arbejdsløs i år 2002 - eller i hvert fald \emph{primært} som arbejdsløs.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection{Opsummering \label{}}
+
+Konklusioner:
+%
+ \begin{itemize} [topsep=6pt,itemsep=-1ex]
+	\item Fokus på arbejdsmarkedsparate arbejdsløse, men værd opmærksom på, at arbejdsmarkedsparathed kan have en mening (økonomiske incitamenter) vi ikke ønsker.
+   \item Vi anvender et mere dynamisk arbejdsløshedsbegreb, som adskiller sig fra netto-, brutto- og AKU-ledighed samt ILO's definition.
+   \item Vi anvender seks forskellige analyseudvalg for at skabe en kritisk masse af arbejdsløse.
+   \item Den metodiske pointe er, at arbejdsløse opgøres på forskellige måder blandt andet i nettoledige, bruttoledige, AKU-ledige, dagpengemodtagere, kontanthjælpsmodtagere osv. alt efter hvad vi taler om. Når vi taler om arbejdsløse er der truffet en masse valg. Vores fokus er at samle forskellige definitioner/former for arbejdsløshed for at se hvilken betydning det har for beskæftigelsesmobilitet. Som noget helt nyt ønsker vi bl.a. at inkludere “uden for arbejdsstyrken” og kortere perioder “deltidsledighed” og “fuldtidsledighed”. 
+ \end{itemize}
+%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Vi antager, at hvis én af de to variable inddeler en person i en kategori udenfor beskæftigelse, så er det sandsynligt, at det forholder sig sådan. Det kan være, at man dermed kommer til at kategorisere en person, der i løbet af et år primært er på arbejdsmarkedet, og kun sekundært har været i kontakt med overførselsindkomster, som en person udenfor arbejdsmarkedet. Vi vælger denne løsning for at kunne udtale os bredt om dem, der i en periode har haft en løs eller ingen tilknytning til arbejdsmarkedet.
+
+
+%Local Variables: 
+%mode: latex
+%TeX-master: "report"
+%End:

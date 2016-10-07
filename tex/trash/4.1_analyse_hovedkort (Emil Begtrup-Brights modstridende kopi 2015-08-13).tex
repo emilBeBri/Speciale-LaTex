@@ -1,0 +1,368 @@
+% -*- coding: utf-8 -*-
+% !TeX encoding = UTF-8
+% !TeX root = ../report.tex
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage \section{\textsc{Hovedkort: vores definition af arbejdsløshed \label{}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Kortlægningen af vores definition af arbejdsløse giver os et kort baseret på 516.812 personer, som er gået fra beskæftigelse til arbejdsløshed til beskæftigelse, altså har foretaget 597.437 skift fra 1996 til 2009. Kortet slår bevægelser for alle årene sammen i én samlet struktur, som viser mobilitetsmønstrene i denne årrække.
+%  
+\begin{figure}[H]
+\begin{centering}
+	\caption{Hovedkort, \texttt{SOCSTIL} \& \texttt{SOCIO}, 1996-2009. Se større version i appendiks \ref{ap_fig_hovedkort_disco}.}
+	\includegraphics[width=\textwidth]{fig/analyse/socstilsocio.pdf}
+	\label{fig_hist_beskaeftigede_allekategorier132}
+\end{centering}
+\end{figure}
+%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{At aflæse et Moneca-netværkskort}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+s
+Kortet skal læses således, at nodernes størrelse er udtryk for andelen af personer i hver node. Den største node er \textit{9130: Rengørings- og køkkenhjælpsarbejde}, der udgør 5,7\% af alle beskæftigede, svarende til 21.065 mennesker, mens den mindste node er \textit{8110: Mine- og mineraludvindingsanlægsarbejde}, der udgør 0,02\% af noderne, svarende til 87 personer, som beskrevet i \texttt{DISCO}-afsnittet (ikke vedlagt).
+
+Farvelægningen af forbindelserne viser styrken af forbindelserne: desto mere orange, desto stærkere er en forbindelse. Pilene angiver retningen af forbindelsen, hvilken de større udgaver af kortene vedlagt i appendiks \ref{app_fig_stor} gerne skulle synliggøre.
+
+Farvelægningen af noderne er på dette kort sket ud fra \texttt{DISCO}-kategoriernes hovedgrupper. Disse kategorier giver et dobbelt indtryk af såvel en vis ensartethed i arbejdsfunktionen og uddannelsesniveau, samt ikke mindst et indtryk af den samfundsmæssigt konstituerede hierkarkiseringen af jobtyperne.
+
+Det sidste væsentlige element for at kunne tolke kortene, er klyngeinddelingen. Klyngeinddelingen tegner også klyngerne på lavere niveau ind, men er kun navngivet på kortet efter klyngens højeste niveau. Den store klynge, der næsten udleukkende består af blå \texttt{DISCO}-2 kategorier i højre hjørne, er derfor nummeret 5.1, da dens øverste niveau også er det øverste niveau Moneca fandt i mobilitetsmatricen. Overfor dette står en række små “klynger” på niveau 1, hvilket betyder at de slet ikke er slået sammen med andre kategorier.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Ved første øjekast}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Det første vi lægger mærke til er at et pænt antal klynger indeholder arbejdsfunktioner, der umiddelbart giver god mening er sammenlagt. Således kan vi se at klynge 5.1 indeholder langt de fleste af de lange videregående uddannelser, mens klynge 5.4 indeholder de fleste mennesker, der beskæftiger sig med kontorarbejde. I venstre hjørne kan vi se klynge 5.5 5.2, 4.3 og 3.7, der indeholder mange forskellige \texttt{DISCO}-hovedkategorier, men i høj grad karakteriseret ved at være fysisk krævende arbejde indenfor service eller håndværk. Landbruget har sin helt egen klynge kladet 3.5.
+
+Det er ikke overraskende, at der er en genkendelige systematik i den sociale mobilitet på denne måde. Det ville være alarmerende i forhold til metoden samt datakvalitetens pålidelighed, hvis dette ikke var tilfældet. 
+
+Før vi går i dybden med hovedkortet, vil vi vise et kort, der er farvelagt efter kønsfordelingen i hver beskæftigelseskategori. Det er centralt i netværksanalyse, at man vise korrelationer med relevante karakteristika, der ikke er anvendt til at definere netværket. Det giver os mulighed for at vurdere, om vores specifikation af netværket stemmer overens med en genkendelige social virkelighed, hvilket øger validiteten af netværksspecifikationen \parencite[29]{Laumann1983}. I et netværkskort baseret på Moneca-algoritmen, der jo benytter en klyngealgoritme til at foreslå sandsynlige grupperinger af netværket, virker det ydermere meget relevant at benytte disse eksterne karakteristika til at vurdere klyngernes validitet.
+
+\newpage
+På kort \ref{fig_kortkoensocioversion2} ser vi andelen af kvinder, således at en næsten lyserød farve angiver en andel af kvinder   
+%
+\begin{figure}[H]
+\begin{centering}
+	\caption{Hovedkort, farvelagt efter andel af kvinder. Se større version i appendiks \ref{ap_fig_kortkoensocioversion2}.}
+	\includegraphics[width=\textwidth]{fig/analyse/kortkoensocioversion2.pdf}
+	\label{fig_kortkoensocioversion2}
+\end{centering}
+\end{figure}
+%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Gennemgang af segmenter i hovedkort}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+En nærmere gransking af segmentinddelingen vil give os nogle ideer om sammensætningen af kortet, så vi kan analysere kortet nærmere, såvel som være opmærksom på eventuelle svagheder i data og metoden.
+
+To mål er centrale i gennemgangen af klyngerne: Den interne mobilitet og densiteten. Den interne mobilitet er andelen af skift, der sker indenfor beskæftigelseskategorien. Den giver derfor et mål for hvor uafhængig kategorien er af indsupplering fra andre jobtyper. Vi ser eksempelvis at læger og tandlæger ligger helt i top på den interne mobilitet, med en intern mobilitet på 94\% for begge kategorier. Det er en voldsomt høj grad af intern mobilitet, især taget i betragtning af at alle disse skift sker efter en mellemliggende periode med arbejdsløshed. I en sociologisk tolkning passer det godt ind, at to fag der i så høj grad er karakteriseret som en profession i klassisk weberiansk forstand, er så ekstremt selvsupplerende. I kontrast hertil står \textit{8140: Træ- og papirprocesanlægsarbejde}, der har en intern mobilitet på 18\%, hvilket betyder at lidt under hver 5. skifter tilbage til job af denne type, der primært indeholder job som savskærer og finerarbejde, og har omtrent 100 beskæftigede i gennemsnit pr. år i perioden%
+%
+\footnote{Til jens, skal stå et andet sted: eftersom skiftene er registreret over en 14-årig periode, så husk at det er hvor mange der \emph{i gennemsnit} er beskæftiget med den type arbejde over de 14 år. Dvs antallet af beskæftigede divideret med 14.}.
+%
+.
+Densiteten er et netværksmål, der siger noget om hvor godt en graf er forbundet med de andre i et komponent eller en subgraf. Desto højere densitet, desto tættere er grafen på at være en “komplet” subgraf, det vil sige at alle noder er forbundne med alle andre noder. I så fald er densiteten lig 1, da alle de mulige forbindelser er skabt. Omvendt vil en graf\footnote{et netværks kaldes ofte en graf indenfor jargonen.} kun bestående af “isolates” have en densitet på nul, da der ingen forbindelser eksisterer mellem noderne i grafen (hvis man da kan kalde en graf uden nogle forbindelser overhovedet for en graf).
+
+I Moneca bruges densiteten som et mål for hvor godt integreret noderne i klyngen er med hinanden. Det er vigtigt, fordi vi husker på at segmentering over 1. sammenlægningsstadie ikke indebærer at alle noderne fra niveauet under er forbundne med de noder, der nu tages i betragtning i klyngedannelsen. Derfor vil klynger på 2. niveau altid have en densitet på 1, da det er kravet for at Moneca overhovedet lægger dem sammen. Det gælder ikke efterfølgende, nu er det de sammenlagte klynger fra det tidligere niveau der betragtes som en node, jævnfør metodeafsnittet. Det er ydermere vigtigt, da det, i modsætning til meget andet netværksanalyse, giver meget lidt teoretisk mening at forestille sig forbindelser med en path på længere end 1, til nøds 2. Vi har ikke at gøre med personer, eller bare organisationer, men beskæftigelseskategorier, så at tænke disse kategorier som noget meningsfuldt udover hvad de umiddelbart er forbundet med giver meget lidt teoretisk mening. Medmindre den interne mobiliet i klyngen er meget høj, hvor man med en vis rimelighed så kan forvente at vandringer foregår internt i klyngen. Ikke desto mindre skulle det gerne stå klart at densitet er et helt centralt mål.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Gennemgang segmenter fortsat - ret ufærdigt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{1.11 og 1.12}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+2221: Læger og 2222: tandlæger voldsomt høj grad af intern mobilitet. Klassisk
+
+Følgende er en gennemgang, der starter med de klynger der har højest intern mobilitet og bevæger sig nedad. 
+
+\subsubsection{3.1: Skibsfart og fiskeri.}
+
+Tydelig ensartethed i genstandsfelt, godtgør nok en feltbeskrivelse af en art. Meget stærke forbindelser, dog med den ene forskel, at 6150 går til 3181, men det går ikke den anden vej.
+%
+\begin{figure} \label{monecaeksempel1}
+\parbox[H]{6cm}{\null
+  % \centering
+  \captionof{figure}{Klynge 3.1}
+	\includegraphics[width=7cm]{fig/zoom_tmp/3_1.pdf}
+}
+\parbox[H]{14cm}{\null
+  % \centering
+  \captionof{figure}{Klynge 2.29}
+	\includegraphics[width=7cm]{fig/zoom_tmp/2_29.pdf}
+}
+\end{figure}
+%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{2.29: Jordemoder og overordnet sygepleje mv samt sygeplejerske.} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Vi kan se at disse to er sammen i en klynge for sig og ikke i den store omsorgsklynge (LA's kvindefængsel). Vi har at gøre med arbejde på \texttt{DISCO}-niveau 3 og 2, det vil sige at dette arbejde trods ensheden i genstandsfelt, differentierer sig ud på grund af sit højere færdighedsniveau i form af diplomer, samt muligvis udskilnen hvor dem der har jobbet ligger nærmere grundet den type færdigheder der kræves, i modsætning til kvindefængsel-clusteren. udgør 2,6 \% af alle beskæftigede.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{1.35, 1.25, 1.104(egentligt nedenunder 3.13) og 1.48:}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Derefter en række små som religiøst arbejde, bibliotekar samt flyrelateret. Relativt høj intern mobilitet, over halvdelen af skiftene ender tilbage i samme job. Og at de ikke er lagt sammen med nogle kan betyde enten at de tilfældigvis ikke er segmenteret med ind i en klynge eller at den eksterne mobilitet er meget diffus. De her klynger plejer vist ikke at blive lagt sammen med nogen, så de er vist bare diffuse.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{3.13}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Interessant klynge. Selvom den interne mobilitet er høj er densiteten noget lavere. Stadig 60 \%, hvilket er ok godt, men noget lavere end de allerbedste klynger hvor over 3/4 af noderne er forbundet med hinanden. Ved første øjekast indeholder den også grupper, der umiddelbart må forventes at indeholde meget forskellige genstandsfelter såvel som arbejdsfunktioner. 
+
+Ved at zoome ind kan vi se denne klynge er slået sammen gennem to klynger skabt på 2. niveau. Her ser vi teknisk betonet arbejde indenfor biologisk produktion, medicin og forskning, samt teknisk arbejde med kemi, fysik, astrononomi og geologi. Disse to udgør en klynge på 2. niveau sammen med  kvalitetskontrol af fastsatte standarder indenfor diverse produktionsfærer, hvilket giver fin mening. Man må forvente at kompetencer opnået i teknikerarbejde indenfor kemi, fysisik, biologi etc kan benyttes netop inden kvalitetskontrol og sikring af eksempelvis kemiske standarder.
+
+Den anden klynge på niveau to består af assitenstentarbejde indenfor en række sundshedsrelaterede områder, samt arbejde indenfor fysioterapi, yoga, ergoterapi og række andre jobtyper, med fokus på behandling af menneskekroppen. Denne sammenlægning er ikke overraskende. Det overraskende sker i sammenlægningen af disse to klynger. Det ses at 3282 rent faktisk har stærk forbindelse til 3150, men også en nogenlunde stærk forbindelse til 3111, og en ganske svag forbindelse til 3211, dog kun i ekstern retning. (læseren bør huskes på hvad definitionen er af en forbindelse her - at der ikke eksisterer nogle barrierer i form af den forventede mulighed for at tage job når man kommer fra XXX og går til XXX). 3282 har på samme tid en intern mobilitet på cirka 50 \%, og det ses at det er netop denne beskæftigelseskategori, der binder den samlede klynge 3.13 sammen. Kropsbehandlerne, der desuden har en høj intern mobilitet på 67 \%,  er derfor kun med i kraft af deres forbindelse til assisterne indenfor kropspleje.  Det er desuden sådan, at det primært at assisterne indenfor kropspleje, der bliver kropsbehandlere, og kun i nogen grad den anden vej rundt.  
+
+%
+\begin{figure} \label{monecaeksempel1}
+\parbox[H]{6cm}{\null
+  % \centering
+  \captionof{figure}{Klynge 3.13}
+	\includegraphics[width=7cm]{fig/zoom_tmp/3_13.pdf}
+}
+\parbox[H]{14cm}{\null
+  % \centering
+  \captionof{figure}{Klynge 3.5}
+	\includegraphics[width=7cm]{fig/zoom_tmp/3_5.pdf}
+}
+\end{figure}
+%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{3.5 Landbrugsklyngen.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Har en god høj densitet, og en intern mobilitet på cirka 50 \%.  Vi kan igen se at genstandsfeltet er enormt vigtigt, kendskabet til området. I den forbindelse skal man også huske de geografiske dimensioner, den konkrete lokalisering som vi skal se på senere (R Danmarkskort)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{5.5 Bygge-anlæg inklusiv transport.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+bygge-anlæg klyngen indeholder cirka 10 \% af alle ledige. Den interne mobilitet er på ca. 45 \%, hvilket betyder der foregår en del gennemstrømning i gruppen %det virker altså til at være ret lavt. how come? hvordan ser det ud højere oppe, og er den interne mobilitet bedre på nogle af de lavere niveauer?
+Variationen i den interne mobilitet er meget voldsom, fra 17 \% hos gruppen af viceværter og pedeller, og op til de omtrent 60-70 \% hos malerne, murerne og tømrerne. Det ses  
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsubsection{3.11 omsorgsarbejdeklyngen AKA LAs kvindefængsel}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% 3.11 omsorgsarbejdeklyngen meget høj intern mobilitet 65 \%, samt en densitet på 79 \%. Det vil sige at nærmest alle klynger er forbundet med nærmest alle andre klynger, således at ikke bare den interne mobilitet er meget høj, men skiftene internt kan gå på kryds og tværs. Dette udgør derfor i høj grad en form for klasse. samtidig udgør den knap 20 \% af de arbejdsløse og 13 \% af alle beskæftigede. I form af mobilitetsmønstre må man sige, at hvis man arbejder med en af disse stillinger, er man voldsomt tilbøjelig til at skifte til en af de andre indenfor klyngen. En høj grad af ensartethed indenfor socialitet bør derfor kunne findes i denne gruppe. (ja - indtil videre: kvindefag!) 
+
+% 2.29 og 3.11 er sandsynligvis samme felt, men viser en tydelig stratificering indenfor feltet i form af kvalicerende uddannelsesniveauer. Jordemoder: Danmarks højeste snit. Der kommer man ikke ind bare sådan. Egentligt overraskende at sammenhængen ikke er til akademikerklyngen (jvf min ekskæreste Louise der skifter fra antropologi til jordemoder. 12-tals pigerne). 
+
+% ide: lav grafer ud komponenter. Hvilke komponenter indeholder dette netværk? Ret centralt. Hvor er der ihvertfald *slet* ikke forbindelser? Tjek adelsdata igennem.
+
+% vi kan også sige noget om at hvis man i perioder med arbjedsløshed ikke engang skifter, så er der virkelig tale om stærke barrierer for sammenfald.
+
+% % de mindste grupper:
+% 1220 har også lav mobilitet, men har 3449 personer og må siges at være vigtig i sig selv. 
+
+% Tabel \ref{tab_socio} viser nogle udvalgte nøgletal for denne struktur. “Antal personer pr. år” udvælger en række variable,
+
+% %
+% \begin{table}[H] \centering
+% \caption{Nøgletal for hovedkort. Kilde: DST}
+% \label{tab_socio}
+% \resizebox{0.5\textwidth}{!}{
+% \begin{tabular}{@{}lllll} \toprule
+% 				& Antal personer pr. år	& Antal perioder 	& Længde af perioder	& Antal Segmenter \\	\midrule
+% 	Min			& 52.803		& 1			& 1			& 			\\
+% 	Max			& 120.419		& 6			& 12		& 143		\\
+% 	Gennemsnit	& 88.777		& 1,18		& 1,76		& 			\\
+% 	Stand.afv.	& 22461,		& 0,43		& 1,29		& 			\\
+% 	Median		& -				& 1			& -			& 			\\
+% 	I alt 		& 516.812		& 597.437	& 			& 			\\	\bottomrule
+% \end{tabular} }
+% \end{table}
+% % 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage \subsection{Hovedkort: intern mobilitet på node \label{}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+\begin{centering}
+	\caption{Hovedkort, \texttt{SOCSTIL} \& \texttt{SOCIO}, 1996-2009}
+	\includegraphics[width=18cm]{fig/analyse/socstilsociointernmobilitetnode.pdf}
+	\label{fig_hist_beskaeftigede_allekategorier132}
+\end{centering}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \newpage \subsection{Hovedkort: intern mobilitet på segmenter \label{}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \begin{figure}[H]
+% \begin{centering}
+% 	\caption{Hovedkort, \texttt{SOCSTIL} \& \texttt{SOCIO}, 1996-2009}
+% 	\includegraphics[width=\textwidth]{fig/analyse/socstilsociointernmobilitetsegment.pdf}
+% 	\label{fig_hist_beskaeftigede_allekategorier132}
+% \end{centering}
+% \end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage \subsection{Hovedkort: længden på arbejdsløshedsperioderne \label{}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Når vi kigger på den gennemsnitlige længde af arbejdsløshedsperioderne inden for de forskellige noder og segmenter fremgår det af figuren, at den røde farve markerer lange arbejdsløshedsperioder, og den grønne farver markerer korte arbejdsløshedsperioder.
+
+\begin{figure}[H]
+\begin{centering}
+	\caption{Hovedkort, \texttt{SOCSTIL} \& \texttt{SOCIO}, 1996-2009}
+	\includegraphics[width=18cm]{fig/analyse/socstilsocioledighedsperiodelaengde.pdf}
+	\label{fig_hist_beskaeftigede_allekategorier132}
+\end{centering}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage \subsection{Hovedkort: antal arbejdsløshedsperioder \label{}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Når vi kigger på antallet af arbejdsløshedsperioderne inden for de forskellige noder og segmenter fremgår det af figuren, at den røde farve markerer flere arbejdsløshedsperioder, og den grønne farver markerer færre arbejdsløshedsperioder.
+
+\begin{figure}[H]
+\begin{centering}
+	\caption{Hovedkort, \texttt{SOCSTIL} \& \texttt{SOCIO}, 1996-2009}
+	\includegraphics[width=18cm]{fig/analyse/socstilsocioledighedsperiodeantal.pdf}
+	\label{fig_hist_beskaeftigede_allekategorier132}
+\end{centering}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage \subsection{Bikort: Alle beskæftigede på arbejdsmarkedet (ingen arbejdsløse) \label{}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Kortlægningen af alle beskæftigede giver os \textbf{2.778.841 personer} som er gået fra beskæftigelse til arbejdsløshed til beskæftigelse \textbf{3.298.468 gange} fra 1996 til 2009.Kortet adskiller sig væsentligt fra arbejdsløshedskortene.  Alle arbejdsløshedskort har store segmenter sammenlignet med alle beskæftigede. Dette kan forklares med, at arbejdsløse søge arbejde længere væk fra deres fagområde end når beskæftigede skifter arbejde. De fem største segmenter i kortlægningen af nettoledige er: 1) Det største segment (4.4) består af ekspiedient-, lager, transport, post, brandslukning- og militært arbejde. 2) Det anden største segment (3.14) består af kontorarbejde. 3) Det tredje største segment (3.7) består af påæødagogisk, omsorgs- og pasningsarbejde. 4) Det fjerde største segment (2.24) består af plejeog omsorgsarbejde. 5) Det  femte segment (3.8) består af rengørings- og køkkenarbejde.
+
+\begin{figure}[H]
+\begin{centering}
+	% \caption{Hovedkort, Alle beskæftigede, 1996-2009}
+	\includegraphics[width=14cm]{fig/analyse/allebeskaeftigede.pdf}
+	\label{fig_hist_beskaeftigede_allekategorier132}
+\end{centering}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage \subsection{Bikort: DST's definition af arbejdsløse som nettoledige \label{}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Kortlægningen af DST's definition af arbejdsløse som nettoledige giver os \textbf{292.926 personer}som er gået fra beskæftigelse til arbejdsløshed til beskæftigelse \textbf{317.046 gange} fra 1996 til 2009.
+
+Selve kortet minder om hovedkortet. De fem største segmenter er: 1) Det største segment (5.2) består af pleje-, omsorgs, rengørings-, køkkenarbejde mv. (16 noder, 20\% af samlet). 2) Det anden største segment (6.1) består af en bred blanding af forskellige faglærte og ufaglærte (28 noder, 14\% af samlet). 3) Det tredje største segment (4.7) består blandet kontorarbejde (11 noder, 13\% af samlet). Det fjerde største segment (5.3) består primært af forskellige akademikere samt ledelse og diverse kunstnere (20 noder, 8\% af samlet). Det femte største segment (3.8) består primært af faglærte håndværkere (6 noder, 5\% af samlet).
+
+\begin{figure}[H]
+\begin{centering}
+	% \caption{Hovedkort, \texttt{SOCSTIL}=Nettoledige, 1996-2009}
+	\includegraphics[width=\textwidth]{fig/analyse/socstilnettoledige.pdf}
+	\label{fig_hist_beskaeftigede_allekategorier132}
+\end{centering}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage \subsection{Bikort: vores definition af arbejdsløshed, minimum seks uger \label{}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Kortlægningen af vores definition af arbejdsløse i minimum seks uger giver os \textbf{687.708 personer} som er gået fra beskæftigelse til arbejdsløshed til beskæftigelse \textbf{812.533 gange} fra 1996 til 2009.
+
+Selve kortet minder om hovedkortet. De fem største segmenter er: 1) Det største segment (3.14) består af pleje-, omsorgs, rengørings-, køkken, ekspedientarbejde, mv. (9 noder, 20\% af samlet). 2) Det anden største segment (5.1) består af en bred blanding af forskellige faglærte og ufaglærte (35 noder, 20\% af samlet). Det tredje største segment (5.2) består af blandet kontorarbejde (19 noder, 17\% af samlet). Det fjerde største segment (3.16) består pådagogisk og offentligt administrationsarbejde (5 noder, 5\% af samlet). Det  femte segment (3.11) består af undervisere (6 noder, 5\% af samlet)-
+
+\begin{figure}[H]
+\begin{centering}
+	% \caption{Hovedkort, \texttt{SOCSTIL}, \texttt{SOCIO} \& \texttt{LEDFULD/LEDDEL} 6+ uger, 1996-2009}
+	\includegraphics[width=\textwidth]{fig/analyse/socstilsocioled6uger.pdf}
+	\label{fig_hist_beskaeftigede_allekategorier132}
+\end{centering}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% de største grupper 
+
+
+% %
+% \begin{table}[H] \centering
+% \caption{Operationalisering af \texttt{SOCIO}/\texttt{SOCIO02}, 1996-2009. Kilde: DST}
+% \label{tab_socio}
+% \resizebox{0.9\textwidth}{!}{
+% \begin{tabular}{@{}l| llrrrrr@{}} \toprule
+% Mellemtotaler	&	Status	&	Gennemsnit	&	Gennemsnit (pct.)	&	Standardafv.	&	Min.	&	Maks.	\\	\midrule
+% 1 -2 uger fuld ledig	&	.	&	97,261	&	19.62	&	13,524	&	80,742	&	123,197	\\	
+% 3-4 uger fuld ledig	&	Arbejdsløs	&	53,193	&	10.73	&	5,748	&	44,521	&	62,617	\\	
+% 5-10 uger fuld ledig	&	Arbejdsløs	&	97,279	&	19.62	&	11,556	&	73,137	&	116,719	\\	
+% 11-20 uger fuld ledig	&	Arbejdsløs	&	104,872	&	21.15	&	17,132	&	67,225	&	136,017	\\	
+% 21-30 uger fuld ledig	&	Arbejdsløs	&	62,102	&	12.53	&	13,642	&	36,701	&	88,447	\\	
+% 31-40 uger fuld ledig	&	Arbejdsløs	&	38,430	&	7.75	&	10,677	&	20,143	&	58,587	\\	
+% 41-53 uger fuld ledig	&	Arbejdsløs	&	42,622	&	8.60	&	19,754	&	15,824	&	83,483	\\	
+% Total	&		&	495,759	&	100.00	&	84,815	&	341,592	&	662,410	\\	\bottomrule
+% \end{tabular} }
+% \end{table}
+% % 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \section{Tekst vi sendte til 3. vejledningsmøde med Jens \label{}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% % note til billede på moneca-kortet: en marmorplade med kugler - hvor de lige ender er ikke tilfældigt, men grænserne er flydende, og kuglernes placering afhænger af deres vægt og de andre kuglers vægt som skabes via dybden af hulet, der afgøres af de samlede kuglers vægt. 
+
+
+% Kortet viser et netværk af forskellige arbejdsstillinger indelt i 150 \texttt{DISCO}-kategorier og 32 segmenter. I netværket bevæger individer sig mellem forskellige typer af arbejdsstillinger. Det sker når en person går fra at være beskæftiget i en arbejdsstilling til at være beskæftiget i en anden arbejdsstilling efter en mellemliggende periode med ledighed eller uden beskæftigelse. Arbejdsstillingerne kommer til udtryk som de 150 \texttt{DISCO}-kategorier  tager form som noder i netværket, og personernes bevægelser mellem forskellige arbejdsstillinger er det som frembringer  i netværket. Nedenstående kort giver os mulighed for at overskue beskæftigelsesmønstre for lediges bevægelser ind og ud af arbejdsmarkedet.
+% % 
+% \begin{figure}[h]
+% \begin{centering}
+% 	% \caption{Mobilitetsmønstre hos ledige, 1996-2009}
+% 	\includegraphics[width=\textwidth]{fig/metode/hovedkort.pdf}
+% 	\label{fig_hist_beskaeftigede_allekategorier}
+% \end{centering}
+% \end{figure}
+
+% Som det fremgår af kortet findes der nogle meget store segmenter som omfatter meget forskelligt type arbejde. Her er det eksempelvis relevant at se på det store faglige segment (5.3), omsorgs-segmentet (3.14), kontor-segmentet (5.2), magister-segmentet (5.1) og salgs-segmentet (5.4), som repræsenterer de fem største segmenter i forhold til antal unikke personer, antal skift ud-og-ind på arbejdsmarkedet og antal noder (\texttt{DISCO-kategorier}). 
+
+% Det faglige segmenter er det absolut største og repræsenterer 37 noder (og dermed 37 \texttt{DISCO}-kategorier) samt indeholder 24 \% af alle disco-kategorierne. Eftersom størrelsen på kategorierne varierer ganske betragteligt, som beskrevet i afsnit \ref{fig_hist_beskaeftigede_allekategorier}, er et mere sigende mål hvor mange beskæftigede, der i gennemsnit er tale om over perioden. Her har segmentet en andel på 36 \%,hvilket svarer til 237.411 personer. De to største \texttt{DISCO}-kategorier befinder sig i dette segment, og de står sammen for 12 \% af arbejdsmarkedet for ledige. Taget i betragtning af at det næststørste segment kun har en andel på 16,5 \%, må man sige at segmentet fylder ganske meget på det danske arbejdsmarked. 
+
+% Det fremgår også af kortet, at det ikke er alle noder som samler sig med andre til større segmenter. Der er i alt 13 noder, som ligger sig for sig selv. Når en node er for sig selv, betyder det, at der ikke er en signifikant bevægelse til andre noder. For at bruge et eksempel med lægerne. Lægerne er både en node og et segment, hvilket egentlig giver meget god mening, da lægearbejdet er så specialiseret, at ingen andre faggrupper kan varetager en læges job hverken uden eller med en periode uden for beskæftigelse. Det er hvad man inden for arbejdsmarkedssegmenteringsteorien ville kalde for enten funktionel eller institutionel form for beskæftigelsesmønster. På den ene side skal man nemlig have de rette færdigheder for at have mulighed for at indtage en bestemt arbejdsstilling, og for det andet skal man egentlig også have det rette certifikat for at komme i betragtning til en bestemt arbejdsstilling \parencite[3]{TouboelLarsenJensen2013} \parencite[4]{TouboelLarsen2015}. Dette er dog ikke ensbetydende med, at lægerne ikke kunne bevæge sig mod andre type arbejdsstillinger (noder/\texttt{DISCO}kategorier) især efter en ledighedsperiode. Vi kan se, at der har været skift fra lægearbejde mod sygeplejearbejde i 43, mod undervisning paa universiteter og andre hoejere laereanstalter 15 tilfælde, mod ledelse af virksomhed faerre end 10 ansatte i 13, mod militaert arbejde i seks tilfælde, mod alment kontorarbejde i seks tilfælde og mod rengoerings- og koekkenhjaelpsarbejde i fem tilfælde. Dette skal selvfølgelig sammenlignes med de 1917 tilfælde af skift fra lægearbejde til lægearbejde. Der er altså meget få længer som vælge at skifte væk fra lægearbejdet efter en ledighedsperiode. Hovedårsagen er mest sandsynligt, at det har at gøre med at manglen på læger altid er stor og derfor ledighedsperioden stor (henvisning), hvilket betyder at selvom man er ledig i en periode vender man typisk tilbage i arbejde inden for en periode, hvilket fremgår summen af ledighedsperioder gennem hele arbejdslivet, som er særlig lav for læger se afsnit \ref{?}. Hvis det modsatte var tilfældet nemlig, at der er for mange læger i arbejdsstyrken, kunne man forestiller sig, at lægerne ville søge nye jobs og at gruppen som bevæger sig mod regnørings-- og køkkenhjælpsarbejde ville være større. Hvis vi kortlage beskæftigelsesmønstre i for eksempel Cuba, som flest antal læger pr. indbyggere i verden (henvisning), kunne det eksempelvis være tilfældet, hvilket muligvis kunne resultere i at lægerne ikke lå i et segment for sig selv.
+
+% For at illustrere kortet vil vi tage fat i en case med akademikernes fordeling på kortet.
+
+% % Toubøl, Larsen og Jensen \parencite[3]{TouboelLarsenJensen2013} \parencite[4]{TouboelLarsen2015} kan beskæftigelsesmønstre have en funktionel, en institutionel og en normativ form. Den funktionelle form opstår, når man skal have de rette færdigheder for at have mulighed for at indtage en bestemt arbejdsstilling. Den institutionelle form opstår, når man skal have det rette certifikat for at komme i betragtning til en bestemt arbejdsstilling. Og den normativ form opstår, når der ekskluderes personer med et bestemt køn eller en bestemt race fra visse arbejdsstillinger.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \section{Opsummering}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Konklusioner:
+% %
+%  \begin{itemize} [topsep=6pt,itemsep=-1ex]
+%    \item Alle arbejdsløshedskort har en store segmenter sammenlignet med alle beskæftigede. Dette kan forklares med, at arbejdsløse søge arbejde længere væk fra deres fagområde end når beskæftigede skifter arbejde.
+%    \item De forskellige analyseudvalg indeholder forskellige grader af marginalisering. Personer som i det indeværende år vil generelt ligge tættere på inkluderet på arbejdsmarkedet end en person som har været arbejdsløs i halvandet år såvel som en nettoledig ligger tættere på at være inkluderet end en kontanthjælpsmodtager. Dette fremgår også af de gennemsnitslængden på arbejdsløshedsperioden se... 
+%  \end{itemize}
+% %
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Trash
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Local Variables: 
+%mode: latex
+%TeX-master: "report"
+%End: 

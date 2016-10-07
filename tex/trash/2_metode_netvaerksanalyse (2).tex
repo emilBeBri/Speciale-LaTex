@@ -1,0 +1,203 @@
+% -*- coding: utf-8 -*-
+% !TeX encoding = UTF-8
+% !TeX root = ../report.tex
+
+\chapter{metode} \label{metode}
+
+
+
+\section{Netværksanalyse \label{}}
+
+
+
+
+\section{teori og empiri vekselvirkning \label{kategorierogteori}}
+
+Social netværksanalyse er en relationel analysemetode. Vi benytter en udgave af denne, som Toubøl \& Larsen har udviklet til at inddele sociale grupper i større overgrupper, for at sige det kort. Givet at sociale grupper og deres relationer til andre grupper er komplekse, samt at mange grupper kan have relationer til mange andre grupper, hvordan kan man så inddele disse grupper i meningsfulde overgrupper? Formuleringens forforørende enkelhed bør ikke narre nogen. DeT er et af sociologiens grundlæggende spørgsmål: Hvad konstituerer en social gruppe, og efter hvilke principper finder en sådan konstituering sted? Bourdieu beskriver, hvordan der eksisterer en homologi mellem de sociale og mentale strukturer, mellem de objektive adskillelser i den sociale verden og de perspektiver, agenterne selv ser denne verden igennem \parencite[12]{Bourdieu1992}. Deraf følger to ting. \textbf{For det første} at ethvert blik på disse strukturer er svært adskilleligt fra éns egen position i det sociale rum. Vi vil have tendens til at kende de felter, vi selv er i berøring med, bedre end de felter, vi ikke kender til, da vores kategorier til at forstå verden igennem ikke er individuelle, men kollektive repræsentationer, og de er struktureret ud fra den eller de sociale grupper, vi befinder (eller har befundet) os i \parencite[12]{Bourdieu1992}. Der opstår en forvrængning, “\emph{alene af den grund, at for at kunne strukturere, beskrive og fremstille det, må man i samme bevægelse i videst muligt omfang lægge afstand til det. Her sker der typisk en forvrængning, fordi man i den teoretiske model, der konstrueres af det sociale, glemmer at den er et produkt af en teoretisk og distancerende holdning. En refleksiv sociologi i ordets egentlige betydning må konstant være på vagt over for den form for "akademisk etnocentrisme", der overser alt det, forskeren indlæser i undersøgelsesgenstanden, i kraft af at han eller hun befinder sig udenfor den og studerer den på afstand og oppefra.}” \parencite[62]{Bourdieu1996}. Det findes næppe en måde mere "på afstand og oppefra" end at se på registerdata gennem en VPN-forbindelse til Danmarks Statistiks servere. Der er en voldsom afstand til den praksis vi forsøger at beskrive, og det er helt centralt at vi og læseren hele tiden forholder sig til de vilkår for analysen%
+%
+\footnote{Under dataarbejdet sad jeg og skulle tjekke om min kode for inddeling i ledighedsperioder tog højde for en række scenarier. Jeg plejer at vælge 20-30 paneler ud, som jeg så kigger på for at se om koden gør det den skal. Her sad jeg og kiggede på om vores ledighedsvariabel opførte sig som ønsket. Det er derfor interessant at se på dem der ryger ind og ud af ledighed flere gange i perioden, for at se om koden er fleksibel nok til at kategorisere dem korrekt. Jeg sad derfor og kiggede på et panel, der havde 3 års beskæftigelse fra 1996 til 1999, efterfulgt af revalideringsydelse, derefter arbejde et enkelt år, og diverse overgangsydelser frem til 2009. De fleste af panelets udfald i \texttt{SOCSTILL} var koderne \texttt{325}, \texttt{326} og \texttt{322}. De koder stod for revalideringsydelse, kontanthjælp og dagpenge. Det går pludselig op for mig, at det her ikke bare er et panel, det er konkret menneske, der mellem 1996 og 2009 oplevede en voldsom deroute. At det overhovedet er muligt at opleve så abstrakt en relation til et "element" i sit genstandsfelt, at man får oplevelsen af at vågne ud af abstraktionen, og tænke "gud, det er et menneske", det siger meget om farerne ved den metode vi har valgt at gå til arbejdsløshed på. Bourdieu skriver i indledningen til \emph{The Weight of the World}, “the discussion must provide all the elements necessary to analyze the interviewees' positions objectively and to understand their point of view, and it must accomplish this without reducing individual to a specimen in a display case” \parencite[2]{Bourdieu1999}. Der er en klar væsensforskel i metode som gør den metodemæssigt kvalitativt orienterede \emph{The Weight of the World} har nemmere ved at forholde sig direkte til dem, der undersøges, men idealet er centralt og bør nok særlig forfølges af dem, der - som os - benytter redskaber, der fordrer eller hvis grundlag måske ligefrem c\emph{er} denne \emph{specimen}-tilgang.}%
+%
+ . 
+
+Et eksempel på det er vores inddeling af beskæftigelseskategorier fra \texttt{DISCO}, som vil blive uddybet i afsnit \ref{disco_intro}. Her stod vi overfor at skulle sammenlægge en række beskæftigelseskategorier, da det ikke er muligt at benytte alle de knap tusind \texttt{DISCO}-kategorier, af åbenlyse årsager, relateret til overskuelighed. Her skulle jeg vurdere hvilke grupper indenfor den overordnede kategori, \texttt{322: Assistentarbejde indenfor sundhedssektoren}, der kunne lægges sammen. Jeg havde enormt svært ved at lægge gruppen \texttt{3226: Arbejde med emner inden for fysioterapi, kiropraktik mv.} sammen med gruppen \texttt{3229: Arbejde med emner inden for ergoterapi, zoneterapi, yoga med videre}. Det er jo to helt forskellige ting! Fysioterapeuter og kiropraktikere er accepterede og institutionaliserede dele af sundhedssektoren, mens den anden kategori indeholder sundhedsrelaterede behandlere, der befinder sig i randen af disse institutioner. Jeg har gået til yoga, jeg har en fornemmelse af at de ikke er samme typer som fysioterapeuter og kiropraktorer. Dem kunne vi da umuligt sammen, det virkede som at gøre vold på den sociale virkelighed.  
+
+Så gik det op for mig at jeg en halv time forinden havde slået alle undergrupper, der arbejder med teknikerarbejde, sammen til en enkelt gruppe, og dét uden at blinke. Vi taler om mennesker, der laver så forskelligartede ting som at arbejde med elektroniske anlæg%
+%
+\footnote{Såsom byggetekniker og landmaalingstekniker}%
+%
+, eller bygningsrelateret anlægsarbejde%
+%
+\footnote{Elektroniktekniker, køletekniker, teletekniker}%
+%
+, eller vedrørende maskiner og røranlæg (“\emph{eksklusiv vedligeholdelse af maskiner ombord på skibe}”)%
+%
+\footnote{Gastekniker, konstruktør, maskintekniker, VVS-tekniker, vaerktøjstekniker
+}%
+%
+. Der er tale om en gruppe arbejdsfunktioner, der i gennemsnit har beskæftiget 40.507 mennesker om året i perioden 1996-2009. Til sammenligning beskæftigede gruppen af fysioterapeuter og kiropraktikere 12.499 personer, mens yogalærerne og zoneterapueterne beskæftigede 2.382, i alt 14.811 personer, under halvdelen af antallet af teknikeruddannelserne. Jeg kender ingen køletekniker, vejrobservatør, gastekniker eller laborant. Men jeg kender en fysioterapeut, og jeg kender flere der har taget diverse yogalæreruddannelser. Det er en kæmpeudfordring i forbindelse med dette projekt. Det er helt nødvendigt og udemærket at benytte sin faglige og personlige viden om sociale relationer, vilkår og status tilknyttet forskellige beskæftigelser til at skabe nogle meningsfyldte grundkategorier. Om man “bør” gøre det giver efter vores opfattelse et spørgsmål med omtrent som meget mening som “bør jeg rette mig efter tyngekraften?”. Det er i bedste fald naivt. Der findes ikke en taksonomi, der står udenfor de sociale kampe, disse taksonomier er et produkt af. Særligt med sammensatte og til en vis grad abstrakte inddelinger som “beskæftigelseskategorier” må vi gå til opgaven med omtanke. Som Bourdieu skriver i \emph{Practical Reason}:
+
+%
+ \begin{quote} \small %\raggedright %(bloktekst on/off)
+	To endavour to think the state is to take the risk of taking over (or being taken over by) a thought of the state, that is, of applying to the state categories of thought produced and 	guaranteed by the state and hence to misrecognize its most profound truth. \sourceatright{\parencite[35]{Bourdieu1998}}
+ \end{quote}
+ % 
+
+Her er inddelingen af teknikere farlig, da den har en tilsyneladende og \emph{troskyldig} objektivitet bag sig. I en vis forstand er den rimelig nok, da disse opdelinger i tekniker-kategorierne ud fra uddannelses- og færdighedsskøn sandsynligvis godtgør nogle delte sociale vilkår, der også er omsat til kognitive strukturer for den enkelte. I moderne samfund er homologien mellem sociale strukturer og kognitive strukturer i høj grad formet af uddannelsessystemet som en, hvis ikke den, afgørende smeltedigel for de habituelle dispositioner hos agenterne \parencite[12]{Bourdieu1992}. Der er derfor en vis fornuft i benytte sig af et klassifikationsystem, der bruger dette som udgangspunkt for inddelingen. Omvendt vil en for stor tiltro til denne inddeling vanskeliggøre netop den opgave, vi har stillet os selv, nemlig at fremvise et system af forskellige mellem ledige baseret på de mønstre, vi kan observere dem tage del i, fremfor en teoretisk eller administrativt funderet inddeling. Det er en naturligvis en illusion at tro på den rene induktion, men det er for os et mål at danne så praksisfølsom en model som overhovedet muligt. Udfordringen er ikke benytte disse kategorier, som staten har stillet til rådighed for os, på en sådan måde, at præcisionen i den sociale inddeling er størst indenfor de felter, vi selv har en relation til, og stort set ikke-eksisterende på de felter, vi ikke kender til, hvor vi bliver nødt til at forlade os på statens højere kategori-niveauer. Det har vi forsøgt at undgå ved at benytte så lavt et niveau som er praktisk muligt i vores disco-inddeling. 
+
+
+
+Det er ikke altid muligt at benytte sig af de kategori
+
+(her skal stå noget om hvordan vi bruger en form for dialektik for at kortlægge praksis, eftersom statens kategorier også har en vis berettigelse og symbolsk virkning, forholder vi os hele tiden til disco-hierarkiseringen (hierarki\emph{seringen} for at understøttte det \emph{aktive element} i inddelingen), og vurdere forholdet mellem disse inddelinger og det vi ser.)
+
+
+%ku godt skrives mere ud
+
+\section{kategorier \label{}}
+
+Figur \ref{fig_hist_beskaeftigede_allekategorier} viser antallet af personer i de \antalkat kategorier, vi arbejder med, for henholdsvis alle beskæftigede og ledige. Eftersom vi arbejder med en 14 års periode, har vi taget gennemsnittet af hvert kategori over denne periode. Antallet af personer i kategorien skal derfor tolkes som det gennemsnitlige antal beskæftigede indenfor denne kategori i perioden 1996 til 2009. For de ledige er forskellen, at grafen er begrænset til de personer, der har været ledige i denne periode. Kategorierne er desuden farveskaleret efter størrelse, således at kategorierne går fra grå til orange, desto større de er. Det er ikke meningen at figuren skal give detaljeret indsigt i hver enkelt af de \antalkat kategorier. Vi bruger netop moneca for at kunne reducere antallet kategorier til et overskueligt antal. - men blot et overblik over vores grundkategorier, så læseren kan følge processen, som argumenteret for i %%% her henviser du til det afsnit du skal skrive med udgangspunkt i Carol-bogen! #todo
+
+
+
+\begin{figure}[h]
+\begin{centering}
+	\caption{Antallet af beskæftigede indenfor disco-kategorierne}
+	\includegraphics[width=\textwidth]{fig/metode/hist_beskaeftigede_allekategorier.pdf}
+	\label{fig_hist_beskaeftigede_allekategorier}
+\end{centering}
+\end{figure}
+% man kunne muligvis indsætte figuren som set her, og så lave en stor version der kunne henvises til og som ligger i bilaget. Man kunne muligvis også i Illustrator fx, inddele grafen i de grupper som tabellen nedenfor beskriver.  #ideer
+
+Det ses tydeligt af figur \ref{fig_hist_beskaeftigede_allekategorier}, at enkelte kategorier er voldsomt meget større end resten, mens der er en lang hale af små kategorier. En række forskellige hensyn har spillet ind i denne inddeling, som tidligere har været berørt mere teoretisk, men som også er drevet af nogle praktiske begrænsninger og hensyn, som ovenstående figur kan give anledning til at diskutere. I tabel \ref{tab_discokat_grup} er disco-kategorierne inddelt i percentil-intervaller, der er bestemt ud fra den fordeling vi kan se i figur \ref{fig_hist_beskaeftigede_allekategorier}. Den eneste forskel er at fordelingen er præsenteret i procent fremfor antal personer. %Bør der her stå noget med i "i procent af det (gennemsnitlige) samlede antal beskæftigede i perioden", just to spell it out?   % betratningner om god mening det giver at identificere folk der er ledige indenfor beskæftigelseskategorier. 
+
+\begin{table}[ht]
+\centering
+\caption{Disco-kategorier grupperet efter andele}
+\label{tab_discokat_grup}
+\begin{tabular}{@{}lrrrrrrr@{}}
+\toprule
+\multicolumn{1}{c}{}      & \multicolumn{1}{c}{Minimum} & \multicolumn{1}{c}{Maksimum} & \multicolumn{1}{c}{Total} & \multicolumn{1}{c}{\textless 1 \%} & \multicolumn{1}{c}{1-2 \%} & \multicolumn{1}{c}{2-3 \%} & \multicolumn{1}{c}{3-7 \%} \\ \midrule
+Ledige                    & 165                         & 41.900                       & 656.927                   & 39 \%                              & 17 \%                      & 19 \%                      & 25 \%                      \\
+\textit{Antal kategorier} & -                           & -                            & 150                       & 124                                & 13                         & 8                          & 5                          \\
+Beskæftigede              & 464                         & 115.100                      & 2.440.511                 & 42 \%                              & 26 \%                      & 12 \%                      & 20 \%                      \\
+\textit{Antal kategorier} & -                           & -                            & 150                       & 122                                & 18                         & 5                          & 5                          \\ \bottomrule
+\end{tabular}
+\end{table}
+
+Tabel \ref{tab_discokat_grup} viser også den største og mindste kategori indenfor hver af de to populationer. De to mindste kategorier med kun 171 ledige i gennemsnit er kategorien \texttt{Arbejde med emner inden for medicin, odontologi, veterinaervidenskab og farmaci i oevrigt
+}, der blandt andet tæller arbejdsmiljøkonsulent, samt \texttt{Arbejde med matematik, aktuariske og statistiske metoder
+}, der blandt andet tæller aktuar og statistiker. Der kan være stor forskel på hvor en disco-kategori er i henholdsvis populationen af alle beskæftigede og ledige, hvilket vi vil gå mere detaljeret ind i senere. De fleste af de ti mindste kategorier er dog de samme i begge populationer, med maks 260 personer i kategorien blandt ledige og ca. 2000 blandt alle  beskæftigede. Der er tale om højt specialiseret arbejde, der ikke nødvendigvis kræver en lang \emph{uddannelse}. Udover de to føromtalte tæller det arbejde som flymekaniker, håndarbejde i træ og tekstil, glaspuster og keramiker, driller på boreplatforme og mineanlægsrelateret arbejde. Der er ingen klar systematik i relation til disco-hierarkisering, det definerende kendetegn lader til at være det nicheprægede element, hvilket vel nærmest er tautologisk. 
+
+Den næste kolonne i tabellen skal læses således, at de disco-kategorier, der har under 1 \% af det samlede antal, udgør 39 \% af alle de ledige, når de summeres, og består af 124 af de 150 kategorier. Derefter udgør de disco-kategorier, der har mellem 1-2 \% og 2-3 \%, henholdsvis 17 \% og 19 \% af totalen, mens de fem største kategorier står for 25 \% af det totale antal ledige%
+%
+\footnote{Af hensyn til formidlingen har vi valgt at skrive “1-2 \%” og “2-3 \%”, men rent teknisk operer vi med “1-1,999 \%” og “2-2,999 \%”. Ingen af grupperne rammer dog disse grænsetilfælde, derfor vælger vi at prioritere formidling højest.}%
+%
+. Hvis man sammenligner med den hovedpopulation, som de ledige kommer fra, alle beskæftigede, så er forskellen, at blandt alle beskæftigede er den lange hale tykkere. kategorierne under 2 \% udgør tilsammen 68 \%, fremfor 56 \% hos de ledige. Denne forskel i tyngde er hos de ledige forskudt op så gruppen af semi-store kategorier på mellem 2-3 \% er noget større, og gruppen af de fem største kategorier har 25 \% af fordelingen fremfor 20 \% blandt alle beskæftigede. Som nævnt i det foregående afsnit har det høj prioritet for os at at give plads til at praksis driver segmenteringen, så vidt muligt.  Det betyder at vi har overvejet forskellige inddelinger, blandt andet at lade os styre mere af fordelingen blandt ledige fremfor alle beskæftigede. Det ville dog være en fejlslutning, da ovenstående forskel i tyngde med stor sandsynlighed skal tolkes som udtryk for, at risikoen for ledighed varierer indenfor forskellige jobtyper, og dermed indenfor forskellige sociale grupper, hvilket er præcis det, vi ikke vil pille ved. Vi vender tilbage med en analyse af det på side \ref{ledighedsrisiko}, foreløbigt skal det bare konstateres, at derfor foregår Disco-kategoriseringen primært hensyn til fordelingen blandt alle beskæftigede, og her er det meget tilfredsstillende, at 68 \% af fordelingen, eller 1.649.859 i gennemsnit over perioden, er beskæftigede i den lange hale.
+
+Gruppen med de fem største kategorier er desuden kendetegnet ved at bestå af primært en enkelt subkategori på det 4-cifrede disco-niveau. Det betyder at vi simpelthen ikke kan gå længere ned i detaljegrad, og det er således en praktisk omstændighed, vi ikke kan undslippe i vores arbejde med registerdata. Disse kategorier består af arbejde indenfor hovedgruppe 4, 5 og 9 i disco-klassifikationen. Det vil sige \texttt{Almindeligt kontor- og kundeservicearbejde (4)}, \texttt{Service- og salgsarbejde (5)} og \texttt{Andet manuelt arbejde (9)}. Det er ikke overraskende at arbejde indenfor disse kategorier er meget udbredt, og (læs Lars Olsen og sammenlign omkring skredet til servicearbejde, den danske arbejderklasses sammensætning, den slags). \#todo
+
+
+
+
+% 5133
+% 4110
+% 5131
+% 5200
+% 9130
+
+
+% Social- og sundhedspersonale i private hjem (hjemmehjælp)
+% rengørings- og køkkenarbejde
+% alment kontorarbejde
+% privat børnepasning 
+% demonstrationsarbejde Butiksmedarbejder, demonstratoer, kasseassistent, kommis, togsteward
+
+
+
+I tilfældende  \texttt{rengørings- og køkkenarbejde} (41.897 personer eller 6,4 \%), \texttt{alment kontorarbejde} (27.527 personer eller 4,2 \%) og \texttt{Ekspedient-, kasse-,  demonstrations- og modelarbejde} (36.078 personer eller 5,5 \%), er en enkelt kategori på det 4-cifrede niveau blevet lagt sammen med de andre 4-cifrede kategorier indenfor sit 3-cifrede niveau, fordi denne enkelte kategori udgør langt størstedelen af den samlede 3-cifrede kategori på niveauet over. Eksempelvis udgør arbejdet med \texttt{alment kontorarbejde} omtrent 94 \% af gruppens indhold, mens de andre 4-cifrede kategorier, der omhandler \texttt{EDB-indtastningsarbejde}, \texttt{andet indtastningsarbejde på regnemaskine m.v.}%
+%
+\footnote{I denne jobtype hvor informationsteknologiens udvikling har skabt omfattende ændringer af arbejdsgange bliver er det tydeligt at jobbeskrivelserne er løbet fra sproget i \texttt{Disco'88}.}%
+%
+samt \texttt{arbejde med stenografering}, udgør de resterende 6 \%. Vi har derfor kaldt gruppen for \texttt{alment kontorarbejde}. Samme logik gælder for de andre to kategorier.
+
+
+
+Her adskiller kategorien\texttt{Privat børnepasning} og \texttt{Omsorgsarbejde i private hjem
+} sig. De er lavet udelukkende fra det 4-cifrede disko-niveau. Det kan umiddelbart forekomme spøjst. \texttt{Privat børnepasning} har også blandt alle beskæftigede en betragtelig andel af alle ansættelser, og har her en 4. plads med sine 3,3 \% af alle beskæftigede. Eftersom den er taget direkte fra det 4-cifrede niveau, har vi intet ændret fra den oprindelige disco-variabel.
+
+
+Det er mindre mystisk hvis man ser på, hvorledes \texttt{pædagog} udgør 2,4 \% af de ledige og 2,5 \% af de beskæftigede, med henholdsvis en 8. og en 7. plads over største kategorier. Folkeskolelærer kommer lige efter. Man må bare konstatere, at børnepasning, at opdrage den næste generation, udgør en væsentlig del af det samfundsmæssige arbejde. % skriv samme pointe med at passe på ældre, når først vi har opdateret moneca og splittet ældre- og omsorgsarbejde op i to.
+
+
+
+Derefter bevæger vi os op til de mest iøjnefaldende kategorier, jævnfør figur \ref{fig_hist_beskaeftigede_allekategorier}, der udgør 27 \%.
+
+\label{ledighedsrisiko} % skal sættes ind der hvor der skrives om det
+
+%blandet og ukendt kategorier og overvejelser omkring det.
+
+% noget omkring det pudsige i at definere ledige i relation til deres job. og det der sker med den statistiske transformation der ser på gennemsnit indenfor en årrække. Og forsvar det alligevel: det siger noget om forskelligartetheden i at være ledig.
+
+
+% lav skelnen mellem job, jobtype, socialklasse, habitusdrevet, det der.
+
+% hold det her op imod Lars Olsens bøger
+
+% læs Stefan Andrades phd og kom ind på alt det der med serviceklasser og prekariatet-tænkning.
+
+
+% Husk eksemplet med børnehavelærer - pædagog af uddannelse, men arbejder på en folkeskole! hmm. 
+
+% husk det med ingeniører og arkitekter
+
+% hvilket betyder at de største kategorier  test test 
+
+
+
+
+
+% Samt den særlig opgave, det er for sociologien, der bør ligge til grund for en inddeling, som ingen i sagens natur kan have det fulde overblik over. 
+
+
+
+ 
+% Baseret på disse gruppers relationer, er Moneca-algoritmen udviklet  test
+
+
+
+
+
+% \subsection{Netværksanalytisk videnskabsteori}
+
+
+% \subsection{Borudieus videnskabsteori}
+
+
+
+
+
+
+
+
+% #### ideer til afsnit
+
+% - Disco
+% - opbygning af relativ risiko gennem total antal beskæftigede, teoretisk diskussion (se Emils logbog)
+
+% skriv noget om hvorfor vi ikke behøver lave statistik - vi har populationen - men hvorfor man alligevel godt kunne lave det, men hvorfor det nok ikke giver nogen mening alligevel (Adorno)
+
+
+
+
+
+
+
+
+
+
+
+
+%Local Variables: 
+%mode: latex
+%TeX-master: "report"
+%End: 

@@ -1,0 +1,183 @@
+% -*- coding: utf-8 -*-
+% !TeX encoding = UTF-8
+% !TeX root = ../report.tex
+
+
+
+
+
+
+\chapter{metodeovervejelser \label{}}
+
+Her vil vi blah blah og blah blah der der noget?!?
+
+
+\section{at skabe en kritisk masse af ledige \label{ledigskab}}
+
+Kernen i vores empiriske arbejde er en fundamentale skelnen mellem at være ledig og ikke at være ledig%
+%
+\footnote{eller at være beskæftiget og ikke være beskæftiget, hvilket ikke er det samme, hvilket diskussion vil blah blah}%
+%
+. Fordi det er en nødvendig skelnen i vores empiri, behøver det imidlertidig ikke også være det sådan i vores begrebsdannelse, at vi accepterer denne dikotomi som et lige så fundamentalt socialt fakta. Følgende gennemgang af vores empiriske ledighedsbegreb vil netop vise, at dikotomien er langt mere mudret end den efterfølgende reduktion til en binær modstilling lader ane. 
+
+Danmarks Statistik har ikke overraskende en lang række variable, der forholder sig direkte eller indirekte til begrebet ledighed. Mange af disse forholder sig specifikt til forskellige aspekter af det at være ledig, såsom \texttt{DPTIMER}, der beskriver det antal timer, der er udbetalt dagpenge for, indenfor en uge. At aggregere disse variable til et samlet ledighedsbegreb ville være en enorm opgave, og eftersom dokumentationen for variablene varierer fra ganske informativ til obskur intern system-jargon. Vi har i stedet valgt udvalgt to variable, som DST selv har aggreret på en sådan vis at vi kan skabe et binært ledighedsbegreb ud fra dem. 
+
+Det er ikke et mål i sig selv at reducere den sociale virkelighed til et spørgsmål om at “være ledig eller ej”. Snarere tværtimod. Men for at kunne skabe et overblik over ledighedsmobilitet i tidsperioden, er det nødvendigt for senere at kunne åbne begrebet op igen.  
+
+\subsection{spells \& runs}
+
+For at skabe en datastruktur der gav os mulighed for at undersøge perioder med ledighed stod vi overfor en udfordring. I modsætning til Larsen \& Toubøls brug af MONECA i forbindelse med social mobilitet blandt alle jobskift, står vi med det særlige benspænd, at der kan gå få eller mange år mellem at personer i vores data får nyt arbejde. Vi kan derfor ikke tælle skift per år, men bliver nødt til at lave en struktur, der tillader os at kollapse ledighedsperioden dynamisk således at vi kan se hvilket job man gik fra og til, uanset hvor lang ledighedsperiod der er tale om. For at gøre dette, har det været nødvendigt at reducere informationsmængden i DSTs aggregerede ledighedsvariable til en binær variabel. Ved at skabe en sådan klar stop/start-indikator på ledighedsperioder, i kombination med en paneldatastruktur, kan vi ved kodning ved hjælp af indekseringsprogrammering%
+%
+\footnote{Det vil sige: skabe nye variable og lave beregniner baseret på værdier relativt til en given observations \emph{placering} i data, fremfor givne \emph{karakteristika} ved observationer}%
+%
+ opnå en struktur der viser skift, uagtet længden af ledighedsperioderne%
+%
+\footnote{Længden af ledighedsperioderne er naturligvis af stor analytisk interese, men benyttes først på et senere trin i analysen.}%
+%
+. Det betyder at vi - før nogen form for sortering - har 5.860.440 mennesker, hvert obsereret over 14 år svarende til 82.046.160 observationer. Det følgende er et illustrativt eksempel på denne struktur. 
+%
+\input{tabel/metode/tab_spellrun}
+%
+Vi har at gøre med et enkelt panel, det vil her sige den samme anonymiserede person gennem 14 år. Det ses at vedkommende i 1996 arbejder med bageri- eller konditorrelateret arbejde. Vedkommende er kategoriseret som lønmodtager på grundniveau i vores aggregerede beskæftigelsesvariabel \texttt{SOCSTIL\_KOD/SOCIO}, hvilket betyder at han i vores binære ledighedsvariabel har et negativt udfald. Hvordan dette bestemmes vil blive beskret i næstkommende afsnit, foreløbigt skal det blot konstateres, at han i 1997 tildeles en revalideringsydelse, som han er på de næste fire år. I vores optik er han derfor i denne periode “ledig”. Revalideringsydelsens formål er, ifølge Bekendtgørelsen om aktiv socialpolitik, (...) \emph{at en person med begrænsninger i arbejdsevnen, herunder personer, der er berettiget til ledighedsydelse og særlig ydelse, fastholdes eller kommer ind på arbejdsmarkedet, således at den pågældendes mulighed for at forsørge sig selv og sin familie forbedres.}” (\textcite{lov_revalidering}).
+
+Efter fire år på denne ydelse bliver vedkommende ansat indenfor pædagogisk arbejde. Året efter ender han på kontanthjælp, men kommer tilbage til det pædagogiske arbejde i 2003. i 2004 skifter han til beskæftigelseskategorien \emph{Operatør- og fremstillingsarbejde i næring og nydelse}. Denne forbliver han frem til panelets sidste observation i 2009. Derfor vil denne person blive registreret med to skift i vores mobilitetstabel: ét skift fra \emph{Bager- og konditorarbejde} til \emph{Pædagogisk arbejde}, og et andet fra \emph{Pædagogisk arbejde} til \emph{pædagogisk arbejde}. Det efterfølgende skift til til fremstillingsarbejde i næringsindustrien medtages ikke. Man kunne mene at det ville være en del af historien, og man kunne mene at der sandsynligvis sker en tilbagevending til hårdere fysisk arbejde indenfor madfremstilling, ligesom bager- og konditorarbejdet som manden havde i 1996. Det hører med til historien, og er grunden til vi %blah blah blah argument for at lave sekvensanalyse / en eller anden form for livsbane analyse #vendtilbage.
+
+\subsection{Inddeling af ledige i binær form}
+
+Eksemplet tjener også til at illustrerer noget andet centralt. Det ses at manden i 2002 var på kontanthjælp, og dog havde han en DISCO-kode tilknyttet. Det skal forstås sådan, at en inddeling af et menneskes arbejdsliv, baseret på en årsinddeling, grundlæggende er en kunstig inddeling, der ikke kan indfange den kontinuitet, livet leves i. En sådan årsinddeling har ofte en vis berettigelse, eftersom det er grundlag for en lang række adminstrative inddelinger, med meget reelle sociale konsekvenser. Ikke desto mindre kan man sagtens være kontanthjælpsmodtager og have en en, to eller flere jobs i løbet af samme år, og det er en kompleksitet, vi er tvunget til at reducere til en samlet vurdering af hvad vedkommende lavede i løbet af året. Som beskrevet i bilag \ref{hvordanDSTdisco} er dannelsen af disco-variablene en kompliceret proces, hvor den endelige beskæftigelseskode er sammensat ud fra mange forskellige kilder og kriterier. \texttt{DISCOALLE\_INDK} grundlæggende dannet ud fra det arbejdssted, hvor de har fået størst lønindkomst gennem året. Der er ingen vurdering af hvor lang en ansættelse, der er tale om, før den tæller med. En ledighedsvariabel baseret på hvorvidt man eller ikke har et udfald i \texttt{DISCOALLE\_INDK}, ville derfor være ekstremt upålidelig. Vi har derfor valgt en anden tilgang, hvor ledighed bestemmes ud fra en kombination af variablene \texttt{socio/SOCIO02} og \texttt{SOCSTIL\_KODE}.
+
+\texttt{socio/SOCIO02} kan kort beskrives som en variabel, der dannes ud fra en persons væsentligste indkomstkilde, og ud fra denne fastlægges det, hvilken socioøkonomisk status vedkommende har i det år. Denne har en overordnet opdeling mellem \emph{personer i beskæftigelse}, \emph{arbejdsløse personer},
+\emph{personer uden for arbejdsstyrken} og \emph{børn}. Hovedformålet for \texttt{socio/SOCIO02} er en samlet vurdering af socioøkonomisk status. Her er tilknytning til arbejdsmarkedet et væsentligt kriterie, men kun en del af en samlet vurdering, der er langt bredere \parencite[8]{Plovsing1997}. 
+I modsætning hertil er \texttt{SOCSTIL\_KODE} defineret ud fra tilknytning til arbejdsmarkedet, baseret på ILO-standarder. den opdeler i de tre overordnede kategorier \emph{beskæftigede}, \emph{arbejdsløse} og \emph{personer udenfor arbejdsstyrken}. 
+Både \texttt{socio/SOCIO02} og \texttt{SOCSTIL\_KODE} indeholder en hovedgruppe af personer i beskæftigelse, som vi uden videre kan betegne som ikke-ledige i vores binære variabel \texttt{led\_soc}.  Det drejer sig om lønmodtagere på forskellige færdighedsniveauer samt selvstændige med forskelle antal ansatte. Det er grupperne udenfor arbejdsmarkedet, samt de arbejdsløse, hvori de gråmelerede toner dukker frem. 
+%Indsæt muligvis tabel med udfald kun af ikke-beskæftigede indenfor socstil og socio her #todo
+Det ses at de to variable indeholder detaljerede oplysinger om personer udenfor arbejdsmarkedet. Det ses også at vi har at gøre med både hårde ledighedskategorier såsom \texttt{Nettoledige} og \texttt{Kontanthjælpsmodtager}, og kategorier såsom \emph{Delvis ledig} %hvad ligger der i det? det står der intet om - find ud af det #todo
+. \texttt{SOCSTIL\_KODE} og \texttt{socio/SOCIO02} indeholder definitioner af ledighed, der ligger tæt op af hinanden, men fanger forskellige aspekter. De to variable hedder i deres binære form henholdsvis \texttt{led\_socio} og \texttt{led\_sockod}. Vi kan se at de rammer forskelligt ved at krydse \texttt{SOCSTIL\_KODE} og \texttt{socio/SOCIO02}.
+%tabel her der gør det
+Det ses at \texttt{led\_socio} og \texttt{led\_sockod} i 68 \% af tilfældende %opdater når relevant
+rammer samme inddeling, mens den  i xxx af tilfældende rammer en forkert inddeling (markeret med gråt). Her er vores to primære kilder til at se på tilknytning til arbejdsmarkedet altså ikke enige om inddelingen. Det giver os fire mulige løsninger, rangeret efter hvor restriktivt et ledighedsbegreb man ønsker at benytte.
+%
+\begin{description} [topsep=6pt,itemsep=-1ex]
+  \item[Restriktiv] Udvælg de ledige, der defineres som sådan af både \texttt{SOCSTIL\_KODE} \emph{og} \texttt{socio/SOCIO02}.
+  \item[Semirestriktiv] Benyt enten \texttt{SOCSTIL\_KODE} eller \texttt{socio/SOCIO02}s inddeling af ledige
+  \item[Semibred] Benyt enten den ene variables inddeling, og supplere missing-værdierne med den anden variabel.
+ \item[Bred] Benyt begge variables inddeling således at hvis den ene variabel siger en person er ledig, overruler det den anden variabels bestemmelse af at vedkommende ikke er det.
+\end{description}
+%
+Det er meget svært hvis ikke umuligt at verificere gyldigheden af enten \texttt{SOCSTIL\_KODE} eller \texttt{socio/SOCIO02} som værende \emph{den helt korrekte} betegnelse, i tilfælde af tvivlsspørgsmål. Da vi arbejder med en meget bred forståelse af ledighed, og er interesseret i alle med en løs tilknytning til arbejdsmarkedet, vælger vi at benytte den 4. mulighed, hvor informationer fra begge variable inddrages. Vi antager, at hvis én af de to variable inddeler en person i en kategori udenfor beskæftigelse, så er det sandsynligt at det forholder sig sådan. Det kan være at man dermed kommer til at kategorisere en person, der i løbet af et år primært er på arbejdsmarkedet, og kun sekundært har været i kontakt med overførselsindkomster, som en person udenfor arbejdsmarkedet. Vi vælger denne løsning for at kunne udtale os bredt om dem, der i en periode har haft en løs eller ingen tilknytning til arbejdsmarkedet. Det forklarer også hvorfor personen i tabel \ref{tab_spellrun} har en disco-kode i år 2002. i \texttt{SOCSTIL\_KODE} er han sat med beskæftigelseskoden \texttt{Lønmodtagere på grundniveau}, mens han i \texttt{socio/SOCIO02} er kategoriseret som på kontanthjælp. Det er sandsynligt at manden har været begge dele i dette år. Vi mener at vis den ene af de to variable kategoriserer ham som kontanthjælpsmodtager som primær socioøkonimisk status, bør vi vurdere ham som ledig i år 2002 - eller ihvertfald \emph{primært} som ledig%
+%
+\footnote{som nævnt er det også muligt at have en disco-kode selvom både \texttt{socio/SOCIO02} og \texttt{SOCSTIL\_KODE} mener man ikke er i en beskæftigelseskategori. Det betyder sandsynligvis at der er tale om et job, der ikke fylder meget i forhold til de forskellige overførselsindkomster, som de to aggregerede variable baserer sig på. Det forekommer derfor rimeligt at ignorere denne beskæftigelse.}
+
+
+\subsection{Ledighedsvariable i DST fra 1996 til 2009} \label{}}
+
+DST har tre ledighedsstatistikker \parencite{DST2014}. Den registerbaserede nettoledighedsstatistik, den registerbaserede bruttoledighedsstatistik og AKU-ledighed som kommer fra den interviewbaserede arbejdskraftundersøgelse:
+\begin{itemize} [topsep=6pt,itemsep=-1ex]
+  \item De nettoledige omfatter de 16-64-årige jobparate modtagere af dagpenge, kontanthjælp og uddannelseshjælp, omregnet til ’fuldtidsledige’. Opgøres fra 1979.
+  \item De bruttoledige omfatter de nettoledige samt de 16-64-årige jobparate aktiverede dagpenge-, kontanthjælps- og uddannelseshjælpsmodtagere, herunder personer i løntilskud, omregnet til fuldtid. Opgøres fra 2007.
+  \item AKU-Ledigheden følger det europæiske statistikbureau Eurostats og ILO’s operationaliseringer af arbejdsmarkedstilknytningen. De AKU-ledige er således personer, der til arbejdskraftundersøgelsen oplyser, at de ikke var beskæftigede i en given referenceuge, og at de aktivt har søgt arbejde indenfor de seneste fire uger, og at de kan påbegynde nyt arbejde indenfor de kommende to uger. Opgøres fra 1990.
+\end{itemize}
+
+De registerbaserede ledighedstatistikker er mere anvendelige for os til at definere langtidsledighed og summen af ledighedsgrad gennem hele arbejdslivet end AKU-ledighedsstatistikken, fordi vi kigger på DISCO-grupper som er forholdsvis små grupper og fordi vi kigger på tdsserier fra 1996 til 2009. Disse to elementer er ikke særlig anvendelige for AKU-ledighedsstatikken.
+
+Den bedste ledighedsstatistik vi så kan bruge er bruttoledigheden, fordi den omfatter både de nettoledige samt de 16-64-årige jobparate aktiverede dagpenge-, kontanthjælps- og uddannelseshjælpsmodtagere, herunder personer i løntilskud, omregnet til fuldtid. Det vil sige, at det er en bredere kategori end nettoledigheden, hvilket passer overens med vores brede definition af ledighed. Desværre opgøres den først fra 2007, hvilket betyder, at vi er nødt til at vælge nettoledighed. Vi anvender derfor nettoledigheden, fordi DST anbefaler denne, når man ønsker en lang tidsserie selvom vi desværre ikke får ledigheden opgjort med jobklare personer i aktivering og løntilskud som ved bruttoledigheden.
+
+På nuværende tidspunkt figurerer forskellige langtidsledighedsdefitioner. DST \parencite{Grunnet-Lauridsen2014} opstiller følgende: 
+\begin{itemize} [topsep=6pt,itemsep=-1ex]
+  \item DST: 80 pct. bruttoledig det seneste kalenderår
+  \item DST: Personer der er berørt af bruttoledighed eller ”midlertidigt fraværende fra bruttoledighed” i de seneste 365 dage.%
+%
+\footnote{Midlertidigt fraværende fra bruttoledighed” afgrænses som: 1. Perioden, hvor personen ikke er berørt af bruttoledighed, er kortere end 29 dage, og i denne periode er personen ikke i lønmodtagerbeskæftigelse i mere end 10 timer. 2. Perioden mellem to ledighedsspænd er kortere end 29 dage og personen har markering for løntilskud dagen før eller dagen efter denne periode. Hvis det er tilfældet, indgår denne periode i opgørelsen af langtidsledighed uanset hvor mange timers lønmodtagerbeskæftigelse, der er i perioden. Tidsserien er først tilgængelig fra januar 2009, da oplysningerne i \texttt{BFL} først er fra januar 2008}%
+%
+\ .
+  \item AMS: 80 pct. bruttoledig de seneste 52 uger samt bruttoledig i sidste uge af perioden
+  \item AE: 80 pct. bruttoledig de seneste 52 uger samt bruttoledig i seneste dagpengemåned. Inkluderer desuden feriedagpengemodtagere fra ledighed.
+  \item AKU Langtidsledighed defineres som ledig de seneste 12 måneder med følgende opgørelsesmetode: AKU-ledig i referenceugen, søgt arbejde minimum de seneste 12 måneder og uden job de seneste 12 måneder.
+\end{itemize}
+%
+
+Andelen af langtidsledige er på baggrund af variablen \texttt{arledgr}, som kommer fra DST's \texttt{IDAP}-registeret (IDA Persondata).
+
+Ledighedsgraden svarer på årsbasis til den andel af året, hvori den ledighedsberørte person har været ledig i enten én sammenhængende periode eller flere perioder sammenlagt.
+
+Ledighedsgraden er beregnet som antallet af ledige timer i forhold til antallet af (mulige) arbejdstimer. Ledighedsgraden svarer på årsbasis til den andel af året, hvori den ledighedsberørte person har været ledig i enten én sammenhængende periode eller flere perioder sammenlagt. Ledigheden er angivet i promille. En årsledighedsgrad lig 1000 angiver fuld ledighed i hele året, en årsledighedsgrad på 500 angiver således ledighed i halvdelen af året etc.
+
+Ledighedsgraden beregnes for hele befolkningen, men det er valgt kun at vise graf og tabel for personer, der har en positiv årsledighedsgrad i løbet af året. Det betyder, at ARLEDGR er forskellig fra 0 eller med andre ord, at de pågældende personer er ledighedsberørte i arbejdsåret.
+
+Variablen dannes ikke i IDA, men modtages fra ledighedsstatistikken (Data modtages fra CRAM (Det centrale register for arbejdsmarked). For yderligere dokumentation henvises derfor til dokumentationen for dette område. Fra 2008 baseres ledighedsoplysninger på statistikken Personer uden Ordinær Beskæftigelse, som erstatter Det centrale register for arbejdsmarkedsdata (CRAM). Årsledighedsgraden beregnes som summen af tilstandskoderne for ledige dagpengemodtagere (kode 5020), G-dage (kode 5030) og ledige kontanthjælpsmodtagere (kode 5080).
+
+Vi har omkodet ledighedsgraden om til andelen af langtidsledige, det vil sige personer med en ledighed på over 800 (80 procent).
+
+Det er ikke muligt at danne Bruttoledighed før 2007 pga. usikkerhed omkring aktiveringen. Der er to muligheder for at gøre langtidsledighed bedre.
+Man kunne prøve at inddrage variable med varighed af aktiveringsydelser inden for det seneste år. 
+\begin{itemize} [topsep=6pt,itemsep=-1ex]
+  \item Man kan sænke procentsatsen til 75 eller 70 procent.
+  \item Disse variable har vi dog ikke, men kan bestilles fra SFI: texttt{NETTO_AK NETTO_M NETTO_VAR VAR_AF_B VAR_AF_FA VAR_AF_U VAR_AK1 VAR_AK2 VAR_AK3 VAR_AK4 VAR_AK5 VAR_AKT}
+  \item Fra 2007 til 2009 kunne man bruge \texttt{FORSIKRINGSKATEGORI_KODE GRADAAR KILDE_KODE PTI_TILSTAND_KODE PTI_TIMER_PER_UGE PTI_VFRA PTI_VTIL} til at få de bruttoledige med.
+\end{itemize}
+
+Kilde: http://www.dst.dk/da/Statistik/dokumentation/Times/ida-databasen/ida-personer/arledgr.aspx
+
+
+
+
+% test
+\parencite[158]{Bourdieu1986}. 
+
+\parencite[185]{DST2014}
+
+
+
+
+
+
+%% noter %%
+
+%fint at bruge ordet population - og forklar hvorfor: fordi det er generisk nok, vi ved godt det kun tvivlsomt kan kaldes en gruppe. Det har vi heller ikke lyst til at definere dem som, og derfor bruger vi det indholdstomme populationsbegreb. (er det indholdstomt? Tjaeh. Det kan vi ihvertfald argumentere for)
+
+
+
+
+% hvad mangler der her
+% - indsæt tabeller og kommenter dem med nyeste færdige oplysninger. Især kombinationerne af socio og socstil, smat led_fusion skal præsenteres i deres endelige udgaver. 
+% muligvis forholde sig til rigtige arbejdsmarkedsstatistikker og sammenligne
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%Local Variables: 
+%mode: latex
+%TeX-master: "report"
+%End:
