@@ -93,5 +93,5 @@
 	"theme": "Spacegray.sublime-theme",
 	"word_separators": "/\\()\"‘-:,;~!@#$%^&*|+=[]{}`~?",
 	"word_wrap": "true",
-	"wrap_width": 72
+	"wrap_width": 90
 }
