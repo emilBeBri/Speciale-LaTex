@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-\chapter{${1:} \label{${2:}}}
+\chapter{${1:} \label{kap_${2:}}}
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>tcci</tabTrigger>

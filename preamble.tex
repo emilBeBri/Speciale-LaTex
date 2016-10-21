@@ -100,6 +100,8 @@
 \usepackage[normalem]{ulem} %striketrough
 \usepackage{array} %centering 
 \usepackage{wallpaper}
+\usepackage{wrapfig} % wrap figure
+\usepackage[font=small]{caption}
 
 % Test pakker
 \usepackage{appendix} %[toc,page]
@@ -114,12 +116,15 @@
 \usepackage{nicefrac}
 \usepackage{flowchart}
 \usetikzlibrary{arrows}
+% \usepackage{pgfplotstable}
 
 
 % ----------- Bibliografi ------------ %
 
+
+
 %%bibliografi med biblatex
-\usepackage[citestyle=authoryear-ibid, sorting=nty,backend=biber,bibencoding=UTF8,maxcitenames=1]{biblatex}
+\usepackage[citestyle=authoryear-ibid, sorting=nty,backend=biber,bibencoding=UTF8,maxcitenames=2,defernumbers=true]{biblatex}
 %% options til ovenstaaende:
 %% maxcitenames=x styrer antal af forfattere før der står et.al/m.fl.
 %% uniquelist=false/true styrer om den alligevel skal skrive flere navne end specifieret i maxcitenames i tvivlspørgsmål, dvs. hvis en forfatter optræder i flere referencer med andre forfattere.

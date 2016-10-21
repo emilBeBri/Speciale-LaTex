@@ -102,8 +102,14 @@ hvorfor printer den ikke sidetal på 2. del af figurlisten?
 \parencite - producerer (Jensen 2008, s. 32)
 \textcite{Jensen2008} - producerer Jensen(2008)
 \cite - sært format, forstår ikke helt hvorfor den er standard
-
-
+\citetitle
+\citeauthor
+\citeyear
+\nocite
+\nocite{knuth:ct} %ved ikke helt hvad : gør i mellem text 
+\citename
+\citelist
+\citefield
 
 
 
