@@ -134,14 +134,22 @@
 %bibtex-fil
 
 %lave filtre så bibliografien kan deles op
-\defbibfilter{notonline}{
-  not type=online
-  and not type=manual
-%  and not keyword={DST}
-}
-\defbibfilter{DST}{%
-keyword=DST %keyword er et felt i en bib-entry
-}
+% \defbibfilter{notonline}{
+%   not type=Electronic, 
+%   % and not type=manual
+%   not keyword={DSTmanual}
+% }
+
+% \defbibfilter{DSTmanual}{%
+% keyword=DSTmanual %keyword er et felt i en bib-entry
+% }
+
+% \defbibfilter{onlinekilder}{%
+% type={Electronic}, 
+% notkeyword={DSTmanual}
+% }
+
+
 
 \addbibresource{biblio/bibliografi.bib}
 

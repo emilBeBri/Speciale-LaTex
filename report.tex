@@ -77,15 +77,14 @@
 % - madsen thatcher verville southall ger companion
 
 %% Indledning
-	% \input{tex/1.0_indledning}
+	\input{tex/1.0_indledning}
 		% \input{tex/1.0_problemformulering_til_Jens}	
 
 %%	Teori
 	% \part{Teori \label{part_teori}}
 
-	% 	% \input{tex/2.0_teori_soeren}
-	% 	\input{tex/2.0_teori_AST}
-	% 	\input{tex/2.0_teori_klasse}
+		\input{tex/2.0_teori_AST}
+		\input{tex/2.0_teori_klasse}
 						% \input{tex/2.0_teori}
 						% \input{tex/2.1_teori_bourdieu}
 						% \input{tex/2.2_teori_arbejdsloeshed}
@@ -97,7 +96,8 @@
 
 	% \chapter{Social netværksanalyse \label{metode_sna}}
 	 
- 	% \input{tex/3.0_metode_SNA}
+ 	\input{tex/3.0_metode_SNA}
+ 	\input{tex/3.0_metode_DISCO}
 						% \input{tex/3.1_metode_arbejdsloeshed}
 						% \input{tex/3.2_metode_netvaerksanalyse}
 						% \input{tex/3.3_metode_disco}
@@ -106,8 +106,8 @@
 %% Analyse
 % \part{Analyse\label{part_analyse}}
 
-		% \input{tex/delanalyse1_deskriptivt}
-		% \input{tex/delanalyse2_socialeprocesser}		
+		\input{tex/4.0_delanalyse1_deskriptivt}
+		\input{tex/4.0_delanalyse2_socialeprocesser}		
 
 %% Diskussion
 % \part{Diskussion label{part_diskussion}}
@@ -123,22 +123,23 @@
 % \begin{appendix}
 
 % \setcounter{secnumdepth}{3}
-% % \input{tex/app_figurer}
+% % % \input{tex/app_figurer}
 % \input{tex/app_metode_loen}
-% \input{tex/app_netvaerkskort}
-\input{tex/app_metode_netvaerksmaal}
-% % \input{tex/app_metode_disco}
-% % \input{tex/app_metode_baggrundsvariable}
+% % \input{tex/app_netvaerkskort}
+% \input{tex/app_metode_netvaerksmaal}
+% % % \input{tex/app_metode_disco}
+% % % \input{tex/app_metode_baggrundsvariable}
 
 
 
 % \end{appendix} 
 
-% \newpage
+\newpage
 
 %%% -------------- Bibliografi ----------------- %%%
 
-\chapter{Litteraturliste \label{litteraturliste}}
+\chapter*{Litteraturliste \label{Litteraturliste}}
+\addcontentsline{toc}{chapter}{Litteraturliste} 
 %%%%% biblatex definerer alt i preamblet
 
 % \nocite{*} % brug denne for at tage referencer med der ikke citeres i teksten
@@ -146,11 +147,48 @@
 %%%%% til samlet litteraturliste
 % \printbibliography
 
-% %%%%% til opsplittet litteraturliste
-\printbibliography[heading=subbibliography,title={Primær litteraturliste},filter=notonline]
-\printbibliography[heading=subbibliography,title={Online kilder},type=online]
-\printbibliography[heading=subbibliography,title={DST manualer},filter=DST]
-\printbibliography[heading=subbibliography,title={Danmarks Statistiks Manualer},type=manual]
+%%%%%% til opsplittet litteraturliste
+
+% \printbibliography[
+% heading=bibintoc,
+% title={Litteraturliste}
+% ]
+
+% \printbibliography[heading=bibintoc,title={Litteraturliste},
+% nottype=article,nottype=book,nottype=mvbook,nottype=inbook,nottype=bookinbook,nottype=suppbook,nottype=booklet,nottype=collection,nottype=mvcollection,nottype=incollection,nottype=suppcollection,nottype=manual,nottype=misc,nottype=online,nottype=patent,nottype=periodical,nottype=suppperiodical,nottype=proceedings,nottype=mvproceedings,nottype=inproceedings,nottype=reference,nottype=mvreference,nottype=inreference,nottype=report,nottype=set,nottype=thesis,nottype=unpublished,nottype=custom,nottype=conference,nottype=electronic,nottype=masterthesis,nottype=phdthesis,nottype=techreport
+% ]
+
+\printbibliography[heading=subbibliography,title={Bøger og artikler},nottype=online,notkeyword=DSTmanual]
+
+\printbibliography[heading=subbibliography,title={Online kilder},type=online,notkeyword=DSTmanual]
+
+\printbibliography[heading=subbibliography,title={Danmarks Statistiks Manualer},keyword=DSTmanual]
+
+
+% \printbibliography[heading=subbibliography,title={Online kilder},filter=onlinekilder]
+% \printbibliography[heading=subbibliography,title={Danmarks Statistiks Manualer},filter=DSTmanual]
+% \printbibliography[keyword=own,...]
+% \printbibliography[notkeyword=own,...]
+
+
+
+% \printbibliography[title={Article references},type=article]
+% \printbibliography[title={Other references}, nottype=book, nottype=article]
+
+
+% \printbibliography[heading=subbibliography,title={Primær litteraturliste},filter=notonline]
+% \printbibliography[heading=subbibliography,title={Online kilder},filter=onlinekilder]
+% \printbibliography[heading=subbibliography,title={Danmarks Statistiks Manualer},filter=DSTmanual]
+
+
+
+%%% se mere her:
+%%% http://texblog.org/2012/10/22/multiple-bibliographies-with-biblatex/
+
+
+
+
+
 
 \newpage
 

@@ -1,0 +1,72 @@
+% -*- coding: utf-8 -*-
+% !TeX encoding = UTF-8
+% !TeX root = ../report.tex
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Datamateriale \label{kapitel_metode_datamateriale}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{DISCO}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Arbejdsmarkedssegmentering måles på jobskifte
+
+Datamaterialet bygger på Danmarks Statistik
+
+De primære variable som bruges er i den sociale netværksanalyse er DISCO-88 og ANXSFREM
+
+Danmarks Statistik bruger DISCO-fagklassifikationskoder til at inddele arbejdsmarkedet i forskellige jobfunktioner, som afhænger forudsætningerne for udførelsen af et job og typen af job. Klassifikationen opdeler arbejdsmarkedet i 492 et fircifret niveau, som fx omfatter lægearbejde, sygeplejearbejde, pædagoisk arbejde og snedkerarbejde. Det er disse jobfunktioner, som ligger til grund for dette speciale.
+
+DISCO har et væsentlig databrud for i 2010, hvor DISCO-88 ændres til DISCO-08. Derfor anvendes der udelukkende data fra perioden 1996 til 2009. Der bruges alene data fra DISCO-koder, som har mere end xxx ansatte i perioden 1996 til 2009. Baggrunden er, at der er for få personer til at lave en meningsfuld social netævrksanalyse.
+
+Analyseudvalget består af X.XXX.XXX observationer med X.XXX.XXX personer i alderen 16 til 69 år. som skifte job fra et job til et andet job i det efterfølgende år. Til at lokalisere dem der har lavet et reelt jobskifte er der anvendt ANXSFREM.
+
+Anayseudvalget spænder fra XXX.XXX personer i 1997 til XXX.XXX i 2008. Med operationaliseringen sket der et bortfald i dem, som ikke har haft meningsfulde DISCO-koder. Frafaldet er på XX procent. Frafaldet har dog ikke betydning for løn.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Timeløn}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Jeg benytter indkomstvariablen timeløn. I bilag \ref{app_loen} beskriver jeg variablen samt den datarensning jeg foretager, samt sammenligner den med de andre mulige indkomstvariable og DSTs egne mål for indkomst for forskellige erhvervsgrupper. De væsentlige pointer fra bilaget er:
+%
+ \begin{itemize}
+  \itemsep -0.5em
+  	\item Timelønsvariablen er det bedste skøn på indkomst, og er ganske nøjagtigt selv på mit detaljerede \texttt{DISCO}-niveau.
+  	\item Medmindre andet siges, er timelønninger \emph{et gennemsnit} af lønningerne i hele perioden 1996-2009. I beregningen af dette gennemsnit er perioden 1996-2008 inflationskorrigeret til 2009 priser.
+  	\item Månedslønninger beregnes ved at gange timelønnen med 160,33. Det er DSTs metode \parencite[32]{DST2009}.
+ \end{itemize}
+%
+Når man undersøger sit eget forslag til arbejdsmarkedsstruktur skal man være opmærksom på, at det ikke kan valideres med ved hvad Boje kalder “outcomes af sociale processer,” såsom arbejdsløshed, hyppighed i jobskift og, ikke mindst: lønforskelle \parencite[28]{Boje1985}. Det er indkomst og indkomstforskelle mellem delmarkederne, jeg vil gennemgå nu. 
+
+I netværksmetodologiske termer er Laumann, Marsden \& Prensky inde på det samme, når de advarer imod at validere et socialt netværk baseret på de selvsamme attributter, der er brugt til at konstruere det \parencite[29]{Laumann1983}. Løn er ikke brugt til at konstruere mit netværk, men må siges at være så tæt et outcome af beskæftigelse, at det ikke fremstår eksternt i Lauman et als (skriver man det sådan? \#todo) forstand. Lønniveauerne på de af Moneca skabte \emph{delmarkeder} er derimod interessante for validiteten, hvis vi accepterer det som et \emph{kriterie-relateret validitetsmål}, der gør det muligt at validere den interne struktur og konsistens i et klasseskema \parencite[94]{Oesch2006a}%
+%
+\footnote{ Jeg laver ikke et klasseskema, men er tæt nok på til jeg synes det giver mening at benytte Oeschs validitetskriterie.}%
+%
+. Udover denne mere metologisk nødvendige validering af mit bud på en segmenteringsstrukur, er lønninger \emph{i sig selv} interessante, da det er direkte relaterbart til arbejdsmarkedets struktur, og utvivlsomt er den mest benyttede indikator for social status og magtposition i den sociale struktur Oesch s. 95, (Weber, Andrade, Boje, Marx, Wright, Goldthorpe, Harrits, Scott - find dem og skriv dem ind \#todo.) 
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Køn}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Ledighed}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Local Variables: 
+%mode: latex
+%TeX-master: "report"
+%End:
