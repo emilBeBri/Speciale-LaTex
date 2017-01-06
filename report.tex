@@ -4,6 +4,10 @@
 %%% -------------- Preamble ----------------- %%%
 
 
+%  Helvetica typesetting ku være nice, tjek ud:
+% http://tex.stackexchange.com/questions/10204/last-step-in-moving-to-xetex-font-shape-problems
+% http://tex.stackexchange.com/questions/173126/xelatex-and-texmaker-cannot-use-pdftex
+
 
 \input{preamble}
 
@@ -78,13 +82,13 @@
 
 %% Indledning
 % 	\input{tex/1.0_indledning}
-% 		% \input{tex/1.0_problemformulering_til_Jens}	
+		 % \input{tex/1.0_problemformulering_til_Jens}	
 
 % %%	Teori
 % 	% \part{Teori \label{part_teori}}
 
 % 		\input{tex/2.0_teori_AST}
- 		\input{tex/2.0_teori_klasse}
+ 		% \input{tex/2.0_teori_klasse}
 % 						% \input{tex/2.0_teori}
 % 						% \input{tex/2.1_teori_bourdieu}
 % 						% \input{tex/2.2_teori_arbejdsloeshed}
@@ -96,13 +100,13 @@
 	 
 %  	\input{tex/3.0_metode_SNA}
 %  	\input{tex/3.0_metode_DISCO}
-% 						% \input{tex/3.1_metode_arbejdsloeshed}
-% 						% \input{tex/3.2_metode_netvaerksanalyse}
-						% \input{tex/3.3_metode_disco}
-						% \input{tex/3.4_metode_opsamling}
+% % 						% \input{tex/3.1_metode_arbejdsloeshed}
+% % 						% \input{tex/3.2_metode_netvaerksanalyse}
+% 						% \input{tex/3.3_metode_disco}
+% 						% \input{tex/3.4_metode_opsamling}
 
-%% Analyse
-% \part{Analyse\label{part_analyse}}
+% %% Analyse
+% % \part{Analyse\label{part_analyse}}
 
 		\input{tex/4.0_delanalyse1_deskriptivt}
 		\input{tex/4.0_delanalyse2_socialeprocesser}		
@@ -130,37 +134,49 @@
 
 
 
-%\end{appendix} 
+% %\end{appendix} 
 
-\newpage
+% \newpage
 
-%%% -------------- Bibliografi ----------------- %%%
+% %%% -------------- Bibliografi ----------------- %%%
 
 \chapter*{Litteraturliste \label{Litteraturliste}}
 \addcontentsline{toc}{chapter}{Litteraturliste} 
-%%%%% biblatex definerer alt i preamblet
+% %%%%% biblatex definerer alt i preamblet
 
-% \nocite{*} % brug denne for at tage referencer med der ikke citeres i teksten
+% % \nocite{*} % brug denne for at tage referencer med der ikke citeres i teksten
 
-%%%%% til samlet litteraturliste
-% \printbibliography
+% %%%%% til samlet litteraturliste
+% % \printbibliography
 
 %%%%%% til opsplittet litteraturliste
 
 % \printbibliography[
 % heading=bibintoc,
 % title={Litteraturliste}
+% % keyword=intetkeywordbaretilatlavefancyoversk
 % ]
 
 % \printbibliography[heading=bibintoc,title={Litteraturliste},
 % nottype=article,nottype=book,nottype=mvbook,nottype=inbook,nottype=bookinbook,nottype=suppbook,nottype=booklet,nottype=collection,nottype=mvcollection,nottype=incollection,nottype=suppcollection,nottype=manual,nottype=misc,nottype=online,nottype=patent,nottype=periodical,nottype=suppperiodical,nottype=proceedings,nottype=mvproceedings,nottype=inproceedings,nottype=reference,nottype=mvreference,nottype=inreference,nottype=report,nottype=set,nottype=thesis,nottype=unpublished,nottype=custom,nottype=conference,nottype=electronic,nottype=masterthesis,nottype=phdthesis,nottype=techreport
 % ]
 
-\printbibliography[heading=subbibliography,title={Bøger og artikler},nottype=online,notkeyword=DSTmanual]
+\printbibliography[
+heading=subbibliography,
+title={Bøger og artikler},
+nottype=online,
+notkeyword=DSTmanual]
 
-\printbibliography[heading=subbibliography,title={Online kilder},type=online,notkeyword=DSTmanual]
+\printbibliography[
+heading=subbibliography,
+title={Online kilder},
+type=online,
+notkeyword=DSTmanual]
 
-\printbibliography[heading=subbibliography,title={Danmarks Statistiks Manualer},keyword=DSTmanual]
+\printbibliography[
+heading=subbibliography,
+title={Danmarks Statistiks Manualer},
+keyword=DSTmanual]
 
 
 % \printbibliography[heading=subbibliography,title={Online kilder},filter=onlinekilder]
