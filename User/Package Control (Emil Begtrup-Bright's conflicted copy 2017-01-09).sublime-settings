@@ -8,6 +8,8 @@
 	"installed_packages":
 	[
 		"All Autocomplete",
+		"Boxy Theme",
+		"Boxy Theme Addon - Mono File Icons",
 		"ColorPicker",
 		"Dayle Rees Color Schemes",
 		"Dictionaries",
@@ -35,7 +37,6 @@
 		"SideBarEnhancements",
 		"SideBarFolders",
 		"StataEditor",
-		"SublimeCodeIntel",
 		"Text Pastry",
 		"Theme - Flatland",
 		"Theme - Soda SolarizedDark",

@@ -15,8 +15,6 @@
 	"file_exclude_patterns":
 	[
 		"*.*outputstream*",
-		"*.zip",
-		"*.rar",
 		"*conflicted copy*",
 		"*.sublime-snippet",
 		"*.hmtl",
@@ -103,6 +101,7 @@
 	"show_tab_close_buttons": false,
 	"spell_check": false,
 	"theme": "Spacegray.sublime-theme",
+	"word_separators": "/\\()\"‘-:,;~!@#$%^&*|+=[]{}`~?",
 	"word_wrap": "true",
 	"wrap_width": 80
 }
