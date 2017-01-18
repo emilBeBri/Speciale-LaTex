@@ -43,7 +43,7 @@
 
 
 
-
+% inkluder formueudvidelsen på en eller anden måde http://www.dst.dk/da/Statistik/nyt/NytHtml?cid=24034
 
 
 
@@ -72,16 +72,15 @@ Derfor vil jeg se på jobmobiliten mellem delmarkederne, hvor for at vudere hvor
 \section{Opdeling af arbejdsmarkedet i klynger \label{delanalyse1_endelige mobilitetskort}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Min analyse viser 41 klynger på det danske arbejdsmarked, samt 6 enkeltstående erhvervsgrupper. Det er portrætteret i figur \ref{fig_seg_proces5} som et netværk af 273 noder, opdelt i 41 klynger. De 273 noder dækker over de i kapitel \ref{kapitel metode DISCO} beskrevne erhvervsgrupper. 
+Min analyse viser 41 klynger på det danske arbejdsmarked, samt 6 enkeltstående erhvervsgrupper. Det er portrætteret i figur \ref{fig_seg_proces5} som et netværk af 273 noder, opdelt i 41 klynger. De 273 noder dækker over de i kapitel \ref{kapitel metode DISCO} beskrevne erhvervsgrupper. Alle noder, der er blevet sammenlagt i klynger, er markeret med sort, mens de 6 enkeltstående noder er markeret med hvid. 
 
 
 % Disse erhvervsgrupper bindes sammen af forbindelser, som angiver jobskift mellem forskellige erhvervsgrupper i perioden 1996 til 2009. Jo flere jobskifte, der er mellem erhvervsgrupper, jo kraftigere er forbindelsen. Eksempelvis er forbindelserne kraftige fra \emak{d9312} til \emak{d9313}, da 1264 personer skiftede fra jord- og kloakarbejde til medhjælp ved bygningsarbejde i perioden. 
 
-% lav en udgave af niveau 5 hvor der ikke er alle de der ting med sort-hvid der forvirrer lige her. Bare alle sammen sorte. \#todo
 
 \begin{figure}[H]
 \begin{centering}
-  \includegraphics[width=10 cm]{fig/netvaerkskort/kort_seg_proces5.pdf}
+  \includegraphics[width=10 cm]{fig/netvaerkskort/kort_seg_proces_niveau5_praesentation.pdf}
   \caption{}
   \label{fig_seg_proces5}
 \end{centering}
@@ -91,21 +90,22 @@ Klyngerne er sammensat med Moneca-algoritmen. Klyngedannelsen sker ved at aggreg
 
 Om klyngerne også er \emph{delmarkeder}, kommer i min definition an på jobmobiliteten, forstået i netværkstermer. For at der er tale om et delmarked, skal der ifølge Boje været meget mobilitet indenfor delmarkedet, og barrierer for jobmobilitet mellem  delmarkeder. Derfor bliver jobmobilitet tolket sådan, at hvis jobmobiliteten er “høj” internt i klyngerne - fra nu af kaldet \emph{den interne mobilitet} - har vi at gøre med et delmarked. 
 
-Udover det, tilføjer jeg to yderligere krav, der er centrale mål indenfor social netværksanalyse: \emph{Densitet} og \emph{den maksimale stilængde} \parencite[68f]{Scott2000}. Disse to mål siger noget om hvor godt de enkelte klynger “hænger sammen” internt. Disse to mål skal undgå den situation, at den interne mobilitet kan være høj grundet høj intern mobilitet i noderne selv, og ikke i klyngen som sådan. Samt tage højde for inklusionen af noder i klynger, hvor de er blevet inkluderet ved en fejl, det vil sige: Deres inklusion i en given klynge skyldes forbindelse til enkelte erhvervsgrupper, og ikke fordi de er velintegrerede i klyngen som sådan. Densitet og maksimal stilængde for klyngerne har primært en teknisk karakter. Fremlæggelsen og diskussionen af dem findes i bilag \ref{app_netvaerksmaal}. På baggrund af disse to mål tages 9 klynger til revision grundet disse kvalitetsmål. Ud af disse 9 splittes 4 klynger op. Dette uddybbes også i bilag bilag \ref{app_netvaerksmaal}. 
+Moneca-algoritmens klike-baserede bud på en segment-opdeling benytter jeg \emph{som udgangspunkt} for arbejdsmarkedets opdeling. Dette bud på en opdeling har jeg justeret efterfølgende, baseret på to kriterier: Et netværksanalytisk kriterie for den interne konsistens af klyngerne, baseret på to almindelige centrale mål indenfor netværksanalyse,   \emph{Densitet} og \emph{den maksimale stilængde} \parencite[68f]{Scott2000}. Et hermeneutisk kritierie, hvor noder, der forekommer malplacerede i bestemte klynger, granskes nøje for at vurdere hvor de hører til.Der er foretages nogle ganske væsentlige ændringer fra Monecas mekaniske klyngedannelsesprocedure. Dette er uddybet i bilag \ref{app_netvaerksmaal}.  
 
 Tilsammen er jobmobilitet, \emph{densiteten} og \emph{den maksimale stilængde} for en række noder med til at sige, om vi har at gøre med et delmarked eller ej. For at parafrasere Weber, så består et delmarked af de arbejdsmarkedssituationer, hvor mobilitet er nem og typisk 
 %
-\footnote{Parafrasen er over citatet “\emph{A »social class« makes up the totality of those class situations within which individual and generational mobility is easy and typical.}” \parencite[302]{Weber1978}.}%
+\footnote{Citatet lyder “\emph{A »social class« makes up the totality of those class situations within which individual and generational mobility is easy and typical.}” \parencite[302]{Weber1978}.}%
 %
 \parencite[302]{Weber1978}. 
 
-Til forskel fra densitet og maksimal stilængde har jobmobilitet en klar teoretisk baggrund, såvel som den er baggrund for klyngedannelsen i det hele taget. Det er denne klyngeddannelse, jeg nu vil gennemgå. Det skulle gerne lette fortolkningen af det endelige netværkskort for læseren, samt give svar på om klyngerne kan betegnes som egentlige delmarkeder. 
+Jeg vil nu gennemgå klyngedannelsen. Det er ikke kun en metodisk procedure, men tjener det formål at give en pædagogisk indføring i tolkning af det endelige netværkskort, der ellers kan fremstå temmelig uoverskueligt. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Dannelsen af klynger \label{delanalyse1_segmenteringsprocessen}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Moneca-algoritmens klyngedannelse slutter på det 5. niveau. I første niveau starter vi med de 273 noder. På femte og sidste niveau er de 273 noder blevet aggreret til 54 klynger.
+Moneca-algoritmens klyngedannelse slutter på det 5. niveau. I første niveau starter vi med de 273 noder. På femte og sidste niveau er de 273 noder blevet aggreret til 41 klynger og 6 enkeltstående noder. De 6 enkeltstående noder er alle kendetegnet ved at have en meget høj intern mobilitet, og være meget specialiserede erhverv, såsom læge. 
+
 
 Aggreringen fra nivea 1 til niveau 5 fremgår af tabel \ref{tab_delanalyse1_karakteristika}. Her vises ændringerne i jobmobiliteten fra niveau til niveau, som den foregår internt \emph{i} klyngerne og \emph{eksternt} mellem klyngerne.
 
@@ -120,12 +120,21 @@ Det første iøjnefaldende er at den interne mobilitet på det (uaggregerede) ni
 %
 . Det understøtter i høj grad Gruskys antagelse om, at blah blah læs det han skriver om mikroklasser \#todo). 
 
-Fra niveau 1 til niveau 2 er Moneca er i stand til at forhøje den interne mobilitet med 7 procentpoint, således at $\nicefrac{3}{4}$ af jobmobiliteten foregår indenfor disse. Det er i god overenstemmigelse med tidligere undersøgelser, der viser at hovedparten af skift i job sker indenfor relativt afgrænsede delmarkeder \parencite[124]{BojeToft1989}. Der er, så vidt jeg ved, ikke foretaget en jobmobilitetsundersøgelse på så detaljeret et Disco-niveau og med så omfangsrigt et datamateriale. Vi kan altså allerede konstatere, at det danske arbejdsmarked er voldsomt specialiseret, blot ved at se på de første to Moneca-niveauer.
+Fra niveau 1 til niveau 2 er Moneca er i stand til at forhøje den interne mobilitet med 6 procentpoint, således at næsten $\nicefrac{3}{4}$ af jobmobiliteten foregår indenfor klyngerne. Niveau to klynger på meget lavt niveau, og kunne på en måde siges at være en slags “udvidede erhvervsgrupper,” med gennemsnitligt antal noder i klyngerne på 3,5%
+%
+\footnote{ 3,2 hvis man tæller de 36 noder med, der endnu ikke er aggregerede.}%
+%
+
+
+Der er, så vidt jeg ved, ikke tidligere foretaget en jobmobilitetsundersøgelse på så detaljeret et Disco-niveau og med så omfangsrigt et datamateriale i Danmark. Men vi kan konstatere, at det er i overenstemmigelse med tidligere undersøgelser, der viser at hovedparten af skift i job sker indenfor relativt afgrænsede delmarkeder \parencite[124]{BojeToft1989}. 
+
+Det danske arbejdsmarked må siges at være voldsomt specialiseret, blot ved at se på de første to Moneca-niveauer. 
 
 Jeg vil nu gennemgå udviklingen i niveauerne visuelt, og beskrive udviklingen ud fra tabel \ref{tab_delanalyse1_karakteristika}.
 
-Figurerne der afbilleder processen skal tolkes således: Forskellen på hvide og sorte noder i figurerne på side \pageref{fig_delanalyse1_kort_seg_proces2} til side \pageref{fig_delanalyse1_kort_seg_proces5} er simpel. Sorte node indikerer at denne node er blevet inkluderet i en ny klynge siden det foregående niveau. Hvid node indikerer at den \emph{ikke} er blevet inkluderet i en ny klynge siden niveauet før. 
-Jeg har ikke afbilledet niveau 1, da der ikke findes et foregående niveau at vise et skift \emph{fra}. 
+Figurerne der afbilleder processen skal tolkes således: Der er hvide og sorte noder tegnet ind på netværkskortene på side \pageref{fig_delanalyse1_kort_seg_proces2} til side \pageref{fig_delanalyse1_kort_seg_proces5} . Forskellen på hvide og sort noder i figurerne på er simpel: Sorte node indikerer at denne node er blevet inkluderet i en ny klynge siden det foregående niveau. Hvid node indikerer at den \emph{ikke} er blevet inkluderet i en ny klynge siden niveauet før. 
+Niveau 1 er ikke afbilledet, da der ikke findes et foregående niveau at vise et skift fra. 
+Forbindelserne mellem noderne er markeret med grå streger, men bør ikke tolkes på nuværende tidspunkt, da der ikke er diffentieret mellem stærke og svage forbindelser i illustrationerne. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -146,11 +155,11 @@ Jeg har ikke afbilledet niveau 1, da der ikke findes et foregående niveau at vi
 
 Den mest markante aggregering i klynger og stigning i intern jobmobilitet fra finder sted i skiftet fra 1. niveau til 2. niveau, og herefter falder effekten af klyngedannelsen på den interne jobmobilitet støt. Af figur \ref{fig_delanalyse1_kort_seg_proces2} fremgår aggreringen. 
 
-På 2. niveau går vi fra de oprindelige 273 fritstående noder til 81 klynger, samt 33 endnu fritstående noder. Det vil sige 114 i alt%
+På 2. niveau går vi fra de oprindelige 273 fritstående noder til 80 klynger, samt 35 endnu fritstående noder: 115 i alt%
 %
-\footnote{ Der skelnes i tabel \ref{tab_delanalyse1_karakteristika} ikke mellem enkelte noder og klynger, da klyngernes interne mobilitet jo netop skal erstatte nodernes, og en direkte sammenligning derfor er ønskelig. }%
+\footnote{ Der skelnes i tabel \ref{tab_delanalyse1_karakteristika} ikke mellem enkelte noder og klynger, da klyngernes interne mobilitet jo netop skal erstatte nodernes, og en direkte sammenligning derfor er ønskelig.}%
 %
-. Antallet af klynger er reduceret med 139 \%, og den gennemsnitlige interne mobilitet i klyngerne er steget med 7 procentpoint.
+. Antallet af klynger er reduceret med 137 \%, og den gennemsnitlige interne mobilitet i klyngerne er steget med 6 procentpoint. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -168,7 +177,9 @@ På 2. niveau går vi fra de oprindelige 273 fritstående noder til 81 klynger, 
   \vspace{-20pt}
 \end{wrapfigure}
 
-På 3. niveau, afbilledet i figur \ref{fig_delanalyse1_kort_seg_proces3}, inkluderes 20 enkeltstående noder i klynger, samt en række niveau 2 klynger aggrereres yderligere. Det reducerer antallet af grupper til 69. Stigningen i den gennemsnitlige interne mobilitet er på 3 procentpoint, hvilket er beskedent sammenlignet med stigningen fra niveau 1 til niveau 2. Tilgengæld er reduktionen i \emph{antallet} af grupper på 65 \%. Det vil sige at kompleksiteten i netværket reduceres, samtidig med at den interne mobilitet øges. Det er tendensen fra niveau 3 og frem: Der foretages stadig væsentlige sammenlægninger af klynger og noder til større klynger, men betydning af sammenlægningen på den gennemsnitlige interne mobilitet er lille. Det tolker jeg som udtryk for, at jo længere væk fra den sociale kontekst af den oprindelige erhvervsgruppe, vi kommer, desto mindre systematik er der i jobskiftet. 
+På 3. niveau, afbilledet i figur \ref{fig_delanalyse1_kort_seg_proces3}, inkluderes 21 enkeltstående noder i klynger, samt en række niveau 2 klynger aggrereres yderligere. Det reducerer antallet af klynger til 52 og 14 enkeltstående noder, 66 grupper i alt. Stigningen i den gennemsnitlige interne mobilitet er på 2 procentpoint, hvilket er beskedent sammenlignet med stigningen fra niveau 1 til niveau 2. Tilgengæld er reduktionen i \emph{antallet} af grupper på 74\%. Det vil sige at kompleksiteten i netværket reduceres, samtidig med at den interne mobilitet øges. Det er tendensen fra niveau 3 og frem: Der foretages stadig væsentlige sammenlægninger af klynger og noder til større klynger, men betydning af sammenlægningen på den gennemsnitlige interne mobilitet forbliver derefter på de to-tre point per niveau. Det ender dog alligevel med at blive en forøgelse i alt på 7 procentpoint, altså omtrent det samme som forøgelsen fra niveau 1 til niveau 2. 
+
+% Det tolker jeg som udtryk for, at jo længere væk fra den sociale kontekst af den oprindelige erhvervsgruppe, vi kommer, desto mindre systematik er der i jobskiftet: Det bliver sværere at pege på de meget
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -186,24 +197,26 @@ På 3. niveau, afbilledet i figur \ref{fig_delanalyse1_kort_seg_proces3}, inklud
   \vspace{-20pt}
 \end{wrapfigure}
 
-På 4. niveau skabes 12 nye klynger. Kun en enkelt af disse sker i en sammenlægning med en enkeltstående node. Resten er tidligere klyngedannelser. 
-Der er nu 56 grupper, hvoraf 14 er noder. Den interne mobilitet er steget med to procentpoint.
-%
-\footnote{Selvom to procentpoints stigning kan virke af lidt, viser effektforskninger, fx Andrade, at bare den 1 1/2 procent han kan finde i indkomstforskelle meget. De forklarer ofte kun 5-10 procent af den totale variation. skriv det her bedre \#todo}%
-%
-Antallet af grupper er tilgengæld reduceret med 23 \%, lidt under $\nicefrac{1}{4}$. Det er på dette niveau, at sammenlægningerne binder allerede store klynger sammen, og vi får udvidede klynger med en betragtelig mængde forskellige erhvervsgrupper samlet under ét.
+På 4. niveau skabes 10 nye klynger. Der er nu 53 grupper, hvoraf 42 er klynger og 9 er noder. Den interne mobilitet er igen steget med to procentpoint. Dette kan måske forekomme beskedent, men jeg vil faktisk mene det forholder sig omvendt: At kunne forklare yderligere to procent af den samlede variation i jobskifte, er mere end udemærket. Især når reduktionen i antallet af grupper er på $\nicefrac{1}{4}$. 
 
-Disse klynger af erhvervsgrupper er ikke baseret på den \emph{teknisistiske vision}, som Grusky advarer imod, og heller ikke en a priori teoretisk opdeling, som hos Goldthorpe og Oesch. Inddelingen er istedet baseret på den sociale nærhed, der antages at findes mellem jobs, hvor mobilitet er “let og typisk” , som Weber siger det i sin definition af hvad der udgør en social klasse. %kalder det, sin beskrivelse af (et af) de definerende træk ved social klasse: Individuel mobilitet% Det her skal nok stå i teori-afsnittet, og så henvises til her i stedet. \#todo
+
+Det er på dette niveau, at sammenlægningerne binder allerede store klynger sammen, og vi får udvidede klynger med en betragtelig mængde forskellige erhvervsgrupper samlet under ét. Det er altså her, det for alvor bliver interessant. 
+Disse klynger af erhvervsgrupper nemlig ikke er ikke baseret på den \emph{teknisistiske vision}, som Grusky advarer imod, og heller ikke en a priori teoretisk opdeling, som hos Goldthorpe og Oesch. Inddelingen er istedet baseret på den sociale nærhed, der antages at findes mellem jobs, hvor mobilitet er “let og typisk” , som Weber siger er det definerende træk ved social klasse. Jeg er dog som tidligere beskrevet mere beskeden, og prøver kun at udtale mig om økonomiske klasser- og klassefraktioner.  %kalder det, sin beskrivelse af (et af) de definerende træk ved social klasse: Individuel mobilitet% Det her skal nok stå i teori-afsnittet, og så henvises til her i stedet. \#todo
+
 %
-\footnote{Der er naturligvis flere elementer end individuel jobmobilitet på spil. Det fulde citat lyder: “\textit{A »social class« makes up the totality of those class situations within which individual and generational mobility is easy and typical.}” \parencite[302]{Weber1978}. }%
+\footnote{Der er naturligvis flere elementer end individuel jobmobilitet på spil. Det fulde citat lyder: “\textit{A »social class« makes up the totality of those class situations within which individual and generational mobility is easy and typical.}” \parencite[302]{Weber1978}. }% Det her citat står allerede længere oppe. Lav vurdering af hvor det hører til senere. 
 %
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage \subsection{Niveau 5 \label{delanalyse1_endelige mobilitetskort}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Det 5. niveaeu er det sidste niveau, da Moneca-algoritmen ikke kan aggregere klynger på et højere niveau end det. Vi mindes fra gennemgangen af Moneca-proceduren på side  \pageref{metode_monecastepbystep}, at det betyder, at Moneca ikke kan finde nogle noder eller tidligere klynger, hvor der er intern mobilitet mellem  \emph{alle} klynger fra niveauet tidligere. %check lige op på det med Anton \#todo 
-I skiftet fra niveau 4 sker der tre aggregeringer: En inklusion af en enkelt node i en niveau 4- klynge, samt en større sammenlægning af en niveau 4- og en niveau 3-klynge. Det bringer os ned på 13 enkeltstående noder, samt 41 klynger. 
+Det 5. niveau er det sidste niveau, da Moneca-algoritmen ikke kan aggregere klynger på et højere niveau end det. Vi mindes fra gennemgangen af Moneca-proceduren på side  \pageref{metode_monecastepbystep}, at det betyder, at Moneca ikke kan finde nogle noder eller tidligere klynger, hvor der er intern mobilitet mellem  \emph{alle} klynger fra niveauet tidligere. %check lige op på det med Anton \#todo 
+I skiftet fra niveau 4 til 5 aggregeres to klynger. Den ene skabes ud fra store niveau 4-klynger, og inkluderer en enkelt node i processen, \emak{d8110}. Den anden er én stor niveau 4-klynge, der “sluger” 4 enkeltstående noder. 
+
+Det bringer os ned på de 41 klynger og 6 noder.
+
+
 
 \begin{figure}[H]
 \begin{centering}
@@ -213,44 +226,69 @@ I skiftet fra niveau 4 sker der tre aggregeringer: En inklusion af en enkelt nod
 \end{centering}
 \end{figure}
 
-Her er forbedringen i den interne mobilitet uanselig. Vi kommer ikke højere op end  en gennemsnitlig intern mobilitet på 79 \% Dette forekommer mig rimeligt og acceptabelt, og en stigning på 11 procentpoint i den interne mobilitet fra niveau 1 til niveau 5 vurderer jeg som ganske tilfredsstillende, når det endelige resultat forklarer omtrent $\nicefrac{4}{5}$ af al mobilitet på arbejdsmarkedet. Også selvom udgangspunktet var højt i forvejen, er det tilfredsstillende. Dette er i god overenstemmigelse med tidligere undersøgelser, der viser at hovedparten af skift i job sker indenfor relativt afgrænsede klynger \parencite[124]{BojeToft1989}. 
 
-Den oprindelige 273 x 273 mobilitetstabel nu er reduceret til en mere overkommelig 54 x 54 mobilitetstabel. Ud af disse 54 kategorier er 13 enkelstående noter, der ikke er sammenlagt med andre noter, mens 42 er klynger. Tabel \ref{tab_delanalyse1_noegletalniveau1og5} viser yderligere centrale mål. Disse viser tydeligt at aggregeringen har skabt færre kategorier med højere intern mobilitet.
+
+
+
+
+
+Den oprindelige 273 x 273 mobilitetstabel nu er reduceret til en mere overkommelig 47 x 47 mobilitetstabel. Tabel \ref{tab_delanalyse1_noegletalniveau1og5} viser yderligere centrale mål for startniveau 1 og slutniveau 5. Disse viser tydeligt at aggregeringen har skabt færre kategorier med højere intern mobilitet. 
+
+Vi ender med en gennemsnitlig intern mobilitet på 81 \% Dette forekommer rimeligt og acceptabelt, og en stigning på 13 procentpoint i den interne mobilitet fra niveau 1 til niveau 5 vurderer jeg som meget tilfredsstillende. Det endelige resultat forklarer omtrent $\nicefrac{4}{5}$ af al mobilitet på arbejdsmarkedet, selvom det er vigtigt at huske på den meget høje interne mobilitet, der forekommer indenfor erhvervsgrupperne på det danske arbejdsmarked. 
+
+
 
 %
 \input{tabel/delanalyse1_noegletalniveau1og5}
 %
 
-Medianen på det 1. niveau er på 79 \%, mens det på 5. niveau er steget til 80 \%. Standardafvigelsen for den interne mobilitet på det 1. niveau er på 12 \%, mens den på det 5. niveau er på 10 \%. At standardafvigelsen er faldet og medianen er steget, er vigtigt, fordi det fortæller os at gennemsnittet ikke er trukket op via enkelte klynger.  Det er en generel forbedring af mobilitetsstrukturen. Det ses også ud fra minimumværdierne. Hvor de laveste værdier tidligere lå på lidt over 40 \%, ligger de nu på lidt over 50 \%. På de 3 centrale mål for kontinuerte variable (Find henvisning Malchow-Muller \#todo) er der sket en forbedring. 5. niveau forklarer \emph{mere} mobilitet, og kategoriernes interne mobilitet svinger \emph{mindre} om gennemsnitsmobiliteten end i kategorierne på 1. niveau. Det er meget tilfredsstillende, da det indikerer at et højere aggregeringsniveau ud fra Monecas beslutningsprocedure forklarer \emph{hvor} mobiliteten løber hen, når den bevæger sig udenfor de oprindelige kategorier.  % Det er jo sådan set også det, den er designet til, kunne man indvende. Men det tilfredsstillende her er at helt op til \emph{det 5. aggregreringsniveau} er der stadig en bedre forklaringskraft end på de tidligere niveauer. Man kunne forestille sig at for mange kompromisser med sammenlægninger - genkald argumentet fra side ??(det om at der lægger noder sammen der rent faktisk ikke hænger sammen \#todo) ville fungere kontraproduktivt over et vist niveau, men det er altså ikke tilfældet. % ved ikke helt om det her argument egentligt holder -vil en større sammenlægning ikke bare automatisk give bedre forklaring? Nej! for hvis en node nu har meget mere udveksling med en node udenfor det, den er lagt sammen med, så ville det jo godt kunne trække ned. Men det sker ikke her, altså er det en god sammenlægning. Tror jeg. 
-
-Fra 3. niveau og frem er klyngedannelsens primære funktion at danne større klynger, det vil sige reducere kompleksiteten i jobstrukturen. Visse klynger indeholer langt flere beskæftigede end andre, og kan derfor anses som sammenlægninger, der er mere væsentlige end andre. Vi får dermed nogle klynger, der antalsmæssigt beskæftiger store dele af den danske befolkning. Dette vil jeg mene er et andet vigtigt parameter i klyngedannelsen, så længe at det ikke bryder med kravet om delmarkedsstatus, hvilket min gennemgang viser at det ikke gør: Når folk søger andet arbejde end indenfor deres erhvervsgruppe, vil langt de fleste finde job indenfor de klynger, som kortet viser. 
+gennemsnittet på det 1. niveau er på 68 \%, mens det på 5. niveau er steget til 80 \%. Medianen har så godt som ens værdier. Standardafvigelsen for den interne mobilitet på det 1. niveau er på 12 \%, mens den på det 5. niveau er på 10 \%. At standardafvigelsen er faldet, mens gennemsnittet er steget, er vigtigt, fordi det fortæller os, at gennemsnittet ikke er trukket op via enkelte klynger. Det understøttes af medianens værdi, der er meget tæt på gennemsnittet. Alle tre forhold viser os, at det en \emph{generel} og \emph{stabil} forbedring af mobilitetsstrukturen: På de tre mest fundamentale centralitetsmål for kontinuerte variable er der sket en forbedring \parencite[121]{Malchow-MoellerWuertz2010}. Det ses også ud fra minimumsværdierne. Hvor de laveste værdier tidligere lå på lidt over 40 \%, ligger de nu på lidt over 50 \%.
 
 
-I dette afsnit er aggreringen fra niveau til niveau blevet beskrevet med henblik på at vurdere om vi kan tale om delmarkeder fremfor blot klynger. Det er klart, at der ikke er tale om dual eller tredeling af arbejdsmarkedet, men en langt mere fraktioneret struktur. Det skulle gerne stå klart, at vi kan tale om delmarkeder på det danske arbejdsmarked i langt de fleste tilfælde,
+Konklusionen er, at 5. niveau forklarer \emph{mere} mobilitet, og den den gennemsnitlige mobilitet varier gennemsnitligt \emph{mindre} end i noderne på 1. niveau. Et højere aggregeringsniveau ud fra Monecas beslutningsprocedure forklarer følgelig \emph{hvor} mobiliteten løber hen, når den bevæger sig udenfor de oprindelige erhvervsgrupper: Når folk søger andet arbejde end indenfor deres erhvervsgruppe, kan netværksmodellen forklare 13 \% mere af mobiliteten end den oprindelige mobilitetstabel. Det kan også ses på følgende måde: Af de 32 \% af mobiliteten, der ikke foregår internt i erhvervsgrupperne, kan netværksmodellen forklare 41 \% af den eksterne jobmobilitet%
+%
+\footnote{ Det kunne være særdeles interessant at sammenligne med en latent klasseanalytisk-, klyngeanalytisk- eller faktoranalytisk tilgang. Det er desværre for omfattende for dette speciale, med dets ambition om at benytte Monecas netværksanalytiske metode i dybden.}
+%
 
 
- omend graden af intern mobilitet naturligvis varierer. Det følgende afsnit vil præsentere det første “rigtige” netværkskort, hvor jeg vil undersøge nogle af de klynger, hvor den interne mobilitet er lav, og derfor næppe fortjener status af delmarkeder, samt nogle af dem, hvor den er meget høj, og vi derfor har et skoleeksempel på et delmarked.
- Dette afsnit har desuden tjent som en vejledning i at forstå hvordan netværkskortet er lavet, så de nemmere kan tolkes i resten af analysen.
+% Det er jo sådan set også det, den er designet til, kunne man indvende. Men det tilfredsstillende her er at helt op til \emph{det 5. aggregreringsniveau} er der stadig en bedre forklaringskraft end på de tidligere niveauer. Man kunne forestille sig at for mange kompromisser med sammenlægninger - genkald argumentet fra side ??(det om at der lægger noder sammen der rent faktisk ikke hænger sammen \#todo) ville fungere kontraproduktivt over et vist niveau, men det er altså ikke tilfældet. % ved ikke helt om det her argument egentligt holder -vil en større sammenlægning ikke bare automatisk give bedre forklaring? Nej! for hvis en node nu har meget mere udveksling med en node udenfor det, den er lagt sammen med, så ville det jo godt kunne trække ned. Men det sker ikke her, altså er det en god sammenlægning. Tror jeg. 
+
+Et vigtigt forhold er, at visse klynger indeholder langt flere beskæftigede end andre, og kan derfor anses som sammenlægninger, der er mere væsentlige end andre. Vi får dermed nogle klynger, der antalsmæssigt beskæftiger store dele af den danske befolkning. Dette vil jeg mene er et andet vigtigt parameter i klyngedannelsen, så længe at det ikke bryder med kravet om delmarkedsstatus, hvilket min gennemgang viser at det ikke gør: 
+
+
+I dette afsnit er aggreringen fra niveau til niveau blevet beskrevet med henblik på at vurdere om vi kan tale om delmarkeder fremfor blot klynger. Selv med en mere grov opdeling end Monecas klike-baseredede inddeling står det klart, at det danske arbejdsmarked som minimum udgøres af mere end 3 delmarkeder.  Der er en langt mere fraktioneret struktur i det danske arbejdsmarked, hvilket også teoretisk er blevet forudsagt (find eksempel fra Boje \#todo). 
+
+
+Et af nøglekravene i Bojes definition af et delmarked er hvad kunne omformulere til dets interne sammenhængskraft. Det mere tekniske aspekt af dette er dækket i bilag \ref{app_netvaerksmaal}, hvor konklusion er, at klyngeinddelingen har ganske fine egenskaber på to af de centrale netværksmål. Jeg vil nu gå i dybden med til det sociologisk mere interessante del af den interne konsistens, hvilket er den interne mobilitet i klyngerne.
+
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Den interne mobilitet i klyngerne \label{analyse_deskriptivt_within_mob_seg}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+Det følgende afsnit vil præsentere det første “rigtige” netværkskort. Her vil jeg se på arbejdsmarkedets mobilitetsstruktur som helhed, og undersøge nogle af de klynger, hvor den interne mobilitet er relativt lav, samt nogle, hvor den er meget høj. Afsnittet tjener desuden som vejledning i at forstå hvordan netværkskortet skal aflæses, så det nemmere kan tolkes i resten af analysen.
+
+
 % Jobmobilitet fremgår som mobilitet internt i de 54 klynger og eksternt mellem klynger. 79 \% af al mobilitet foregår inden for klyngerne. At der blot er 21 \% af al mobilitet mellem klyngerne viser altså tydeligvis barrierer for mobilitet mellem klyngerne. 
 
 % For Boje er det centralt, at der er begrænset mobilitet mellem de enkelte klynger. Og for Weber er det vigtigt, at der er, at den sociale nærhed, der antages at findes mellem jobs, hvor mobilitet er “let og typisk”.
 
-Den interne mobilitet for hvert klynge er præsenteret i netværkskortet i figur \ref{fig_analyse_deskriptivt_kort_intern_mob_seg} på side \pref{fig_analyse_deskriptivt_kort_intern_mob_seg}. I analysen af spørgsmålet om delmarkeder, er logikken i kortets struktur blevet præsenteret. For at kunne forstå det endelige netværkskort, kræves der imidlertidig yderligere forklaring, da både \emph{størrelsen på noderne}, \emph{nodernes størrelse}  samt \emph{forbindelsernes farve} indeholder information om strukturen på det danske arbejdsmarked.
+Den interne mobilitet i hver klynge er præsenteret i netværkskortet i figur \ref{fig_analyse_deskriptivt_kort_intern_mob_seg} på side \pref{fig_analyse_deskriptivt_kort_intern_mob_seg}. I analysen af spørgsmålet om delmarkeder, er logikken i kortets struktur blevet præsenteret. For at kunne forstå det endelige netværkskort, kræves der i midlertidig yderligere forklaring, da både \emph{nodernes størrelse}, \emph{nodernes farve} og \emph{forbindelsernes farve} indeholder information om strukturen på det danske arbejdsmarked.
 
-\underline{Størrelsen på en node} repræsenterer ganske simpelt hvor mange personer, der i gennemsnit er i beskæftigelse indenfor erhvervsgruppen i årrækken 1996-2009%
+\underline{Størrelsen på en node} repræsenterer ganske simpelt hvor mange personer, der i gennemsnit er beskæftiget indenfor erhvervsgruppen i årrækken 1996-2009%
 %
-\footnote{Når jeg fra nu af taler om hvor mange der er beskæftigede, er det underforstået at der er tale om det gennemsnitlige antal \emph{indenfor årrækken 1996-2009}, med mindre det eksplicit fremhæves at der er tale om noget andet.}%
+\footnote{Når jeg fra nu af taler om hvor mange der er beskæftigede, er det underforstået, at der er tale om \emph{det gennemsnitlige antal indenfor årrækken 1996-2009}, medmindre andet eksplicit fremhæves.}%
 %
-Den største erhvervsgruppe, \emak{d5220} indeholder 114.869 personer i gennemsnit, svarende til 4,9 \% af det totale antal beskæftigede. Mens den mindste, \emak{d7346} indeholder 504 personer, svarende til 0,02 \% af det totale antal beskæftigede
+. Den største erhvervsgruppe, \emak{d5220}, indeholder 114.869 personer, svarende til 4,9 \% af det totale antal beskæftigede. Mens den mindste, \emak{d7346} indeholder 504 personer, svarende til 0,02 \% af det totale antal beskæftigede
 %
-\footnote{Der er ikke tale om et 1:1 størrelsesforhold mellem antallet af personer i de forskellige erhvervsgrupper. Det er for komplekst til visuel afkodning i et allerede informationstungt netværkskort, da de mindste noder ville blive meget små og de store noder meget store. Derfor har jeg valgt et størrelsesforhold mellem noderne, der ikke er 1:1 med deres reelle forskelle i størrelse, men som alligevel giver en fornuftig fornemmelse for disse størrelsesforhold. Man skal dermed se både farve af forbindelserne og nodernes størrelse som en grov målestok af den variabel, den repræsenterer. Med vægten lagt på nem visuel afkodning, fremfor korrekt gengivelse af datakompleksisteten.}%
+\footnote{Der er ikke tale om et 1:1 størrelsesforhold mellem antallet af personer i de forskellige erhvervsgrupper. Det er for komplekst til visuel afkodning i et allerede informationstungt netværkskort. De mindste noder ville blive meget små og de store noder meget store. Derfor har jeg valgt et størrelsesforhold mellem noderne, der ikke afbilleder det reelle målestoksforhold, men som giver en fornemmelse for det størrelsesforhold uden at forvirre læseren. Man skal dermed se både forbindelsernes farve og nodernes størrelse som simplificering den variabel, den repræsenterer. Med vægten lagt på nem visuel afkodning, fremfor korrekt gengivelse af datakompleksiteten.}%
+%
 
+%
 \newgeometry{left=-0.01cm,bottom=0.1cm}
 \begin{figure}[H]
 \begin{center}
@@ -260,12 +298,18 @@ Den største erhvervsgruppe, \emak{d5220} indeholder 114.869 personer i gennemsn
 \end{center}
 \end{figure}
 \restoregeometry
+%
 
-graden af den interne mobilitet ses ved \underline{nodernes farve}. Farven går fra mørkerød, til hvid, til mørkegrøn, bestemt af graden af intern mobilitet i delmarkedet. Røde markerer en intern mobilitet på mellem 50 og 67 \%, mens hvid er en intern mobilitet på 68 \%, det vil sige: den gennemsnitlige interne mobilitet for noderne uden moneca aggregering. Det forekom mig som et passende sted at markedere en form for “neutralt” niveau af intern mobilitet. Grøn markerer en intern mobilitet på mellem 69 \% og 96 \%.  Da der er tale om en gradient, er skiftet i farve en kontinuer overgang, hvor intensiteten af henholdsvis rød og grøn viser hvor langt ude på skalaen vi er, i den ene eller anden retning (husk at vær sikker på at det du skriver her er korrekt for skalaen i sidste instans \#todo)%
+\underline{nodernes farve} viser andelen af den interne mobilitet indenfor klyngen. Farvespektret går fra mørkerød, til hvid, til mørkegrøn. Rød markerer en intern mobilitet på mellem 50 og 67 \%, mens hvid er medianen for den intern mobilitet, 68 \%. Grøn markerer en intern mobilitet på mellem 69 \% og 96 \%.  Da der er tale om en gradient, er skiftet i farve en kontinuer overgang, hvor intensiteten af henholdsvis rød og grøn viser hvor langt ude på skalaen vi er, i den ene eller anden retning
 %
-\footnote{ Skiftet i farve er, som nævnt, min egen vurdering, baseret på de deskriptive værdier for den interne mobilitet gennemgået i det foregående afsnit. Der findes ingen tidligere brug af Moneca algoritmen, hvori dette bliver analyseret.}%
+\footnote{ Skiftet i farve er, som nævnt, min egen vurdering, baseret på de deskriptive værdier for den interne mobilitet gennemgået i det foregående afsnit. Der findes ingen tidligere brug af Moneca algoritmen, hvori dette bliver analyseret, som jeg kan trække på.}%
 %
- \underline{forbindelsens farve} markerer som beskrevet i afsnit \ref{metode_relativrisiko} forbindelsernes styrke, målt ved den relative risiko. Et forholdsmål, læseren kan genkalde sig udtrykker mobiliteten fra en erhvervsgruppe til en anden, givet den relative størrelse af antallet af beskæftigede i erhvervsgruppen. Det er styrken af denne relative risiko (RR), der afgør farven på forbindelserne, der kan antage tre nuancer: Helt lysegrå angiver en RR på 3%
+. Vi kan se, at langt de fleste klynger er forskellige nuancer af grønt, hvilket viser, at langt de fleste 
+
+
+
+
+\underline{forbindelsens farve} markerer som beskrevet i afsnit \ref{metode_relativrisiko} forbindelsernes styrke, målt ved den relative risiko. Et forholdsmål, læseren kan genkalde sig udtrykker mobiliteten fra en erhvervsgruppe til en anden, givet den relative størrelse af antallet af beskæftigede i erhvervsgruppen. Det er styrken af denne relative risiko (RR), der afgør farven på forbindelserne, der kan antage tre nuancer: Helt lysegrå angiver en RR på 3%
 %
 \footnote{Husk på den præcise definition af relativ risiko:  det vil sige, at der ved en lysegrå forbindelse er 3 gange så stor sandsynlighed for mobilitet fra den forladte beskæftigelse til den nye beskæftigelse, i forhold til hvis der var tale om et arbejdsmarked med helt fri bevægelse.}%
 %
@@ -273,12 +317,11 @@ graden af den interne mobilitet ses ved \underline{nodernes farve}. Farven går 
 %
 \footnote{ I bestemmelsen af klyngerne, er alle forbindelser med en RR på over 1 medtaget som en forbindelse. På det visuelle kort er den informationsmængde upraktisk. Det bliver umuligt at aflæse den underliggende systematik i hvilke forbindelser, der værd at lægge mærke til. Enkelte forbindelser har RR-værdier på flere tusinde, men de fleste langt lavere: Medianen i er på 2,1. En relativ risiko på 3 svarer cirka til den 65. percentil, og 15 er cirka den 90 percentil. 30 svarer til cirka den 92,5'te percentil, og er ikke valgt ud fra denne, men bestemt ud fra det punkt, hvor der sker en stigning i styrken af forbindelserne. }%
 %
+. Forbindelserne er desuden retningsbestemte, hvor pilene på kortet angiver hvilken vej, mobiliteten går.
 
-Forbindelserne er desuden retningsbestemte, hvor pilene på kortet angiver retningen af mobiliteten mellem noderne.
+Så vidt beskrivelsen af hvad kortet viser. Ovenstående er de generelle retningslinjer for netværkskortet: I den resterende del af analysen vil nodernes farve variere, alt efter hvilken variabel, der farvelægges efter. Fremfor at kommentere dette kort med det den interne mobilitet , vil jeg for overblikkets skyld zoome ind på nogle bestemte klynger eller delmarkeder, forklare hvad vi ser, og først derefter kommentere kortet i sin helhed.
 
-Ovenstående er de generelle retningslinjer for netværkskortet. Bortset fra nodernes farve, der vil variere, alt efter hvilken variabel, der farvelægges efter. 
 
-Så vidt beskrivelsen af hvad kortet viser. Fremfor at kommentere kortets indhold overordnet, vil jeg for overblikkets skyld zoome ind på nogle bestemte klynger eller delmarkeder, forklare hvad vi ser, og først derefter kommentere kortet i sin helhed.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Klynge \emak{s2.78}: Børnepasning i private hjem samt turist- og rejseledere}
