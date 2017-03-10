@@ -1,0 +1,321 @@
+%!TEX TS-program = pdflatex
+%!TEX TS-program = pdflatex
+
+%%% -------------- Preamble ----------------- %%%
+
+
+%  Helvetica typesetting ku være nice, tjek ud:
+% http://tex.stackexchange.com/questions/10204/last-step-in-moving-to-xetex-font-shape-problems
+% http://tex.stackexchange.com/questions/173126/xelatex-and-texmaker-cannot-use-pdftex
+
+
+\input{preamble}
+
+
+
+%%% -------------- Dokument ----------------- %%%
+
+\begin{document} \selectlanguage{danish}
+
+
+% makroer
+
+\newcommand{\DefineRemark}[2]{%
+  \expandafter\newcommand\csname rmk-#1\endcsname{#2}%
+}
+\newcommand{\emak}[1]{\csname rmk-#1\endcsname}
+
+
+\input{makroer}
+
+
+% \newcommand{\antalkat}{150} (bruges ikke længere men for eksemplets skyld)
+
+%%% -------------- forside ----------------- %%%
+%
+% \begin{titlingpage}
+% \centering
+% \Huge Fra manuel produktion til servicearbejde \\
+
+% \large 
+
+% % \emph{- Det danske arbejdsmarked i starten af det 21. århundrede: En datadrevet undersøgelse af beskæftigelsesstrukturen i perioden 1996-2009} 
+% % \emph{- En datadrevet undersøgelse af beskæftigelsesstrukturen i Danmark, i starten af det 21. århundrede} 
+% \emph{- En datadrevet undersøgelse af beskæftigelsesstrukturen i Danmark 1996-2009} 
+
+% \begin{vplace}
+% \vspace{\baselineskip}
+% %  \includegraphics[width=17cm]{forside.png}
+% \vspace{1\baselineskip}
+% \emph{13. marts 2017} 
+% % \vspace{5}
+% \vfill{\textit{antal tegn: xxx antal tegn i fodnoter: xxx}}
+% \emph{eksamensnummer: 1809}  %eller \& 1812, et af dem er Sørens
+% \end{vplace}
+% \newpage
+
+% \end{titlingpage} %skal måske først stå efter ToC, check om der er problemer med sidetal etc
+
+
+
+
+
+
+%%% -------------- preface etc ----------------- %%%
+
+
+
+\newpage 
+\begin{center}
+\vspace*{2in}
+“\emph{Danmark kan ikke fungere uden alle de, der gør en indsats i produktionen. Det gælder for store som små virksomheder, for landbruget. Det gælder for dem, der kører varer fra	den ene ende af landet til den anden, dem der sælger varerne til kunderne, eller har en helt anden funktion i vores samfund. Arbejdsglæden er helt grundlæggende for vores dagligdag.}” \\
+% det er den, der får medarbejdere ssåvel som ledere ti lat tage et tag til . den der fhjulene til at snurre, og det hele ti lat gå op i den højere enhed,  som er det velfungerende danske samfund.
+
+\vspace{1cm}
+\hfill Dronning Margrethe D. II, \emph{Nytårstalen}, 31/12 2016.
+\end{center}
+\newpage 
+
+
+
+
+
+% \include{Acknowledgement/acknowledgement}
+
+	% \input{tex/0.2_Tak}
+
+
+%%% -------------- Indholdsfortegnelse ----------------- %%%
+
+\pagenumbering{roman} %til preface etc.
+
+
+
+\tableofcontents*		% Indholdsfortegnelse the asterisk means that the contents itself isn't put into the ToC
+
+\newpage
+
+\thispagestyle{empty}
+ 
+\listoffigures
+\listoftables
+ 
+\newpage
+
+\pagenumbering{arabic}
+%måske ikke nødvendigt
+
+%%% -------------- Afsnit ----------------- %%%
+%% Hashtags: #todo, #husk 										
+
+% https://docs.google.com/spreadsheets/d/1q67sfA7KSWAmJI5qVl4vTVojkArq0NYeVB0RNl9-wwA/edit#gid=1745570169
+
+% \chapterstyle{southall} %hvordan kapitler skal se ud.
+%Nogle valgmuligheder, se flere i the memoir manual:
+% - madsen thatcher verville southall ger companion
+
+
+% From https://www.dtu.dk/upload/dtu%20kommunikation/designguide/designplatform_farver2010.pdf
+%
+% Primally colors
+\definecolor{dtured}{cmyk}{0,.91,.72,.23}
+\definecolor{dtugray}{cmyk}{0,0,0,.56}
+% fra http://latexcolor.com/
+\definecolor{cornellred}{rgb}{0.7, 0.11, 0.11}
+\definecolor{darkcandyapplered}{rgb}{0.64, 0.0, 0.0}
+\definecolor{darkorange}{rgb}{1.0, 0.55, 0.0}
+\definecolor{deepcarrotorange}{rgb}{0.91, 0.41, 0.17}
+\definecolor{trolleygrey}{rgb}{0.5, 0.5, 0.5}	
+\definecolor{davy\'sgrey}{rgb}{0.33, 0.33, 0.33}
+
+% Chapterstyle
+\makeatletter
+\makechapterstyle{mychapterstyle}{
+    \chapterstyle{default}
+    \def\format{\normalfont\sffamily}
+
+    \setlength\beforechapskip{0mm}
+
+    \renewcommand*{\chapnamefont}{\format\HUGE}
+    \renewcommand*{\chapnumfont}{\format\fontsize{54}{54}\selectfont}
+    \renewcommand*{\chaptitlefont}{\format\fontsize{42}{42}\selectfont}
+
+    % \renewcommand*{\printchaptername}{\chapnamefont\MakeUppercase{\@chapapp}}
+    \patchcommand{\printchaptername}{\begingroup\color{trolleygrey}}{\endgroup}
+    \renewcommand*{\chapternamenum}{\space\space}
+    \patchcommand{\printchapternum}{\begingroup\color{darkorange}}{\endgroup}
+    \renewcommand*{\printchapternonum}{%
+        \vphantom{\printchaptername\chapternamenum\chapnumfont 1}
+        \afterchapternum
+    }
+
+    \setlength\midchapskip{1ex}
+
+    \renewcommand*{\printchaptertitle}[1]{\raggedleft \chaptitlefont ##1}
+    \renewcommand*{\afterchaptertitle}{\vskip0.5\onelineskip \hrule \vskip1.3\onelineskip}
+}
+\makeatother
+\chapterstyle{mychapterstyle}
+
+
+
+%% prewords
+	% \input{tex/0.1_Abstract}
+
+
+%% Indledning
+	\input{tex/1.0_indledning}
+
+
+% %%	Teori
+	\part{Delen med Teorien \label{part_teori}}
+
+		\input{tex/2.0_teori_AST}
+ 		\input{tex/2.0_teori_klasse}
+% 						% \input{tex/2.0_teori}
+% 						% \input{tex/2.1_teori_bourdieu}
+% 						% \input{tex/2.2_teori_arbejdsloeshed}
+% 						% \input{tex/2.3_teori_mobilitet}
+% 						% \input{tex/2.4_teori_opsamling}
+
+% % %%	Metode	
+% 	\part{Delen med Metoden \label{part_metode}}
+		 
+	 	\input{tex/3.0_metode_SNA}
+	 	\input{tex/3.0_metode_DISCO}
+
+		 	
+% 	%  	\input{tex/00_tmp_2.0_metode_samlet}
+% 	%  	\input{tex/00_tmp_appendikshvadskerderher}
+% 	%  	\input{tex/00_tmp_7.1_appendiks_disco}
+% 	%  	\input{tex/00_tmp_metode}
+% 	%  	\input{tex/00_tmp_7.2_appendiks_baggrundsvariable_til_moneca}
+% 	%  	\input{tex/00_tmp_2_metode_netvaerksanalyse_2}
+
+
+
+% 	% % 						% \input{tex/3.1_metode_arbejdsloeshed}
+% 	% % 						% \input{tex/3.2_metode_netvaerksanalyse}
+% 							% \input{tex/3.3_metode_disco}
+% 							% \input{tex/3.4_metode_opsamling}
+
+% % %% Analyse
+\part{Delen med Analysen \label{part_analyse}}
+
+		\input{tex/4.0_delanalyse1_deskriptivt}
+% 		% \input{tex/4.0_delanalyse2_socialeprocesser}		
+		\input{tex/4.0_delanalyse3_klasser}		
+
+
+% % %% Diskussion/Konklusion
+\part{Delen med Afslutningen \label{part_afslutning}}
+% 	% \part{Diskussion label{part_diskussion}}
+% 	% \input{tex/6.0_konklusion}	
+% 	% \input{tex/5.0_diskussion}
+
+
+% Muligvis en figur over afhandlingens opbygning i starten, som afslutning på indledningen? ligesom Oesch har det på s. 26. \#todo
+
+
+% % %%% -------------- Appendiks ----------------- %%%
+% %i en tidligere version hed det appendices i stedet for appendix, så hvis appendikset ikke dukker frem så prøv i stedet
+
+\begin{appendix}
+\setcounter{secnumdepth}{3}
+
+% % % % \input{tex/app_figurer}
+
+
+
+% \chapter{Variabelbeskrivelser \label{kap app metode variabelbeskrivelser}}
+% \input{tex/app_metode_loen}
+% \input{tex/app_metode_andre_baggrundsvariable}
+
+
+%\input{tex/app_netvaerkskort}
+% \input{tex/app_metode_netvaerksmaal}
+% % % % \input{tex/app_metode_disco}
+% % % % \input{tex/app_metode_baggrundsvariable}
+
+
+
+\end{appendix} 
+
+\newpage
+
+% %%% -------------- Bibliografi ----------------- %%%
+
+\chapter*{Litteraturliste \label{Litteraturliste}}
+\addcontentsline{toc}{chapter}{Litteraturliste} 
+% %%%%% biblatex definerer alt i preamblet
+
+% % \nocite{*} % brug denne for at tage referencer med der ikke citeres i teksten
+
+% %%%%% til samlet litteraturliste
+% % \printbibliography
+
+%%%%%% til opsplittet litteraturliste
+
+% \printbibliography[
+% heading=bibintoc,
+% title={Litteraturliste}
+% % keyword=intetkeywordbaretilatlavefancyoversk
+% ]
+
+% \printbibliography[heading=bibintoc,title={Litteraturliste},
+% nottype=article,nottype=book,nottype=mvbook,nottype=inbook,nottype=bookinbook,nottype=suppbook,nottype=booklet,nottype=collection,nottype=mvcollection,nottype=incollection,nottype=suppcollection,nottype=manual,nottype=misc,nottype=online,nottype=patent,nottype=periodical,nottype=suppperiodical,nottype=proceedings,nottype=mvproceedings,nottype=inproceedings,nottype=reference,nottype=mvreference,nottype=inreference,nottype=report,nottype=set,nottype=thesis,nottype=unpublished,nottype=custom,nottype=conference,nottype=electronic,nottype=masterthesis,nottype=phdthesis,nottype=techreport
+% ]
+
+\printbibliography[
+heading=subbibliography,
+title={Bøger og artikler},
+nottype=online,
+notkeyword=DSTmanual]
+
+\printbibliography[
+heading=subbibliography,
+title={Online kilder},
+type=online,
+notkeyword=DSTmanual]
+
+\printbibliography[
+heading=subbibliography,
+title={Danmarks Statistiks Manualer},
+keyword=DSTmanual]
+
+
+% \printbibliography[heading=subbibliography,title={Online kilder},filter=onlinekilder]
+% \printbibliography[heading=subbibliography,title={Danmarks Statistiks Manualer},filter=DSTmanual]
+% \printbibliography[keyword=own,...]
+% \printbibliography[notkeyword=own,...]
+
+
+
+% \printbibliography[title={Article references},type=article]
+% \printbibliography[title={Other references}, nottype=book, nottype=article]
+
+
+% \printbibliography[heading=subbibliography,title={Primær litteraturliste},filter=notonline]
+% \printbibliography[heading=subbibliography,title={Online kilder},filter=onlinekilder]
+% \printbibliography[heading=subbibliography,title={Danmarks Statistiks Manualer},filter=DSTmanual]
+
+
+
+%%% se mere her:
+%%% http://texblog.org/2012/10/22/multiple-bibliographies-with-biblatex/
+
+
+
+
+
+
+\newpage
+
+
+
+%%% -------------- slut det hele er slut ----------------- %%%
+\end{document}
+
+
+
+

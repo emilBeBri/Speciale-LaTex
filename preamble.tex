@@ -20,8 +20,19 @@
 \usepackage[utf8]{inputenc} % set input encoding to utf8
 \usepackage[T1]{fontenc}
 \usepackage{kpfonts}
+\usepackage[normalem]{ulem} % muliggør underline der brydes fremfor at fortsætte udover marginen. i stedet \underline{} er det \uline{}.
 \usepackage[danish]{babel} %dansk sprog
-\renewcommand{\danishhyphenmins}{22} % gør ordopdeling bedre men den er lort i forvejen så hvor slemt kan det være hvis det her er det bedste?! Prøv at eksperimentér med det der tal, 22, se hvad der sker.
+\renewcommand{\danishhyphenmins}{10} % gør ordopdeling bedre men den er lort i forvejen så hvor slemt kan det være hvis det her er det bedste?! Prøv at eksperimentér med det der tal, 22, se hvad der sker.
+
+
+
+
+%%% hyphenation
+
+
+
+
+% \hyphenation{formålsløst} % eksempel på ord der under ingen omstændigheder må deles op
 
 
 % \usepackage[avantgarde]{quotchap}   % Pænere kapitler
@@ -30,10 +41,9 @@
 
 
 
-
 \usepackage[scaled]{helvet}
 \renewcommand\familydefault{\sfdefault} 
-% \usepackage[T1]{fontenc}
+\usepackage[T1]{fontenc}   
 
 
 
@@ -97,6 +107,7 @@
 \usepackage{tabularx} % til statas tabout
 \usepackage{multirow} % flere rækker i tabeller
 \usepackage{graphicx} % indsæt billeder
+\usepackage{pdflscape} % lav visse sider om til landscape mode
 \usepackage{rotating} %tillader figurer der står sidelæns
 \usepackage{csquotes}
 \usepackage{enumitem} %mindre mellemrum mellem items
@@ -108,7 +119,10 @@
 \usepackage{array} %centering 
 \usepackage{wallpaper}
 \usepackage{wrapfig} % wrap figure
-\usepackage[font=small]{caption}
+% \usepackage[font=small]{caption}
+% \captionnamefont{\scriptsize}
+
+ % or footnotesize
 
 % Test pakker
 \usepackage{appendix} %[toc,page]
@@ -212,6 +226,7 @@
 
 % \renewcommand*{\pref}{side} 
 
+\usepackage{xcolor}
 
 %Local Variables: 
 %mode: latex

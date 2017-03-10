@@ -1,0 +1,68 @@
+% -*- coding: utf-8 -*-
+% !TeX encoding = UTF-8
+% !TeX root = ../report.tex
+
+\chapter{metode} \label{metode}
+
+
+DISCO-KODER
+
+Danmarks Statistik beskrivelse
+- DISCO er den officielle danske version af den internationale fagklassifikation *International Standard Classification of Occupations*. ISCO udarbejdes af International Labour Organisation (ILO).
+- DISCO-88 afløser i 1996 fagklassifikationen fra 1981, som var baseret på Danske Fagkode. DISCO-88 er den officielle danske version af den internationale fagklassifikation ISCO-88. DISCO-88 er en firecifret beskæftigelsesnomenklatur, som primært er udarbejdet med henblik på statistisk brug. Nomenklaturen tilvejebringer retningslinier for en opdeling af det danske arbejdsmarked i 372 undergrupper, som alle indeholder en række nært beslægtede arbejdsfunktioner. Således åbner klassifikationen mulighed for at sammenholde personer, der reelt udfører samme type arbejde, men ikke nødvendigvis er kendetegnet ved samme fagbetegnelse eller uddannelsesbaggrund. Danmark er blot ét af den lange række af lande, som i øjeblikket arbejder på at konvertere til en ny nomenklatur på beskæftigelsesområdet. Baggrunden for DISCO-88 skal således i første omgang findes i et internationalt samarbejde mellem arbejdsmarkedsstatistikere. Foruden selve præsentationen af DISCO-88 rummer publikationen en vejledning i brug af klassifikationen, en liste med klassificering af de hyppigst anvendte fagbetegnelser og en redegørelse for de forskelle, som eksisterer mellem DISCO-88 og den internationale klassifikation.
+- ILO har i 2008 for første gang siden 1988 offentliggjort en revideret fagklassifikationen, og ISCO-88 er blevet til ISCO-08. DISCO-08 er en sekscifret klassifikation, der er opbygget som en hierarkisk struktur med fem niveauer. DISCO-08 opdeler det danske arbejdsmarked i 563 faggrupper, som hver indeholder en række nært beslægtede arbejdsfunktioner. ISCO-08 er en firecifret klassifikation, som i opbygning og struktur er identisk med DISCO-08. De første fire niveauer af DISCO-08 er stort set identisk med ISCO-08. For at tilgodese de specifikke behov, der måtte være for at opfylde klassifikationens anvendelsesmuligheder i en dansk kontekst, har Danmarks Statistik suppleret med yderligere et niveau, hvor det er fundet nødvendigt. 
+
+Valg af data fra 1996 frem til 2009
+- Det grundlæggende problem er at DISCO-koden ændrer sig til DISCO-08 versionen i 2010 (Det er ILO der styrer disco og ca. hvert 20. år opdaterer de kategorierne – det medfører hver gang databrud…). Dermed opstår et genuint databrud – dvs. at de gamle og nye kategorier ikke kan reduceres til hinanden på andet end meget aggregeret niveau. Vi har forsøgt at overkomme det fordi LO død og pine skal have tidsserier der kører så langt frem som muligt. Men da det ikke kan overkommes (og det har været et sygt arbejde at gå gennem alle koderne på 4-cifte niveau!) fuldstændigt og jeg vil sige kun i meget ringe tilfredsstillende grad, vil jeg meget, meget kraftigt anbefale jer at arbejde med data frem til og med 2009 som alt sammen er i DISCO-88 formatet. Jeg vil selv arbejde videre med segmentering i ikke-LO inficeret sammenhæng og der bruger jeg ikke data fra 2010 og frem sammen med de tidligere data, fordi det er noget juks.
+
+
+% % ## Disco udfald 
+
+% DISCO2005 og DISCOALLE_INDK2005 er ens (779 udfald) 
+% 6-cifret, det er den oprindelige. Men hvordan f... er den blevet transformeret?
+% Det er den oprindelige, men der er ingen do-fil der viser hvordan den er lavet om til noget andet. Ingen. Det er ret irriterende. What to do. Leap of faith? Starte fra bunden? (en uges arbejde, siger Jonas)
+
+% disco2005 (779 udfald)
+% ser ud til at være helt rå data. 6-cifret, men måske renset, som jonas siger? tjek hvor langt den går frem.
+
+% disco2005_4 890 (480 udfald)
+% 4-cifret
+
+% disco2005_ny (246 udfald)
+% vist nok den der tager højde for det voldsomme databrud i 2010, og som jonas frarådede os at bruge. jeg kan ikke se hvordan den er lavet.
+
+% disco2005_3 (91 udfald)
+% 3-cifret. kan ikke se hvordan den er skabt, MEN i Jens' datasæt er der koder til det. og den er lavet på  - guess what - discoX_ny!!
+
+% disco2005_m 1379 (159 udfald)
+% har labels på. har 4-cifret kode på nedenunder, ved ikke hvad de dækker endnu. tjek eventuelt.  update - så vidt jeg kan se er de lavet ud fra discoX_ny, dvs de er IKKE gode. Men måske kan labels fra moneca_kategorier.do bruges (her ses det at de er generet ud fra discoX_ny)
+
+
+
+% 15 års discokoder
+
+% Tjekke fejl
+
+
+% #### ideer til afsnit
+
+% - Disco
+% - opbygning af relativ risiko gennem total antal beskæftigede, teoretisk diskussion (se Emils logbog)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%Local Variables: 
+%mode: latex
+%TeX-master: "report"
+%End: 

@@ -1,88 +1,181 @@
 %!TEX root = ../report.tex
 
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Indledning \label{indledning}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Dette speciale er en undersøgelse af hvorvidt arbejdsmarkedet er delt op i flere forskellige segmenter, og i så fald, hvordan en sociologisk analyse kan belyse disse segmenters mulige forskellige funktionsmåder.
 
-Hvorfor er det interessant? Der meget lidt sociologisk teori, der beskæftiger sig med arbejdsmarkedets funktionsmåder på et mesoniveau, og samtidig er åben overfor en empirisk kortlægning. For det meste beskæftiger den arbejdsmarkedssociologiske teori (mig bekendt) enten med et kvalitativt orienteret mikroniveau, eller de helt brede penselstrøg på makroniveau.
 
-Hvorfor er det vigtigt med undersøgelse af arbejdsmarkedet på et mesoniveau, når der laves undersøgelser på et mikro- og makroniveau? Viden om arbejdsmarkedet på et mikroniveau giver et billedet af et bestemt og snævert sted på arbejdsmarkedet og altså ikke viden hele arbejdsmarkedet. Viden om arbejdsmarkedet på et makroniveau giver et billede af abstrakte lovmæssigheder, der skal forklare en eller anden tendens i moderne samfund generelt. Dette er ikke en ny kritik (se GER og Merton find henvisninger \#todo), men noget, der tilsyneladende alligevel ofte glemmes. Med en undersøgelse på mesoniveau fås et billede af hvordan arbejdsmarkdet i et givet land fungerer lige nu.
 
-Den teori, der bedst egner sig til en sådan undersøgelse, er (for mig at se) arbejdsmarkedssegmenteringsteorierne, med elementer fra moderne empirisk klasseforskning. Arbejdsmarkedssegmenteringsteorierne blev udviklet i 1970'erne, men er kun i begrænset omfang er blevet benyttet de sidste 20 år. Denne afhandling vil benytte denne teoriretning, med udgangspunkt i registerdata fra Danmarks Statistik i perioden fra 1996 til 2009.
+Dette speciale er en undersøgelse af hvorvidt arbejdsmarkedet er delt op i forskellige delmarkeder, og hvilken konsekvens, det har for beskæftigelsesmuligheder for personer på forskellige delmarkeder. 
+
+Afhandlingens formål er at kortlægge det danske arbejdsmarkedes struktur, baseret på en datadreven netværksmodel, der ser mobilitet mellem jobs som en netværksstruktur, hvor mobilitet mellem visse typer jobs er større end mellem andre. 
+
+Jeg betragter arbejdsmarkedet først og fremmest som en social struktur, der \emph{også} fungerer ved markedslignende mekanismer, og ikke som et marked, der er reguleret ved sociale mekanismer. Dette er mit udgangspunkt, og det er ikke mit formål at spille bold op imod den gængse neoklassiske økonomiske skole, der benytter den sidstnævnte tilgang. I stedet vil jeg benytte skolen af arbejdsmarkedssegmenteringsteorier, der ser arbejdsmarkedet som kendetegnet primært ved \emph{opdeling} fremfor \emph{enshed}  \parencite[174]{Boje1986}.
+
+Første del af min empiriske analyse handler om at undersøge, hvorvidt jobmobiliteten i Danmark understøtter en sådan antagelse, og hvordan den er krystalliseret i den omtalte tidsperiode. 
+
+Teorier med blik for segmenteringsprocesser på arbejdsmarkedet har en række forskellige indfaldsvinkler: det, der primært binder dem sammen, er ideen om at arbejdsmarkedet mere er karakteriseret ved \emph{opdeling} end af \emph{enshed}, hvilket ellers ville være det basale præmis i neoklassisk økonomisk teori. Dette speciale læner sig op af Thomas Bojes udformning af dette præmis \parencite[174]{Boje1986}.
+
+For at forstå arbejdsmarkedets segmentering/opdeling, vil jeg trække på moderne klasseteori, særligt Daniel Oeschs videreudvikling af John Goldthorpes klassiske EGP-klasseskema. Fokus for Oesch og de andre, jeg trækker på, er klasse forstået som “\emph{a minimal work hypothesis in which class is simply referred to as as a proxy for \uline{similiarity in position within the occupational system}}” \parencite[13]{Oesch2006a}. Dette er også mit udgangspunkt, mit empiriske materiale er netop skabt på baggrund af \emph{DISCO} nomenklaturet fra Danmarks Statistik, der har meget detaljerede oplysninger på erhvervsbeskæftigelsen for (stort set) alle i Danmark, år for år. 
+
+Oesch mener at klassestrukturen har ændret sig væsentligt, med kvindernes indtog på arbejdsmarkedet, servicesektorens eksplosive vækst, en større offentlig sektor. Dette påviser han i 4 andre vesteuropæiske lande, og jeg vil ved hjælp af hans klasseskema se, om det kan forklare nogle af de komplicerede mønstre i arbejdsmarkedets mobilitetsstruktur, som mit netværksdata kortlægger. 
+
+Mit empiriske data har samtidig den fordel, at det ikke er drevet af en teoretisk \emph{a priori} inddeling af arbejdsmarkedet. Jeg har bestræbt mig overmåde meget på at tilgå arbejdsmarkedets indretning i delmarkeder så objektivt som det har været mig muligt, og se på, hvilken struktur der træder frem. Det er meget interessant at se på, hvordan denne struktur er i overenstemmelse med eller afviger fra  sociologisk teori om grupperinger på arbejdsmarkedet i form af (moderne) bud på klasser og klassefraktioner. Der er mig bekendt ikke lavet forskning i mobilitet på arbejdsmarkedet, eller hvad det siger om klassestrukturen i samfundet, der benytter beskæftigelseskategorier så tæt på det arbejde, som mennesker rent faktisk har. Dette inkluderer sociologen David Grusky, den fremmeste fortaler for jobnære ”mikroklasser”, samt Jonas Toubøl og Anton Grau Larsen, hvis metode jeg benytter. De nævnte forskere er interesserede i at starte “fra bunden”, for at se på hvilken lokal strukturation, der finder sted, og hvordan disse hænger sammen med andre bud på klassifikationsskemaer, der ikke benytter sig af, eller har haft mulighed for, samme professionsnære tilgang. 
+
+Jeg er enig i, at dette er en interessant mulighed, som den moderne “big data”-verden giver mulighed for, og registerdata fra Danmarks Statistik giver en unik mulighed for et sådant blik på arbejdsmarkedet, og hvilke “nærheder i position på arbejdsmarkedet”, som dette giver mulighed for. Selvom jeg benytter samme metode samt råvariable som Grau Larsen og Toubøl, og har samme interesse i det professionsnære som Grusky, adskiller jeg dog ved det detaljeniveau, hvormed jeg kigger på arbejdsmarkedet:  Både Grusky \citeyear{Grusky2012} og Toubøl og Larsen \citeyear{TouboelLarsen2017} benytter sig af omtrent 100-125 beskæftigelseskategorier, mens jeg opererer med 273 beskæftigelseskategorier, eller mellem 2 $\nicefrac{1}{2}$ og 3 gange så mange. Det var et mål for mig at komme så tæt på konkrete jobs, som mit datamateriale samt netværksmetoden tillod.  
+
+Det betyder naturligvis ikke, at et mere detaljeret niveau i form af flere kategorier \emph{i sig selv} har en værdi. Det, der har en værdi, er at \emph{at finde ud af}, om det har en værdi.  Det er heller ikke sådan, at jeg vægter min samt Toubøl og Larsens primært empiriske klassifikationsmodel \emph{højere}, end en primært teoridreven%
+%
+		\footnote{ Skønt Grusky har det tilfælles med Toubøl og Larsen samt mig selv, at han vil undersøge i sin Giddens/Durkheimsk inspirerede termer kalder  “lokal strukturation” \parencite[207]{Grusky2001}, adskiller han sig på en række andre væsentlige punkter, det er grunden til jeg ikke nævner ham i denne sammenhæng.}%
+%
+ ditto. Jeg abonnerer ikke på, hvad David Grusky kalder for en "\emph{technicist vision}" \parencite[215:fodnote 5]{Grusky2001}, altså forestillingen om at en rent teknisk klassifikation af menneskeligt arbejdstyper overhovedet er mulig. 
+ Dette forsøg med et hidtil uset detaljeniveau, skal snarere ses som et eksplorativt projekt, hvis værdi ikke kan etableres på forhånd. 
+
+Hvis jeg i væsentlige henseender blot bekræfter de eksisterende klasseskemaer, ville jeg betragte det som en stor succes. De 273 erhvervskategorier, grupperet i 47 klynger ud fra deres mobilitet, som jeg arbejder med, er til mange formål i praksis ikke mulige at benytte sig af. Ikke mindst i surveydata. Det ville derfor være betryggende at vide, at større, mere praktiske kategorier, fangede de væsentlige aspekter af et position på arbejdsmarkedet.
+
+
+Mit mål med afhandlingen bliver tre ting: 
+
+%
+\begin{itemize}
+ \itemsep -0.5em
+ 	\item Kortlægge jobmobiliteten på det danske arbejdsmarked 
+ 	\item Vurdere betydningen af denne for arbejdsmarkedets struktur og eventuelle mobilitetsbarrierer på arbejdsmarkedet
+ 	\item Fremhæve de sociale logikker, der gør sig gældende gennem menneskers stilling i den samfundsmæssige produktion i starten af det 21. århundrede  
+ 	\item Sammenligne denne med tre moderne klasseteorier og se på hvorledes denne datadrevne mobilitetsstruktur understøtter eller afviser disse teoretiske klassemodeller  
+\end{itemize}
+%
+
+
+% Hvorfor er det interessant? Der meget lidt sociologisk teori, der beskæftiger sig med arbejdsmarkedets funktionsmåder på et mesoniveau, og samtidig er åben overfor en empirisk kortlægning. For det meste beskæftiger den arbejdsmarkedssociologiske teori (mig bekendt) enten med et kvalitativt orienteret mikroniveau, eller de helt brede penselstrøg på et teoretisk (makro) niveau.
+
+% Denne afhandling benytter registerdata for hele den danske befolkning i perioden 1996-2009, og benytter jobkategorier tæt på professionsniveau i sin gruppedannelse. Det bliver derfor muligt at nyttig viden - grundforskning kunne man kalde det - i hvordan klasser \emph{virker} på professionsniveau, som bl.a. David Grusky har efterspurgt \textcite{Grusky2001}. Dette kan bruges til at forstå om de moderne klasseskemaer, vi benytter, indfanger den empiriske virkelighed, som den kommer til udtryk gennem jobmobilitet på det danske arbejdsmarked.
+
+
+% Hvorfor er det vigtigt med undersøgelse af arbejdsmarkedet på et mesoniveau, når der laves undersøgelser på et mikro- og makroniveau? Viden om arbejdsmarkedet på et mikroniveau giver et billedet af et bestemt og snævert sted på arbejdsmarkedet og altså ikke viden hele arbejdsmarkedet. Viden om arbejdsmarkedet på et makroniveau giver et billede af abstrakte lovmæssigheder, der skal forklare en tendens i moderne samfund generelt. Dette er ikke en ny kritik (se GER og Merton find henvisninger \#todo), men noget, der tilsyneladende alligevel ofte glemmes. Med en undersøgelse på mesoniveau fås et billede af hvordan arbejdsmarkdet i et givet land fungerer lige nu.
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Problemformulering}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-Med udgangspunkt i arbejdsmarkedssegmenteringsteorien, moderne klasseteori og empiri fra registerdata i Danmarks Statistik, har dette speciale følgende problemformulering:
+
+
+
+Det teoretiske udgangspunkt for afhandlingen er arbejdsmarkedssegmenteringsteorierne, sammen med moderne empirisk klasseforskning. 
+
+Arbejdsmarkedssegmenteringsteorierne blev udviklet i 1970'erne, men er kun i begrænset omfang er blevet benyttet de sidste 20 år. Heri ses arbejdsmarkedets delmarkeder som \emph{segmenter}, der operer delvist eller helt uafhængigt af hinanden. Denne tænkning trækker i forvejen eksplicit eller mere implicit på ideen om økonomiske klasser, og der er derfor ikke de store modsætninger mellem disse teoriretninger indenfor samfundsvidenskaben.  
+
+Efter min afsøgning af delmarkeder og delmarkedernes udformning, vil jeg se på hvordan Daniel Oeschs 16-klasses klasseskema, samt hans empiri fra andre lande med dette skema, kan ses i det danske arbejdsmarked. 
+
+Min problemformulering er følgende:
+
+
 %
 \vspace{\baselineskip}
 %
-\begin{tcolorbox}[title=\textbf{Problemformulering}]
-Findes der segmenter på det danske arbejdsmarked, og hvordan kan forskelle i sociale processer være med til at forklare sådanne forskelle i segmentstrukturen?
+\begin{tcolorbox}[title=\textbf{Problemformulering}, 
+subtitle style={boxrule=0.4pt}, colbacktitle=deepcarrotorange!99!white,colback=trolleygrey!30!white,coltitle=black]
+% colbacktitle=dtured!99!white,colback=dtugray!35!white]
+Findes der segmenter på det danske arbejdsmarked? Kan disse forstås ud fra nyere klasseteori, der empirisk har vist forandringer i klassestrukturen fra en primært manuelt betonet beskæftigelsesstruktur til en ny, servicebaseret beskæftigelsesstruktur? Hvad er konsekvenser af dette?
 \end{tcolorbox}
 %
 \vspace{\baselineskip}
-Det vil jeg undersøge med følgende forskningsspørgsmålspørgsmål:
+Det vil jeg undersøge med følgende forskningsspørgsmål:
 \vspace{\baselineskip}
-\begin{tcolorbox}[title=Forskningspørgsmål,
-subtitle style={boxrule=0.4pt} ]
-	\tcbsubtitle{1.} Er der en opdeling af arbejdsmarkedet for arbejdstagere i delmarkeder, hvor mobilitet indenfor delmarkederne er hyppig, og mellem delmarkederne sjælden?
-	\tcbsubtitle{2.} Kan forskelle i de sociale processer vise, at der er tale om segmenter, og ikke blot delmarkeder?
-	\tcbsubtitle{3.} Kan klasseteori belyse denne segmentering?
+\begin{tcolorbox}[title=\textbf{Forskningspørgsmål},
+% subtitle style={boxrule=0.4pt}, colbacktitle=dtured!99!white,colback=dtugray!35!white]
+subtitle style={boxrule=0.4pt}, colbacktitle=deepcarrotorange!99!white,colback=trolleygrey!30!white,coltitle=black]
+	
+	\tcbsubtitle{\textbf{1.}} Er der en opdeling af arbejdsmarkedet for arbejdstagere i delmarkeder, hvor mobilitet indenfor delmarkederne er hyppig, og mellem delmarkederne sjælden?
+	
+	\tcbsubtitle{\textbf{2.}} Kan klasseteori belyse denne segmentering?
+
+	\tcbsubtitle{\textbf{3.}} Hvad er konsekvensen af klassesammensætningen for mobilitet på jobmarkedet, og har den ændret sig over tid?
+	
+	% \tcbsubtitle{4.} Hvilke sociale forskelle kan ses, og er der forskelle i mellem klasser, klassefraktioner og segmenter? Hvad er relationen mellem tre?
+
 \end{tcolorbox}
 
-Teorier med blik for segmenteringsprocesser på arbejdsmarkedet har en række forskellige indfaldsvinkler: det, der primært binder dem sammen, er ideen om at arbejdsmarkedet mere er karakteriseret ved \emph{opdeling} end af \emph{enshed}, hvilket ellers ville være det basale præmis i neoklassisk økonomisk teori. Dette speciale læner sig op af Thomas Bojes udformning af dette præmis \parencite[174]{Boje1986}.
+
+Jeg vil nu gennemgå forskningsspørgsmålene mere detaljeret.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection[Forskningsspørgsmål 1]{Forskningsspørgsmål 1: \linebreak \small Er der en opdeling af arbejdsmarkedet for arbejdstagere i delmarkeder, hvor mobilitet indenfor delmarkederne er hyppig, og mellem delmarkederne sjælden?}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Den danske sociolog Thomas Boje beskæftigede sig indgående med arbejdsmarkedssegmenteringsteori i midten af 1980'erne. I sin skitsering af et arbejdsprogram for en dansk empirisk undersøgelse af arbejdsmarkedet i denne periode, er hans første kriterie for segmenteringens eksistens, at man må påvise, at arbejdsmarkedet er delt op i delmarkeder, med begrænset mobilitet mellem de enkelte delmarkeder. Det betyder, at der i mellem visse typer jobs forekommer hyppige skift, og andre jobtyper, hvor der sjældent, eller aldrig, observeres skifte fra det ene til det andet. 
+
+ Det er denne afhandlings formål at benytte en sådan tilgang, for at vurdere om den kan belyse arbejdsmarkedets struktur.
+
+
+% Delmarkeder i denne tradition har ofte tilknyttet en forståelse af samfundet som opdelt i forskellige klasser, med forskellige strukturelle livsbetingelser for individerne i dem, alt efter hvilke delmarkeder, man befinder sig i. Man kan ikke sætte lighedstegn mellem delmarkeder og klasser, det er nok snarere sådan, at der også indenfor klasserne, uanset definition, findes 
+
+
+
+
+% En klassebaseret forståelse har været genstand for sociologiske analyser siden sociologiens første store teoretikere, Weber, Marx og Durkheim%
+% %
+% \footnote{Durkheim er ikke bredt kendt som klasseteoretikere, men elementer i hans sociologi, samt især videreudviklinger af denne, har disse elementer i sig (citer Harrits \#todo)}%
+% %
+% . Weber var en af de af de første til at se på forholdet mellem klasse og mobilitet, og til at beskrive klasser ud fra de sociale mobilitetsmønstre, individerne var en del af. Han definerer klasse således: “\emph{A »social class« makes up the totality of those class situations within which individual and generational mobility is easy and typical.}” \parencite[302]{Weber1978}. Weberiansk orienterede sociologer såsom Goldthorpe (henvisning \#todo) og Oesch ( henvisning \#todo) har bibeholdt dette fokus på social mobilitet i nyere forskning. Spørgsmålet om både intra- og intergenerationel mobilitet på arbejdsmarkedet, som det observeres empirisk, har en væsentlig rolle at spille i klasseforskningen både indenfor den marxistiske, weberianske og durkheimianske tradition (henvisning: Wright, Goldthorpe, Grusky).
+
+% Den marxistiske tradition er optaget af klasser som et spørgsmål om udbytning, baseret på et socialt forhold til produktionsmidlerne. Nymarxistiske sociologer som Olin-Wright benytter også en stratifikation af lønmodtagerne, hvor positioner på arbejdmarkedet, forstået som arbejderklassens interne sammensætning, også har stor betydning for den faktiske fordeling af goder, og forskellige individers mulighed for opnåelse af disse goder. Arbejdsmarkedet er med andre ord også her delt op ud fra andre kriterier end blot arbejdsgiver-arbejder dikotomien. Den faktiske klassestruktur, udover den grundlæggende modsætning mellem arbejde og kapital, skal undersøges empirisk (henvisning til Wright \#todo). Den weberianske og durkheimianske tradition har ikke samme fokus på blah blah (skriv måske ud: tvivlsomt om afsnittet skal være sådan her? \#todo)
+
+% Af nyere sociologisk teori kan desuden nævnes Pierre Bourdieus sammensmeltning og nytænkning af marxistisk og weberiansk funderet teori, i hans forståelse af samfundet som et socialt rum, opdelt i felter, der opererer ud fra forskellige sociale logikker (\#henvisning). Anthony Giddens understreger nødvendigheden af empirisk funderede analyser, for at forstå klassestrukturen i et bestemt samfund, og de muligheder individet har, alt efter "hvor det kommer fra" \parencite[48,110]{Giddens1973}. (inkluder eventuelt Gruskys "mikroklasser")
+
+Indenfor arbejdsmarkedssegmenteringsteorierne har man, særligt i USA, beskæftiget sig med teorien om det \emph{todelte arbejdsmarked}. Det vil arbejdsmarkedet opdelt i to overordnede delmarkeder, hvor de to primære indeholder faste stillinger med tryghed i ansættelse og favorable lønninger og gode arbejdsvilkår, hvorimod det sekundære delmarked består af midlertidige ansættelser til lavere lønninger og dårligere arbejdsvilkår \parencite{Piore1980}. Senere har segmenteteringsteoretikere som Gordon, Edwards og Reich opdelt det primære segment i to, da det ifølge dem både indeholder et \emph{overordnet} og et \emph{underordnet} segment, der groft sagt svarer til en distinktion mellem  management og arbejder, indenfor store firmaer med veletablerede karrieremuligheder og sikre ansættelsesvilkår, også for arbejderne \parencite[202]{Gordon1982}. 
+
+Boje karakteriserer denne opdeling som et amerikansk fænomen, da en række institutionelle forhold samt en produktionsstruktur, med relativt få, meget store virksomheder, ikke findes i Danmark. Dette understreger behovet for en analyse af hvilke danske delmarkeder, der findes. Bojes tentative undersøgelser viser at det danske arbejdsmarked består af langt flere delmarkeder, blandt andet på grund af kollektive overenskomster, sikring af arbejdsløshedsunderstøttelse, samt den langt større rolle, små og mellemstore firmaer spiller, hvilket skaber en helt anden strukturering af arbejdsmarkedet \parencite[36]{Boje1985}
+
+I Danmark er en nyere kortlægning af arbejdsmarkedets delmarkeder allerede påbegyndt, ligeledes med udgangspunkt i arbejdsmarkedssegmenteringsteorien, af førnævnte Toubøl og Grau Larsen \citeyear {Touboel2013}, ved brug af social netværksanalyse. 
+
+Denne afhandling benytter sig af en af Toubøl og Grau Larsen nyligt udviklede metode til at finde kliker i et socialt netværk, til at finde segmenter i det danske arbejdsmarked, baseret på mobilitet, for at undersøge arbejdsmarkedets opdeling, omend som nævnt ikke på samme detaljeniveau. Med mine to næste forskningsspørgsmål bevæger jeg mig desuden videre, da jeg vil se på, hvordan denne opdeling hænger sammen med klassestrukturen i det danske samfund.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Forskningsspørgsmål 1: Opdeling af arbejdsmarkedet i delmarkeder}
+\subsection[Forskningsspørgsmål 2]{Forskningsspørgsmål 2:  \linebreak
+\small Kan klasseteori belyse denne segmentering?}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-For Thomas Boje er det første kriterie for arbejdsmarkedssegmentering, at arbejdsmarkedet er delt op i delmarkeder, med begrænset mobilitet mellem de enkelte delmarkeder. Det betyder, at der i mellem visse typer jobs forekommer hyppige skift, og andre jobtyper, hvor der sjældent, eller aldrig, observeres skifte fra det ene til det andet.
 
-Delmarkeder i denne tradition har ofte tilknyttet en forståelse af samfundet som opdelt i forskellige sociale klasser, med forskellige strukturelle livsbetingelser for individerne i dem. Det er denne afhandlings formål at benytte en sådan tilgang, for at vurdere om den kan belyse arbejdsmarkedets struktur.
+Moderne klasseteori, som den kommer til udtryk hos Daniel Oesch og John Goldthorpe, mener jeg har frugtbare teoretiske såvel som empiriske indsigter i, hvad man kan kalde den \emph{over-tid} segmenterede arbejdsmarkedsstruktur.
 
-En klassebaseret forståelse har været genstand for sociologiske analyser siden sociologiens første store teoretikere, Weber, Marx og Durkheim%
-%
-\footnote{Durkheim er ikke bredt kendt som klasseteoretikere, men elementer i hans sociologi, samt især videreudviklinger af denne, har disse elementer i sig (citer Harrits \#todo)}%
-%
-. Weber var en af de af de første til at se på forholdet mellem klasse og mobilitet, og til at beskrive klasser ud fra de sociale mobilitetsmønstre, individerne var en del af. Han definerer klasse således: “\emph{A »social class« makes up the totality of those class situations within which individual and generational mobility is easy and typical.}” \parencite[302]{Weber1978}. Weberiansk orienterede sociologer såsom Goldthorpe (henvisning \#todo) og Oesch ( henvisning \#todo) har bibeholdt dette fokus på social mobilitet i nyere forskning. Spørgsmålet om både intra- og intergenerationel mobilitet på arbejdsmarkedet, som det observeres empirisk, har en væsentlig rolle at spille i klasseforskningen både indenfor den marxistiske, weberianske og durkheimianske tradition (henvisning: Wright, Goldthorpe, Grusky).
+Disse to klasseteoretikeres klassedefinitioner forholder sig udelukkende til arbejdsmarkedet, og handler eksplicit om at en minimalistisk definition af \emph{økonomiske} klasser, til forskel fra et bredere social klassebegreb, som vi ser det hos den engelske sociolog Mike Savage \citeyear{Savage2013}, eller Bourdieus \citeyear{Bourdieu1986}, for de fleste velkendte, multidimensionelle klassebegreb. 
 
-Den marxistiske tradition er optaget af klasser som et spørgsmål om udbytning, baseret på et socialt forhold til produktionsmidlerne. Nymarxistiske sociologer som Olin-Wright benytter også en stratifikation af lønmodtagerne, hvor positioner på arbejdmarkedet, forstået som arbejderklassens interne sammensætning, også har stor betydning for den faktiske fordeling af goder, og forskellige individers mulighed for opnåelse af disse goder. Arbejdsmarkedet er med andre ord også her delt op ud fra andre kriterier end blot arbejdsgiver-arbejder dikotomien. Den faktiske klassestruktur, udover den grundlæggende modsætning mellem arbejde og kapital, skal undersøges empirisk (henvisning til Wright \#todo). Den weberianske og durkheimianske tradition har ikke samme fokus på blah blah (skriv måske ud: tvivlsomt om afsnittet skal være sådan her? \#todo)
+Hos Oesch og Goldthorpe benyttes “\emph{a few, well-defined concepts}” \parencite[382]{GoldthorpeMarshall1992}, skræddersyet at forstå nogle centrale eksistensvilkår på arbejdsmarkedet.
 
-Af nyere sociologisk teori kan desuden nævnes Pierre Bourdieus sammensmeltning og nytænkning af marxistisk og weberiansk funderet teori, i hans forståelse af samfundet som et socialt rum, opdelt i felter, der opererer ud fra forskellige sociale logikker (\#henvisning). Anthony Giddens understreger nødvendigheden af empirisk funderede analyser, for at forstå klassestrukturen i et bestemt samfund, og de muligheder individet har, alt efter "hvor det kommer fra" \parencite[48,110]{Giddens1973}. (inkluder eventuelt Gruskys "mikroklasser")
+En årsag til Oesch og Goldthorpes anvendelig sammenligningen i min kortlægning af arbejdsmarkedet, er deres fokus på \emph{økonomiske} klasse, fremfor det mere vidtløftige begreb \emph{social} klasse. 
 
-Indenfor arbejdsmarkedssegmenteringsteorierne har man i en amerikansk optik beskæftiget sig med det såkaldte "dual labour market", det vil arbejdsmarkedet opdelt i to overordnede delmarkeder, hvor det primære indeholder faste stillinger med tryghed i ansættelse og favorable lønninger og gode arbejdsvilkår, hvorimod det sekundære delmarked består af midlertidige ansættelser til lavere lønninger og dårligere arbejdsvilkår \parencite{Piore1980}. Boje karakteriserer denne opdeling et amerikansk fænomen, da en række institutionelle forhold samt en produktionsstruktur, med få, store virksomheder i landet, har skabt denne struktur, og kan ikke generaliseres til lande med andre instutionelle forhold. Dette understreger behovet for en analyse af hvilke danske delmarkeder, der findes. Her finder Boje, at det danske samfund består af langt flere delmarkeder, blandt andet på grund af kollektive overenskomster, sikring af arbejdsløshedsunderstøttelse, samt den langt større rolle, små og mellemstore firmaer spiller, hvilket skaber en anden social dynamik \parencite[36]{Boje1985}
+Jeg vil undersøge denne sammenhæng, og se hvordan forholdet mellem klasser, klassefraktioner og segmenter er. 
 
-I Danmark er en nyere kortlægning af arbejdsmarkedets delmarkeder allerede påbegyndt, ligeledes med udgangspunkt i arbejdsmarkedssegmenteringsteorien, af Toubøl og Grau Larsen \parencite{Touboel2013}, ved brug af social netværksanalyse. Denne afhandling benytter sig af den af Toubøl og Grau Larsen nyligt udviklede metode til at finde kliker i et socialt netværk, til at finde segmenter i det danske arbejdsmarked, baseret på mobiliet.  
+
+% De har en række teoretiske overvejelser omkring deres klasseskemaer, såvel som empiriske resultater i en række forskellige velfærdsstatsmodeller. Jeg vil benytte deres overvejelser om hvorledes forholdet til produktionsmidlerne og arbejdets materielle indhold og symbolske status, har betydning for arbejdsmarkedets stratificering. 
+
+
+% Boje er optaget af, at forskelle i sociale processer skaber ulighed på arbejdsmarkedet, og ses i ulige vilkår for forskellige (segmenterede) delmarkeder, hvorved forskelle i livsvilkår fører til øget seggregering. Dette er tæt beslægtet med tankegangen i klasseteori. Arbejdsmarkedet kan, som den marxistiske arbejdsmarkedssegmentteoretiker Richard Edwards bemærker, ses som et helt særegent marked, der tydeliggør styrkeholdende i produktionen og i den arbejdende befolkning som helhed {\parencite[177]{Edwards1979}. 
+
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Forskningsspørgsmål 2: Forskellen på et delmarked og et segment er påvisningen af særegne (specifikke? partikulære) sociale processer indenfor delmarkedet}
+\subsection[Forskningsspørgsmål 3]{Forskningsspørgsmål 3:  \linebreak
+\small Hvad er konsekvensen af klassesammensætningen for mobilitet på jobmarkedet, og har den ændret sig over tid?}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Det er imidlertidig ikke nok at påvise høj intern mobilitet for at kunne påstå at der er tale om et selvstændigt segment. Det skal være muligt at påvise forskelle i de sociale processer, som findes i delmarkedet i forhold til andre delmarkeder. Et delmarked, hvor forskellen i mobilitet primært skyldes faglige eller geografiske forskelle, men andre væsentlige sociale processer ellers er ens, kan ikke karakteriseres som et segment \parencite[41]{Boje1985}. Det er bare et delmarked, da allokeringen af arbejdskraft i væsentligt grad sker uden (determinerende) sociale stratifikationsmekanismer. Hvis eksempelvis løndannelse og kønsforskelle viser sig tydeligt mellem to ellers sammenlignelige delmarkeder, kan man begynde at tale om segmenter i Bojes forstand. Sammenlignelige skal her forstås som, at uddannelseslængde og 
+
+
+
+ikke nok at påvise høj intern mobilitet for at kunne påstå at der er tale om et selvstændigt segment. Det skal være muligt at påvise forskelle i de sociale processer, som findes i delmarkedet i forhold til andre delmarkeder. Et delmarked, hvor forskellen i mobilitet primært skyldes faglige eller geografiske forskelle, men andre væsentlige sociale processer ellers er ens, kan ikke karakteriseres som et segment \parencite[41]{Boje1985}. Det er bare et delmarked, da allokeringen af arbejdskraft i væsentligt grad sker uden (determinerende) sociale stratifikationsmekanismer. Hvis eksempelvis løndannelse og kønsforskelle viser sig tydeligt mellem to ellers sammenlignelige delmarkeder, kan man begynde at tale om segmenter i Bojes forstand. Sammenlignelige skal her forstås som, at uddannelseslængde og 
 
 Sociale processer er et noget abstrakt begreb for den praksis, hvori livet på arbejdsmarkedet udspiller sig for den enkelte lønmodtager. Det teoretiske indhold, samt naturligvis empiriske målbarhed, vil blive udpenslet efterfølgende, her skal blot nævnes to kortfattede perspektiver på sådanne processer.
 
 Frank Parkin definerede i slut 60'erne begrebet \emph{social lukning} som en måde at forstå opdeling mellem sociale grupper, baseret på forhåndenværende distinktionskriterier i et samfund. Begrebet bruges her til at definere de processer, hvorpå forskellige faggrupper sørger for at beskytte egne privilegier, på en sådan vis at det ekskluderer andre, og hæmmer mobiliteten ud fra andre hensyn end (åbenlyst) faglig eller uddannelsesmæssige \parencite{Parkin1994}. 
 % Mark  Granovetters benytter social netværksteoris metodik(?? \#todo) om svage og stærke sociale forbindelser for at forstå social lukning. Hans hovedargument er individernes mulighed mobilitet af nye kanaler, gennem deres såkaldte "svage forbindelser" - det er igennem de mennesker, man ikke kender så godt, at der er adgang til nye muligheder indenfor for eksempel arbejdslivet \parencite{Granovetter1973}. (\emph{de her to eksempler skal strammes op, I know - E }) Giver ikke rigtig så god mening her. 
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Forskningsspørgsmål 3:  Et klasseteoretisk perspektiv på segmentering}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-Her adskiller min afhandling sig væsentligt fra Toubøl \& Grau Larsen, Nielsen-Gravholt og Boje, da dette speciale udover en beskrivelse af delmarkederne, har et klasseteoretisk perspektiv på segmentering og de sociale processer der definerer dem, der derefter undersøges empirisk. Formålet er at bevæge sig over i et klasseteoretisk perspektiv på segmentering, for at undersøge klassebegrebets anvendelig i at forstå disse sociale processer, som jeg ser dem komme til udtryk i min empiri. 
-
-Forbindelsen til segmenteringsteori er ikke kontroversiel, og teoriretningen er bestemt ikke fremmed overfor teorier om sociale klasser, omend det ofte frames anderledes og i mere arbejdsmarkedsfokuserede termer. 
-Boje er optaget af, at forskelle i sociale processer skaber ulighed på arbejdsmarkedet, og ses i ulige vilkår for forskellige (segmenterede) delmarkeder, hvorved forskelle i livsvilkår fører til øget seggregering. Dette er tæt beslægtet med tankegangen i klasseteori. Arbejdsmarkedet kan, som den marxistiske arbejdsmarkedssegmentteoretiker Richard Edwards bemærker, ses som et helt særgent marked, der tydeliggør styrkeholdende i produktionen og i den arbejdende befolkning som helhed {\parencite[177]{Edwards1979}. 
-
-Moderne klasseteori, som den kommer til udtryk hos Daniel Oesch og John Goldthorpe, mener jeg har frugtbare teoretiske såvel som empiriske indsigter i, hvad man kan kalde den over-tid segmenterede arbejdsmarkedsstruktur. Deres klasseinddeling er næsten udelukkende baseret på position på arbejdsmarkedet. En årsag til Oesch og Goldthorpes anvendelig i min kortlægning af arbejdsmarkedet, er deres stringente - næsten ydmyge - fokus på \emph{økonomiske} klasse, fremfor det mere vidtløftige begreb \emph{social} klasse. Det vil jeg komme nærmere ind på senere, foreløbigt skal det bare konstateres, at det er yderst anvendeligt, når man som mig har fokus på arbejdsmarkedets struktur. Det betyder, at deres teori og empiri om differentieringer på arbejdsmarkedet er yderst anvendelige for mig.
 
 
 
@@ -93,15 +186,21 @@ Moderne klasseteori, som den kommer til udtryk hos Daniel Oesch og John Goldthor
 \section{Fremgangsmåde}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-I de to næste kapitler gennemgår jeg teori. Andet kapitel handler således om arbejdsmarkedssegmenteringsteori og tredje kapitel handler om klasseteori.
+Del \ref{part_teori} omhandler teori, og består af to kapitler. I det første gennemgår jeg arbejdsmarkedssegmenteringsteori, og i det andet de føromtalte nyere klasseteorier. Fokus er på deres applicering i mit empiriske arbejde.
 
-I de to efterfølgende kapitler gennemgår jeg metode. Fjerde kapitel handler således om social netværksanalyse og femte kapitel handler om registerdatamaterialet fra Danmarks Statistik.
+Del \ref{part_metode} omhandler metode, og  består af to kapitler. Det første redegør for metoden, som er social netværksanalyse, og den specifikke algoritme, udviklet til programmet R, som er lavet af Toubøl og Larsen. Det andet kapitel redegør for datamaterialet og de afgørende variable i skabelsen af dette. 
 
-De tre efterfølgende kapitler er analysen opdelt tre delanalyser, som passer overens med de tre forskningsspørgsmål. Sjette kapitel er en delanalyse af opdeling af arbejdsmarkedet i delmarkeder. Syvende kapitel er en delanalyse af sociale processer i delmarkeder og segmenter. Ottende kapitel er en delanalyse af det klasseteoretiske perspektiv på segmentering.
+Del \ref{part_analyse}  er analysen, og består af tre kapitler. Her (skriv videre blah blah )
 
-Niende kapitel er en diskussion af analysen på baggrund af teori og metode.
-
-De tiende og afsluttende kapitel er konklusion.
+Del \ref{part_afslutning} er konklusionen, diskussionen og perspektiveringen.
 
 
-Denne afhandling vil fokusere på, hvorledes sociale processer kan ses afvige fra hinanden i delmarkederne, på sådan vis at vi kan tale om segmenter. Jeg vil benytte social stratifikationsteori, til at forklare forskellen i sociale processer, som de kommer til udtryk på et empirisk niveau, gennem intern mobilitet i delmarkederne, indkomst, uddannelse og køn. 
+% I de to efterfølgende kapitler gennemgår jeg metode. Fjerde kapitel handler om social netværksanalyse og femte kapitel handler om registerdatamaterialet fra Danmarks Statistik.
+
+% De tre efterfølgende kapitler er analysen af arbejdsmarkedet. Den er opdelt tre delanalyser, som stemmer overens med de tre forskningsspørgsmål. Sjette kapitel er en delanalyse af opdeling af arbejdsmarkedet i delmarkeder. Syvende kapitel er en delanalyse af sociale processer i delmarkeder og segmenter. Ottende kapitel er en delanalyse af det klasseteoretiske perspektiv på segmentering.
+
+% Niende kapitel er en diskussion af analysen på baggrund af teori og metode.
+
+% De tiende og afsluttende kapitel er konklusion.
+
+% Denne afhandling vil fokusere på, hvorledes sociale processer kan ses afvige fra hinanden i delmarkederne, på sådan vis at vi kan tale om segmenter. Jeg vil benytte social stratifikationsteori, til at forklare forskellen i sociale processer, som de kommer til udtryk på et empirisk niveau, gennem intern mobilitet i delmarkederne, indkomst, uddannelse og køn. 
